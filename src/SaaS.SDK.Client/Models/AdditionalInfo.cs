@@ -2,20 +2,20 @@
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
 namespace Microsoft.Marketplace.SaasKit.Models
 {
-    using Microsoft.Marketplace.SaasKit.Attributes;
+    using System.Text.Json.Serialization;
 
     /// <summary>
-    /// Get Fulfillment Result.
+    /// Additional  Info.
     /// </summary>
-    public class SaaSApiResult
+    public class AdditionalInfo
     {
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Gets or sets the accepted message.
         /// </summary>
         /// <value>
-        /// The request identifier.
+        /// The accepted message.
         /// </value>
-        [FromRequestHeader("x-ms-requestid")]
-        public string RequestID { get; set; }
+        [JsonPropertyName("acceptedMessage")]
+        public AcceptedMessage AcceptedMessage { get; set; }
     }
 }

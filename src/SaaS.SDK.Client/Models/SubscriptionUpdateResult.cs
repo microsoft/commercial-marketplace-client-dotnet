@@ -1,11 +1,13 @@
-﻿namespace Microsoft.Marketplace.SaasKit.Models
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE file in the project root for license information.
+namespace Microsoft.Marketplace.SaasKit.Models
 {
     using System;
     using Microsoft.Marketplace.SaasKit.Attributes;
     using Microsoft.Marketplace.SaasKit.Models;
 
     /// <summary>
-    /// Subscription Update Result
+    /// Subscription Update Result.
     /// </summary>
     /// <seealso cref="Microsoft.Marketplace.SaasKit.Models.SaaSApiResult" />
     public class SubscriptionUpdateResult : SaaSApiResult
@@ -26,11 +28,11 @@
         /// The operation identifier.
         /// </value>
         /// <exception cref="FulfillmentException">
-        /// API did not return an operation ID
+        /// API did not return an operation ID.
         /// or
-        /// URI is not recognized as an operation ID url
+        /// URI is not recognized as an operation ID url.
         /// or
-        /// Returned operation ID is not a Guid
+        /// Returned operation ID is not a Guid.
         /// </exception>
         [FromRequestHeader("OperationId")]
         public Guid OperationId

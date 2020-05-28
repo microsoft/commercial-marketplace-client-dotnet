@@ -1,12 +1,15 @@
-﻿using Microsoft.Marketplace.SaasKit.Configurations;
-using Microsoft.Marketplace.SaasKit.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE file in the project root for license information.
 namespace Microsoft.Marketplace.SaasKit.Helpers
 {
-   public class UrlHelper
+    using System;
+    using Microsoft.Marketplace.SaasKit.Configurations;
+    using Microsoft.Marketplace.SaasKit.Models;
+
+    /// <summary>
+    /// The url helper.
+    /// </summary>
+    public class UrlHelper
     {
         /// <summary>
         /// GetFulfilllments the URL.
@@ -15,7 +18,7 @@ namespace Microsoft.Marketplace.SaasKit.Helpers
         /// <param name="resourceGuid">The resource unique identifier.</param>
         /// <param name="action">The action.</param>
         /// <param name="operationGuid">The operation unique identifier.</param>
-        /// <returns></returns>
+        /// <returns> Saas URL.</returns>
         public static string GetSaaSApiUrl(SaaSApiClientConfiguration clientConfiguration, Guid resourceGuid, SaaSResourceActionEnum? action, Guid? operationGuid = null)
         {
             var resourceId = Convert.ToString(resourceGuid);
@@ -40,6 +43,8 @@ namespace Microsoft.Marketplace.SaasKit.Helpers
                     return $"{clientConfiguration.FulFillmentAPIBaseURL}{subscriptionBaseURL}?api-version={clientConfiguration.FulFillmentAPIVersion}";
                 case SaaSResourceActionEnum.SUBSCRIPTION_USAGEEVENT:
                     return $"{clientConfiguration.FulFillmentAPIBaseURL}/usageEvent?api-version={clientConfiguration.FulFillmentAPIVersion}";
+                case SaaSResourceActionEnum.SUBSCRIPTION_BATCHUSAGEEVENT:
+                    return $"{clientConfiguration.FulFillmentAPIBaseURL}/batchUsageEvent?api-version={clientConfiguration.FulFillmentAPIVersion}";
                 default:
                     return $"{clientConfiguration.FulFillmentAPIBaseURL}{subscriptionBaseURL}{resourceId}?api-version={clientConfiguration.FulFillmentAPIVersion}";
             }

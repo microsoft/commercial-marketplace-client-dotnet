@@ -6,11 +6,19 @@ namespace Microsoft.Marketplace.SaasKit.Models
     using System.Text.Json.Serialization;
 
     /// <summary>
-    /// Subscription Usage Result.
+    /// Accepted Message.
     /// </summary>
-    /// <seealso cref="Microsoft.Marketplace.SaasKit.Models.SaaSApiResult" />
-    public class MeteringUsageResult : SaaSApiResult
+    public class AcceptedMessage
     {
+        /// <summary>
+        /// Gets or sets the usage event identifier.
+        /// </summary>
+        /// <value>
+        /// The usage event identifier.
+        /// </value>
+        [JsonPropertyName("usageEventId")]
+        public string UsageEventId { get; set; }
+
         /// <summary>
         /// Gets or sets the status.
         /// </summary>
@@ -21,31 +29,13 @@ namespace Microsoft.Marketplace.SaasKit.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or sets the usage posted date.
-        /// </summary>
-        /// <value>
-        /// The usage posted date.
-        /// </value>
-        [JsonPropertyName("effectiveStartTime")]
-        public DateTime? UsagePostedDate { get; set; }
-
-        /// <summary>
-        /// Gets or sets the usage event identifier.
-        /// </summary>
-        /// <value>
-        /// The usage event identifier.
-        /// </value>
-        [JsonPropertyName("usageEventId")]
-        public Guid UsageEventId { get; set; }
-
-        /// <summary>
         /// Gets or sets the message time.
         /// </summary>
         /// <value>
         /// The message time.
         /// </value>
         [JsonPropertyName("messageTime")]
-        public DateTime MessageTime { get; set; }
+        public string MessageTime { get; set; }
 
         /// <summary>
         /// Gets or sets the resource identifier.
@@ -63,7 +53,7 @@ namespace Microsoft.Marketplace.SaasKit.Models
         /// The quantity.
         /// </value>
         [JsonPropertyName("quantity")]
-        public long Quantity { get; set; }
+        public string Quantity { get; set; }
 
         /// <summary>
         /// Gets or sets the dimension.
@@ -73,6 +63,15 @@ namespace Microsoft.Marketplace.SaasKit.Models
         /// </value>
         [JsonPropertyName("dimension")]
         public string Dimension { get; set; }
+
+        /// <summary>
+        /// Gets or sets the effective start time.
+        /// </summary>
+        /// <value>
+        /// The effective start time.
+        /// </value>
+        [JsonPropertyName("effectiveStartTime")]
+        public string EffectiveStartTime { get; set; }
 
         /// <summary>
         /// Gets or sets the plan identifier.

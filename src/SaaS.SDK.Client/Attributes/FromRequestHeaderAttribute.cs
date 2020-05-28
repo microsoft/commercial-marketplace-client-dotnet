@@ -1,9 +1,11 @@
-﻿namespace Microsoft.Marketplace.SaasKit.Attributes
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE file in the project root for license information.
+namespace Microsoft.Marketplace.SaasKit.Attributes
 {
     using System;
 
     /// <summary>
-    /// FromRequestHeaderAttribute to set the Header Key with each Request
+    /// FromRequestHeaderAttribute to set the Header Key with each Request.
     /// </summary>
     /// <seealso cref="System.Attribute" />
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]

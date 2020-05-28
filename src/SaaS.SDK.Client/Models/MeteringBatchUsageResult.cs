@@ -3,23 +3,30 @@
 namespace Microsoft.Marketplace.SaasKit.Models
 {
     using System.Collections.Generic;
-    using System.ComponentModel;
     using System.Text.Json.Serialization;
 
     /// <summary>
-    /// Sets Plan.
+    /// Subscription Batch Usage Result.
     /// </summary>
     /// <seealso cref="Microsoft.Marketplace.SaasKit.Models.SaaSApiResult" />
-    public class PlanResult : SaaSApiResult
+    public class MeteringBatchUsageResult : SaaSApiResult
     {
         /// <summary>
-        /// Gets or sets the plans.
+        /// Gets or sets the count.
         /// </summary>
         /// <value>
-        /// The plans.
+        /// The count.
         /// </value>
-        [JsonPropertyName("plans")]
-        [DisplayName("plans")]
-        public List<PlanDetailResult> Plans { get; set; }
+        [JsonPropertyName("count")]
+        public int Count { get; set; }
+
+        /// <summary>
+        /// Gets or sets the count.
+        /// </summary>
+        /// <value>
+        /// The result.
+        /// </value>
+        [JsonPropertyName("result")]
+        public IEnumerable<ResultBatchUsageResult> Result { get; set; }
     }
 }

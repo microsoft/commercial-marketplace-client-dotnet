@@ -1,9 +1,11 @@
-﻿namespace Microsoft.Marketplace.SaasKit.Models
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE file in the project root for license information.
+namespace Microsoft.Marketplace.SaasKit.Models
 {
     using System.Text.Json.Serialization;
 
     /// <summary>
-    /// Shows Operation Status
+    /// Shows Operation Status.
     /// </summary>
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum OperationStatusEnum
@@ -31,6 +33,6 @@
         /// <summary>
         /// The conflict
         /// </summary>
-        Conflict
+        Conflict,
     }
 }

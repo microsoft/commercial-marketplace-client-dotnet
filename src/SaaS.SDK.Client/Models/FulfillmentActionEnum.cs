@@ -1,7 +1,9 @@
-﻿namespace Microsoft.Marketplace.SaasKit.Models
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE file in the project root for license information.
+namespace Microsoft.Marketplace.SaasKit.Models
 {
     /// <summary>
-    /// Fulfillment Action Enum
+    /// Fulfillment Action Enum.
     /// </summary>
     public enum SaaSResourceActionEnum
     {
@@ -38,6 +40,11 @@
         /// <summary>
         /// The subscription usageevent
         /// </summary>
-        SUBSCRIPTION_USAGEEVENT
+        SUBSCRIPTION_USAGEEVENT,
+
+        /// <summary>
+        /// The subscription batch usageevent
+        /// </summary>
+        SUBSCRIPTION_BATCHUSAGEEVENT,
     }
 }

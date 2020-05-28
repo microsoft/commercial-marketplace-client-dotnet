@@ -2,21 +2,21 @@
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
 namespace Microsoft.Marketplace.SaasKit.Models
 {
-    using System;
     using System.Text.Json.Serialization;
 
     /// <summary>
-    /// Beneficiary Result.
+    /// BatchUsage Result.
     /// </summary>
-    public class BeneficiaryResult
+    /// <seealso cref="Microsoft.Marketplace.SaasKit.Models.MeteringUsageResult" />
+    public class ResultBatchUsageResult : MeteringUsageResult
     {
         /// <summary>
-        /// Gets or sets the tenant identifier.
+        /// Gets or sets the error.
         /// </summary>
         /// <value>
-        /// The tenant identifier.
+        /// The Error.
         /// </value>
-        [JsonPropertyName("tenantId")]
-        public Guid TenantId { get; set; }
+        [JsonPropertyName("error")]
+        public object Error { get; set; }
     }
 }

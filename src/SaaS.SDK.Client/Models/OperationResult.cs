@@ -1,11 +1,12 @@
-﻿namespace Microsoft.Marketplace.SaasKit.Models
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE file in the project root for license information.
+namespace Microsoft.Marketplace.SaasKit.Models
 {
     using System;
-    using Microsoft.Marketplace.SaasKit.Models;
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
-    /// Subscription Operation Response
+    /// Subscription Operation Response.
     /// </summary>
     /// <seealso cref="Microsoft.Marketplace.SaasKit.Models.SaaSApiResult" />
     public class OperationResult : SaaSApiResult
@@ -16,7 +17,7 @@
         /// <value>
         /// The identifier.
         /// </value>
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public string ID { get; set; }
 
         /// <summary>
@@ -25,7 +26,7 @@
         /// <value>
         /// The status.
         /// </value>
-        [JsonProperty("status")]
+        [JsonPropertyName("status")]
         public OperationStatusEnum Status { get; set; }
 
         /// <summary>
@@ -34,7 +35,7 @@
         /// <value>
         /// The resource location.
         /// </value>
-        [JsonProperty("resourceLocation")]
+        [JsonPropertyName("resourceLocation")]
         public string ResourceLocation { get; set; }
 
         /// <summary>
@@ -43,7 +44,7 @@
         /// <value>
         /// The created.
         /// </value>
-        [JsonProperty("created")]
+        [JsonPropertyName("created")]
         public DateTime Created { get; set; }
 
         /// <summary>
@@ -52,7 +53,7 @@
         /// <value>
         /// The last modified.
         /// </value>
-        [JsonProperty("lastModified")]
+        [JsonPropertyName("lastModified")]
         public DateTime? LastModified { get; set; }
     }
 }

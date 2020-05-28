@@ -1,12 +1,14 @@
-﻿namespace Microsoft.Marketplace.SaasKit.Models
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE file in the project root for license information.
+namespace Microsoft.Marketplace.SaasKit.Models
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
-    /// Subscription Response
+    /// Subscription Response.
     /// </summary>
     /// <seealso cref="Microsoft.Marketplace.SaasKit.Models.SaaSApiResult" />
     public class SubscriptionResult : SaaSApiResult
@@ -49,7 +51,7 @@
         /// <value>
         /// The identifier.
         /// </value>
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         [DisplayName("Subscription Id")]
         public Guid Id { get; set; }
 
@@ -59,7 +61,7 @@
         /// <value>
         /// The publisher identifier.
         /// </value>
-        [JsonProperty("publisherId")]
+        [JsonPropertyName("publisherId")]
         public string PublisherId { get; set; }
 
         /// <summary>
@@ -68,7 +70,7 @@
         /// <value>
         /// The offer identifier.
         /// </value>
-        [JsonProperty("offerId")]
+        [JsonPropertyName("offerId")]
         public string OfferId { get; set; }
 
         /// <summary>
@@ -85,7 +87,7 @@
         /// <value>
         /// The name.
         /// </value>
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         [DisplayName("Subscription Name")]
         public string Name { get; set; }
 
@@ -95,8 +97,9 @@
         /// <value>
         /// The subscription status.
         /// </value>
-        [JsonProperty("saasSubscriptionStatus")]
+        [JsonPropertyName("saasSubscriptionStatus")]
         [DisplayName("Subscription Status")]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public SubscriptionStatusEnum SaasSubscriptionStatus { get; set; }
 
         /// <summary>
@@ -106,7 +109,7 @@
         /// The plan identifier.
         /// </value>
         [DisplayName("Plan Id")]
-        [JsonProperty("planId")]
+        [JsonPropertyName("planId")]
         public string PlanId { get; set; }
 
         /// <summary>
@@ -204,7 +207,7 @@
         /// <value>
         /// The purchaser.
         /// </value>
-        [JsonProperty("purchaser")]
+        [JsonPropertyName("purchaser")]
         public PurchaserResult Purchaser { get; set; }
 
         /// <summary>
@@ -213,7 +216,7 @@
         /// <value>
         /// The beneficiary.
         /// </value>
-        [JsonProperty("beneficiary")]
+        [JsonPropertyName("beneficiary")]
         public BeneficiaryResult Beneficiary { get; set; }
 
         /// <summary>
@@ -222,7 +225,7 @@
         /// <value>
         /// The term.
         /// </value>
-        [JsonProperty("term ")]
+        [JsonPropertyName("term")]
         public TermResult Term { get; set; }
 
         /// <summary>Gets or sets the customer email address.</summary>
@@ -232,6 +235,5 @@
         /// <summary>Gets or sets the name of the customer.</summary>
         /// <value>The name of the customer.</value>
         public string CustomerName { get; set; }
-
     }
 }
