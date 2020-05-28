@@ -1,19 +1,20 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.SaasKit.Network
+namespace Microsoft.Marketplace.Client.Network
 {
     using System.IO;
     using System.Net;
     using System.Text.Json;
-    using Microsoft.Marketplace.SaasKit.Configurations;
-    using Microsoft.Marketplace.SaasKit.Contracts;
-    using Microsoft.Marketplace.SaasKit.Models;
+    using Microsoft.Marketplace.SaaS.Client.Network;
+    using Microsoft.Marketplace.Client.Configurations;
+    using Microsoft.Marketplace.Client.Contracts;
+    using Microsoft.Marketplace.Client.Models;
 
     /// <summary>
     /// The Fulfillment Api RestClient.
     /// </summary>
     /// <typeparam name="T"> Generic Type.</typeparam>
-    /// <seealso cref="Microsoft.Marketplace.SaasKit.Network.AbstractSaaSApiRestClient{T}" />
+    /// <seealso cref="SaaS.Client.Network.AbstractSaaSApiRestClient{T}" />
     public class FulfillmentApiRestClient<T>
                                             : AbstractSaaSApiRestClient<T>
                                              where T : SaaSApiResult, new()

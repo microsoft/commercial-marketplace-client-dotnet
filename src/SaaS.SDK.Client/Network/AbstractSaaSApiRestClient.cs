@@ -1,16 +1,16 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.SaasKit.Network
+namespace Microsoft.Marketplace.SaaS.Client.Network
 {
     using System.Collections.Generic;
     using System.Net;
     using System.Text.Json;
     using System.Threading.Tasks;
     using Microsoft.Marketplace.SaaS.SDK.Client.Network;
-    using Microsoft.Marketplace.SaasKit.Configurations;
-    using Microsoft.Marketplace.SaasKit.Contracts;
-    using Microsoft.Marketplace.SaasKit.Helpers;
-    using Microsoft.Marketplace.SaasKit.Models;
+    using Microsoft.Marketplace.Client.Configurations;
+    using Microsoft.Marketplace.Client.Contracts;
+    using Microsoft.Marketplace.Client.Helpers;
+    using Microsoft.Marketplace.Client.Models;
 
     /// <summary>
     /// rest client call implementation.
@@ -54,9 +54,9 @@ namespace Microsoft.Marketplace.SaasKit.Network
         {
             try
             {
-                this.logger?.Info("Call Rest Service : {0}" + JsonSerializer.Serialize(new { url = url, method = method, parameters = parameters, headers = headers, contentType = contentType }));
+                logger?.Info("Call Rest Service : {0}" + JsonSerializer.Serialize(new { url, method, parameters, headers, contentType }));
 
-                var accessTokenResult = await ADAuthenticationHelper.GetAccessToken(this.clientConfiguration).ConfigureAwait(false);
+                var accessTokenResult = await ADAuthenticationHelper.GetAccessToken(clientConfiguration).ConfigureAwait(false);
 
                 if (headers == null)
                 {
@@ -74,8 +74,8 @@ namespace Microsoft.Marketplace.SaasKit.Network
             }
             catch (WebException ex)
             {
-                this.logger?.Error(string.Format($"An error occurred while processing request to the url : {url} - {ex.ToString()}"));
-                return this.ProcessErrorResponse(url, ex);
+                logger?.Error(string.Format($"An error occurred while processing request to the url : {url} - {ex.ToString()}"));
+                return ProcessErrorResponse(url, ex);
             }
         }
 

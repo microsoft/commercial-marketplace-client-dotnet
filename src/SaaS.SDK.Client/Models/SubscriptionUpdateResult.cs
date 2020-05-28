@@ -1,15 +1,15 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.SaasKit.Models
+namespace Microsoft.Marketplace.Client.Models
 {
     using System;
-    using Microsoft.Marketplace.SaasKit.Attributes;
-    using Microsoft.Marketplace.SaasKit.Models;
+    using Microsoft.Marketplace.Client.Attributes;
+    using Microsoft.Marketplace.Client.Models;
 
     /// <summary>
     /// Subscription Update Result.
     /// </summary>
-    /// <seealso cref="Microsoft.Marketplace.SaasKit.Models.SaaSApiResult" />
+    /// <seealso cref="Microsoft.Marketplace.Client.Models.SaaSApiResult" />
     public class SubscriptionUpdateResult : SaaSApiResult
     {
         /// <summary>

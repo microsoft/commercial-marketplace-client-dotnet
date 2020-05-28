@@ -9,8 +9,8 @@ namespace Microsoft.Marketplace.SaaS.SDK.Client.Network
     using System.Net;
     using System.Text.Json;
     using System.Threading.Tasks;
-    using Microsoft.Marketplace.SaasKit.Attributes;
-    using Microsoft.Marketplace.SaasKit.Network;
+    using Microsoft.Marketplace.Client.Attributes;
+    using Microsoft.Marketplace.Client.Network;
 
     /// <summary>
     /// Helper class to prepare and make web requests and build response from the request.

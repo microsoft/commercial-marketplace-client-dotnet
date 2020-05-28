@@ -1,13 +1,13 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.SaasKit.Models
+namespace Microsoft.Marketplace.Client.Models
 {
     using System.Text.Json.Serialization;
 
     /// <summary>
     /// BatchUsage Result.
     /// </summary>
-    /// <seealso cref="Microsoft.Marketplace.SaasKit.Models.MeteringUsageResult" />
+    /// <seealso cref="Microsoft.Marketplace.Client.Models.MeteringUsageResult" />
     public class ResultBatchUsageResult : MeteringUsageResult
     {
         /// <summary>

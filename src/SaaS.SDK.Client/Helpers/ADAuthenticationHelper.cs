@@ -1,14 +1,14 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.SaasKit.Helpers
+namespace Microsoft.Marketplace.Client.Helpers
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
     using Microsoft.Marketplace.SaaS.SDK.Client.Models;
     using Microsoft.Marketplace.SaaS.SDK.Client.Network;
-    using Microsoft.Marketplace.SaasKit.Configurations;
-    using Microsoft.Marketplace.SaasKit.Network;
+    using Microsoft.Marketplace.Client.Configurations;
+    using Microsoft.Marketplace.Client.Network;
 
     /// <summary>
     /// Helper class to complete authentication against Azure Active Directory and get access token detail.
