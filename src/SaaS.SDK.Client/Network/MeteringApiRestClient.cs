@@ -1,15 +1,15 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.Client.Network
+namespace Microsoft.Marketplace.SaaS.Client.Network
 {
     using System.IO;
     using System.Net;
     using System.Text.Json;
     using Microsoft.Marketplace.SaaS.Client.Network;
-    using Microsoft.Marketplace.Client.Configurations;
-    using Microsoft.Marketplace.Client.Contracts;
-    using Microsoft.Marketplace.Client.Exceptions;
-    using Microsoft.Marketplace.Client.Models;
+    using Microsoft.Marketplace.SaaS.Client.Configurations;
+    using Microsoft.Marketplace.SaaS.Client.Contracts;
+    using Microsoft.Marketplace.SaaS.Client.Exceptions;
+    using Microsoft.Marketplace.SaaS.Client.Models;
 
     /// <summary>
     /// Metering Api RestClient.
@@ -38,7 +38,7 @@ namespace Microsoft.Marketplace.Client.Network
         /// Error result built using the data in the response.
         /// </returns>
         /// <exception cref="MeteredBillingException">Exception.</exception>
-        /// <exception cref="Microsoft.Marketplace.Client.Exceptions.MeteredBillingException">Token expired. Please logout and login again.
+        /// <exception cref="Microsoft.Marketplace.SaaS.Client.Exceptions.MeteredBillingException">Token expired. Please logout and login again.
         /// Not Found.
         /// Bad Request.
         /// Internal Server error.</exception>

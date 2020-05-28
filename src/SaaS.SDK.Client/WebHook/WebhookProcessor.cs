@@ -1,15 +1,15 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.Client.WebHook
+namespace Microsoft.Marketplace.SaaS.Client.WebHook
 {
     using System;
     using System.Threading.Tasks;
-    using Microsoft.Marketplace.Client.Contracts;
+    using Microsoft.Marketplace.SaaS.Client.Contracts;
 
     /// <summary>
     /// The webhook processor.
     /// </summary>
-    /// <seealso cref="Microsoft.Marketplace.Client.WebHook.IWebhookProcessor" />
+    /// <seealso cref="Microsoft.Marketplace.SaaS.Client.WebHook.IWebhookProcessor" />
     public class WebhookProcessor : IWebhookProcessor
     {
         /// <summary>

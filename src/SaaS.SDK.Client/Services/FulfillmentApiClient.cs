@@ -1,20 +1,20 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.Client.Services
+namespace Microsoft.Marketplace.SaaS.Client.Services
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using Microsoft.Marketplace.Client.Configurations;
-    using Microsoft.Marketplace.Client.Contracts;
-    using Microsoft.Marketplace.Client.Helpers;
-    using Microsoft.Marketplace.Client.Models;
-    using Microsoft.Marketplace.Client.Network;
+    using Microsoft.Marketplace.SaaS.Client.Configurations;
+    using Microsoft.Marketplace.SaaS.Client.Contracts;
+    using Microsoft.Marketplace.SaaS.Client.Helpers;
+    using Microsoft.Marketplace.SaaS.Client.Models;
+    using Microsoft.Marketplace.SaaS.Client.Network;
 
     /// <summary>
     /// Fulfillment API Client Action-List For Subscriptions.
     /// </summary>
-    /// <seealso cref="Microsoft.Marketplace.Client.Contracts.IFulfilmentApiClient" />
+    /// <seealso cref="Microsoft.Marketplace.SaaS.Client.Contracts.IFulfilmentApiClient" />
     public class FulfillmentApiClient : IFulfillmentApiClient
     {
         /// <summary>

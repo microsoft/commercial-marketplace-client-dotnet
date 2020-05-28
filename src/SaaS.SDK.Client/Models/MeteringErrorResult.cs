@@ -1,13 +1,13 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.Client.Models
+namespace Microsoft.Marketplace.SaaS.Client.Models
 {
     using System;
     using System.Collections.Generic;
     using System.Text.Json.Serialization;
 
     /// <summary>Metering API Exception Response.</summary>
-    /// <seealso cref="Microsoft.Marketplace.Client.Models.SaaSApiResult"/>
+    /// <seealso cref="Microsoft.Marketplace.SaaS.Client.Models.SaaSApiResult"/>
     public class MeteringErrorResult : SaaSApiResult
     {
         /// <summary>Gets or sets the error message.</summary>

@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.Client.Models
+namespace Microsoft.Marketplace.SaaS.Client.Models
 {
     using System.Collections.Generic;
     using System.ComponentModel;
@@ -9,7 +9,7 @@ namespace Microsoft.Marketplace.Client.Models
     /// <summary>
     /// Sets Plan.
     /// </summary>
-    /// <seealso cref="Microsoft.Marketplace.Client.Models.SaaSApiResult" />
+    /// <seealso cref="Microsoft.Marketplace.SaaS.Client.Models.SaaSApiResult" />
     public class PlanResult : SaaSApiResult
     {
         /// <summary>

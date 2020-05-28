@@ -7,10 +7,10 @@ namespace Microsoft.Marketplace.SaaS.Client.Network
     using System.Text.Json;
     using System.Threading.Tasks;
     using Microsoft.Marketplace.SaaS.SDK.Client.Network;
-    using Microsoft.Marketplace.Client.Configurations;
-    using Microsoft.Marketplace.Client.Contracts;
-    using Microsoft.Marketplace.Client.Helpers;
-    using Microsoft.Marketplace.Client.Models;
+    using Microsoft.Marketplace.SaaS.Client.Configurations;
+    using Microsoft.Marketplace.SaaS.Client.Contracts;
+    using Microsoft.Marketplace.SaaS.Client.Helpers;
+    using Microsoft.Marketplace.SaaS.Client.Models;
 
     /// <summary>
     /// rest client call implementation.

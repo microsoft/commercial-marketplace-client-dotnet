@@ -1,13 +1,13 @@
-namespace Microsoft.Marketplace.Client.UnitTest
+namespace Microsoft.Marketplace.SaaS.Client.UnitTest
 {
     using System;
     using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.Extensions.Configuration;
-    using Microsoft.Marketplace.Client.Configurations;
-    using Microsoft.Marketplace.Client.Helpers;
-    using Microsoft.Marketplace.Client.Models;
-    using Microsoft.Marketplace.Client.Services;
+    using Microsoft.Marketplace.SaaS.Client.Configurations;
+    using Microsoft.Marketplace.SaaS.Client.Helpers;
+    using Microsoft.Marketplace.SaaS.Client.Models;
+    using Microsoft.Marketplace.SaaS.Client.Services;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     /// <summary>

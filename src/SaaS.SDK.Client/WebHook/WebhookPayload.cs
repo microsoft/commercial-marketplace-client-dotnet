@@ -1,10 +1,10 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE file in the project root for license information.
-namespace Microsoft.Marketplace.Client.WebHook
+namespace Microsoft.Marketplace.SaaS.Client.WebHook
 {
     using System;
     using System.Text.Json.Serialization;
-    using Microsoft.Marketplace.Client.Models;
+    using Microsoft.Marketplace.SaaS.Client.Models;
 
     /// <summary>
     /// Web hook Payload get or set the API Response Data.
