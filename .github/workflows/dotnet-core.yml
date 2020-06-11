@@ -2,12 +2,9 @@ name: .NET Core
 
 on:
   push:
-    branches:
-    - master
-    - release/*
+    branches: [ master ]
   pull_request:
-    branches:
-    - master
+    branches: [ master ]
 
 jobs:
   build:
@@ -19,8 +16,14 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.202
-    - name: Build with dotnet
+        dotnet-version: 3.1.301
+    - name: Build
       run: dotnet build --configuration Release
-      working-directory: ./src
-     
+      working-directory: ./sdk
+    - name: test
+      run: dotnet test
+      env:
+        TenantId: ${{secrets.TENANTID}}
+        ClientId: ${{secrets.CLIENTID}}
+        clientSecret: ${{secrets.CLIENTSECRET}}
+      working-directory: ./sdk      

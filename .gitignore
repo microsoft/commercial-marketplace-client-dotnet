@@ -127,6 +127,9 @@ _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
 
+# JustCode is a .NET coding add-in
+.JustCode
+
 # TeamCity is a build add-in
 _TeamCity*
 
@@ -348,15 +351,3 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-
-# IDEA project dev tools
-.DS_Store
-src/.idea/.gitignore
-src/.idea/.idea.Microsoft.Marketplace.SaaS.SDK/riderModule.iml
-src/.idea/.idea.Microsoft.Marketplace.SaaS.SDK/.idea/.gitignore
-src/.idea/.idea.Microsoft.Marketplace.SaaS.SDK/.idea/.name
-src/.idea/.idea.Microsoft.Marketplace.SaaS.SDK/.idea/contentModel.xml
-src/.idea/.idea.Microsoft.Marketplace.SaaS.SDK/.idea/indexLayout.xml
-src/.idea/.idea.Microsoft.Marketplace.SaaS.SDK/.idea/modules.xml
-src/.idea/.idea.Microsoft.Marketplace.SaaS.SDK/.idea/projectSettingsUpdater.xml
-src/.idea/.idea.Microsoft.Marketplace.SaaS.SDK/.idea/vcs.xml

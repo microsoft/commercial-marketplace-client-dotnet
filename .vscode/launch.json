@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/SaaS.SDK.UnitTest/bin/Debug/netcoreapp3.1/SaaS.SDK.UnitTest.dll",
+            "program": "${workspaceFolder}/sdk/tests/SDK.Tests/bin/Debug/netcoreapp3.1/SDK.Tests.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/SaaS.SDK.UnitTest",
+            "cwd": "${workspaceFolder}/sdk/tests/SDK.Tests",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false

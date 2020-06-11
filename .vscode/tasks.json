@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/SaaS.SDK.UnitTest/SaaS.SDK.UnitTest.csproj",
+                "${workspaceFolder}/sdk/tests/SDK.Tests/SDK.Tests.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/SaaS.SDK.UnitTest/SaaS.SDK.UnitTest.csproj",
+                "${workspaceFolder}/sdk/tests/SDK.Tests/SDK.Tests.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/src/SaaS.SDK.UnitTest/SaaS.SDK.UnitTest.csproj",
+                "${workspaceFolder}/sdk/tests/SDK.Tests/SDK.Tests.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
