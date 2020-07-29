@@ -166,11 +166,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "AadIdentifier",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/AadIdentifier"
+      "file:///input/marketplace.json#/components/schemas/AadIdentifier"
      ]
     }
    },
@@ -268,11 +268,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "Subscription-term",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/Subscription-term"
+      "file:///input/marketplace.json#/components/schemas/Subscription-term"
      ]
     },
     "x-internal-autorest-anonymous-schema": {
@@ -453,11 +453,11 @@
         "2018-08-31"
        ],
        "filename": [
-        "mem:///110?oai3.shaken.json"
+        "mem:///111?oai3.shaken.json"
        ],
        "name": "SubscriptionStatusEnum",
        "originalLocations": [
-        "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/Subscription-saasSubscriptionStatus"
+        "file:///input/marketplace.json#/components/schemas/Subscription-saasSubscriptionStatus"
        ]
       },
       "x-ms-enum": {
@@ -962,11 +962,11 @@
         "2018-08-31"
        ],
        "filename": [
-        "mem:///110?oai3.shaken.json"
+        "mem:///111?oai3.shaken.json"
        ],
        "name": "SessionModeEnum",
        "originalLocations": [
-        "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/Subscription-sessionMode"
+        "file:///input/marketplace.json#/components/schemas/Subscription-sessionMode"
        ]
       },
       "x-ms-enum": {
@@ -1041,11 +1041,11 @@
         "2018-08-31"
        ],
        "filename": [
-        "mem:///110?oai3.shaken.json"
+        "mem:///111?oai3.shaken.json"
        ],
        "name": "SandboxTypeEnum",
        "originalLocations": [
-        "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/Subscription-sandboxType"
+        "file:///input/marketplace.json#/components/schemas/Subscription-sandboxType"
        ]
       },
       "x-ms-enum": {
@@ -1111,11 +1111,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "Subscription",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/Subscription"
+      "file:///input/marketplace.json#/components/schemas/Subscription"
      ]
     }
    },
@@ -1350,11 +1350,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "ResolvedSubscription",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/ResolvedSubscription"
+      "file:///input/marketplace.json#/components/schemas/ResolvedSubscription"
      ]
     }
    },
@@ -1453,11 +1453,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "SubscriptionsResponse",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/SubscriptionsResponse"
+      "file:///input/marketplace.json#/components/schemas/SubscriptionsResponse"
      ]
     }
    },
@@ -1589,11 +1589,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "Plan",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/Plan"
+      "file:///input/marketplace.json#/components/schemas/Plan"
      ]
     }
    },
@@ -1654,11 +1654,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "SubscriptionPlans",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/SubscriptionPlans"
+      "file:///input/marketplace.json#/components/schemas/SubscriptionPlans"
      ]
     }
    },
@@ -1755,11 +1755,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "SubscriberPlan",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/SubscriberPlan"
+      "file:///input/marketplace.json#/components/schemas/SubscriberPlan"
      ]
     }
    },
@@ -1855,11 +1855,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "FulfillmentInternalServerErrorResponse-error",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/FulfillmentInternalServerErrorResponse-error"
+      "file:///input/marketplace.json#/components/schemas/FulfillmentInternalServerErrorResponse-error"
      ]
     },
     "x-internal-autorest-anonymous-schema": {
@@ -1914,11 +1914,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "FulfillmentInternalServerErrorResponse",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/FulfillmentInternalServerErrorResponse"
+      "file:///input/marketplace.json#/components/schemas/FulfillmentInternalServerErrorResponse"
      ]
     }
    },
@@ -2023,11 +2023,11 @@
         "2018-08-31"
        ],
        "filename": [
-        "mem:///110?oai3.shaken.json"
+        "mem:///111?oai3.shaken.json"
        ],
        "name": "UpdateOperationStatusEnum",
        "originalLocations": [
-        "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/UpdateOperation-status"
+        "file:///input/marketplace.json#/components/schemas/UpdateOperation-status"
        ]
       },
       "x-ms-enum": {
@@ -2093,11 +2093,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "UpdateOperation",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/UpdateOperation"
+      "file:///input/marketplace.json#/components/schemas/UpdateOperation"
      ]
     }
    },
@@ -2385,11 +2385,11 @@
         "2018-08-31"
        ],
        "filename": [
-        "mem:///110?oai3.shaken.json"
+        "mem:///111?oai3.shaken.json"
        ],
        "name": "OperationActionEnum",
        "originalLocations": [
-        "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/Operation-action"
+        "file:///input/marketplace.json#/components/schemas/Operation-action"
        ]
       },
       "x-ms-enum": {
@@ -2515,11 +2515,11 @@
         "2018-08-31"
        ],
        "filename": [
-        "mem:///110?oai3.shaken.json"
+        "mem:///111?oai3.shaken.json"
        ],
        "name": "OperationStatusEnum",
        "originalLocations": [
-        "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/Operation-status"
+        "file:///input/marketplace.json#/components/schemas/Operation-status"
        ]
       },
       "x-ms-enum": {
@@ -2600,11 +2600,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "Operation",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/Operation"
+      "file:///input/marketplace.json#/components/schemas/Operation"
      ]
     }
    },
@@ -2665,11 +2665,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "OperationList",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/OperationList"
+      "file:///input/marketplace.json#/components/schemas/OperationList"
      ]
     }
    },
@@ -2881,11 +2881,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "UsageEvent",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/UsageEvent"
+      "file:///input/marketplace.json#/components/schemas/UsageEvent"
      ]
     }
    },
@@ -2956,11 +2956,11 @@
         "2018-08-31"
        ],
        "filename": [
-        "mem:///110?oai3.shaken.json"
+        "mem:///111?oai3.shaken.json"
        ],
        "name": "UsageEventStatusEnum",
        "originalLocations": [
-        "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/UsageEventOkResponse-status"
+        "file:///input/marketplace.json#/components/schemas/UsageEventOkResponse-status"
        ]
       },
       "x-ms-enum": {
@@ -3277,11 +3277,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "UsageEventOkResponse",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/UsageEventOkResponse"
+      "file:///input/marketplace.json#/components/schemas/UsageEventOkResponse"
      ]
     }
    },
@@ -3352,11 +3352,11 @@
         "2018-08-31"
        ],
        "filename": [
-        "mem:///110?oai3.shaken.json"
+        "mem:///111?oai3.shaken.json"
        ],
        "name": "UsageEventConflictResponse-additionalInfo-status",
        "originalLocations": [
-        "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/UsageEventConflictResponse-additionalInfo-status"
+        "file:///input/marketplace.json#/components/schemas/UsageEventConflictResponse-additionalInfo-status"
        ]
       }
      },
@@ -3649,11 +3649,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "UsageEventConflictResponse-additionalInfo",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/UsageEventConflictResponse-additionalInfo"
+      "file:///input/marketplace.json#/components/schemas/UsageEventConflictResponse-additionalInfo"
      ]
     },
     "x-internal-autorest-anonymous-schema": {
@@ -3744,11 +3744,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "UsageEventConflictResponse",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/UsageEventConflictResponse"
+      "file:///input/marketplace.json#/components/schemas/UsageEventConflictResponse"
      ]
     }
    },
@@ -3880,11 +3880,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "UsageEventBadRequestResponseDetail",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/UsageEventBadRequestResponseDetail"
+      "file:///input/marketplace.json#/components/schemas/UsageEventBadRequestResponseDetail"
      ]
     }
    },
@@ -4053,11 +4053,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "UsageEventBadRequestResponse",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/schemas/UsageEventBadRequestResponse"
+      "file:///input/marketplace.json#/components/schemas/UsageEventBadRequestResponse"
      ]
     }
    },
@@ -4091,11 +4091,11 @@
         "2018-08-31"
        ],
        "filename": [
-        "mem:///110?oai3.shaken.json"
+        "mem:///111?oai3.shaken.json"
        ],
        "name": "paths·1rqu8v1·saas-subscriptions-subscriptionid·patch·responses·202·headers·operation_location",
        "originalLocations": [
-        "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/headers/paths·1rqu8v1·saas-subscriptions-subscriptionid·patch·responses·202·headers·operation_location"
+        "file:///input/marketplace.json#/components/headers/paths·1rqu8v1·saas-subscriptions-subscriptionid·patch·responses·202·headers·operation_location"
        ]
       },
       "x-ms-client-name": "OperationLocationUri"
@@ -4158,11 +4158,11 @@
         "2018-08-31"
        ],
        "filename": [
-        "mem:///110?oai3.shaken.json"
+        "mem:///111?oai3.shaken.json"
        ],
        "name": "paths·c6todp·saas-subscriptions-subscriptionid·delete·responses·202·headers·operation_location",
        "originalLocations": [
-        "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/headers/paths·c6todp·saas-subscriptions-subscriptionid·delete·responses·202·headers·operation_location"
+        "file:///input/marketplace.json#/components/headers/paths·c6todp·saas-subscriptions-subscriptionid·delete·responses·202·headers·operation_location"
        ]
       },
       "x-ms-client-name": "OperationLocationUri"
@@ -4272,11 +4272,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·kbv190·saas-subscriptions-resolve·post·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·kbv190·saas-subscriptions-resolve·post·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·kbv190·saas-subscriptions-resolve·post·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -4349,11 +4349,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1xc1tc0·saas-subscriptions-resolve·post·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1xc1tc0·saas-subscriptions-resolve·post·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·1xc1tc0·saas-subscriptions-resolve·post·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -4401,11 +4401,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·qzogu6·saas-subscriptions-resolve·post·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·qzogu6·saas-subscriptions-resolve·post·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·qzogu6·saas-subscriptions-resolve·post·parameters·2"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -4455,11 +4455,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·13y0b97·saas-subscriptions-resolve·post·parameters·3",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·13y0b97·saas-subscriptions-resolve·post·parameters·3"
+      "file:///input/marketplace.json#/components/parameters/paths·13y0b97·saas-subscriptions-resolve·post·parameters·3"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -4509,11 +4509,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·8lx9cn·saas-subscriptions-resolve·post·parameters·4",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·8lx9cn·saas-subscriptions-resolve·post·parameters·4"
+      "file:///input/marketplace.json#/components/parameters/paths·8lx9cn·saas-subscriptions-resolve·post·parameters·4"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -4562,11 +4562,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1ew2lxr·saas-subscriptions·get·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1ew2lxr·saas-subscriptions·get·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·1ew2lxr·saas-subscriptions·get·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -4638,11 +4638,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·ub89iv·saas-subscriptions·get·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·ub89iv·saas-subscriptions·get·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·ub89iv·saas-subscriptions·get·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -4691,11 +4691,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1umf1w6·saas-subscriptions·get·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1umf1w6·saas-subscriptions·get·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·1umf1w6·saas-subscriptions·get·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -4743,11 +4743,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·12tonne·saas-subscriptions·get·parameters·3",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·12tonne·saas-subscriptions·get·parameters·3"
+      "file:///input/marketplace.json#/components/parameters/paths·12tonne·saas-subscriptions·get·parameters·3"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -4797,11 +4797,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1ij6s46·saas-subscriptions·get·parameters·4",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1ij6s46·saas-subscriptions·get·parameters·4"
+      "file:///input/marketplace.json#/components/parameters/paths·1ij6s46·saas-subscriptions·get·parameters·4"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -4850,11 +4850,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·174v99u·saas-subscriptions-subscriptionid·get·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·174v99u·saas-subscriptions-subscriptionid·get·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·174v99u·saas-subscriptions-subscriptionid·get·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -4904,11 +4904,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·15c1pa8·saas-subscriptions-subscriptionid·get·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·15c1pa8·saas-subscriptions-subscriptionid·get·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·15c1pa8·saas-subscriptions-subscriptionid·get·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -4981,11 +4981,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·102aua6·saas-subscriptions-subscriptionid·get·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·102aua6·saas-subscriptions-subscriptionid·get·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·102aua6·saas-subscriptions-subscriptionid·get·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -5033,11 +5033,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·uvbjdp·saas-subscriptions-subscriptionid·get·parameters·3",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·uvbjdp·saas-subscriptions-subscriptionid·get·parameters·3"
+      "file:///input/marketplace.json#/components/parameters/paths·uvbjdp·saas-subscriptions-subscriptionid·get·parameters·3"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -5087,11 +5087,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1wwmf57·saas-subscriptions-subscriptionid·get·parameters·4",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1wwmf57·saas-subscriptions-subscriptionid·get·parameters·4"
+      "file:///input/marketplace.json#/components/parameters/paths·1wwmf57·saas-subscriptions-subscriptionid·get·parameters·4"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -5140,11 +5140,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·13zp2dg·saas-subscriptions-subscriptionid·patch·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·13zp2dg·saas-subscriptions-subscriptionid·patch·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·13zp2dg·saas-subscriptions-subscriptionid·patch·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -5194,11 +5194,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·lxqods·saas-subscriptions-subscriptionid·patch·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·lxqods·saas-subscriptions-subscriptionid·patch·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·lxqods·saas-subscriptions-subscriptionid·patch·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -5271,11 +5271,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·hdpxal·saas-subscriptions-subscriptionid·patch·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·hdpxal·saas-subscriptions-subscriptionid·patch·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·hdpxal·saas-subscriptions-subscriptionid·patch·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -5323,11 +5323,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·j7794q·saas-subscriptions-subscriptionid·patch·parameters·3",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·j7794q·saas-subscriptions-subscriptionid·patch·parameters·3"
+      "file:///input/marketplace.json#/components/parameters/paths·j7794q·saas-subscriptions-subscriptionid·patch·parameters·3"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -5377,11 +5377,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·cegn0s·saas-subscriptions-subscriptionid·patch·parameters·4",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·cegn0s·saas-subscriptions-subscriptionid·patch·parameters·4"
+      "file:///input/marketplace.json#/components/parameters/paths·cegn0s·saas-subscriptions-subscriptionid·patch·parameters·4"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -5430,11 +5430,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1yudhci·saas-subscriptions-subscriptionid·delete·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1yudhci·saas-subscriptions-subscriptionid·delete·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·1yudhci·saas-subscriptions-subscriptionid·delete·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -5484,11 +5484,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1170zd9·saas-subscriptions-subscriptionid·delete·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1170zd9·saas-subscriptions-subscriptionid·delete·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·1170zd9·saas-subscriptions-subscriptionid·delete·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -5561,11 +5561,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1vnbmcx·saas-subscriptions-subscriptionid·delete·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1vnbmcx·saas-subscriptions-subscriptionid·delete·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·1vnbmcx·saas-subscriptions-subscriptionid·delete·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -5613,11 +5613,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1wo6k1·saas-subscriptions-subscriptionid·delete·parameters·3",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1wo6k1·saas-subscriptions-subscriptionid·delete·parameters·3"
+      "file:///input/marketplace.json#/components/parameters/paths·1wo6k1·saas-subscriptions-subscriptionid·delete·parameters·3"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -5667,11 +5667,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·pjsgdl·saas-subscriptions-subscriptionid·delete·parameters·4",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·pjsgdl·saas-subscriptions-subscriptionid·delete·parameters·4"
+      "file:///input/marketplace.json#/components/parameters/paths·pjsgdl·saas-subscriptions-subscriptionid·delete·parameters·4"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -5720,11 +5720,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1jlm46q·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1jlm46q·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·1jlm46q·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -5774,11 +5774,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1nrg1n1·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1nrg1n1·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·1nrg1n1·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -5851,11 +5851,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·c7abm3·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·c7abm3·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·c7abm3·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -5903,11 +5903,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1u226hs·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·3",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1u226hs·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·3"
+      "file:///input/marketplace.json#/components/parameters/paths·1u226hs·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·3"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -5957,11 +5957,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·krcb01·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·4",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·krcb01·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·4"
+      "file:///input/marketplace.json#/components/parameters/paths·krcb01·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·4"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -6010,11 +6010,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1ppcnjs·saas-subscriptions-subscriptionid-activate·post·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1ppcnjs·saas-subscriptions-subscriptionid-activate·post·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·1ppcnjs·saas-subscriptions-subscriptionid-activate·post·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6064,11 +6064,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·z2b2ww·saas-subscriptions-subscriptionid-activate·post·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·z2b2ww·saas-subscriptions-subscriptionid-activate·post·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·z2b2ww·saas-subscriptions-subscriptionid-activate·post·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6141,11 +6141,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·lnohnv·saas-subscriptions-subscriptionid-activate·post·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·lnohnv·saas-subscriptions-subscriptionid-activate·post·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·lnohnv·saas-subscriptions-subscriptionid-activate·post·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6193,11 +6193,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·d24lju·saas-subscriptions-subscriptionid-activate·post·parameters·3",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·d24lju·saas-subscriptions-subscriptionid-activate·post·parameters·3"
+      "file:///input/marketplace.json#/components/parameters/paths·d24lju·saas-subscriptions-subscriptionid-activate·post·parameters·3"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -6247,11 +6247,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·10twv3g·saas-subscriptions-subscriptionid-activate·post·parameters·4",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·10twv3g·saas-subscriptions-subscriptionid-activate·post·parameters·4"
+      "file:///input/marketplace.json#/components/parameters/paths·10twv3g·saas-subscriptions-subscriptionid-activate·post·parameters·4"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -6300,11 +6300,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1rx1qez·saas-subscriptions-subscriptionid-operations·get·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1rx1qez·saas-subscriptions-subscriptionid-operations·get·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·1rx1qez·saas-subscriptions-subscriptionid-operations·get·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6354,11 +6354,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1a6wgar·saas-subscriptions-subscriptionid-operations·get·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1a6wgar·saas-subscriptions-subscriptionid-operations·get·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·1a6wgar·saas-subscriptions-subscriptionid-operations·get·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6431,11 +6431,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·gzwzv7·saas-subscriptions-subscriptionid-operations·get·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·gzwzv7·saas-subscriptions-subscriptionid-operations·get·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·gzwzv7·saas-subscriptions-subscriptionid-operations·get·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6483,11 +6483,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·hc1lvx·saas-subscriptions-subscriptionid-operations·get·parameters·3",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·hc1lvx·saas-subscriptions-subscriptionid-operations·get·parameters·3"
+      "file:///input/marketplace.json#/components/parameters/paths·hc1lvx·saas-subscriptions-subscriptionid-operations·get·parameters·3"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -6537,11 +6537,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·al3l3w·saas-subscriptions-subscriptionid-operations·get·parameters·4",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·al3l3w·saas-subscriptions-subscriptionid-operations·get·parameters·4"
+      "file:///input/marketplace.json#/components/parameters/paths·al3l3w·saas-subscriptions-subscriptionid-operations·get·parameters·4"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -6590,11 +6590,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·5t4g4t·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·5t4g4t·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·5t4g4t·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6642,11 +6642,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·iq0wej·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·iq0wej·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·iq0wej·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6696,11 +6696,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·150pybj·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·150pybj·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·150pybj·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6773,11 +6773,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·itsw2n·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·3",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·itsw2n·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·3"
+      "file:///input/marketplace.json#/components/parameters/paths·itsw2n·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·3"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6825,11 +6825,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·jqbfm1·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·4",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·jqbfm1·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·4"
+      "file:///input/marketplace.json#/components/parameters/paths·jqbfm1·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·4"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -6879,11 +6879,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·7novi8·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·5",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·7novi8·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·5"
+      "file:///input/marketplace.json#/components/parameters/paths·7novi8·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·5"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -6932,11 +6932,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1kc0nx8·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1kc0nx8·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·1kc0nx8·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -6984,11 +6984,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1vm6i35·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1vm6i35·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·1vm6i35·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -7038,11 +7038,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·kawo35·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·kawo35·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·kawo35·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -7115,11 +7115,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1xe7y7j·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·3",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1xe7y7j·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·3"
+      "file:///input/marketplace.json#/components/parameters/paths·1xe7y7j·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·3"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -7167,11 +7167,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1nly23y·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·4",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1nly23y·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·4"
+      "file:///input/marketplace.json#/components/parameters/paths·1nly23y·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·4"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -7221,11 +7221,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1rvcw1g·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·5",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1rvcw1g·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·5"
+      "file:///input/marketplace.json#/components/parameters/paths·1rvcw1g·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·5"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -7276,11 +7276,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·7ywah2·usageevent·post·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·7ywah2·usageevent·post·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·7ywah2·usageevent·post·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -7352,11 +7352,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·x3lg62·usageevent·post·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·x3lg62·usageevent·post·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·x3lg62·usageevent·post·parameters·1"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -7406,11 +7406,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·rxyxm6·usageevent·post·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·rxyxm6·usageevent·post·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·rxyxm6·usageevent·post·parameters·2"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -7461,11 +7461,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·1yqdafe·batchusageevent·post·parameters·0",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1yqdafe·batchusageevent·post·parameters·0"
+      "file:///input/marketplace.json#/components/parameters/paths·1yqdafe·batchusageevent·post·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -7537,11 +7537,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·17zt9co·batchusageevent·post·parameters·1",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·17zt9co·batchusageevent·post·parameters·1"
+      "file:///input/marketplace.json#/components/parameters/paths·17zt9co·batchusageevent·post·parameters·1"
      ]
     },
     "x-ms-client-name": "requestId",
@@ -7591,11 +7591,11 @@
       "2018-08-31"
      ],
      "filename": [
-      "mem:///110?oai3.shaken.json"
+      "mem:///111?oai3.shaken.json"
      ],
      "name": "paths·bimwtw·batchusageevent·post·parameters·2",
      "originalLocations": [
-      "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·bimwtw·batchusageevent·post·parameters·2"
+      "file:///input/marketplace.json#/components/parameters/paths·bimwtw·batchusageevent·post·parameters·2"
      ]
     },
     "x-ms-client-name": "correlationId",
@@ -7689,11 +7689,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1xc1tc0·saas-subscriptions-resolve·post·parameters·1",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1xc1tc0·saas-subscriptions-resolve·post·parameters·1"
+          "file:///input/marketplace.json#/components/parameters/paths·1xc1tc0·saas-subscriptions-resolve·post·parameters·1"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -7741,11 +7741,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·qzogu6·saas-subscriptions-resolve·post·parameters·2",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·qzogu6·saas-subscriptions-resolve·post·parameters·2"
+          "file:///input/marketplace.json#/components/parameters/paths·qzogu6·saas-subscriptions-resolve·post·parameters·2"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -7795,11 +7795,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·13y0b97·saas-subscriptions-resolve·post·parameters·3",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·13y0b97·saas-subscriptions-resolve·post·parameters·3"
+          "file:///input/marketplace.json#/components/parameters/paths·13y0b97·saas-subscriptions-resolve·post·parameters·3"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -7849,11 +7849,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·8lx9cn·saas-subscriptions-resolve·post·parameters·4",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·8lx9cn·saas-subscriptions-resolve·post·parameters·4"
+          "file:///input/marketplace.json#/components/parameters/paths·8lx9cn·saas-subscriptions-resolve·post·parameters·4"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -7906,11 +7906,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1n3ohlw·saas-subscriptions-resolve·post·responses·200",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1n3ohlw·saas-subscriptions-resolve·post·responses·200"
+          "file:///input/marketplace.json#/components/responses/paths·1n3ohlw·saas-subscriptions-resolve·post·responses·200"
          ]
         }
        },
@@ -7925,11 +7925,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·z67y0·saas-subscriptions-resolve·post·responses·400",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·z67y0·saas-subscriptions-resolve·post·responses·400"
+          "file:///input/marketplace.json#/components/responses/paths·z67y0·saas-subscriptions-resolve·post·responses·400"
          ]
         }
        },
@@ -7944,11 +7944,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·2r8w8l·saas-subscriptions-resolve·post·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·2r8w8l·saas-subscriptions-resolve·post·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·2r8w8l·saas-subscriptions-resolve·post·responses·403"
          ]
         }
        },
@@ -7963,11 +7963,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·4vot22·saas-subscriptions-resolve·post·responses·404",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·4vot22·saas-subscriptions-resolve·post·responses·404"
+          "file:///input/marketplace.json#/components/responses/paths·4vot22·saas-subscriptions-resolve·post·responses·404"
          ]
         }
        },
@@ -7982,11 +7982,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1b1jvsx·saas-subscriptions-resolve·post·responses·500",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1b1jvsx·saas-subscriptions-resolve·post·responses·500"
+          "file:///input/marketplace.json#/components/responses/paths·1b1jvsx·saas-subscriptions-resolve·post·responses·500"
          ]
         }
        },
@@ -8082,11 +8082,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·ub89iv·saas-subscriptions·get·parameters·1",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·ub89iv·saas-subscriptions·get·parameters·1"
+          "file:///input/marketplace.json#/components/parameters/paths·ub89iv·saas-subscriptions·get·parameters·1"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -8135,11 +8135,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1umf1w6·saas-subscriptions·get·parameters·2",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1umf1w6·saas-subscriptions·get·parameters·2"
+          "file:///input/marketplace.json#/components/parameters/paths·1umf1w6·saas-subscriptions·get·parameters·2"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -8187,11 +8187,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·12tonne·saas-subscriptions·get·parameters·3",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·12tonne·saas-subscriptions·get·parameters·3"
+          "file:///input/marketplace.json#/components/parameters/paths·12tonne·saas-subscriptions·get·parameters·3"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -8241,11 +8241,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1ij6s46·saas-subscriptions·get·parameters·4",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1ij6s46·saas-subscriptions·get·parameters·4"
+          "file:///input/marketplace.json#/components/parameters/paths·1ij6s46·saas-subscriptions·get·parameters·4"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -8300,11 +8300,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1t8od1o·saas-subscriptions·get·responses·200",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1t8od1o·saas-subscriptions·get·responses·200"
+          "file:///input/marketplace.json#/components/responses/paths·1t8od1o·saas-subscriptions·get·responses·200"
          ]
         }
        },
@@ -8319,11 +8319,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1fygs3d·saas-subscriptions·get·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1fygs3d·saas-subscriptions·get·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·1fygs3d·saas-subscriptions·get·responses·403"
          ]
         }
        },
@@ -8338,11 +8338,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1w6o72n·saas-subscriptions·get·responses·500",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1w6o72n·saas-subscriptions·get·responses·500"
+          "file:///input/marketplace.json#/components/responses/paths·1w6o72n·saas-subscriptions·get·responses·500"
          ]
         }
        },
@@ -8406,11 +8406,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·174v99u·saas-subscriptions-subscriptionid·get·parameters·0",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·174v99u·saas-subscriptions-subscriptionid·get·parameters·0"
+          "file:///input/marketplace.json#/components/parameters/paths·174v99u·saas-subscriptions-subscriptionid·get·parameters·0"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -8495,11 +8495,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·102aua6·saas-subscriptions-subscriptionid·get·parameters·2",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·102aua6·saas-subscriptions-subscriptionid·get·parameters·2"
+          "file:///input/marketplace.json#/components/parameters/paths·102aua6·saas-subscriptions-subscriptionid·get·parameters·2"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -8547,11 +8547,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·uvbjdp·saas-subscriptions-subscriptionid·get·parameters·3",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·uvbjdp·saas-subscriptions-subscriptionid·get·parameters·3"
+          "file:///input/marketplace.json#/components/parameters/paths·uvbjdp·saas-subscriptions-subscriptionid·get·parameters·3"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -8601,11 +8601,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1wwmf57·saas-subscriptions-subscriptionid·get·parameters·4",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1wwmf57·saas-subscriptions-subscriptionid·get·parameters·4"
+          "file:///input/marketplace.json#/components/parameters/paths·1wwmf57·saas-subscriptions-subscriptionid·get·parameters·4"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -8660,11 +8660,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·12c07h8·saas-subscriptions-subscriptionid·get·responses·200",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·12c07h8·saas-subscriptions-subscriptionid·get·responses·200"
+          "file:///input/marketplace.json#/components/responses/paths·12c07h8·saas-subscriptions-subscriptionid·get·responses·200"
          ]
         }
        },
@@ -8679,11 +8679,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1v5grlg·saas-subscriptions-subscriptionid·get·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1v5grlg·saas-subscriptions-subscriptionid·get·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·1v5grlg·saas-subscriptions-subscriptionid·get·responses·403"
          ]
         }
        },
@@ -8698,11 +8698,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·18debi6·saas-subscriptions-subscriptionid·get·responses·404",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·18debi6·saas-subscriptions-subscriptionid·get·responses·404"
+          "file:///input/marketplace.json#/components/responses/paths·18debi6·saas-subscriptions-subscriptionid·get·responses·404"
          ]
         }
        },
@@ -8717,11 +8717,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·48ze7v·saas-subscriptions-subscriptionid·get·responses·500",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·48ze7v·saas-subscriptions-subscriptionid·get·responses·500"
+          "file:///input/marketplace.json#/components/responses/paths·48ze7v·saas-subscriptions-subscriptionid·get·responses·500"
          ]
         }
        },
@@ -8778,11 +8778,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1hn78i8·saas-subscriptions-subscriptionid·patch·requestbody",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/requestBodies/paths·1hn78i8·saas-subscriptions-subscriptionid·patch·requestbody"
+          "file:///input/marketplace.json#/components/requestBodies/paths·1hn78i8·saas-subscriptions-subscriptionid·patch·requestbody"
          ]
         }
        },
@@ -8820,11 +8820,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·13zp2dg·saas-subscriptions-subscriptionid·patch·parameters·0",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·13zp2dg·saas-subscriptions-subscriptionid·patch·parameters·0"
+          "file:///input/marketplace.json#/components/parameters/paths·13zp2dg·saas-subscriptions-subscriptionid·patch·parameters·0"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -8909,11 +8909,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·hdpxal·saas-subscriptions-subscriptionid·patch·parameters·2",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·hdpxal·saas-subscriptions-subscriptionid·patch·parameters·2"
+          "file:///input/marketplace.json#/components/parameters/paths·hdpxal·saas-subscriptions-subscriptionid·patch·parameters·2"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -8961,11 +8961,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·j7794q·saas-subscriptions-subscriptionid·patch·parameters·3",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·j7794q·saas-subscriptions-subscriptionid·patch·parameters·3"
+          "file:///input/marketplace.json#/components/parameters/paths·j7794q·saas-subscriptions-subscriptionid·patch·parameters·3"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -9015,11 +9015,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·cegn0s·saas-subscriptions-subscriptionid·patch·parameters·4",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·cegn0s·saas-subscriptions-subscriptionid·patch·parameters·4"
+          "file:///input/marketplace.json#/components/parameters/paths·cegn0s·saas-subscriptions-subscriptionid·patch·parameters·4"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -9074,11 +9074,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·13realj·saas-subscriptions-subscriptionid·patch·responses·202",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·13realj·saas-subscriptions-subscriptionid·patch·responses·202"
+          "file:///input/marketplace.json#/components/responses/paths·13realj·saas-subscriptions-subscriptionid·patch·responses·202"
          ]
         }
        },
@@ -9096,11 +9096,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·ft9jij·saas-subscriptions-subscriptionid·patch·responses·400",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·ft9jij·saas-subscriptions-subscriptionid·patch·responses·400"
+          "file:///input/marketplace.json#/components/responses/paths·ft9jij·saas-subscriptions-subscriptionid·patch·responses·400"
          ]
         }
        },
@@ -9118,11 +9118,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·24409·saas-subscriptions-subscriptionid·patch·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·24409·saas-subscriptions-subscriptionid·patch·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·24409·saas-subscriptions-subscriptionid·patch·responses·403"
          ]
         }
        },
@@ -9140,11 +9140,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·cs6scb·saas-subscriptions-subscriptionid·patch·responses·404",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·cs6scb·saas-subscriptions-subscriptionid·patch·responses·404"
+          "file:///input/marketplace.json#/components/responses/paths·cs6scb·saas-subscriptions-subscriptionid·patch·responses·404"
          ]
         }
        },
@@ -9162,11 +9162,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·iebcnj·saas-subscriptions-subscriptionid·patch·responses·500",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·iebcnj·saas-subscriptions-subscriptionid·patch·responses·500"
+          "file:///input/marketplace.json#/components/responses/paths·iebcnj·saas-subscriptions-subscriptionid·patch·responses·500"
          ]
         }
        },
@@ -9226,11 +9226,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1yudhci·saas-subscriptions-subscriptionid·delete·parameters·0",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1yudhci·saas-subscriptions-subscriptionid·delete·parameters·0"
+          "file:///input/marketplace.json#/components/parameters/paths·1yudhci·saas-subscriptions-subscriptionid·delete·parameters·0"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -9315,11 +9315,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1vnbmcx·saas-subscriptions-subscriptionid·delete·parameters·2",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1vnbmcx·saas-subscriptions-subscriptionid·delete·parameters·2"
+          "file:///input/marketplace.json#/components/parameters/paths·1vnbmcx·saas-subscriptions-subscriptionid·delete·parameters·2"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -9367,11 +9367,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1wo6k1·saas-subscriptions-subscriptionid·delete·parameters·3",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1wo6k1·saas-subscriptions-subscriptionid·delete·parameters·3"
+          "file:///input/marketplace.json#/components/parameters/paths·1wo6k1·saas-subscriptions-subscriptionid·delete·parameters·3"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -9421,11 +9421,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·pjsgdl·saas-subscriptions-subscriptionid·delete·parameters·4",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·pjsgdl·saas-subscriptions-subscriptionid·delete·parameters·4"
+          "file:///input/marketplace.json#/components/parameters/paths·pjsgdl·saas-subscriptions-subscriptionid·delete·parameters·4"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -9480,11 +9480,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1tq9ds3·saas-subscriptions-subscriptionid·delete·responses·202",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1tq9ds3·saas-subscriptions-subscriptionid·delete·responses·202"
+          "file:///input/marketplace.json#/components/responses/paths·1tq9ds3·saas-subscriptions-subscriptionid·delete·responses·202"
          ]
         }
        },
@@ -9502,11 +9502,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1y83up1·saas-subscriptions-subscriptionid·delete·responses·400",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1y83up1·saas-subscriptions-subscriptionid·delete·responses·400"
+          "file:///input/marketplace.json#/components/responses/paths·1y83up1·saas-subscriptions-subscriptionid·delete·responses·400"
          ]
         }
        },
@@ -9524,11 +9524,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·13nvh5v·saas-subscriptions-subscriptionid·delete·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·13nvh5v·saas-subscriptions-subscriptionid·delete·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·13nvh5v·saas-subscriptions-subscriptionid·delete·responses·403"
          ]
         }
        },
@@ -9546,11 +9546,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·x09k0n·saas-subscriptions-subscriptionid·delete·responses·404",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·x09k0n·saas-subscriptions-subscriptionid·delete·responses·404"
+          "file:///input/marketplace.json#/components/responses/paths·x09k0n·saas-subscriptions-subscriptionid·delete·responses·404"
          ]
         }
        },
@@ -9568,11 +9568,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·ugbo1·saas-subscriptions-subscriptionid·delete·responses·500",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·ugbo1·saas-subscriptions-subscriptionid·delete·responses·500"
+          "file:///input/marketplace.json#/components/responses/paths·ugbo1·saas-subscriptions-subscriptionid·delete·responses·500"
          ]
         }
        },
@@ -9632,11 +9632,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1jlm46q·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·0",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1jlm46q·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·0"
+          "file:///input/marketplace.json#/components/parameters/paths·1jlm46q·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·0"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -9721,11 +9721,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·c7abm3·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·2",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·c7abm3·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·2"
+          "file:///input/marketplace.json#/components/parameters/paths·c7abm3·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·2"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -9773,11 +9773,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1u226hs·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·3",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1u226hs·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·3"
+          "file:///input/marketplace.json#/components/parameters/paths·1u226hs·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·3"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -9827,11 +9827,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·krcb01·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·4",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·krcb01·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·4"
+          "file:///input/marketplace.json#/components/parameters/paths·krcb01·saas-subscriptions-subscriptionid-listavailableplans·get·parameters·4"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -9886,11 +9886,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·fajld1·saas-subscriptions-subscriptionid-listavailableplans·get·responses·200",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·fajld1·saas-subscriptions-subscriptionid-listavailableplans·get·responses·200"
+          "file:///input/marketplace.json#/components/responses/paths·fajld1·saas-subscriptions-subscriptionid-listavailableplans·get·responses·200"
          ]
         }
        },
@@ -9905,11 +9905,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·ldh6l6·saas-subscriptions-subscriptionid-listavailableplans·get·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·ldh6l6·saas-subscriptions-subscriptionid-listavailableplans·get·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·ldh6l6·saas-subscriptions-subscriptionid-listavailableplans·get·responses·403"
          ]
         }
        },
@@ -9924,11 +9924,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1m899zp·saas-subscriptions-subscriptionid-listavailableplans·get·responses·404",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1m899zp·saas-subscriptions-subscriptionid-listavailableplans·get·responses·404"
+          "file:///input/marketplace.json#/components/responses/paths·1m899zp·saas-subscriptions-subscriptionid-listavailableplans·get·responses·404"
          ]
         }
        },
@@ -9943,11 +9943,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1ufebe0·saas-subscriptions-subscriptionid-listavailableplans·get·responses·500",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1ufebe0·saas-subscriptions-subscriptionid-listavailableplans·get·responses·500"
+          "file:///input/marketplace.json#/components/responses/paths·1ufebe0·saas-subscriptions-subscriptionid-listavailableplans·get·responses·500"
          ]
         }
        },
@@ -10004,11 +10004,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1dadhy6·saas-subscriptions-subscriptionid-activate·post·requestbody",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/requestBodies/paths·1dadhy6·saas-subscriptions-subscriptionid-activate·post·requestbody"
+          "file:///input/marketplace.json#/components/requestBodies/paths·1dadhy6·saas-subscriptions-subscriptionid-activate·post·requestbody"
          ]
         }
        },
@@ -10046,11 +10046,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1ppcnjs·saas-subscriptions-subscriptionid-activate·post·parameters·0",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1ppcnjs·saas-subscriptions-subscriptionid-activate·post·parameters·0"
+          "file:///input/marketplace.json#/components/parameters/paths·1ppcnjs·saas-subscriptions-subscriptionid-activate·post·parameters·0"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -10135,11 +10135,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·lnohnv·saas-subscriptions-subscriptionid-activate·post·parameters·2",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·lnohnv·saas-subscriptions-subscriptionid-activate·post·parameters·2"
+          "file:///input/marketplace.json#/components/parameters/paths·lnohnv·saas-subscriptions-subscriptionid-activate·post·parameters·2"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -10187,11 +10187,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·d24lju·saas-subscriptions-subscriptionid-activate·post·parameters·3",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·d24lju·saas-subscriptions-subscriptionid-activate·post·parameters·3"
+          "file:///input/marketplace.json#/components/parameters/paths·d24lju·saas-subscriptions-subscriptionid-activate·post·parameters·3"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -10241,11 +10241,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·10twv3g·saas-subscriptions-subscriptionid-activate·post·parameters·4",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·10twv3g·saas-subscriptions-subscriptionid-activate·post·parameters·4"
+          "file:///input/marketplace.json#/components/parameters/paths·10twv3g·saas-subscriptions-subscriptionid-activate·post·parameters·4"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -10297,11 +10297,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·z1mxas·saas-subscriptions-subscriptionid-activate·post·responses·200",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·z1mxas·saas-subscriptions-subscriptionid-activate·post·responses·200"
+          "file:///input/marketplace.json#/components/responses/paths·z1mxas·saas-subscriptions-subscriptionid-activate·post·responses·200"
          ]
         }
        },
@@ -10316,11 +10316,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·oz24u8·saas-subscriptions-subscriptionid-activate·post·responses·400",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·oz24u8·saas-subscriptions-subscriptionid-activate·post·responses·400"
+          "file:///input/marketplace.json#/components/responses/paths·oz24u8·saas-subscriptions-subscriptionid-activate·post·responses·400"
          ]
         }
        },
@@ -10335,11 +10335,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·t5u321·saas-subscriptions-subscriptionid-activate·post·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·t5u321·saas-subscriptions-subscriptionid-activate·post·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·t5u321·saas-subscriptions-subscriptionid-activate·post·responses·403"
          ]
         }
        },
@@ -10354,11 +10354,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·7d9hhc·saas-subscriptions-subscriptionid-activate·post·responses·404",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·7d9hhc·saas-subscriptions-subscriptionid-activate·post·responses·404"
+          "file:///input/marketplace.json#/components/responses/paths·7d9hhc·saas-subscriptions-subscriptionid-activate·post·responses·404"
          ]
         }
        },
@@ -10373,11 +10373,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1aajotk·saas-subscriptions-subscriptionid-activate·post·responses·500",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1aajotk·saas-subscriptions-subscriptionid-activate·post·responses·500"
+          "file:///input/marketplace.json#/components/responses/paths·1aajotk·saas-subscriptions-subscriptionid-activate·post·responses·500"
          ]
         }
        },
@@ -10449,11 +10449,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1rx1qez·saas-subscriptions-subscriptionid-operations·get·parameters·0",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1rx1qez·saas-subscriptions-subscriptionid-operations·get·parameters·0"
+          "file:///input/marketplace.json#/components/parameters/paths·1rx1qez·saas-subscriptions-subscriptionid-operations·get·parameters·0"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -10538,11 +10538,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·gzwzv7·saas-subscriptions-subscriptionid-operations·get·parameters·2",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·gzwzv7·saas-subscriptions-subscriptionid-operations·get·parameters·2"
+          "file:///input/marketplace.json#/components/parameters/paths·gzwzv7·saas-subscriptions-subscriptionid-operations·get·parameters·2"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -10590,11 +10590,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·hc1lvx·saas-subscriptions-subscriptionid-operations·get·parameters·3",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·hc1lvx·saas-subscriptions-subscriptionid-operations·get·parameters·3"
+          "file:///input/marketplace.json#/components/parameters/paths·hc1lvx·saas-subscriptions-subscriptionid-operations·get·parameters·3"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -10644,11 +10644,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·al3l3w·saas-subscriptions-subscriptionid-operations·get·parameters·4",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·al3l3w·saas-subscriptions-subscriptionid-operations·get·parameters·4"
+          "file:///input/marketplace.json#/components/parameters/paths·al3l3w·saas-subscriptions-subscriptionid-operations·get·parameters·4"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -10703,11 +10703,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·91j44d·saas-subscriptions-subscriptionid-operations·get·responses·200",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·91j44d·saas-subscriptions-subscriptionid-operations·get·responses·200"
+          "file:///input/marketplace.json#/components/responses/paths·91j44d·saas-subscriptions-subscriptionid-operations·get·responses·200"
          ]
         }
        },
@@ -10722,11 +10722,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1rmvt5s·saas-subscriptions-subscriptionid-operations·get·responses·400",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1rmvt5s·saas-subscriptions-subscriptionid-operations·get·responses·400"
+          "file:///input/marketplace.json#/components/responses/paths·1rmvt5s·saas-subscriptions-subscriptionid-operations·get·responses·400"
          ]
         }
        },
@@ -10741,11 +10741,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·18xw1gc·saas-subscriptions-subscriptionid-operations·get·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·18xw1gc·saas-subscriptions-subscriptionid-operations·get·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·18xw1gc·saas-subscriptions-subscriptionid-operations·get·responses·403"
          ]
         }
        },
@@ -10760,11 +10760,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1mpk5kz·saas-subscriptions-subscriptionid-operations·get·responses·404",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1mpk5kz·saas-subscriptions-subscriptionid-operations·get·responses·404"
+          "file:///input/marketplace.json#/components/responses/paths·1mpk5kz·saas-subscriptions-subscriptionid-operations·get·responses·404"
          ]
         }
        },
@@ -10779,11 +10779,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·55ant1·saas-subscriptions-subscriptionid-operations·get·responses·500",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·55ant1·saas-subscriptions-subscriptionid-operations·get·responses·500"
+          "file:///input/marketplace.json#/components/responses/paths·55ant1·saas-subscriptions-subscriptionid-operations·get·responses·500"
          ]
         }
        },
@@ -10843,11 +10843,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·5t4g4t·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·0",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·5t4g4t·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·0"
+          "file:///input/marketplace.json#/components/parameters/paths·5t4g4t·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·0"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -10895,11 +10895,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·iq0wej·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·1",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·iq0wej·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·1"
+          "file:///input/marketplace.json#/components/parameters/paths·iq0wej·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·1"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -10984,11 +10984,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·itsw2n·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·3",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·itsw2n·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·3"
+          "file:///input/marketplace.json#/components/parameters/paths·itsw2n·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·3"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -11036,11 +11036,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·jqbfm1·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·4",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·jqbfm1·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·4"
+          "file:///input/marketplace.json#/components/parameters/paths·jqbfm1·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·4"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -11090,11 +11090,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·7novi8·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·5",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·7novi8·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·5"
+          "file:///input/marketplace.json#/components/parameters/paths·7novi8·saas-subscriptions-subscriptionid-operations-operationid·get·parameters·5"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -11149,11 +11149,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·trh6fg·saas-subscriptions-subscriptionid-operations-operationid·get·responses·200",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·trh6fg·saas-subscriptions-subscriptionid-operations-operationid·get·responses·200"
+          "file:///input/marketplace.json#/components/responses/paths·trh6fg·saas-subscriptions-subscriptionid-operations-operationid·get·responses·200"
          ]
         }
        },
@@ -11168,11 +11168,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1ojt0yw·saas-subscriptions-subscriptionid-operations-operationid·get·responses·400",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1ojt0yw·saas-subscriptions-subscriptionid-operations-operationid·get·responses·400"
+          "file:///input/marketplace.json#/components/responses/paths·1ojt0yw·saas-subscriptions-subscriptionid-operations-operationid·get·responses·400"
          ]
         }
        },
@@ -11187,11 +11187,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1l54ujd·saas-subscriptions-subscriptionid-operations-operationid·get·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1l54ujd·saas-subscriptions-subscriptionid-operations-operationid·get·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·1l54ujd·saas-subscriptions-subscriptionid-operations-operationid·get·responses·403"
          ]
         }
        },
@@ -11206,11 +11206,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1om4i7g·saas-subscriptions-subscriptionid-operations-operationid·get·responses·404",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1om4i7g·saas-subscriptions-subscriptionid-operations-operationid·get·responses·404"
+          "file:///input/marketplace.json#/components/responses/paths·1om4i7g·saas-subscriptions-subscriptionid-operations-operationid·get·responses·404"
          ]
         }
        },
@@ -11225,11 +11225,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·b4y61n·saas-subscriptions-subscriptionid-operations-operationid·get·responses·500",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·b4y61n·saas-subscriptions-subscriptionid-operations-operationid·get·responses·500"
+          "file:///input/marketplace.json#/components/responses/paths·b4y61n·saas-subscriptions-subscriptionid-operations-operationid·get·responses·500"
          ]
         }
        },
@@ -11286,11 +11286,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·frksg4·saas-subscriptions-subscriptionid-operations-operationid·patch·requestbody",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/requestBodies/paths·frksg4·saas-subscriptions-subscriptionid-operations-operationid·patch·requestbody"
+          "file:///input/marketplace.json#/components/requestBodies/paths·frksg4·saas-subscriptions-subscriptionid-operations-operationid·patch·requestbody"
          ]
         }
        },
@@ -11328,11 +11328,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1kc0nx8·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·0",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1kc0nx8·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·0"
+          "file:///input/marketplace.json#/components/parameters/paths·1kc0nx8·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·0"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -11380,11 +11380,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1vm6i35·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·1",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1vm6i35·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·1"
+          "file:///input/marketplace.json#/components/parameters/paths·1vm6i35·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·1"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -11469,11 +11469,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1xe7y7j·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·3",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1xe7y7j·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·3"
+          "file:///input/marketplace.json#/components/parameters/paths·1xe7y7j·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·3"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -11521,11 +11521,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1nly23y·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·4",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1nly23y·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·4"
+          "file:///input/marketplace.json#/components/parameters/paths·1nly23y·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·4"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -11575,11 +11575,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1rvcw1g·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·5",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·1rvcw1g·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·5"
+          "file:///input/marketplace.json#/components/parameters/paths·1rvcw1g·saas-subscriptions-subscriptionid-operations-operationid·patch·parameters·5"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -11631,11 +11631,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·godzc4·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·200",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·godzc4·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·200"
+          "file:///input/marketplace.json#/components/responses/paths·godzc4·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·200"
          ]
         }
        },
@@ -11650,11 +11650,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1fu8lcb·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·400",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1fu8lcb·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·400"
+          "file:///input/marketplace.json#/components/responses/paths·1fu8lcb·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·400"
          ]
         }
        },
@@ -11669,11 +11669,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·198moju·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·198moju·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·198moju·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·403"
          ]
         }
        },
@@ -11688,11 +11688,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·ffzrzh·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·404",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·ffzrzh·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·404"
+          "file:///input/marketplace.json#/components/responses/paths·ffzrzh·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·404"
          ]
         }
        },
@@ -11707,11 +11707,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1ceqtou·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·409",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1ceqtou·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·409"
+          "file:///input/marketplace.json#/components/responses/paths·1ceqtou·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·409"
          ]
         }
        },
@@ -11726,11 +11726,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·ei2wk2·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·500",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·ei2wk2·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·500"
+          "file:///input/marketplace.json#/components/responses/paths·ei2wk2·saas-subscriptions-subscriptionid-operations-operationid·patch·responses·500"
          ]
         }
        },
@@ -11799,11 +11799,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1lh2ilf·usageevent·post·requestbody",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/requestBodies/paths·1lh2ilf·usageevent·post·requestbody"
+          "file:///input/marketplace.json#/components/requestBodies/paths·1lh2ilf·usageevent·post·requestbody"
          ]
         }
        },
@@ -11816,47 +11816,38 @@
        },
        "serializedName": "body",
        "modelType": {
-        "$id": "1484",
-        "$type": "SequenceType",
-        "elementType": {
-         "$ref": "388"
-        },
-        "name": {
-         "$id": "1485",
-         "fixed": false
-        },
-        "deprecated": false
+        "$ref": "388"
        }
       },
       {
-       "$id": "1486",
+       "$id": "1484",
        "location": "query",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "1487",
+        "$id": "1485",
         "fixed": false,
         "raw": "2018-08-31"
        },
        "deprecated": false,
        "documentation": {
-        "$id": "1488",
+        "$id": "1486",
         "fixed": false,
         "raw": "The API version to use for the request."
        },
        "isRequired": true,
        "isConstant": true,
        "name": {
-        "$id": "1489",
+        "$id": "1487",
         "fixed": false,
         "raw": "api-version"
        },
        "serializedName": "api-version",
        "modelType": {
-        "$id": "1490",
+        "$id": "1488",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "name": {
-         "$id": "1491",
+         "$id": "1489",
          "fixed": false,
          "raw": "String"
         },
@@ -11864,19 +11855,19 @@
        }
       },
       {
-       "$id": "1492",
+       "$id": "1490",
        "clientProperty": {
         "$ref": "624"
        },
        "location": "header",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "1493",
+        "$id": "1491",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "1494",
+        "$id": "1492",
         "fixed": false,
         "raw": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers."
        },
@@ -11886,11 +11877,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·x3lg62·usageevent·post·parameters·1",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·x3lg62·usageevent·post·parameters·1"
+          "file:///input/marketplace.json#/components/parameters/paths·x3lg62·usageevent·post·parameters·1"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -11899,18 +11890,18 @@
        "isRequired": false,
        "isConstant": false,
        "name": {
-        "$id": "1495",
+        "$id": "1493",
         "fixed": false,
         "raw": "x-ms-requestid"
        },
        "serializedName": "x-ms-requestid",
        "modelType": {
-        "$id": "1496",
+        "$id": "1494",
         "$type": "PrimaryType",
         "format": "uuid",
         "knownPrimaryType": "uuid",
         "name": {
-         "$id": "1497",
+         "$id": "1495",
          "fixed": false,
          "raw": "Uuid"
         },
@@ -11918,19 +11909,19 @@
        }
       },
       {
-       "$id": "1498",
+       "$id": "1496",
        "clientProperty": {
         "$ref": "630"
        },
        "location": "header",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "1499",
+        "$id": "1497",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "1500",
+        "$id": "1498",
         "fixed": false,
         "raw": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers."
        },
@@ -11940,11 +11931,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·rxyxm6·usageevent·post·parameters·2",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·rxyxm6·usageevent·post·parameters·2"
+          "file:///input/marketplace.json#/components/parameters/paths·rxyxm6·usageevent·post·parameters·2"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -11953,18 +11944,18 @@
        "isRequired": false,
        "isConstant": false,
        "name": {
-        "$id": "1501",
+        "$id": "1499",
         "fixed": false,
         "raw": "x-ms-correlationid"
        },
        "serializedName": "x-ms-correlationid",
        "modelType": {
-        "$id": "1502",
+        "$id": "1500",
         "$type": "PrimaryType",
         "format": "uuid",
         "knownPrimaryType": "uuid",
         "name": {
-         "$id": "1503",
+         "$id": "1501",
          "fixed": false,
          "raw": "Uuid"
         },
@@ -11973,12 +11964,12 @@
       }
      ],
      "name": {
-      "$id": "1504",
+      "$id": "1502",
       "fixed": false,
       "raw": "PostUsageEvent"
      },
      "group": {
-      "$id": "1505",
+      "$id": "1503",
       "fixed": false,
       "raw": "Metering"
      },
@@ -11988,10 +11979,29 @@
      "httpMethod": "post",
      "responses": {
       "OK": {
-       "$id": "1506",
+       "$id": "1504",
        "body": {
         "$ref": "420"
        },
+       "extensions": {
+        "$id": "1505",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///111?oai3.shaken.json"
+         ],
+         "name": "paths·1sgyirc·usageevent·post·responses·200",
+         "originalLocations": [
+          "file:///input/marketplace.json#/components/responses/paths·1sgyirc·usageevent·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "BadRequest": {
+       "$id": "1506",
        "extensions": {
         "$id": "1507",
         "x-ms-metadata": {
@@ -11999,17 +12009,17 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
-         "name": "paths·1sgyirc·usageevent·post·responses·200",
+         "name": "paths·1e1ibcf·usageevent·post·responses·400",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1sgyirc·usageevent·post·responses·200"
+          "file:///input/marketplace.json#/components/responses/paths·1e1ibcf·usageevent·post·responses·400"
          ]
         }
        },
        "isNullable": true
       },
-      "BadRequest": {
+      "Forbidden": {
        "$id": "1508",
        "extensions": {
         "$id": "1509",
@@ -12018,17 +12028,17 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
-         "name": "paths·1e1ibcf·usageevent·post·responses·400",
+         "name": "paths·1qxge6g·usageevent·post·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1e1ibcf·usageevent·post·responses·400"
+          "file:///input/marketplace.json#/components/responses/paths·1qxge6g·usageevent·post·responses·403"
          ]
         }
        },
        "isNullable": true
       },
-      "Forbidden": {
+      "Conflict": {
        "$id": "1510",
        "extensions": {
         "$id": "1511",
@@ -12037,30 +12047,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
-         ],
-         "name": "paths·1qxge6g·usageevent·post·responses·403",
-         "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1qxge6g·usageevent·post·responses·403"
-         ]
-        }
-       },
-       "isNullable": true
-      },
-      "Conflict": {
-       "$id": "1512",
-       "extensions": {
-        "$id": "1513",
-        "x-ms-metadata": {
-         "apiVersions": [
-          "2018-08-31"
-         ],
-         "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1u4m1wm·usageevent·post·responses·409",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1u4m1wm·usageevent·post·responses·409"
+          "file:///input/marketplace.json#/components/responses/paths·1u4m1wm·usageevent·post·responses·409"
          ]
         }
        },
@@ -12068,11 +12059,11 @@
       }
      },
      "defaultResponse": {
-      "$id": "1514",
+      "$id": "1512",
       "isNullable": true
      },
      "returnType": {
-      "$id": "1515",
+      "$id": "1513",
       "body": {
        "$ref": "420"
       },
@@ -12096,19 +12087,23 @@
      "hidden": false
     },
     {
-     "$id": "1516",
+     "$id": "1514",
      "parameters": [
       {
-       "$id": "1517",
+       "$id": "1515",
        "location": "body",
        "collectionFormat": "none",
+       "constraints": {
+        "MaxItems": "25",
+        "MinItems": "1"
+       },
        "defaultValue": {
-        "$id": "1518",
+        "$id": "1516",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "1519",
+        "$id": "1517",
         "fixed": false
        },
        "extensions": {
@@ -12117,64 +12112,64 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·sj46qt·batchusageevent·post·requestbody",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/requestBodies/paths·sj46qt·batchusageevent·post·requestbody"
+          "file:///input/marketplace.json#/components/requestBodies/paths·sj46qt·batchusageevent·post·requestbody"
          ]
         }
        },
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "1520",
+        "$id": "1518",
         "fixed": false,
         "raw": "body"
        },
        "serializedName": "body",
        "modelType": {
-        "$id": "1521",
+        "$id": "1519",
         "$type": "SequenceType",
         "elementType": {
          "$ref": "388"
         },
         "name": {
-         "$id": "1522",
+         "$id": "1520",
          "fixed": false
         },
         "deprecated": false
        }
       },
       {
-       "$id": "1523",
+       "$id": "1521",
        "location": "query",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "1524",
+        "$id": "1522",
         "fixed": false,
         "raw": "2018-08-31"
        },
        "deprecated": false,
        "documentation": {
-        "$id": "1525",
+        "$id": "1523",
         "fixed": false,
         "raw": "The API version to use for the request."
        },
        "isRequired": true,
        "isConstant": true,
        "name": {
-        "$id": "1526",
+        "$id": "1524",
         "fixed": false,
         "raw": "api-version"
        },
        "serializedName": "api-version",
        "modelType": {
-        "$id": "1527",
+        "$id": "1525",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "name": {
-         "$id": "1528",
+         "$id": "1526",
          "fixed": false,
          "raw": "String"
         },
@@ -12182,19 +12177,19 @@
        }
       },
       {
-       "$id": "1529",
+       "$id": "1527",
        "clientProperty": {
         "$ref": "624"
        },
        "location": "header",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "1530",
+        "$id": "1528",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "1531",
+        "$id": "1529",
         "fixed": false,
         "raw": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers."
        },
@@ -12204,11 +12199,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·17zt9co·batchusageevent·post·parameters·1",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·17zt9co·batchusageevent·post·parameters·1"
+          "file:///input/marketplace.json#/components/parameters/paths·17zt9co·batchusageevent·post·parameters·1"
          ]
         },
         "x-ms-client-name": "requestId",
@@ -12217,18 +12212,18 @@
        "isRequired": false,
        "isConstant": false,
        "name": {
-        "$id": "1532",
+        "$id": "1530",
         "fixed": false,
         "raw": "x-ms-requestid"
        },
        "serializedName": "x-ms-requestid",
        "modelType": {
-        "$id": "1533",
+        "$id": "1531",
         "$type": "PrimaryType",
         "format": "uuid",
         "knownPrimaryType": "uuid",
         "name": {
-         "$id": "1534",
+         "$id": "1532",
          "fixed": false,
          "raw": "Uuid"
         },
@@ -12236,19 +12231,19 @@
        }
       },
       {
-       "$id": "1535",
+       "$id": "1533",
        "clientProperty": {
         "$ref": "630"
        },
        "location": "header",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "1536",
+        "$id": "1534",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "1537",
+        "$id": "1535",
         "fixed": false,
         "raw": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers."
        },
@@ -12258,11 +12253,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·bimwtw·batchusageevent·post·parameters·2",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/parameters/paths·bimwtw·batchusageevent·post·parameters·2"
+          "file:///input/marketplace.json#/components/parameters/paths·bimwtw·batchusageevent·post·parameters·2"
          ]
         },
         "x-ms-client-name": "correlationId",
@@ -12271,18 +12266,18 @@
        "isRequired": false,
        "isConstant": false,
        "name": {
-        "$id": "1538",
+        "$id": "1536",
         "fixed": false,
         "raw": "x-ms-correlationid"
        },
        "serializedName": "x-ms-correlationid",
        "modelType": {
-        "$id": "1539",
+        "$id": "1537",
         "$type": "PrimaryType",
         "format": "uuid",
         "knownPrimaryType": "uuid",
         "name": {
-         "$id": "1540",
+         "$id": "1538",
          "fixed": false,
          "raw": "Uuid"
         },
@@ -12291,12 +12286,12 @@
       }
      ],
      "name": {
-      "$id": "1541",
+      "$id": "1539",
       "fixed": false,
       "raw": "PostBatchUsageEvent"
      },
      "group": {
-      "$id": "1542",
+      "$id": "1540",
       "fixed": false,
       "raw": "Metering"
      },
@@ -12306,9 +12301,18 @@
      "httpMethod": "post",
      "responses": {
       "OK": {
-       "$id": "1543",
+       "$id": "1541",
        "body": {
-        "$ref": "420"
+        "$id": "1542",
+        "$type": "SequenceType",
+        "elementType": {
+         "$ref": "420"
+        },
+        "name": {
+         "$id": "1543",
+         "fixed": false
+        },
+        "deprecated": false
        },
        "extensions": {
         "$id": "1544",
@@ -12317,11 +12321,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·4h6mrn·batchusageevent·post·responses·200",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·4h6mrn·batchusageevent·post·responses·200"
+          "file:///input/marketplace.json#/components/responses/paths·4h6mrn·batchusageevent·post·responses·200"
          ]
         }
        },
@@ -12336,11 +12340,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·1rtjht9·batchusageevent·post·responses·400",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·1rtjht9·batchusageevent·post·responses·400"
+          "file:///input/marketplace.json#/components/responses/paths·1rtjht9·batchusageevent·post·responses·400"
          ]
         }
        },
@@ -12355,11 +12359,11 @@
           "2018-08-31"
          ],
          "filename": [
-          "mem:///110?oai3.shaken.json"
+          "mem:///111?oai3.shaken.json"
          ],
          "name": "paths·oi4n6g·batchusageevent·post·responses·403",
          "originalLocations": [
-          "https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM#/components/responses/paths·oi4n6g·batchusageevent·post·responses·403"
+          "file:///input/marketplace.json#/components/responses/paths·oi4n6g·batchusageevent·post·responses·403"
          ]
         }
        },
@@ -12373,7 +12377,7 @@
      "returnType": {
       "$id": "1550",
       "body": {
-       "$ref": "420"
+       "$ref": "1542"
       },
       "isNullable": true
      },

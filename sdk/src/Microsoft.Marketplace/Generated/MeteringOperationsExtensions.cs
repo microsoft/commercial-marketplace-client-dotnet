@@ -45,7 +45,7 @@ namespace Microsoft.Marketplace
             /// If this value isn't provided, one will be generated and provided in the
             /// response headers.
             /// </param>
-            public static UsageEventOkResponse PostUsageEvent(this IMeteringOperations operations, IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?))
+            public static UsageEventOkResponse PostUsageEvent(this IMeteringOperations operations, UsageEvent body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?))
             {
                 return operations.PostUsageEventAsync(body, requestId, correlationId).GetAwaiter().GetResult();
             }
@@ -75,7 +75,7 @@ namespace Microsoft.Marketplace
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<UsageEventOkResponse> PostUsageEventAsync(this IMeteringOperations operations, IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<UsageEventOkResponse> PostUsageEventAsync(this IMeteringOperations operations, UsageEvent body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostUsageEventWithHttpMessagesAsync(body, requestId, correlationId, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -108,7 +108,7 @@ namespace Microsoft.Marketplace
             /// If this value isn't provided, one will be generated and provided in the
             /// response headers.
             /// </param>
-            public static UsageEventOkResponse PostBatchUsageEvent(this IMeteringOperations operations, IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?))
+            public static IList<UsageEventOkResponse> PostBatchUsageEvent(this IMeteringOperations operations, IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?))
             {
                 return operations.PostBatchUsageEventAsync(body, requestId, correlationId).GetAwaiter().GetResult();
             }
@@ -141,7 +141,7 @@ namespace Microsoft.Marketplace
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<UsageEventOkResponse> PostBatchUsageEventAsync(this IMeteringOperations operations, IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<UsageEventOkResponse>> PostBatchUsageEventAsync(this IMeteringOperations operations, IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostBatchUsageEventWithHttpMessagesAsync(body, requestId, correlationId, null, cancellationToken).ConfigureAwait(false))
                 {

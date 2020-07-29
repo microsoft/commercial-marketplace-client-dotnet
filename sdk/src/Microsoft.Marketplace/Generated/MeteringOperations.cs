@@ -90,7 +90,7 @@ namespace Microsoft.Marketplace
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<UsageEventOkResponse>> PostUsageEventWithHttpMessagesAsync(IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<UsageEventOkResponse>> PostUsageEventWithHttpMessagesAsync(UsageEvent body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (body == null)
             {
@@ -309,11 +309,22 @@ namespace Microsoft.Marketplace
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<UsageEventOkResponse>> PostBatchUsageEventWithHttpMessagesAsync(IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<IList<UsageEventOkResponse>>> PostBatchUsageEventWithHttpMessagesAsync(IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (body == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "body");
+            }
+            if (body != null)
+            {
+                if (body.Count > 25)
+                {
+                    throw new ValidationException(ValidationRules.MaxItems, "body", 25);
+                }
+                if (body.Count < 1)
+                {
+                    throw new ValidationException(ValidationRules.MinItems, "body", 1);
+                }
             }
             string apiVersion = "2018-08-31";
             // Tracing
@@ -453,7 +464,7 @@ namespace Microsoft.Marketplace
                 throw ex;
             }
             // Create Result
-            var _result = new AzureOperationResponse<UsageEventOkResponse>();
+            var _result = new AzureOperationResponse<IList<UsageEventOkResponse>>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             if (_httpResponse.Headers.Contains("x-ms-request-id"))
@@ -466,7 +477,7 @@ namespace Microsoft.Marketplace
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<UsageEventOkResponse>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<IList<UsageEventOkResponse>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {

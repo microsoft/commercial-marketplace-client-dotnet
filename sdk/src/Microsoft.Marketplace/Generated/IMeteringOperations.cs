@@ -57,7 +57,7 @@ namespace Microsoft.Marketplace
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<UsageEventOkResponse>> PostUsageEventWithHttpMessagesAsync(IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<UsageEventOkResponse>> PostUsageEventWithHttpMessagesAsync(UsageEvent body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Posts a set of usage events to the marketplace metering service
         /// API.
@@ -96,6 +96,6 @@ namespace Microsoft.Marketplace
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<UsageEventOkResponse>> PostBatchUsageEventWithHttpMessagesAsync(IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<IList<UsageEventOkResponse>>> PostBatchUsageEventWithHttpMessagesAsync(IList<UsageEvent> body, System.Guid? requestId = default(System.Guid?), System.Guid? correlationId = default(System.Guid?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

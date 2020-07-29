@@ -27,11 +27,16 @@ These are the global settings for the ContainerRegistry API.
 ``` yaml
 openapi-type: arm
 ```
-
+<!-- 
 ```yaml
 input-file:
   - https://raw.githubusercontent.com/Azure/azure-marketplace-openapi/master/marketplace.json?token=AAFUHSQYL5FJAST4WRD6C4265DPUM
-```
+``` -->
+
+```yaml
+input-file:
+  - ./marketplace.json
+``` 
 
 # Code Generation
 

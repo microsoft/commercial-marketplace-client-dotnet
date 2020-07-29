@@ -934,7 +934,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/BatchUsageEvent"
+                "$ref": "#/components/schemas/UsageEvent"
               }
             }
           }
@@ -1017,7 +1017,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsageEventOkResponse"
+                  "$ref": "#/components/schemas/BatchUsageEventOkResponse"
                 }
               }
             }
@@ -1398,7 +1398,9 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UsageEvent"
-        }
+        },
+        "minItems": 1,
+        "maxItems": 25
       },
       "UsageEventOkResponse": {
         "type": "object",
@@ -1453,6 +1455,12 @@
             "type": "string",
             "description": "Plan associated with the purchased offer"
           }
+        }
+      },
+      "BatchUsageEventOkResponse": {        
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/UsageEventOkResponse"
         }
       },
       "UsageEventConflictResponse": {
