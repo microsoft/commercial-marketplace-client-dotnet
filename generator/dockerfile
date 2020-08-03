@@ -1,6 +1,6 @@
 FROM ubuntu:xenial 
 
-LABEL maintainer="ercenk" 
+LABEL maintainer="Microsoft" 
 
 # Required for install
 RUN apt-get update && apt-get install -y curl libunwind8 libicu55
