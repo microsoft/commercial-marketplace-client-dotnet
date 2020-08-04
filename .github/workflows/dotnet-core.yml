@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 3.1.*
     - name: Build
-      run: dotnet build --configuration Release
+      run: dotnet build --configuration Debug
       working-directory: ./sdk
     - name: test
       run: dotnet test
