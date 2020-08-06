@@ -6,35 +6,23 @@ using System;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.IdentityModel.Clients.ActiveDirectory;
+using Microsoft.Identity.Client;
 using Microsoft.Rest;
 
 namespace Microsoft.Marketplace
 {
-    internal class ClientSecretTokenProvider : ITokenProvider
+    internal class ClientSecretTokenProvider : MarketplaceTokenProvider
     {
-        private readonly string authenticationEndpoint;
-        private readonly string marketplaceResourceId;
-        private readonly Guid appId;
         private readonly string clientSecret;
-        private readonly Guid tenantId;
 
-        internal ClientSecretTokenProvider(Guid tenantId, Guid appId, string clientSecret, string authenticationEndpoint,
-            string marketplaceResourceId)
+        internal ClientSecretTokenProvider(Guid tenantId, Guid appId, string clientSecret, string authenticationEndpoint, string marketplaceScope) : base(tenantId, appId, authenticationEndpoint, marketplaceScope)
         {
-            this.tenantId = tenantId;
-            this.appId = appId;
             this.clientSecret = clientSecret;
-            this.authenticationEndpoint = authenticationEndpoint;
-            this.marketplaceResourceId = marketplaceResourceId;
         }
 
-        public async Task<AuthenticationHeaderValue> GetAuthenticationHeaderAsync(CancellationToken cancellationToken)
+        protected override ConfidentialClientApplicationBuilder AddSecret(ConfidentialClientApplicationBuilder builder)
         {
-            var authContext = new AuthenticationContext(authenticationEndpoint + tenantId, false);
-            var result = await authContext.AcquireTokenAsync(marketplaceResourceId,
-                new ClientCredential(appId.ToString(), clientSecret));
-            return new AuthenticationHeaderValue("Bearer", result.AccessToken);
+            return builder.WithClientSecret(this.clientSecret);
         }
     }
 }
