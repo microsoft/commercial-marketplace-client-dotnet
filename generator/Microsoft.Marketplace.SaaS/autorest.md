@@ -30,7 +30,7 @@ openapi-type: arm
 
 ```yaml
 input-file:
-  - ../2018-08-31/saasapi.v2.json
+  - ./2018-08-31/saasapi.v2.json
 ```
 
 <!-- 

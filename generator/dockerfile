@@ -1,9 +1,9 @@
-FROM ubuntu:xenial 
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 
 
 LABEL maintainer="Microsoft" 
 
 # Required for install
-RUN apt-get update && apt-get install -y curl libunwind8 libicu55
+RUN apt-get update && apt-get install -y curl libunwind8 
 
 # NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
@@ -16,18 +16,20 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8  
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8  
-ENV AUTORESTCOREVERSION "3.0.6244"
-ENV AUTORESTDOWNLOAD "https://github.com/Azure/autorest/releases/download/autorest-${AUTORESTCOREVERSION}/autorest-${AUTORESTCOREVERSION}.tgz"
-
-ENV AUTORESTCSHARPVERSION "'https://github.com/Azure/autorest.csharp/releases/download/3.0.0-dev.20200826.1/autorest-csharp-v3-3.0.0-dev.20200826.1.tgz'"
+ENV AUTORESTCOREVERSION "autorest-core-3.0.6320"
+ENV AUTORESTDOWNLOAD "https://github.com/Azure/autorest/releases/download/${AUTORESTCOREVERSION}/${AUTORESTCOREVERSION}.tgz"
+ENV AUTORESTCSHARPVERSION "3.0.0-dev.20200911.1"
+ENV AUTORESTCSHARPDOWNLOAD "'https://github.com/Azure/autorest.csharp/releases/download/${AUTORESTCSHARPVERSION}/autorest-csharp-v3-${AUTORESTCSHARPVERSION}'"
 
 # install Autorest
 RUN wget $AUTORESTDOWNLOAD
-RUN tar -xvzf "autorest-${AUTORESTCOREVERSION}.tgz"
+RUN tar -xvzf "${AUTORESTCOREVERSION}.tgz"
 RUN npm install -g "package"
-RUN autorest --reset 
+#RUN  npm install -g autorest@preview
+#RUN autorest --reset 
 
-
-RUN echo "npx autorest --version=$AUTORESTCOREVERSION ./input/autorest.md --use=$AUTORESTCSHARPVERSION    --add-credentials" > /generate.sh
+#RUN echo "npx autorest --version=$AUTORESTCOREVERSION ./input/autorest.md --use=$AUTORESTCSHARPDOWNLOAD --csharp --add-credentials --verbose" > /generate.sh
+RUN echo "npx autorest ./input/autorest.md --use=$AUTORESTCSHARPDOWNLOAD --csharp --add-credentials --verbose" > /generate.sh
+#RUN echo "npx autorest ./input/autorest.md --use=$AUTORESTCSHARPVERSION --csharp --add-credentials --verbose" > /generate.sh
 
 # ENTRYPOINT ["/bin/bash", "/generate.sh"]
