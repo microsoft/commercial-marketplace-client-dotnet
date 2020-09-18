@@ -1,14 +1,18 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 
+FROM ubuntu:xenial 
 
 LABEL maintainer="Microsoft" 
 
 # Required for install
-RUN apt-get update && apt-get install -y curl libunwind8 
+RUN apt-get update && apt-get install -y curl libunwind8 libicu55
 
 # NodeJS
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
-	apt-get update && apt-get install -y nodejs && apt-get install -y wget && \
-	npm install npm@latest -g 
+RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && \
+	apt-get update && apt-get install -y nodejs && \
+	npm install npm@latest -g
+
+# Autorest
+RUN npm install -g autorest@latest
+RUN autorest --reset 
 
 # Set the locale to UTF-8
 RUN apt-get clean && apt-get update && apt-get install -y locales
@@ -16,20 +20,7 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8  
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8  
-ENV AUTORESTCOREVERSION "autorest-core-3.0.6320"
-ENV AUTORESTDOWNLOAD "https://github.com/Azure/autorest/releases/download/${AUTORESTCOREVERSION}/${AUTORESTCOREVERSION}.tgz"
-ENV AUTORESTCSHARPVERSION "3.0.0-dev.20200911.1"
-ENV AUTORESTCSHARPDOWNLOAD "'https://github.com/Azure/autorest.csharp/releases/download/${AUTORESTCSHARPVERSION}/autorest-csharp-v3-${AUTORESTCSHARPVERSION}'"
 
-# install Autorest
-RUN wget $AUTORESTDOWNLOAD
-RUN tar -xvzf "${AUTORESTCOREVERSION}.tgz"
-RUN npm install -g "package"
-#RUN  npm install -g autorest@preview
-#RUN autorest --reset 
+RUN echo "npx autorest ./input/autorest.md --v3 --csharp --csharp-sdks-folder=/out  --add-credentials" > /generate.sh
 
-#RUN echo "npx autorest --version=$AUTORESTCOREVERSION ./input/autorest.md --use=$AUTORESTCSHARPDOWNLOAD --csharp --add-credentials --verbose" > /generate.sh
-RUN echo "npx autorest ./input/autorest.md --use=$AUTORESTCSHARPDOWNLOAD --csharp --add-credentials --verbose" > /generate.sh
-#RUN echo "npx autorest ./input/autorest.md --use=$AUTORESTCSHARPVERSION --csharp --add-credentials --verbose" > /generate.sh
-
-# ENTRYPOINT ["/bin/bash", "/generate.sh"]
+ENTRYPOINT ["/bin/bash", "/generate.sh"]

@@ -30,7 +30,7 @@ openapi-type: arm
 
 ```yaml
 input-file:
-  - ../2018-08-31/meteringapu.v1.json
+  - ./2018-08-31/meteringapi.v1.json
 ```
 
 <!-- ```yaml

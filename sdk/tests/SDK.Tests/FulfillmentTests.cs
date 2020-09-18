@@ -3,8 +3,8 @@
 // license information.
 
 using Microsoft.Extensions.Configuration;
-using Microsoft.Marketplace;
-using Microsoft.Marketplace.Models;
+using Microsoft.Marketplace.SaaS;
+using Microsoft.Marketplace.SaaS.Models;
 using Microsoft.Rest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -18,7 +18,7 @@ namespace SDK.Tests
     [TestClass]
     public class FulfillmentTests
     {
-        private MarketplaceClient sut;
+        private MarketplaceSaaSClient sut;
 
         public FulfillmentTests()
         {
@@ -27,7 +27,7 @@ namespace SDK.Tests
                 .AddEnvironmentVariables()
                 .Build();
 
-            this.sut = new MarketplaceClient(Guid.Parse(config["TenantId"]), Guid.Parse(config["ClientId"]), config["clientSecret"]);
+            this.sut = new MarketplaceSaaSClient(Guid.Parse(config["TenantId"]), Guid.Parse(config["ClientId"]), config["clientSecret"]);
         }
 
 
@@ -36,19 +36,19 @@ namespace SDK.Tests
         {
             var subscriptions = new List<Subscription>();
 
-            var page = await this.sut.Fulfillment.ListSubscriptionsAsync();
+            var page = await this.sut.FulfillmentOperations.ListSubscriptionsAsync();
             subscriptions.AddRange(page);
 
-            while (page.NextPageLink != default(string))
+            while (page.NextPageLink != default)
             {
-                page = await this.sut.Fulfillment.ListSubscriptionsNextAsync(page.NextPageLink);
+                page = await this.sut.FulfillmentOperations.ListSubscriptionsNextAsync(page.NextPageLink);
                 subscriptions.AddRange(page);
             }
 
             Debug.Print($"Received {subscriptions.Count} subscriptions");
             Debug.Print($"Received {subscriptions.Select(s => s.Id).Distinct().ToList().Count()} distinct subscriptions");
 
-            var allSubscriptions = await this.sut.Fulfillment.ListAllSubscriptionsAsync();
+            var allSubscriptions = await this.sut.FulfillmentOperations.ListAllSubscriptionsAsync();
             
             Assert.IsTrue(subscriptions.Any());
             Assert.AreEqual(allSubscriptions.Count(), subscriptions.Count);
@@ -57,12 +57,12 @@ namespace SDK.Tests
         [TestMethod]
         public async Task GetSubscription()
         {
-            var subscriptions = this.sut.Fulfillment.ListSubscriptions();
+            var subscriptions = this.sut.FulfillmentOperations.ListSubscriptions();
             Assert.IsTrue(subscriptions.Any());
 
             var subscription = subscriptions.First();
 
-            var result = await this.sut.Fulfillment.GetSubscriptionAsync(subscription.Id.Value);
+            var result = await this.sut.FulfillmentOperations.GetSubscriptionAsync(subscription.Id.Value);
 
             Assert.IsNotNull(result);
         }
@@ -73,8 +73,8 @@ namespace SDK.Tests
         {
             // This needs to be run manually after receiving a marketplace token on the landing page, and adding here.
             // Don't forget to urldecode if you are copying from the url param
-            var marketplaceToken = "1sjcR8VVNx2W3oM0wfAfaj0D1yJQIRCeoaDNm7qzQzCXiMGAnuDXnLp+JNPR2e74tgddbEsMqsxKWn23+WubOvNT3FM3aTfGcQTlPe/PPnTQBK6ltqUZSTIKRUjEes+qdZOQSkO4o9k5pF9yio97+s18Dy8MXTawXwhvjF8vdTsjSUfHtzKIpodRWPROYiOgDTQR9pgDhGHNtCU+caxmUlPb5wux5KPBe67RrDXjonE=";
-            var resolvedSubscription = await this.sut.Fulfillment.ResolveAsync(marketplaceToken);
+            var marketplaceToken = "LWW36TzssfHGvUNuDpSy9hVq9RZxrompe1bZT+qRRzqbwx83uxHyRVmYXjjqaYs550FQ07JAu27Suk5YqlnkAoBKt6makiced8hbTFpBS3WRda8Y0KoDTAl9fb0LEkFbpJ1MrcRglQrZLkrmc63ZlLcTQhrq/TNmvVcx4tOlq2f+RcvOdbzPrj7J3bScBNX/1Ug70NXrRMlENawNNORdTZ34eSBaJ9YnBiFcJ7oxcU4=";
+            var resolvedSubscription = await this.sut.FulfillmentOperations.ResolveAsync(marketplaceToken);
 
             Debug.Print(resolvedSubscription.SubscriptionName);    
             Assert.IsNotNull(resolvedSubscription);
@@ -83,14 +83,14 @@ namespace SDK.Tests
         [TestMethod]
         public async Task UpdateSubscription()
         {
-            var subscriptions = await this.sut.Fulfillment.ListSubscriptionsAsync();
+            var subscriptions = await this.sut.FulfillmentOperations.ListSubscriptionsAsync();
             Assert.IsTrue(subscriptions.Any());
 
             var firstActiveSubscription = subscriptions.First(s => s.SaasSubscriptionStatus.Value == SubscriptionStatusEnum.Subscribed);
 
             var plan = firstActiveSubscription.PlanId == "silver" ? "gold" : "silver";
 
-            var result = await this.sut.Fulfillment.UpdateSubscriptionAsync(firstActiveSubscription.Id.Value, null, null, planId: plan);
+            var result = await this.sut.FulfillmentOperations.UpdateSubscriptionAsync(firstActiveSubscription.Id.Value, null, null, planId: plan);
             // Cannot check whether this succeeed or not, 
             var operationId = result.OperationLocation;
 
@@ -105,7 +105,7 @@ namespace SDK.Tests
         [ExpectedException(typeof(ApplicationException))]
         public async Task ThrowsWhenBothPlanIdandQuantityPresent()
         {
-            var subscriptions = await this.sut.Fulfillment.ListSubscriptionsAsync();
+            var subscriptions = await this.sut.FulfillmentOperations.ListSubscriptionsAsync();
             Assert.IsTrue(subscriptions.Any());
 
             var firstActiveSubscription = subscriptions.First(s => s.SaasSubscriptionStatus.Value == SubscriptionStatusEnum.Subscribed);
@@ -113,7 +113,7 @@ namespace SDK.Tests
             var plan = firstActiveSubscription.PlanId == "silver" ? "gold" : "silver";
             var quantity = 5;
 
-            var result = await this.sut.Fulfillment.UpdateSubscriptionAsync(firstActiveSubscription.Id.Value, null, null, planId: plan, quantity);
+            var result = await this.sut.FulfillmentOperations.UpdateSubscriptionAsync(firstActiveSubscription.Id.Value, null, null, planId: plan, quantity);
 
             Assert.Fail("Should never come here");
         }

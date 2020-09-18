@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Microsoft.Marketplace\Microsoft.Marketplace.csproj" />
+    <ProjectReference Include="..\..\src\Microsoft.Marketplace.SaaS\Microsoft.Marketplace.SaaS.csproj" />
   </ItemGroup>
 
 </Project>
