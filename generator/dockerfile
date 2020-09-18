@@ -6,13 +6,9 @@ LABEL maintainer="Microsoft"
 RUN apt-get update && apt-get install -y curl libunwind8 libicu55
 
 # NodeJS
-RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && \
-	apt-get update && apt-get install -y nodejs && \
-	npm install npm@latest -g
-
-# Autorest
-RUN npm install -g autorest@latest
-RUN autorest --reset --allow-no-input --csharp --ruby --python --java --go --nodejs --typescript --azure-validator --preview
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
+	apt-get update && apt-get install -y nodejs && apt-get install -y wget && \
+	npm install npm@latest -g 
 
 # Set the locale to UTF-8
 RUN apt-get clean && apt-get update && apt-get install -y locales
@@ -20,6 +16,18 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8  
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8  
-COPY readme.md /input/readme.md
+ENV AUTORESTCOREVERSION "3.0.6244"
+ENV AUTORESTDOWNLOAD "https://github.com/Azure/autorest/releases/download/autorest-${AUTORESTCOREVERSION}/autorest-${AUTORESTCOREVERSION}.tgz"
 
-ENTRYPOINT ["autorest"]
+ENV AUTORESTCSHARPVERSION "'https://github.com/Azure/autorest.csharp/releases/download/3.0.0-dev.20200826.1/autorest-csharp-v3-3.0.0-dev.20200826.1.tgz'"
+
+# install Autorest
+RUN wget $AUTORESTDOWNLOAD
+RUN tar -xvzf "autorest-${AUTORESTCOREVERSION}.tgz"
+RUN npm install -g "package"
+RUN autorest --reset 
+
+
+RUN echo "npx autorest --version=$AUTORESTCOREVERSION ./input/autorest.md --use=$AUTORESTCSHARPVERSION    --add-credentials" > /generate.sh
+
+# ENTRYPOINT ["/bin/bash", "/generate.sh"]

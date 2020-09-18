@@ -15,8 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Marketplace", "sr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B32DA984-0BD1-49A3-8A98-C257FC8EAD93}"
 	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
 		global.json = global.json
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azure.Core.TestFramework", "tests\Azure.Core.TestFramework\src\Azure.Core.TestFramework.csproj", "{7CAEA32A-64AF-44C7-842A-8DC2B81C1287}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +35,10 @@ Global
 		{BB34CD64-FFB0-4799-8D70-C116A055893F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB34CD64-FFB0-4799-8D70-C116A055893F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB34CD64-FFB0-4799-8D70-C116A055893F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CAEA32A-64AF-44C7-842A-8DC2B81C1287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CAEA32A-64AF-44C7-842A-8DC2B81C1287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CAEA32A-64AF-44C7-842A-8DC2B81C1287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CAEA32A-64AF-44C7-842A-8DC2B81C1287}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3EA97B64-014C-4CEB-9748-FAF3BA337004} = {9F7567AD-6861-47C7-AEB8-57658C402B65}
 		{BB34CD64-FFB0-4799-8D70-C116A055893F} = {26D0B282-1BC3-4D72-A583-6EEDA9043E2D}
+		{7CAEA32A-64AF-44C7-842A-8DC2B81C1287} = {9F7567AD-6861-47C7-AEB8-57658C402B65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF8A9420-8B50-4808-816E-D96141BC1C49}
