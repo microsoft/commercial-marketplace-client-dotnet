@@ -33,12 +33,6 @@ input-file:
   - ./2018-08-31/saasapi.v2.json
 ```
 
-<!-- 
-```yaml
-input-file:
-  - ./marketplace.json
-```  -->
-
 # Code Generation
 
 ## C#

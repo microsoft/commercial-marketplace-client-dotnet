@@ -33,11 +33,6 @@ input-file:
   - ./2018-08-31/meteringapi.v1.json
 ```
 
-<!-- ```yaml
-input-file:
-  - ./marketplace.json
-```  -->
-
 # Code Generation
 
 ## C#
