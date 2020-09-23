@@ -12,7 +12,7 @@ RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && \
 
 # Autorest
 RUN npm install -g autorest@latest
-RUN autorest --reset --allow-no-input --csharp --ruby --python --java --go --nodejs --typescript --azure-validator --preview
+RUN autorest --reset 
 
 # Set the locale to UTF-8
 RUN apt-get clean && apt-get update && apt-get install -y locales
@@ -20,6 +20,7 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8  
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8  
-COPY readme.md /input/readme.md
 
-ENTRYPOINT ["autorest"]
+RUN echo "npx autorest ./input/autorest.md --v3 --csharp --csharp-sdks-folder=/out  --add-credentials" > /generate.sh
+
+ENTRYPOINT ["/bin/bash", "/generate.sh"]

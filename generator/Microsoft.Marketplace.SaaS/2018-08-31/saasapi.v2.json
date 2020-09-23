@@ -1,0 +1,1130 @@
+{
+  "openapi": "3.0.2",
+  "servers": [
+    {
+      "description": "SaaS fulfillment APIs, version 2",
+      "url": "https://marketplaceapi.microsoft.com/api"
+    }
+  ],
+  "info": {
+    "version": "2018-08-31",
+    "title": "SaaS API",
+    "x-ms-code-generation-settings": {
+      "name": "MarketplaceSaaSClient",
+      "header": "MIT",
+      "internalConstructors": true,
+      "useDateTimeOffset": false
+    },
+    "description": "This spec details the APIs that enable partners to sell their SaaS applications in the AppSource marketplace and the Azure Marketplace. These APIs are a requirement for transactable SaaS offers on the AppSource and Azure Marketplace."
+  },
+  "security": [
+    {
+      "azure_auth": ["user_impersonation"]
+    }
+  ],
+
+  "paths": {
+    "/saas/subscriptions/resolve": {
+      "post": {
+        "tags": ["FulfillmentOperations"],
+        "summary": "Resolve a subscription",
+        "operationId": "FulfillmentOperations_Resolve",
+        "description": "The resolve endpoint enables the publisher to resolve a marketplace token to a persistent resource ID. The resource ID is the unique identifier for a SaaS subscription. When a user is redirected to a partner's website, the URL contains a token in the query parameters. The partner is expected to use this token and make a request to resolve it. The response contains the unique SaaS subscription ID, name, offer ID, and plan for the resource. This token is valid for one hour only.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api-version",
+            "schema": {
+              "$ref": "#/components/schemas/ApiVersion"
+            },
+            "required": true,
+            "description": "Version of the API."
+          },
+          {
+            "in": "header",
+            "name": "x-ms-requestid",
+            "x-ms-client-name": "requestId",
+            "description": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-correlationid",
+            "x-ms-client-name": "correlationId",
+            "description": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-marketplace-token",
+            "description": "The token query parameter in the URL when the user is redirected to the SaaS partner's website from Azure (for example,  https://contoso.com/signup?token=..). Note, The URL decodes the token value from the browser before using it.",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK. Describes the SaaS subscription indicated by the x-ms-marketplace-token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResolvedSubscription"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request. x-ms-marketplace-token is missing, malformed, or expired."
+          },
+          "403": {
+            "description": "Unauthorized. The authentication token was not provided or is invalid, or the request is attempting to access an acquisition that does not belong to the current publisher."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      }
+    },
+    "/saas/subscriptions/": {
+      "get": {
+        "summary": "List subscriptions",
+        "description": "Lists all the SaaS subscriptions for a publisher.",
+        "tags": ["FulfillmentOperations"],
+        "operationId": "FulfillmentOperations_ListSubscriptions",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api-version",
+            "schema": {
+              "$ref": "#/components/schemas/ApiVersion"
+            },
+            "required": true,
+            "description": "Version of the API."
+          },
+          {
+            "in": "query",
+            "name": "continuationToken",
+            "description": "Optional value, only used for ListSubscriptions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-ms-requestid",
+            "x-ms-client-name": "requestId",
+            "description": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-correlationid",
+            "x-ms-client-name": "correlationId",
+            "description": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          }
+        ],
+        "x-ms-pageable": {
+          "itemName": "subscriptions",
+          "nextLinkName": "@nextLink"
+        },
+        "responses": {
+          "200": {
+            "description": "OK. Gets the publisher and corresponding subscriptions for all the publisher's offers, based on the authentication token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubscriptionsResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized. The authentication token was not provided or is invalid, or the request is attempting to access an acquisition that does not belong to the current publisher."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      }
+    },
+    "/saas/subscriptions/{subscriptionId}": {
+      "get": {
+        "summary": "Get subscription",
+        "description": "Gets the specified SaaS subscription. Use this call to get license information and plan information.",
+        "operationId": "FulfillmentOperations_GetSubscription",
+        "tags": ["FulfillmentOperations"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscriptionId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "api-version",
+            "schema": {
+              "$ref": "#/components/schemas/ApiVersion"
+            },
+            "required": true,
+            "description": "Version of the API."
+          },
+          {
+            "in": "header",
+            "name": "x-ms-requestid",
+            "x-ms-client-name": "requestId",
+            "description": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-correlationid",
+            "x-ms-client-name": "correlationId",
+            "description": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK. Gets the SaaS subscription from identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Subscription"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized. The authentication token was not provided or is invalid, or the request is attempting to access an acquisition that does not belong to the current publisher."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      },
+      "patch": {
+        "summary": "Patch a subscription",
+        "description": "Use this call to update the plan, the user count (quantity), or both.",
+        "operationId": "FulfillmentOperations_UpdateSubscription",
+        "tags": ["FulfillmentOperations"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscriptionId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "api-version",
+            "schema": {
+              "$ref": "#/components/schemas/ApiVersion"
+            },
+            "required": true,
+            "description": "Version of the API."
+          },
+          {
+            "in": "header",
+            "name": "x-ms-requestid",
+            "x-ms-client-name": "requestId",
+            "description": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-correlationid",
+            "x-ms-client-name": "correlationId",
+            "description": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubscriberPlan"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "The request to change plan and/or quantity has been accepted. The partner is expected to poll the Operation-Location to determine a success or failure.",
+            "headers": {
+              "Operation-Location": {
+                "x-ms-client-name": "OperationLocationUri",
+                "schema": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request. Validation failures."
+          },
+          "403": {
+            "description": "Unauthorized. The authentication token was not provided or is invalid, or the request is attempting to access an acquisition that does not belong to the current publisher."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a subscription",
+        "description": "Unsubscribe and delete the specified subscription.",
+        "operationId": "FulfillmentOperations_DeleteSubscription",
+        "tags": ["FulfillmentOperations"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscriptionId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "api-version",
+            "schema": {
+              "$ref": "#/components/schemas/ApiVersion"
+            },
+            "required": true,
+            "description": "Version of the API."
+          },
+          {
+            "in": "header",
+            "name": "x-ms-requestid",
+            "x-ms-client-name": "requestId",
+            "description": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-correlationid",
+            "x-ms-client-name": "correlationId",
+            "description": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "The partner initiated a call to unsubscribe a SaaS subscription.",
+            "headers": {
+              "Operation-Location": {
+                "x-ms-client-name": "OperationLocationUri",
+                "schema": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Delete on a subscription with Delete not in allowedCustomerOperations."
+          },
+          "403": {
+            "description": "Unauthorized. The authentication token was not provided or is invalid, or the request is attempting to access an acquisition that does not belong to the current publisher."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      }
+    },
+    "/saas/subscriptions/{subscriptionId}/listAvailablePlans": {
+      "get": {
+        "summary": "List available plans",
+        "description": "Use this call to find out if there are any private or public offers for the current publisher.",
+        "operationId": "FulfillmentOperations_ListAvailablePlans",
+        "tags": ["FulfillmentOperations"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscriptionId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "api-version",
+            "schema": {
+              "$ref": "#/components/schemas/ApiVersion"
+            },
+            "required": true,
+            "description": "Version of the API."
+          },
+          {
+            "in": "header",
+            "name": "x-ms-requestid",
+            "x-ms-client-name": "requestId",
+            "description": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-correlationid",
+            "x-ms-client-name": "correlationId",
+            "description": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK. Gets the SaaS subscription from identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubscriptionPlans"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized. The authentication token was not provided or is invalid, or the request is attempting to access an acquisition that does not belong to the current publisher."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      }
+    },
+    "/saas/subscriptions/{subscriptionId}/activate": {
+      "post": {
+        "summary": "Activate a subscription",
+        "description": "Use this call to activate a subscription.",
+        "operationId": "FulfillmentOperations_ActivateSubscription",
+        "tags": ["FulfillmentOperations"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscriptionId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "api-version",
+            "schema": {
+              "$ref": "#/components/schemas/ApiVersion"
+            },
+            "required": true,
+            "description": "Version of the API."
+          },
+          {
+            "in": "header",
+            "name": "x-ms-requestid",
+            "x-ms-client-name": "requestId",
+            "description": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-correlationid",
+            "x-ms-client-name": "correlationId",
+            "description": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubscriberPlan"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Activates the subscription."
+          },
+          "400": {
+            "description": "Bad request. Validation failures."
+          },
+          "403": {
+            "description": "Unauthorized. The authentication token was not provided or is invalid, or the request is attempting to access an acquisition that does not belong to the current publisher."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      }
+    },
+    "/saas/subscriptions/{subscriptionId}/operations": {
+      "get": {
+        "summary": "List outstanding operations",
+        "description": "Lists the outstanding operations for the current publisher.",
+        "operationId": "SubscriptionOperations_ListOperations",
+        "tags": ["SubscriptionOperations"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscriptionId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "api-version",
+            "schema": {
+              "$ref": "#/components/schemas/ApiVersion"
+            },
+            "required": true,
+            "description": "Version of the API."
+          },
+          {
+            "in": "header",
+            "name": "x-ms-requestid",
+            "x-ms-client-name": "requestId",
+            "description": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-correlationid",
+            "x-ms-client-name": "correlationId",
+            "description": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK. Gets the SaaS subscription from identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request; validation failures."
+          },
+          "403": {
+            "description": "Unauthorized. The authentication token was not provided or is invalid, or the request is attempting to access an acquisition that does not belong to the current publisher."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      }
+    },
+    "/saas/subscriptions/{subscriptionId}/operations/{operationId}": {
+      "get": {
+        "summary": "Get operation status",
+        "description": "Enables the publisher to track the status of the specified triggered async operation (such as Subscribe, Unsubscribe, ChangePlan, or ChangeQuantity).",
+        "operationId": "SubscriptionOperations_GetOperationStatus",
+        "tags": ["SubscriptionOperations"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscriptionId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "path",
+            "name": "operationId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "api-version",
+            "schema": {
+              "$ref": "#/components/schemas/ApiVersion"
+            },
+            "required": true,
+            "description": "Version of the API."
+          },
+          {
+            "in": "header",
+            "name": "x-ms-requestid",
+            "x-ms-client-name": "requestId",
+            "description": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-correlationid",
+            "x-ms-client-name": "correlationId",
+            "description": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK. Gets the SaaS subscription from identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request; validation failures."
+          },
+          "403": {
+            "description": "Unauthorized. The authentication token was not provided or is invalid, or the request is attempting to access an acquisition that does not belong to the current publisher."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      },
+      "patch": {
+        "summary": "Update the status of an operation",
+        "description": "Update the status of an operation to indicate success or failure with the provided values.",
+        "operationId": "SubscriptionOperations_UpdateOperationStatus",
+        "tags": ["SubscriptionOperations"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscriptionId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "path",
+            "name": "operationId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "api-version",
+            "schema": {
+              "$ref": "#/components/schemas/ApiVersion"
+            },
+            "required": true,
+            "description": "Version of the API."
+          },
+          {
+            "in": "header",
+            "name": "x-ms-requestid",
+            "x-ms-client-name": "requestId",
+            "description": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          },
+          {
+            "in": "header",
+            "name": "x-ms-correlationid",
+            "x-ms-client-name": "correlationId",
+            "description": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "required": false
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOperation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A call to inform of completion of an operation on the partner side. For example, this response could signal the change of seats or plans."
+          },
+          "400": {
+            "description": "Bad request; validation failures."
+          },
+          "403": {
+            "description": "Unauthorized. The authentication token was not provided or is invalid, or the request is attempting to access an acquisition that does not belong to the current publisher."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "409": {
+            "description": "Conflict. For example, a newer transaction is already fulfilled."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "azure_auth": {
+        "type": "oauth2",
+        "description": "Azure Active Directory OAuth2 Flow",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "https://login.microsoftonline.com/{your-app-tenant-id}/oauth2/token"
+          }
+        }
+      }
+    },
+    "schemas": {
+      "ApiVersion": {
+        "type": "string",
+        "description": "The request must send the following parameters as a URL Encoded form; grant_type - client_credentials; resource - 62d94f6c-d599-489b-a797-3e10e42fbe22; client_id - AAD Registered App Client ID; client_secret - AAD Registered App Client Secret",
+        "enum": ["2018-08-31", "2018-09-15"],
+        "default": "2018-08-31"
+      },
+      "ResolvedSubscription": {
+        "description": "Summary of the subscription",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "subscriptionName": {
+            "type": "string"
+          },
+          "offerId": {
+            "type": "string"
+          },
+          "planId": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "subscription": {
+            "$ref": "#/components/schemas/Subscription"
+          }
+        }
+      },
+      "SubscriptionsResponse": {
+        "type": "object",
+        "properties": {
+          "subscriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Subscription"
+            }
+          },
+          "@nextLink": {
+            "type": "string",
+            "description": "Link to get the next set of subscriptions.",
+            "format": "uri"
+          }
+        }
+      },
+      "Subscription": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "publisherId": {
+            "type": "string"
+          },
+          "offerId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "saasSubscriptionStatus": {
+            "type": "string",
+            "description": "Indicates the status of the operation.",
+            "enum": [
+              "NotStarted",
+              "PendingFulfillmentStart",
+              "Subscribed",
+              "Suspended",
+              "Unsubscribed"
+            ],
+            "x-ms-enum": {
+              "name": "SubscriptionStatusEnum",
+              "modelAsString": false
+            }
+          },
+          "beneficiary": {
+            "$ref": "#/components/schemas/AadIdentifier"
+          },
+          "purchaser": {
+            "$ref": "#/components/schemas/AadIdentifier"
+          },
+          "planId": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "term": {
+            "type": "object",
+            "properties": {
+              "startDate": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "endDate": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          },
+          "isTest": {
+            "type": "boolean",
+            "description": "Indicating whether the current subscription is a test asset."
+          },
+          "isFreeTrial": {
+            "type": "boolean",
+            "description": "true - the customer subscription is currently in free trial, false - the customer subscription is not currently in free trial.(optional field - default false)"
+          },
+          "allowedCustomerOperations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Read", "Update", "Delete"],
+              "x-ms-enum": {
+                "name": "AllowedCustomerOperationsEnum",
+                "modelAsString": false
+              }
+            }
+          },
+          "sessionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "fulfillmentId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "storeFront": {
+            "type": "string"
+          },
+          "sessionMode": {
+            "type": "string",
+            "description": "Dry Run indicates all transactions run as Test-Mode in the commerce stack",
+            "enum": ["None", "DryRun"],
+            "x-ms-enum": {
+              "name": "SessionModeEnum",
+              "modelAsString": false
+            }
+          },
+          "sandboxType": {
+            "type": "string",
+            "description": "Possible Values are None, Csp (Csp sandbox purchase)",
+            "enum": ["None", "Csp"],
+            "x-ms-enum": {
+              "name": "SandboxTypeEnum",
+              "modelAsString": false
+            }
+          }
+        }
+      },
+      "AadIdentifier": {
+        "type": "object",
+        "properties": {
+          "emailId": {
+            "type": "string",
+            "format": "email"
+          },
+          "objectId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "tenantId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "puid": {
+            "type": "string"
+          }
+        }
+      },
+      "SubscriptionPlans": {
+        "type": "object",
+        "properties": {
+          "plans": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Plan"
+            }
+          }
+        }
+      },
+      "Plan": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "isPrivate": {
+            "type": "boolean"
+          }
+        }
+      },
+      "SubscriberPlan": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "FulfillmentInternalServerErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "UpdateOperation": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Success", "Failure"],
+            "x-ms-enum": {
+              "name": "UpdateOperationStatusEnum",
+              "modelAsString": false
+            }
+          }
+        }
+      },
+      "OperationList": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Operation"
+            }
+          }
+        }
+      },
+      "Operation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "activityId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "subscriptionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "offerId": {
+            "type": "string"
+          },
+          "publisherId": {
+            "type": "string"
+          },
+          "planId": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "Unsubscribe",
+              "ChangePlan",
+              "ChangeQuantity",
+              "Suspend",
+              "Reinstate"
+            ],
+            "x-ms-enum": {
+              "name": "OperationActionEnum",
+              "modelAsString": false
+            }
+          },
+          "timeStamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "NotStarted",
+              "InProgress",
+              "Succeeded",
+              "Failed",
+              "Conflict"
+            ],
+            "x-ms-enum": {
+              "name": "OperationStatusEnum",
+              "modelAsString": false
+            }
+          }
+        }
+      }
+    }
+  }
+}
