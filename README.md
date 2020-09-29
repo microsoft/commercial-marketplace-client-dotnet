@@ -25,7 +25,7 @@ The tests use the standard .NET core configuration system user secrets for confi
 - ClientId
 - clientSecret
 
-One test requires a marketplace purchase identification token and you can get it from a landing page link generated from an actual subscription. SImply url-decode it, and set the value in the test.
+One test requires a marketplace purchase identification token and you can get it from a landing page link generated from an actual subscription. Simply url-decode it, and set the value in the test.
 
 
 # Contributing
