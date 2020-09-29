@@ -13,15 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Marketplace.Tests
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9F7429D-47B3-4CFF-A14F-D6272F08E7AA}"
 	ProjectSection(SolutionItems) = preProject
-		Directory.Build.props = Directory.Build.props
 		global.json = global.json
 	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Marketplace.Metering", "src\Microsoft.Marketplace.Metering\Microsoft.Marketplace.Metering.csproj", "{385C2B9A-CF07-462A-959D-D65AE9C5FE6E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Marketplace.SaaS", "src\Microsoft.Marketplace.SaaS\Microsoft.Marketplace.SaaS.csproj", "{6422F74F-F5F0-40C3-A140-34F58EC8733C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Marketplace.Core", "src\Microsoft.Marketplace.Core\Microsoft.Marketplace.Core.csproj", "{7864EAF4-094E-4B60-BAE8-BF22BDFEE237}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
