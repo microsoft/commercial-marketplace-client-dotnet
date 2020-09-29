@@ -18,6 +18,15 @@ Most of the code is generated, except an extension method
 
 - ListAllSubscriptionsAsync - List all of the subscriptions, implementing pagination.
 
+# Running the tests
+The tests use the standard .NET core configuration system user secrets for configuration. Simply add user secrets for the following values, using your favorite method, i.e. either ["dotnet user-secrets"](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-3.1&tabs=windows), Visual Studio Code extension, or Visual Studio 2019 user secrets menu option.
+
+- TenantId
+- ClientId
+- clientSecret
+
+One test requires a marketplace purchase identification token and you can get it from a landing page link generated from an actual subscription. SImply url-decode it, and set the value in the test.
+
 
 # Contributing
 
