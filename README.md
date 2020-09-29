@@ -1,5 +1,24 @@
 ![.NET Core](https://github.com/Azure/commercial-marketplace-saas-sdk-client-dotnet/workflows/.NET%20Core/badge.svg)
 
+# Using the SDK
+
+The SDK has two clients, one for the [SaaS fulfillment API version 2](https://docs.microsoft.com/en-us/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2) (**MarketplaceSaaSClient**) and one for [metered billing APIs](https://docs.microsoft.com/en-us/azure/marketplace/partner-center-portal/marketplace-metering-service-apis) (**MarketplaceMeteringClient**).
+
+Both of them use the client credentials flow, service-to-service authentication for authenticating to call the APIs. The clients support both client secrets and X.509 certificates.After registering an single-tenant application on Azure AD, just create a client secret, or use a X.509 to call the constructor as follows:
+``` csharp
+    new MarketplaceSaaSClient(<tenantId>, <clientId>, <clientSecret>);
+```
+
+Then call the appropriate method corresponding to the API call.
+``` csharp
+    var page = await this.sut.FulfillmentOperations.ListSubscriptionsAsync();
+```
+
+Most of the code is generated, except an extension method
+
+- ListAllSubscriptionsAsync - List all of the subscriptions, implementing pagination.
+
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
