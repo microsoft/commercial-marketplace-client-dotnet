@@ -26,16 +26,23 @@ namespace Microsoft.Marketplace.Metering.Models
         /// <summary>
         /// Initializes a new instance of the UsageEvent class.
         /// </summary>
-        /// <param name="resourceId">Subscription ID for the event</param>
+        /// <param name="resourceId">subscriptionId property value for SaaS
+        /// offer subscriptions; resourceUsageId property on the managed
+        /// application resource for managed application offers. For managed
+        /// applications, only use one of resourceId or resourceUri.</param>
+        /// <param name="resourceUri">Resource URI for the managed app. Used
+        /// with managed applications. Only use resourceUri or resourceId, but
+        /// never both.</param>
         /// <param name="quantity">Number of units consumed</param>
         /// <param name="dimension">Dimension identifier</param>
         /// <param name="effectiveStartTime">Time in UTC when the usage event
         /// occurred</param>
         /// <param name="planId">Plan associated with the purchased
         /// offer</param>
-        public UsageEvent(System.Guid? resourceId = default(System.Guid?), long? quantity = default(long?), string dimension = default(string), System.DateTime? effectiveStartTime = default(System.DateTime?), string planId = default(string))
+        public UsageEvent(System.Guid? resourceId = default(System.Guid?), string resourceUri = default(string), long? quantity = default(long?), string dimension = default(string), System.DateTime? effectiveStartTime = default(System.DateTime?), string planId = default(string))
         {
             ResourceId = resourceId;
+            ResourceUri = resourceUri;
             Quantity = quantity;
             Dimension = dimension;
             EffectiveStartTime = effectiveStartTime;
@@ -49,10 +56,20 @@ namespace Microsoft.Marketplace.Metering.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets subscription ID for the event
+        /// Gets or sets subscriptionId property value for SaaS offer
+        /// subscriptions; resourceUsageId property on the managed application
+        /// resource for managed application offers. For managed applications,
+        /// only use one of resourceId or resourceUri.
         /// </summary>
         [JsonProperty(PropertyName = "resourceId")]
         public System.Guid? ResourceId { get; set; }
+
+        /// <summary>
+        /// Gets or sets resource URI for the managed app. Used with managed
+        /// applications. Only use resourceUri or resourceId, but never both.
+        /// </summary>
+        [JsonProperty(PropertyName = "resourceUri")]
+        public string ResourceUri { get; set; }
 
         /// <summary>
         /// Gets or sets number of units consumed
