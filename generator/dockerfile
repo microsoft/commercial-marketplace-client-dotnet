@@ -24,6 +24,4 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8  
 
-RUN git clone https://github.com/Azure/azure-marketplace-openapi.git
-
-ENTRYPOINT [ "/bin/bash", "-c", "npx autorest ./azure-marketplace-openapi/$SDK/autorest.md --v3 --csharp --csharp-sdks-folder=/out  --add-credentials" ] 
+ENTRYPOINT [ "/bin/bash", "-c", "/scripts/generate.sh" ] 
