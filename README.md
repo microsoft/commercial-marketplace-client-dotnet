@@ -1,4 +1,4 @@
-![.NET Core](https://github.com/Azure/commercial-marketplace-saas-client-dotnet/workflows/.NET%20Core/badge.svg)
+![.NET Core](https://github.com/Azure/commercial-marketplace-client-dotnet/workflows/.NET%20Core/badge.svg)
 
 # Using the Client Library
 
