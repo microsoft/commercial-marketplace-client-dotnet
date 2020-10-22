@@ -1,8 +1,8 @@
-![.NET Core](https://github.com/Azure/commercial-marketplace-saas-sdk-client-dotnet/workflows/.NET%20Core/badge.svg)
+![.NET Core](https://github.com/Azure/commercial-marketplace-saas-client-dotnet/workflows/.NET%20Core/badge.svg)
 
-# Using the SDK
+# Using the Client Library
 
-The SDK has two clients, one for the [SaaS fulfillment API version 2](https://docs.microsoft.com/en-us/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2) (**MarketplaceSaaSClient**) and one for [metered billing APIs](https://docs.microsoft.com/en-us/azure/marketplace/partner-center-portal/marketplace-metering-service-apis) (**MarketplaceMeteringClient**).
+The library has two clients, one for the [SaaS fulfillment API version 2](https://docs.microsoft.com/en-us/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2) (**MarketplaceSaaSClient**) and one for [metered billing APIs](https://docs.microsoft.com/en-us/azure/marketplace/partner-center-portal/marketplace-metering-service-apis) (**MarketplaceMeteringClient**).
 
 Both of them use the client credentials flow, service-to-service authentication for authenticating to call the APIs. The clients support both client secrets and X.509 certificates.After registering an single-tenant application on Azure AD, just create a client secret, or use a X.509 to call the constructor as follows:
 ``` csharp
