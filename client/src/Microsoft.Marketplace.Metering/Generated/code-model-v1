@@ -1,0 +1,2540 @@
+{
+ "$id": "1",
+ "modelTypes": [
+  {
+   "$id": "2",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "3",
+     "isReadOnly": false,
+     "realPath": [
+      "resourceId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "4",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "5",
+      "fixed": false,
+      "raw": "subscriptionId property value for SaaS offer subscriptions; resourceUsageId property on the managed application resource for managed application offers. For managed applications, only use one of resourceId or resourceUri."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "6",
+      "fixed": false,
+      "raw": "resourceId"
+     },
+     "serializedName": "resourceId",
+     "modelType": {
+      "$id": "7",
+      "$type": "PrimaryType",
+      "format": "uuid",
+      "knownPrimaryType": "uuid",
+      "deprecated": false,
+      "name": {
+       "$id": "8",
+       "fixed": false,
+       "raw": "Uuid"
+      }
+     }
+    },
+    {
+     "$id": "9",
+     "isReadOnly": false,
+     "realPath": [
+      "resourceUri"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "10",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "11",
+      "fixed": false,
+      "raw": "Resource URI for the managed app. Used with managed applications. Only use resourceUri or resourceId, but never both."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "12",
+      "fixed": false,
+      "raw": "resourceUri"
+     },
+     "serializedName": "resourceUri",
+     "modelType": {
+      "$id": "13",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "14",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "15",
+     "isReadOnly": false,
+     "realPath": [
+      "quantity"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "16",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "17",
+      "fixed": false,
+      "raw": "Number of units consumed"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "18",
+      "fixed": false,
+      "raw": "quantity"
+     },
+     "serializedName": "quantity",
+     "modelType": {
+      "$id": "19",
+      "$type": "PrimaryType",
+      "format": "int64",
+      "knownPrimaryType": "long",
+      "deprecated": false,
+      "name": {
+       "$id": "20",
+       "fixed": false,
+       "raw": "Long"
+      }
+     }
+    },
+    {
+     "$id": "21",
+     "isReadOnly": false,
+     "realPath": [
+      "dimension"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "22",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "23",
+      "fixed": false,
+      "raw": "Dimension identifier"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "24",
+      "fixed": false,
+      "raw": "dimension"
+     },
+     "serializedName": "dimension",
+     "modelType": {
+      "$id": "25",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "26",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "27",
+     "isReadOnly": false,
+     "realPath": [
+      "effectiveStartTime"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "28",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "29",
+      "fixed": false,
+      "raw": "Time in UTC when the usage event occurred"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "30",
+      "fixed": false,
+      "raw": "effectiveStartTime"
+     },
+     "serializedName": "effectiveStartTime",
+     "modelType": {
+      "$id": "31",
+      "$type": "PrimaryType",
+      "format": "date-time",
+      "knownPrimaryType": "dateTime",
+      "deprecated": false,
+      "name": {
+       "$id": "32",
+       "fixed": false,
+       "raw": "DateTime"
+      }
+     }
+    },
+    {
+     "$id": "33",
+     "isReadOnly": false,
+     "realPath": [
+      "planId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "34",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "35",
+      "fixed": false,
+      "raw": "Plan associated with the purchased offer"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "36",
+      "fixed": false,
+      "raw": "planId"
+     },
+     "serializedName": "planId",
+     "modelType": {
+      "$id": "37",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "38",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    }
+   ],
+   "serializedName": "UsageEvent",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "39",
+    "fixed": false,
+    "raw": "UsageEvent"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "UsageEvent",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/schemas/UsageEvent"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "40",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "41",
+     "isReadOnly": false,
+     "realPath": [
+      "usageEventId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "42",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "43",
+      "fixed": false,
+      "raw": "Unique identifier associated with the usage event"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "44",
+      "fixed": false,
+      "raw": "usageEventId"
+     },
+     "serializedName": "usageEventId",
+     "modelType": {
+      "$id": "45",
+      "$type": "PrimaryType",
+      "format": "uuid",
+      "knownPrimaryType": "uuid",
+      "deprecated": false,
+      "name": {
+       "$id": "46",
+       "fixed": false,
+       "raw": "Uuid"
+      }
+     }
+    },
+    {
+     "$id": "47",
+     "isReadOnly": false,
+     "realPath": [
+      "status"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "48",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "49",
+      "fixed": false,
+      "raw": "Status of the operation."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "2018-08-31"
+       ],
+       "filename": [
+        "mem:///114?oai3.shaken.json"
+       ],
+       "name": "UsageEventStatusEnum",
+       "originalLocations": [
+        "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/schemas/UsageEventOkResponse-status"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "UsageEventStatusEnum",
+       "modelAsString": false
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "50",
+      "fixed": false,
+      "raw": "status"
+     },
+     "serializedName": "status",
+     "modelType": {
+      "$id": "51",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "52",
+        "name": "Accepted",
+        "serializedName": "Accepted"
+       },
+       {
+        "$id": "53",
+        "name": "Expired",
+        "serializedName": "Expired"
+       },
+       {
+        "$id": "54",
+        "name": "Duplicate",
+        "serializedName": "Duplicate"
+       },
+       {
+        "$id": "55",
+        "name": "Error",
+        "serializedName": "Error"
+       },
+       {
+        "$id": "56",
+        "name": "ResourceNotFound",
+        "serializedName": "ResourceNotFound"
+       },
+       {
+        "$id": "57",
+        "name": "ResourceNotAuthorized",
+        "serializedName": "ResourceNotAuthorized"
+       },
+       {
+        "$id": "58",
+        "name": "InvalidDimension|BadArgument",
+        "serializedName": "InvalidDimension|BadArgument"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": false,
+      "underlyingType": {
+       "$id": "59",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "deprecated": false,
+       "name": {
+        "$id": "60",
+        "fixed": false,
+        "raw": "String"
+       }
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "61",
+       "fixed": false,
+       "raw": "UsageEventStatusEnum"
+      }
+     }
+    },
+    {
+     "$id": "62",
+     "isReadOnly": false,
+     "realPath": [
+      "messageTime"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "63",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "64",
+      "fixed": false,
+      "raw": "Time this message was created in UTC"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "65",
+      "fixed": false,
+      "raw": "messageTime"
+     },
+     "serializedName": "messageTime",
+     "modelType": {
+      "$id": "66",
+      "$type": "PrimaryType",
+      "format": "date-time",
+      "knownPrimaryType": "dateTime",
+      "deprecated": false,
+      "name": {
+       "$id": "67",
+       "fixed": false,
+       "raw": "DateTime"
+      }
+     }
+    },
+    {
+     "$id": "68",
+     "isReadOnly": false,
+     "realPath": [
+      "resourceId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "69",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "70",
+      "fixed": false,
+      "raw": "Identifier of the resource against which usage is emitted"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "71",
+      "fixed": false,
+      "raw": "resourceId"
+     },
+     "serializedName": "resourceId",
+     "modelType": {
+      "$id": "72",
+      "$type": "PrimaryType",
+      "format": "uuid",
+      "knownPrimaryType": "uuid",
+      "deprecated": false,
+      "name": {
+       "$id": "73",
+       "fixed": false,
+       "raw": "Uuid"
+      }
+     }
+    },
+    {
+     "$id": "74",
+     "isReadOnly": false,
+     "realPath": [
+      "resourceUri"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "75",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "76",
+      "fixed": false,
+      "raw": "Identifier of the managed app resource against which usage is emitted"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "77",
+      "fixed": false,
+      "raw": "resourceUri"
+     },
+     "serializedName": "resourceUri",
+     "modelType": {
+      "$id": "78",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "79",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "80",
+     "isReadOnly": false,
+     "realPath": [
+      "quantity"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "81",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "82",
+      "fixed": false,
+      "raw": "Number of units consumed"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "83",
+      "fixed": false,
+      "raw": "quantity"
+     },
+     "serializedName": "quantity",
+     "modelType": {
+      "$id": "84",
+      "$type": "PrimaryType",
+      "format": "int64",
+      "knownPrimaryType": "long",
+      "deprecated": false,
+      "name": {
+       "$id": "85",
+       "fixed": false,
+       "raw": "Long"
+      }
+     }
+    },
+    {
+     "$id": "86",
+     "isReadOnly": false,
+     "realPath": [
+      "dimension"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "87",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "88",
+      "fixed": false,
+      "raw": "Dimension identifier"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "89",
+      "fixed": false,
+      "raw": "dimension"
+     },
+     "serializedName": "dimension",
+     "modelType": {
+      "$id": "90",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "91",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "92",
+     "isReadOnly": false,
+     "realPath": [
+      "effectiveStartTime"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "93",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "94",
+      "fixed": false,
+      "raw": "Time in UTC when the usage event occurred"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "95",
+      "fixed": false,
+      "raw": "effectiveStartTime"
+     },
+     "serializedName": "effectiveStartTime",
+     "modelType": {
+      "$id": "96",
+      "$type": "PrimaryType",
+      "format": "date-time",
+      "knownPrimaryType": "dateTime",
+      "deprecated": false,
+      "name": {
+       "$id": "97",
+       "fixed": false,
+       "raw": "DateTime"
+      }
+     }
+    },
+    {
+     "$id": "98",
+     "isReadOnly": false,
+     "realPath": [
+      "planId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "99",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "100",
+      "fixed": false,
+      "raw": "Plan associated with the purchased offer"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "101",
+      "fixed": false,
+      "raw": "planId"
+     },
+     "serializedName": "planId",
+     "modelType": {
+      "$id": "102",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "103",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    }
+   ],
+   "serializedName": "UsageEventOkResponse",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "104",
+    "fixed": false,
+    "raw": "UsageEventOkResponse"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "UsageEventOkResponse",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/schemas/UsageEventOkResponse"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "105",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "106",
+     "isReadOnly": false,
+     "realPath": [
+      "usageEventId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "107",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "108",
+      "fixed": false,
+      "raw": "Unique identifier associated with the usage event"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "109",
+      "fixed": false,
+      "raw": "usageEventId"
+     },
+     "serializedName": "usageEventId",
+     "modelType": {
+      "$id": "110",
+      "$type": "PrimaryType",
+      "format": "uuid",
+      "knownPrimaryType": "uuid",
+      "deprecated": false,
+      "name": {
+       "$id": "111",
+       "fixed": false,
+       "raw": "Uuid"
+      }
+     }
+    },
+    {
+     "$id": "112",
+     "isReadOnly": false,
+     "realPath": [
+      "status"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "113",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "114",
+      "fixed": false,
+      "raw": "Accepted|NotProcessed|Expired"
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "2018-08-31"
+       ],
+       "filename": [
+        "mem:///114?oai3.shaken.json"
+       ],
+       "name": "UsageEventConflictResponse-additionalInfo-status",
+       "originalLocations": [
+        "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/schemas/UsageEventConflictResponse-additionalInfo-status"
+       ]
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "115",
+      "fixed": false,
+      "raw": "status"
+     },
+     "serializedName": "status",
+     "modelType": {
+      "$id": "116",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "117",
+        "name": "Accepted",
+        "serializedName": "Accepted"
+       },
+       {
+        "$id": "118",
+        "name": "NotProcessed",
+        "serializedName": "NotProcessed"
+       },
+       {
+        "$id": "119",
+        "name": "Expired",
+        "serializedName": "Expired"
+       }
+      ],
+      "oldModelAsString": false,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "120",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "deprecated": false,
+       "name": {
+        "$id": "121",
+        "fixed": false,
+        "raw": "String"
+       }
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "122",
+       "fixed": false,
+       "raw": ""
+      }
+     }
+    },
+    {
+     "$id": "123",
+     "isReadOnly": false,
+     "realPath": [
+      "messageTime"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "124",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "125",
+      "fixed": false,
+      "raw": "Time this message was created in UTC"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "126",
+      "fixed": false,
+      "raw": "messageTime"
+     },
+     "serializedName": "messageTime",
+     "modelType": {
+      "$id": "127",
+      "$type": "PrimaryType",
+      "format": "date-time",
+      "knownPrimaryType": "dateTime",
+      "deprecated": false,
+      "name": {
+       "$id": "128",
+       "fixed": false,
+       "raw": "DateTime"
+      }
+     }
+    },
+    {
+     "$id": "129",
+     "isReadOnly": false,
+     "realPath": [
+      "resourceId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "130",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "131",
+      "fixed": false,
+      "raw": "Identifier of the resource against which usage is emitted"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "132",
+      "fixed": false,
+      "raw": "resourceId"
+     },
+     "serializedName": "resourceId",
+     "modelType": {
+      "$id": "133",
+      "$type": "PrimaryType",
+      "format": "uuid",
+      "knownPrimaryType": "uuid",
+      "deprecated": false,
+      "name": {
+       "$id": "134",
+       "fixed": false,
+       "raw": "Uuid"
+      }
+     }
+    },
+    {
+     "$id": "135",
+     "isReadOnly": false,
+     "realPath": [
+      "resourceUri"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "136",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "137",
+      "fixed": false,
+      "raw": "Identifier of the managed app resource against which usage is emitted"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "138",
+      "fixed": false,
+      "raw": "resourceUri"
+     },
+     "serializedName": "resourceUri",
+     "modelType": {
+      "$id": "139",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "140",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "141",
+     "isReadOnly": false,
+     "realPath": [
+      "quantity"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "142",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "143",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "144",
+      "fixed": false,
+      "raw": "quantity"
+     },
+     "serializedName": "quantity",
+     "modelType": {
+      "$id": "145",
+      "$type": "PrimaryType",
+      "format": "int64",
+      "knownPrimaryType": "long",
+      "deprecated": false,
+      "name": {
+       "$id": "146",
+       "fixed": false,
+       "raw": "Long"
+      }
+     }
+    },
+    {
+     "$id": "147",
+     "isReadOnly": false,
+     "realPath": [
+      "dimension"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "148",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "149",
+      "fixed": false,
+      "raw": "Dimension identifier"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "150",
+      "fixed": false,
+      "raw": "dimension"
+     },
+     "serializedName": "dimension",
+     "modelType": {
+      "$id": "151",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "152",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "153",
+     "isReadOnly": false,
+     "realPath": [
+      "effectiveStartTime"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "154",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "155",
+      "fixed": false,
+      "raw": "Time in UTC when the usage event occurred"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "156",
+      "fixed": false,
+      "raw": "effectiveStartTime"
+     },
+     "serializedName": "effectiveStartTime",
+     "modelType": {
+      "$id": "157",
+      "$type": "PrimaryType",
+      "format": "date-time",
+      "knownPrimaryType": "dateTime",
+      "deprecated": false,
+      "name": {
+       "$id": "158",
+       "fixed": false,
+       "raw": "DateTime"
+      }
+     }
+    },
+    {
+     "$id": "159",
+     "isReadOnly": false,
+     "realPath": [
+      "planId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "160",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "161",
+      "fixed": false,
+      "raw": "Plan associated with the purchased offer"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "162",
+      "fixed": false,
+      "raw": "planId"
+     },
+     "serializedName": "planId",
+     "modelType": {
+      "$id": "163",
+      "$type": "PrimaryType",
+      "format": "uuid",
+      "knownPrimaryType": "uuid",
+      "deprecated": false,
+      "name": {
+       "$id": "164",
+       "fixed": false,
+       "raw": "Uuid"
+      }
+     }
+    }
+   ],
+   "serializedName": "UsageEventConflictResponse-additionalInfo",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "165",
+    "fixed": false,
+    "raw": "UsageEventConflictResponse-additionalInfo"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "UsageEventConflictResponse-additionalInfo",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/schemas/UsageEventConflictResponse-additionalInfo"
+     ]
+    },
+    "x-internal-autorest-anonymous-schema": {
+     "anonymous": true
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "166",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "167",
+     "isReadOnly": false,
+     "realPath": [
+      "code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "168",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "169",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "170",
+      "fixed": false,
+      "raw": "code"
+     },
+     "serializedName": "code",
+     "modelType": {
+      "$id": "171",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "172",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "173",
+     "isReadOnly": false,
+     "realPath": [
+      "additionalInfo"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "174",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "175",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "176",
+      "fixed": false,
+      "raw": "additionalInfo"
+     },
+     "serializedName": "additionalInfo",
+     "modelType": {
+      "$ref": "105"
+     }
+    }
+   ],
+   "serializedName": "UsageEventConflictResponse",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "177",
+    "fixed": false,
+    "raw": "UsageEventConflictResponse"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "UsageEventConflictResponse",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/schemas/UsageEventConflictResponse"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "178",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "179",
+     "isReadOnly": false,
+     "realPath": [
+      "code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "180",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "181",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "182",
+      "fixed": false,
+      "raw": "code"
+     },
+     "serializedName": "code",
+     "modelType": {
+      "$id": "183",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "184",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "185",
+     "isReadOnly": false,
+     "realPath": [
+      "message"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "186",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "187",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "188",
+      "fixed": false,
+      "raw": "message"
+     },
+     "serializedName": "message",
+     "modelType": {
+      "$id": "189",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "190",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "191",
+     "isReadOnly": false,
+     "realPath": [
+      "target"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "192",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "193",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "194",
+      "fixed": false,
+      "raw": "target"
+     },
+     "serializedName": "target",
+     "modelType": {
+      "$id": "195",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "196",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    }
+   ],
+   "serializedName": "UsageEventBadRequestResponseDetail",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "197",
+    "fixed": false,
+    "raw": "UsageEventBadRequestResponseDetail"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "UsageEventBadRequestResponseDetail",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/schemas/UsageEventBadRequestResponseDetail"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "198",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "199",
+     "isReadOnly": false,
+     "realPath": [
+      "code"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "200",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "201",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "202",
+      "fixed": false,
+      "raw": "code"
+     },
+     "serializedName": "code",
+     "modelType": {
+      "$id": "203",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "204",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "205",
+     "isReadOnly": false,
+     "realPath": [
+      "message"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "206",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "207",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "208",
+      "fixed": false,
+      "raw": "message"
+     },
+     "serializedName": "message",
+     "modelType": {
+      "$id": "209",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "210",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "211",
+     "isReadOnly": false,
+     "realPath": [
+      "target"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "212",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "213",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "214",
+      "fixed": false,
+      "raw": "target"
+     },
+     "serializedName": "target",
+     "modelType": {
+      "$id": "215",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "216",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "217",
+     "isReadOnly": false,
+     "realPath": [
+      "details"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "218",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "219",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "220",
+      "fixed": false,
+      "raw": "details"
+     },
+     "serializedName": "details",
+     "modelType": {
+      "$id": "221",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "178"
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "222",
+       "fixed": false
+      }
+     }
+    }
+   ],
+   "serializedName": "UsageEventBadRequestResponse",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "223",
+    "fixed": false,
+    "raw": "UsageEventBadRequestResponse"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "UsageEventBadRequestResponse",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/schemas/UsageEventBadRequestResponse"
+     ]
+    }
+   },
+   "deprecated": false
+  }
+ ],
+ "enumTypes": [
+  {
+   "$ref": "51"
+  }
+ ],
+ "name": "MeteringAPI",
+ "namespace": "Microsoft.Marketplace.Metering",
+ "modelsName": "Models",
+ "apiVersion": "2018-08-31",
+ "baseUrl": "https://marketplaceapi.microsoft.com/api",
+ "documentation": "With the commercial marketplace metering service, you can create software as a service (SaaS) and managed application offers which charge according to non-standard units. Before publishing an offer to the commercial marketplace, you define the billing dimensions such as bandwidth, tickets, or emails processed. Customers then pay according to their consumption of these dimensions, with your system informing Microsoft via the commercial marketplace metering service API of billable events.",
+ "extensions": {
+  "security": [
+   {
+    "azure_auth": [
+     "user_impersonation"
+    ]
+   }
+  ]
+ },
+ "codeGenExtensions": {
+  "name": "MarketplaceMeteringClient",
+  "header": "MIT",
+  "internalConstructors": true,
+  "useDateTimeOffset": false
+ },
+ "properties": [
+  {
+   "$id": "224",
+   "isReadOnly": false,
+   "realPath": [
+    "api-version"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "225",
+    "fixed": false,
+    "raw": "2018-08-31"
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "226",
+    "fixed": false,
+    "raw": "Version of the API."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "paths·7ywah2·usageevent·post·parameters·0",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/parameters/paths·7ywah2·usageevent·post·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "227",
+    "fixed": false,
+    "raw": "api-version"
+   },
+   "serializedName": "api-version",
+   "modelType": {
+    "$id": "228",
+    "$type": "EnumType",
+    "values": [
+     {
+      "$id": "229",
+      "name": "2018-08-31",
+      "serializedName": "2018-08-31"
+     },
+     {
+      "$id": "230",
+      "name": "2018-09-15",
+      "serializedName": "2018-09-15"
+     }
+    ],
+    "oldModelAsString": false,
+    "modelAsString": true,
+    "underlyingType": {
+     "$id": "231",
+     "$type": "PrimaryType",
+     "knownPrimaryType": "string",
+     "deprecated": false,
+     "name": {
+      "$id": "232",
+      "fixed": false,
+      "raw": "String"
+     }
+    },
+    "deprecated": false,
+    "name": {
+     "$id": "233",
+     "fixed": false,
+     "raw": ""
+    }
+   }
+  },
+  {
+   "$id": "234",
+   "isReadOnly": false,
+   "realPath": [
+    "x-ms-requestid"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "235",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "236",
+    "fixed": false,
+    "raw": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "paths·x3lg62·usageevent·post·parameters·1",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/parameters/paths·x3lg62·usageevent·post·parameters·1"
+     ]
+    },
+    "x-ms-client-name": "requestId",
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "237",
+    "fixed": false,
+    "raw": "x-ms-requestid"
+   },
+   "serializedName": "x-ms-requestid",
+   "modelType": {
+    "$id": "238",
+    "$type": "PrimaryType",
+    "format": "uuid",
+    "knownPrimaryType": "uuid",
+    "deprecated": false,
+    "name": {
+     "$id": "239",
+     "fixed": false,
+     "raw": "Uuid"
+    }
+   }
+  },
+  {
+   "$id": "240",
+   "isReadOnly": false,
+   "realPath": [
+    "x-ms-correlationid"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "241",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "242",
+    "fixed": false,
+    "raw": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "paths·rxyxm6·usageevent·post·parameters·2",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/parameters/paths·rxyxm6·usageevent·post·parameters·2"
+     ]
+    },
+    "x-ms-client-name": "correlationId",
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "243",
+    "fixed": false,
+    "raw": "x-ms-correlationid"
+   },
+   "serializedName": "x-ms-correlationid",
+   "modelType": {
+    "$id": "244",
+    "$type": "PrimaryType",
+    "format": "uuid",
+    "knownPrimaryType": "uuid",
+    "deprecated": false,
+    "name": {
+     "$id": "245",
+     "fixed": false,
+     "raw": "Uuid"
+    }
+   }
+  },
+  {
+   "$id": "246",
+   "isReadOnly": false,
+   "realPath": [
+    "api-version"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "247",
+    "fixed": false,
+    "raw": "2018-08-31"
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "248",
+    "fixed": false,
+    "raw": "Version of the API."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "paths·1yqdafe·batchusageevent·post·parameters·0",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/parameters/paths·1yqdafe·batchusageevent·post·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "249",
+    "fixed": false,
+    "raw": "ApiVersion1"
+   },
+   "serializedName": "api-version",
+   "modelType": {
+    "$id": "250",
+    "$type": "EnumType",
+    "values": [
+     {
+      "$id": "251",
+      "name": "2018-08-31",
+      "serializedName": "2018-08-31"
+     },
+     {
+      "$id": "252",
+      "name": "2018-09-15",
+      "serializedName": "2018-09-15"
+     }
+    ],
+    "oldModelAsString": false,
+    "modelAsString": true,
+    "underlyingType": {
+     "$id": "253",
+     "$type": "PrimaryType",
+     "knownPrimaryType": "string",
+     "deprecated": false,
+     "name": {
+      "$id": "254",
+      "fixed": false,
+      "raw": "String"
+     }
+    },
+    "deprecated": false,
+    "name": {
+     "$id": "255",
+     "fixed": false,
+     "raw": ""
+    }
+   }
+  },
+  {
+   "$id": "256",
+   "isReadOnly": false,
+   "realPath": [
+    "x-ms-requestid"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "257",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "258",
+    "fixed": false,
+    "raw": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "paths·17zt9co·batchusageevent·post·parameters·1",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/parameters/paths·17zt9co·batchusageevent·post·parameters·1"
+     ]
+    },
+    "x-ms-client-name": "requestId",
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "259",
+    "fixed": false,
+    "raw": "RequestId1"
+   },
+   "serializedName": "x-ms-requestid",
+   "modelType": {
+    "$id": "260",
+    "$type": "PrimaryType",
+    "format": "uuid",
+    "knownPrimaryType": "uuid",
+    "deprecated": false,
+    "name": {
+     "$id": "261",
+     "fixed": false,
+     "raw": "Uuid"
+    }
+   }
+  },
+  {
+   "$id": "262",
+   "isReadOnly": false,
+   "realPath": [
+    "x-ms-correlationid"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "263",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "264",
+    "fixed": false,
+    "raw": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers."
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "2018-08-31"
+     ],
+     "filename": [
+      "mem:///114?oai3.shaken.json"
+     ],
+     "name": "paths·bimwtw·batchusageevent·post·parameters·2",
+     "originalLocations": [
+      "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/parameters/paths·bimwtw·batchusageevent·post·parameters·2"
+     ]
+    },
+    "x-ms-client-name": "correlationId",
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "265",
+    "fixed": false,
+    "raw": "CorrelationId1"
+   },
+   "serializedName": "x-ms-correlationid",
+   "modelType": {
+    "$id": "266",
+    "$type": "PrimaryType",
+    "format": "uuid",
+    "knownPrimaryType": "uuid",
+    "deprecated": false,
+    "name": {
+     "$id": "267",
+     "fixed": false,
+     "raw": "Uuid"
+    }
+   }
+  }
+ ],
+ "operations": [
+  {
+   "$id": "268",
+   "methods": [
+    {
+     "$id": "269",
+     "parameters": [
+      {
+       "$id": "270",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "271",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "272",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·1lh2ilf·usageevent·post·requestbody",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/requestBodies/paths·1lh2ilf·usageevent·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "273",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "2"
+       }
+      },
+      {
+       "$id": "274",
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "275",
+        "fixed": false,
+        "raw": "2018-08-31"
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "276",
+        "fixed": false,
+        "raw": "The API version to use for the request."
+       },
+       "isRequired": true,
+       "isConstant": true,
+       "name": {
+        "$id": "277",
+        "fixed": false,
+        "raw": "api-version"
+       },
+       "serializedName": "api-version",
+       "modelType": {
+        "$id": "278",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "279",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "280",
+       "clientProperty": {
+        "$ref": "234"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "281",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "282",
+        "fixed": false,
+        "raw": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·x3lg62·usageevent·post·parameters·1",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/parameters/paths·x3lg62·usageevent·post·parameters·1"
+         ]
+        },
+        "x-ms-client-name": "requestId",
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "283",
+        "fixed": false,
+        "raw": "x-ms-requestid"
+       },
+       "serializedName": "x-ms-requestid",
+       "modelType": {
+        "$id": "284",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "deprecated": false,
+        "name": {
+         "$id": "285",
+         "fixed": false,
+         "raw": "Uuid"
+        }
+       }
+      },
+      {
+       "$id": "286",
+       "clientProperty": {
+        "$ref": "240"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "287",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "288",
+        "fixed": false,
+        "raw": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·rxyxm6·usageevent·post·parameters·2",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/parameters/paths·rxyxm6·usageevent·post·parameters·2"
+         ]
+        },
+        "x-ms-client-name": "correlationId",
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "289",
+        "fixed": false,
+        "raw": "x-ms-correlationid"
+       },
+       "serializedName": "x-ms-correlationid",
+       "modelType": {
+        "$id": "290",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "deprecated": false,
+        "name": {
+         "$id": "291",
+         "fixed": false,
+         "raw": "Uuid"
+        }
+       }
+      }
+     ],
+     "name": {
+      "$id": "292",
+      "fixed": false,
+      "raw": "PostUsageEvent"
+     },
+     "group": {
+      "$id": "293",
+      "fixed": false,
+      "raw": "MeteringOperations"
+     },
+     "serializedName": "MeteringOperations_PostUsageEvent",
+     "url": "/usageEvent",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "294",
+       "body": {
+        "$ref": "40"
+       },
+       "extensions": {
+        "$id": "295",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·1sgyirc·usageevent·post·responses·200",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/responses/paths·1sgyirc·usageevent·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "BadRequest": {
+       "$id": "296",
+       "extensions": {
+        "$id": "297",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·1e1ibcf·usageevent·post·responses·400",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/responses/paths·1e1ibcf·usageevent·post·responses·400"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "Forbidden": {
+       "$id": "298",
+       "extensions": {
+        "$id": "299",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·1qxge6g·usageevent·post·responses·403",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/responses/paths·1qxge6g·usageevent·post·responses·403"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "Conflict": {
+       "$id": "300",
+       "extensions": {
+        "$id": "301",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·1u4m1wm·usageevent·post·responses·409",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/responses/paths·1u4m1wm·usageevent·post·responses·409"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "302",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "303",
+      "body": {
+       "$ref": "40"
+      },
+      "isNullable": true
+     },
+     "description": "Posts a single usage event to the marketplace metering service API.",
+     "summary": "Posts a single usage event to the marketplace metering service API.",
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": [
+       {
+        "description": "Marketplace Metering APIs, version 1",
+        "url": "https://marketplaceapi.microsoft.com/api"
+       }
+      ]
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "304",
+     "parameters": [
+      {
+       "$id": "305",
+       "location": "body",
+       "collectionFormat": "none",
+       "constraints": {
+        "MaxItems": "25",
+        "MinItems": "1"
+       },
+       "defaultValue": {
+        "$id": "306",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "307",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·sj46qt·batchusageevent·post·requestbody",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/requestBodies/paths·sj46qt·batchusageevent·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "308",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$id": "309",
+        "$type": "SequenceType",
+        "elementType": {
+         "$ref": "2"
+        },
+        "deprecated": false,
+        "name": {
+         "$id": "310",
+         "fixed": false
+        }
+       }
+      },
+      {
+       "$id": "311",
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "312",
+        "fixed": false,
+        "raw": "2018-08-31"
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "313",
+        "fixed": false,
+        "raw": "The API version to use for the request."
+       },
+       "isRequired": true,
+       "isConstant": true,
+       "name": {
+        "$id": "314",
+        "fixed": false,
+        "raw": "api-version"
+       },
+       "serializedName": "api-version",
+       "modelType": {
+        "$id": "315",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "316",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "317",
+       "clientProperty": {
+        "$ref": "234"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "318",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "319",
+        "fixed": false,
+        "raw": "A unique string value for tracking the request from the client, preferably a GUID. If this value isn't provided, one will be generated and provided in the response headers."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·17zt9co·batchusageevent·post·parameters·1",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/parameters/paths·17zt9co·batchusageevent·post·parameters·1"
+         ]
+        },
+        "x-ms-client-name": "requestId",
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "320",
+        "fixed": false,
+        "raw": "x-ms-requestid"
+       },
+       "serializedName": "x-ms-requestid",
+       "modelType": {
+        "$id": "321",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "deprecated": false,
+        "name": {
+         "$id": "322",
+         "fixed": false,
+         "raw": "Uuid"
+        }
+       }
+      },
+      {
+       "$id": "323",
+       "clientProperty": {
+        "$ref": "240"
+       },
+       "location": "header",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "324",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "325",
+        "fixed": false,
+        "raw": "A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn't provided, one will be generated and provided in the response headers."
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·bimwtw·batchusageevent·post·parameters·2",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/parameters/paths·bimwtw·batchusageevent·post·parameters·2"
+         ]
+        },
+        "x-ms-client-name": "correlationId",
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "326",
+        "fixed": false,
+        "raw": "x-ms-correlationid"
+       },
+       "serializedName": "x-ms-correlationid",
+       "modelType": {
+        "$id": "327",
+        "$type": "PrimaryType",
+        "format": "uuid",
+        "knownPrimaryType": "uuid",
+        "deprecated": false,
+        "name": {
+         "$id": "328",
+         "fixed": false,
+         "raw": "Uuid"
+        }
+       }
+      }
+     ],
+     "name": {
+      "$id": "329",
+      "fixed": false,
+      "raw": "PostBatchUsageEvent"
+     },
+     "group": {
+      "$id": "330",
+      "fixed": false,
+      "raw": "MeteringOperations"
+     },
+     "serializedName": "MeteringOperations_PostBatchUsageEvent",
+     "url": "/batchUsageEvent",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "331",
+       "body": {
+        "$id": "332",
+        "$type": "SequenceType",
+        "elementType": {
+         "$ref": "40"
+        },
+        "deprecated": false,
+        "name": {
+         "$id": "333",
+         "fixed": false
+        }
+       },
+       "extensions": {
+        "$id": "334",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·4h6mrn·batchusageevent·post·responses·200",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/responses/paths·4h6mrn·batchusageevent·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "BadRequest": {
+       "$id": "335",
+       "extensions": {
+        "$id": "336",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·1rtjht9·batchusageevent·post·responses·400",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/responses/paths·1rtjht9·batchusageevent·post·responses·400"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "Forbidden": {
+       "$id": "337",
+       "extensions": {
+        "$id": "338",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "2018-08-31"
+         ],
+         "filename": [
+          "mem:///114?oai3.shaken.json"
+         ],
+         "name": "paths·oi4n6g·batchusageevent·post·responses·403",
+         "originalLocations": [
+          "file:///azure-marketplace-openapi/Microsoft.Marketplace.Metering/2018-08-31/meteringapi.v1.json#/components/responses/paths·oi4n6g·batchusageevent·post·responses·403"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "339",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "340",
+      "body": {
+       "$ref": "332"
+      },
+      "isNullable": true
+     },
+     "description": "The batch usage event API allows you to emit usage events for more than one purchased entity at once. The batch usage event request references the metering services dimension defined by the publisher when publishing the offer.",
+     "summary": "Posts a set of usage events to the marketplace metering service API.",
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": [
+       {
+        "description": "Marketplace Metering APIs, version 1",
+        "url": "https://marketplaceapi.microsoft.com/api"
+       }
+      ]
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "341",
+    "fixed": false,
+    "raw": "MeteringOperations"
+   },
+   "typeName": {
+    "$id": "342",
+    "fixed": false
+   },
+   "nameForProperty": "MeteringOperations"
+  }
+ ]
+}
