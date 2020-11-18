@@ -13,40 +13,44 @@ namespace Microsoft.Marketplace.Metering.Models
     using Newtonsoft.Json;
     using System.Linq;
 
-    public partial class UsageEventConflictResponseAdditionalInfo
+    public partial class UsageEventOkResponse
     {
         /// <summary>
-        /// Initializes a new instance of the
-        /// UsageEventConflictResponseAdditionalInfo class.
+        /// Initializes a new instance of the UsageEventOkResponse class.
         /// </summary>
-        public UsageEventConflictResponseAdditionalInfo()
+        public UsageEventOkResponse()
         {
             CustomInit();
         }
 
         /// <summary>
-        /// Initializes a new instance of the
-        /// UsageEventConflictResponseAdditionalInfo class.
+        /// Initializes a new instance of the UsageEventOkResponse class.
         /// </summary>
         /// <param name="usageEventId">Unique identifier associated with the
         /// usage event</param>
-        /// <param name="status">Accepted|NotProcessed|Expired. Possible values
-        /// include: 'Accepted', 'NotProcessed', 'Expired'</param>
+        /// <param name="status">Status of the operation. Possible values
+        /// include: 'Accepted', 'Expired', 'Duplicate', 'Error',
+        /// 'ResourceNotFound', 'ResourceNotAuthorized',
+        /// 'InvalidDimension|BadArgument'</param>
         /// <param name="messageTime">Time this message was created in
         /// UTC</param>
         /// <param name="resourceId">Identifier of the resource against which
         /// usage is emitted</param>
+        /// <param name="resourceUri">Identifier of the managed app resource
+        /// against which usage is emitted</param>
+        /// <param name="quantity">Number of units consumed</param>
         /// <param name="dimension">Dimension identifier</param>
         /// <param name="effectiveStartTime">Time in UTC when the usage event
         /// occurred</param>
         /// <param name="planId">Plan associated with the purchased
         /// offer</param>
-        public UsageEventConflictResponseAdditionalInfo(System.Guid? usageEventId = default(System.Guid?), string status = default(string), System.DateTime? messageTime = default(System.DateTime?), System.Guid? resourceId = default(System.Guid?), long? quantity = default(long?), string dimension = default(string), System.DateTime? effectiveStartTime = default(System.DateTime?), System.Guid? planId = default(System.Guid?))
+        public UsageEventOkResponse(System.Guid? usageEventId = default(System.Guid?), UsageEventStatusEnum? status = default(UsageEventStatusEnum?), System.DateTime? messageTime = default(System.DateTime?), System.Guid? resourceId = default(System.Guid?), string resourceUri = default(string), long? quantity = default(long?), string dimension = default(string), System.DateTime? effectiveStartTime = default(System.DateTime?), string planId = default(string))
         {
             UsageEventId = usageEventId;
             Status = status;
             MessageTime = messageTime;
             ResourceId = resourceId;
+            ResourceUri = resourceUri;
             Quantity = quantity;
             Dimension = dimension;
             EffectiveStartTime = effectiveStartTime;
@@ -66,11 +70,12 @@ namespace Microsoft.Marketplace.Metering.Models
         public System.Guid? UsageEventId { get; set; }
 
         /// <summary>
-        /// Gets or sets accepted|NotProcessed|Expired. Possible values
-        /// include: 'Accepted', 'NotProcessed', 'Expired'
+        /// Gets or sets status of the operation. Possible values include:
+        /// 'Accepted', 'Expired', 'Duplicate', 'Error', 'ResourceNotFound',
+        /// 'ResourceNotAuthorized', 'InvalidDimension|BadArgument'
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public string Status { get; set; }
+        public UsageEventStatusEnum? Status { get; set; }
 
         /// <summary>
         /// Gets or sets time this message was created in UTC
@@ -86,6 +91,14 @@ namespace Microsoft.Marketplace.Metering.Models
         public System.Guid? ResourceId { get; set; }
 
         /// <summary>
+        /// Gets or sets identifier of the managed app resource against which
+        /// usage is emitted
+        /// </summary>
+        [JsonProperty(PropertyName = "resourceUri")]
+        public string ResourceUri { get; set; }
+
+        /// <summary>
+        /// Gets or sets number of units consumed
         /// </summary>
         [JsonProperty(PropertyName = "quantity")]
         public long? Quantity { get; set; }
@@ -106,7 +119,7 @@ namespace Microsoft.Marketplace.Metering.Models
         /// Gets or sets plan associated with the purchased offer
         /// </summary>
         [JsonProperty(PropertyName = "planId")]
-        public System.Guid? PlanId { get; set; }
+        public string PlanId { get; set; }
 
     }
 }
