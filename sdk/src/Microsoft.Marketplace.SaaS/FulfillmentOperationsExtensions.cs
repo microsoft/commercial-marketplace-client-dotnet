@@ -28,6 +28,10 @@ namespace Microsoft.Marketplace.SaaS
         {
             var subscriptions = new List<Subscription>();
             var page = await fulfillment.ListSubscriptionsAsync(null, null, null, cancellationToken).ConfigureAwait(false);
+            
+            if (page == null){
+                return subscriptions;
+            }
 
             subscriptions.AddRange(page);
             while (page.NextPageLink != default)
