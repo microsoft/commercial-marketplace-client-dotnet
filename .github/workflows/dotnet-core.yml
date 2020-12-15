@@ -13,21 +13,26 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
+    
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.*
+
     - name: Build
       run: dotnet build --configuration Debug
-      working-directory: ./client
+      working-directory: ./src
+
     - name: test
       run: dotnet test
       env:
         TenantId: ${{secrets.TENANTID}}
         ClientId: ${{secrets.CLIENTID}}
         clientSecret: ${{secrets.CLIENTSECRET}}
-      working-directory: ./client      
+      working-directory: .      

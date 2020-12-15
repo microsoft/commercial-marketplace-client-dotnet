@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net47;netstandard2.0;netcoreapp3.1</TargetFrameworks>
+    <Nullable>annotations</Nullable>    
+  </PropertyGroup>
+</Project>

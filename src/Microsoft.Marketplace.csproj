@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net47;netstandard2.0;netcoreapp3.1</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.312">
+      <PrivateAssets>all</PrivateAssets>
+      <!-- <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets> -->
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <AdditionalFiles Include="$(RepoEngPath)\stylecop.json">
+      <Visible>true</Visible>
+    </AdditionalFiles>
+  </ItemGroup>
+
+
+
+</Project>
