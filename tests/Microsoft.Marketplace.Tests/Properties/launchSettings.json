@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Microsoft.Marketplace.Tests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "AZURE_TEST_MODE": "Record"
+      }
+    }
+  }
+}
