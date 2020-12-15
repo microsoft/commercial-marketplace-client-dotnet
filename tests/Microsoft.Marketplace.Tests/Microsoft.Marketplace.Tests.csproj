@@ -17,6 +17,7 @@
 
 
   <ItemGroup>
+    <!-- <ProjectReference Include="..\Azure.Core.TestFramework\src\Azure.Core.TestFramework.csproj" Aliases="AzureCoreTestFramework" /> -->
     <ProjectReference Include="..\Azure.Core.TestFramework\src\Azure.Core.TestFramework.csproj"  />
     <ProjectReference Include="..\..\src\Microsoft.Marketplace.csproj" />
   </ItemGroup>
