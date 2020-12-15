@@ -23,11 +23,11 @@ jobs:
         dotnet-version: 3.1.*
     - name: Build
       run: dotnet build --configuration Debug
-      working-directory: ./client
+      working-directory: ./src
     - name: test
       run: dotnet test
       env:
         TenantId: ${{secrets.TENANTID}}
         ClientId: ${{secrets.CLIENTID}}
         clientSecret: ${{secrets.CLIENTSECRET}}
-      working-directory: ./client      
+      working-directory: ./src      
