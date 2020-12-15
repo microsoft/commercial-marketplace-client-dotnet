@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(RequiredTargetFrameworks);net47</TargetFrameworks>
+ 
+  </PropertyGroup>
+
+</Project>
