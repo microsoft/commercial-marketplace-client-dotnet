@@ -12,7 +12,9 @@ namespace Microsoft.Marketplace.Core
     public abstract class MarketplaceClientsOptions : ClientOptions
     {
         // Marketpace API version.
+#pragma warning disable SA1600 // Elements should be documented
         internal const ServiceVersion LatestVersion = ServiceVersion.V2_0;
+#pragma warning restore SA1600 // Elements should be documented
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MarketplaceClientsOptions"/> class.
@@ -31,9 +33,7 @@ namespace Microsoft.Marketplace.Core
             /// <summary>
             /// The V2.0 of the service.
             /// </summary>
-#pragma warning disable CA1707 // Identifiers should not contain underscores
             V2_0 = 2,
-#pragma warning restore CA1707 // Identifiers should not contain underscores
         }
 
         /// <summary>
