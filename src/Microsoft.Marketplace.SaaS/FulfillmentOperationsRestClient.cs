@@ -7,5 +7,7 @@ namespace Microsoft.Marketplace.SaaS
 
     /// <summary> The Subscription service client. </summary>
     [CodeGenClient("FulfillmentRestClient")]
-    internal partial class FulfillmentOperationsRestClient    {}
+    internal partial class FulfillmentOperationsRestClient
+    {
+    }
 }

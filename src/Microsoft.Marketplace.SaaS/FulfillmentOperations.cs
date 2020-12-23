@@ -3,12 +3,12 @@
 
 namespace Microsoft.Marketplace.SaaS
 {
-    using Azure;
-    using Azure.Core;
-    using Microsoft.Marketplace.SaaS.Models;
     using System;
     using System.Threading;
     using System.Threading.Tasks;
+    using Azure;
+    using Azure.Core;
+    using Microsoft.Marketplace.SaaS.Models;
 
     /// <summary> The Subscription service client. </summary>
     [CodeGenClient("FulfillmentClient")]
@@ -18,20 +18,20 @@ namespace Microsoft.Marketplace.SaaS
     [CodeGenSuppress("DeleteSubscription", typeof(Guid), typeof(Guid), typeof(Guid), typeof(CancellationToken))]
     public partial class FulfillmentOperations
     {
-
         /// <summary> Use this call to update the plan, the user count (quantity), or both. </summary>
         /// <param name="subscriptionId"> The Uuid to use. </param>
         /// <param name="body"> The SubscriberPlan to use. </param>
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
+        /// <returns>A <see cref="Task{string}"/> representing the result of the asynchronous operation.</returns>
         public virtual async Task<string> UpdateSubscriptionAsync(Guid subscriptionId, SubscriberPlan body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
-            using var scope = _clientDiagnostics.CreateScope("FulfillmentOperations.UpdateSubscription");
+            using var scope = this._clientDiagnostics.CreateScope("FulfillmentOperations.UpdateSubscription");
             scope.Start();
             try
             {
-                var result = (await RestClient.UpdateSubscriptionAsync(subscriptionId, body, requestId, correlationId, cancellationToken).ConfigureAwait(false)).Headers.OperationLocationUri;
+                var result = (await this.RestClient.UpdateSubscriptionAsync(subscriptionId, body, requestId, correlationId, cancellationToken).ConfigureAwait(false)).Headers.OperationLocationUri;
                 return ExtractOperationIdFromOperationLocation(result);
             }
             catch (Exception e)
@@ -47,13 +47,14 @@ namespace Microsoft.Marketplace.SaaS
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
+        /// <returns>A <see cref="string"/> representing the result of the  operation.</returns>
         public virtual string UpdateSubscription(Guid subscriptionId, SubscriberPlan body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
-            using var scope = _clientDiagnostics.CreateScope("FulfillmentOperations.UpdateSubscription");
+            using var scope = this._clientDiagnostics.CreateScope("FulfillmentOperations.UpdateSubscription");
             scope.Start();
             try
             {
-                var result = RestClient.UpdateSubscription(subscriptionId, body, requestId, correlationId, cancellationToken).Headers.OperationLocationUri;
+                var result = this.RestClient.UpdateSubscription(subscriptionId, body, requestId, correlationId, cancellationToken).Headers.OperationLocationUri;
                 return ExtractOperationIdFromOperationLocation(result);
             }
             catch (Exception e)
@@ -68,13 +69,14 @@ namespace Microsoft.Marketplace.SaaS
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
+        /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
         public virtual async Task<string> DeleteSubscriptionAsync(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
-            using var scope = _clientDiagnostics.CreateScope("FulfillmentOperations.DeleteSubscription");
+            using var scope = this._clientDiagnostics.CreateScope("FulfillmentOperations.DeleteSubscription");
             scope.Start();
             try
             {
-                var result = (await RestClient.DeleteSubscriptionAsync(subscriptionId, requestId, correlationId, cancellationToken).ConfigureAwait(false)).Headers.OperationLocationUri;
+                var result = (await this.RestClient.DeleteSubscriptionAsync(subscriptionId, requestId, correlationId, cancellationToken).ConfigureAwait(false)).Headers.OperationLocationUri;
                 return ExtractOperationIdFromOperationLocation(result);
             }
             catch (Exception e)
@@ -89,13 +91,14 @@ namespace Microsoft.Marketplace.SaaS
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
+        /// <returns>A <see cref="string"/> representing the result of the  operation.</returns>
         public virtual string DeleteSubscription(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
-            using var scope = _clientDiagnostics.CreateScope("FulfillmentOperations.DeleteSubscription");
+            using var scope = this._clientDiagnostics.CreateScope("FulfillmentOperations.DeleteSubscription");
             scope.Start();
             try
             {
-                var result = RestClient.DeleteSubscription(subscriptionId, requestId, correlationId, cancellationToken).Headers.OperationLocationUri;
+                var result = this.RestClient.DeleteSubscription(subscriptionId, requestId, correlationId, cancellationToken).Headers.OperationLocationUri;
                 return ExtractOperationIdFromOperationLocation(result);
             }
             catch (Exception e)
@@ -116,6 +119,5 @@ namespace Microsoft.Marketplace.SaaS
 
             throw new ArgumentException("Not a valid Uri", nameof(operationLocation));
         }
-
     }
 }
