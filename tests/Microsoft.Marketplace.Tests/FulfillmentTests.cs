@@ -1,7 +1,9 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#pragma warning disable SA1200 // Using directives should be placed correctly
 using Azure.Core;
+#pragma warning restore SA1200 // Using directives should be placed correctly
 using Azure.Core.Pipeline;
 using Azure.Core.TestFramework;
 using Azure.Identity;
@@ -25,7 +27,7 @@ namespace Microsoft.Marketplace.Tests
         private IConfigurationRoot config;
 
         // Changed to record when client code is generated first time manually.
-        public FulfillmentTests() : base(true, RecordedTestMode.Playback)
+        public FulfillmentTests() : base(true, RecordedTestMode.Record)
         {
             this.config = new ConfigurationBuilder()
                 .AddUserSecrets<FulfillmentTests>()
@@ -87,7 +89,7 @@ namespace Microsoft.Marketplace.Tests
 
             // This needs to be run manually after receiving a marketplace token on the landing page, and adding here.
             // Don't forget to urldecode if you are copying from the url param
-            var marketplaceToken = "9j3fH3/V5rznrU9e2OC4aqQ+NRfWfR8ICNPNgMvlHsk9CKYJOM6Zsx+vxWxr+0DWCmSdX6I1OfD0UrM3D6lfzwdu9J3CLlTenZkU48ZDsOirCOFO30VT/jffXcrtm5nfJYc6UnCUWZPElxb2XiU1E7rBrh6XpX+Izo0r9Fc40U2gIoOi8P04VKeGxPh3RqDyPxNk2xPO+BV07rYC3Fpsxq+I0R9CKLUgrhrmcvGf76hjT1rFAYPaGGZsvFS4lL1M";
+            var marketplaceToken = "keS9yHatHjwwhsFx+qRXxKI9m2R8YyXGLA9GEvFbJbRWJGe6h6ClisIDoH1lquD+9XLjDXdHZ5aPbS/Rp5b5OujPhdYycjt+2RDhXQZ4oqLyflCGAno3+JGUUZnTIi5rn63gQ+uqHq9DgUSiAj5H9nsp03p9BcqxMrsctDeYbTfNau85EWD11Owlh4/RgNJ2l07uxxGv6D0yfnSh82sChlgXOFfz2ETS/ewZNevfxgw=";
             var resolvedSubscription = await sut.Fulfillment.ResolveAsync(marketplaceToken);
 
             Debug.Print(resolvedSubscription.Value.SubscriptionName);
