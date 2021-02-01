@@ -1,16 +1,15 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#pragma warning disable SA1200 // Using directives should be placed correctly
+using Azure.Core;
+#pragma warning restore SA1200 // Using directives should be placed correctly
+using Azure.Core.Pipeline;
+using Azure.Core.TestFramework;
+using System.Linq;
+
 namespace Microsoft.Marketplace.Tests
 {
-    extern alias AzureCoreTestFramework;
-    extern alias AzureCore;
-
-    using AzureCore::Azure.Core.Pipeline;
-    using AzureCoreTestFramework::Azure.Core.TestFramework;
-    using AzureCore::Azure.Core;
-    using System.Linq;
-
     /// <summary>
     /// Pipeline policy to verify x-ms-client-request-id and x-ms-client-return-request-id
     /// headers that are echoed back from a request match.

@@ -12,6 +12,15 @@
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" />
     <PackageReference Include="AutoRest.CSharp.V3" Version="1.0.0-alpha.20201215.7" />
     <PackageReference Include="Azure.Core" Version="1.7.0"/>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.312">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <AdditionalFiles Include="$(RepoEngPath)\stylecop.json">
+      <Visible>true</Visible>
+    </AdditionalFiles>
   </ItemGroup>
+
+
 
 </Project>

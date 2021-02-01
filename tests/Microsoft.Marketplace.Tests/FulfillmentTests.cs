@@ -1,26 +1,23 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Azure.Core;
+using Azure.Core.Pipeline;
+using Azure.Core.TestFramework;
+using Azure.Identity;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Marketplace.SaaS;
+using Microsoft.Marketplace.SaaS.Models;
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
+
 namespace Microsoft.Marketplace.Tests
 {
-    extern alias AzureIdentity;
-    extern alias AzureCore;
-    extern alias AzureCoreTestFramework;
-
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using AzureCore::Azure.Core.Pipeline;
-    using AzureCore::Azure.Core;
-    using AzureCoreTestFramework::Azure.Core.TestFramework;
-    using AzureIdentity::Azure.Identity;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Marketplace.SaaS;
-    using Microsoft.Marketplace.SaaS.Models;
-    using NUnit.Framework;
-    using System.Net.Http;
 
     [TestFixture]
     public class FulfillmentTests : RecordedTestBase
@@ -70,7 +67,7 @@ namespace Microsoft.Marketplace.Tests
             var subscriptions = new List<Subscription>();
 
             string continuationToken = null;
-            await foreach (AzureCore.Azure.Page<Subscription> subscriptionPage in sut.Fulfillment.ListSubscriptionsAsync(continuationToken).AsPages())
+            await foreach (var subscriptionPage in sut.Fulfillment.ListSubscriptionsAsync(continuationToken).AsPages())
             {
                 subscriptions.AddRange(subscriptionPage.Values);
                 continuationToken = subscriptionPage.ContinuationToken;
@@ -123,7 +120,7 @@ namespace Microsoft.Marketplace.Tests
 
         private MarketplaceSaaSClient GetMarketplaceSaaSClient()
         {
-            return new MarketplaceSaaSClient(new ClientSecretCredential(config["TenantId"], config["ClientId"], config["clientSecret"]), GetOptions());
+            return new MarketplaceSaaSClient(new ClientSecretCredential(config["TenantId"], config["ClientId"], config["clientSecret"]), this.GetOptions());
         }
 
         private MarketplaceSaaSClientOptions GetOptions()
@@ -147,7 +144,7 @@ namespace Microsoft.Marketplace.Tests
             };
             if (Mode != RecordedTestMode.Live)
             {
-                options.AddPolicy(new RecordedClientRequestIdPolicy(Recording, false), HttpPipelinePosition.PerCall);
+                options.AddPolicy(new RecordedClientRequestIdPolicy(this.Recording, false), HttpPipelinePosition.PerCall);
             }
 
             return InstrumentClientOptions(options);

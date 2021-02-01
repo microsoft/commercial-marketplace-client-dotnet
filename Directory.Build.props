@@ -16,7 +16,6 @@
 
         <EnableClientSdkAnalyzers Condition="'$(IsShippingLibrary)' == 'true'">true</EnableClientSdkAnalyzers>
         <EnableFxCopAnalyzers Condition="'$(IsShippingLibrary)' == 'true'">true</EnableFxCopAnalyzers>
-        <EnableStyleCopAnalyzers Condition="'$(EnableStyleCopAnalyzers)' == '' and '$(IsClientLibrary)' == 'true'">true</EnableStyleCopAnalyzers>
         <GenerateAPIListing Condition="'$(IsShippingLibrary)' == 'true'">true</GenerateAPIListing>
         <UpdateSourceOnBuild Condition="'$(UpdateSourceOnBuild)' == ''">$(AZURE_DEV_UPDATESOURCESONBUILD)</UpdateSourceOnBuild>
         <InheritDocEnabled>true</InheritDocEnabled>
@@ -30,16 +29,5 @@
       <_Parameter2>$(MSBuildProjectDirectory)</_Parameter2>
     </AssemblyAttribute>
   </ItemGroup>
-  
-    <!-- StyleCop -->
-    <ItemGroup>
-        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.312" Condition="'$(EnableStyleCopAnalyzers)' == 'true'">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-        </PackageReference>
-        <AdditionalFiles Include="$(RepoEngPath)\stylecop.json">
-            <Visible>true</Visible>
-        </AdditionalFiles>
-    </ItemGroup>
 
 </Project>
