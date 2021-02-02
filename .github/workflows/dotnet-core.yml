@@ -29,9 +29,6 @@ jobs:
       run: dotnet build --configuration Debug
       working-directory: ./src
 
-    - name: Echo
-      run: echo ${{secrets.CLIENTID}}
-
     - name: test
       run: dotnet test
       env:
