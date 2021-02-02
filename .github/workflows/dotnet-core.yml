@@ -35,4 +35,4 @@ jobs:
         TenantId: ${{secrets.TENANTID}}
         ClientId: ${{secrets.CLIENTID}}
         clientSecret: ${{secrets.CLIENTSECRET}}
-      working-directory: ./tests      
+      working-directory: .      
