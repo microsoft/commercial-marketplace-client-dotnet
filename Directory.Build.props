@@ -1,18 +1,18 @@
 <Project ToolsVersion="15.0"
-  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <PropertyGroup>
-    <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
-    <RepoEngPath>$(MSBuildThisFileDirectory)eng</RepoEngPath>
-    <RepoSrcPath>$(RepoRoot)src</RepoSrcPath>
-  </PropertyGroup>
+    <PropertyGroup>
+        <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
+        <RepoEngPath>$(MSBuildThisFileDirectory)eng</RepoEngPath>
+        <RepoSrcPath>$(RepoRoot)src</RepoSrcPath>
+    </PropertyGroup>
 
-  <PropertyGroup>
-    <IsClientLibrary Condition="'$(IsClientLibrary)' == '' and $(MSBuildProjectName) == 'Microsoft.Marketplace'">true</IsClientLibrary>
-    <IsTestProject Condition="$(MSBuildProjectName.EndsWith('.Tests'))">true</IsTestProject>
-    <IsSamplesProject Condition="$(MSBuildProjectName.EndsWith('.Samples'))">true</IsSamplesProject>
-    <IsTestSupportProject Condition="'$(IsTestProject)' != 'true' and ($(MSBuildProjectDirectory.Contains('/tests/')) or $(MSBuildProjectDirectory.Contains('\tests\')))">true</IsTestSupportProject>
-    <IsShippingLibrary Condition="'$(IsClientLibrary)' == 'true' and '$(IsTestProject)' != 'true' and '$(IsTestSupportProject)' != 'true' and '$(IsSamplesProject)' != 'true'">true</IsShippingLibrary>
+    <PropertyGroup>
+        <IsClientLibrary Condition="'$(IsClientLibrary)' == '' and $(MSBuildProjectName) == 'Microsoft.Marketplace'">true</IsClientLibrary>
+        <IsTestProject Condition="$(MSBuildProjectName.EndsWith('.Tests'))">true</IsTestProject>
+        <IsSamplesProject Condition="$(MSBuildProjectName.EndsWith('.Samples'))">true</IsSamplesProject>
+        <IsTestSupportProject Condition="'$(IsTestProject)' != 'true' and ($(MSBuildProjectDirectory.Contains('/tests/')) or $(MSBuildProjectDirectory.Contains('\tests\')))">true</IsTestSupportProject>
+        <IsShippingLibrary Condition="'$(IsClientLibrary)' == 'true' and '$(IsTestProject)' != 'true' and '$(IsTestSupportProject)' != 'true' and '$(IsSamplesProject)' != 'true'">true</IsShippingLibrary>
 
         <EnableClientSdkAnalyzers Condition="'$(IsShippingLibrary)' == 'true'">true</EnableClientSdkAnalyzers>
         <EnableFxCopAnalyzers Condition="'$(IsShippingLibrary)' == 'true'">true</EnableFxCopAnalyzers>
