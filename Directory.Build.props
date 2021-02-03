@@ -1,26 +1,34 @@
 <Project ToolsVersion="15.0"
-    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-    <PropertyGroup>
-        <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
-        <RepoEngPath>$(MSBuildThisFileDirectory)eng</RepoEngPath>
-        <RepoSrcPath>$(RepoRoot)src</RepoSrcPath>
-    </PropertyGroup>
+  <PropertyGroup>
+    <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
+    <RepoEngPath>$(MSBuildThisFileDirectory)eng</RepoEngPath>
+    <RepoSrcPath>$(RepoRoot)src</RepoSrcPath>
+  </PropertyGroup>
 
-    <PropertyGroup>
-        <IsClientLibrary Condition="'$(IsClientLibrary)' == '' and $(MSBuildProjectName) == 'Microsoft.Marketplace'">true</IsClientLibrary>
-        <IsTestProject Condition="$(MSBuildProjectName.EndsWith('.Tests'))">true</IsTestProject>
-        <IsSamplesProject Condition="$(MSBuildProjectName.EndsWith('.Samples'))">true</IsSamplesProject>
-        <IsTestSupportProject Condition="'$(IsTestProject)' != 'true' and ($(MSBuildProjectDirectory.Contains('/tests/')) or $(MSBuildProjectDirectory.Contains('\tests\')))">true</IsTestSupportProject>
-        <IsShippingLibrary Condition="'$(IsClientLibrary)' == 'true' and '$(IsTestProject)' != 'true' and '$(IsTestSupportProject)' != 'true' and '$(IsSamplesProject)' != 'true'">true</IsShippingLibrary>
+  <PropertyGroup>
+    <IsClientLibrary Condition="'$(IsClientLibrary)' == '' and $(MSBuildProjectName) == 'Microsoft.Marketplace'">true</IsClientLibrary>
+    <IsTestProject Condition="$(MSBuildProjectName.EndsWith('.Tests'))">true</IsTestProject>
+    <IsSamplesProject Condition="$(MSBuildProjectName.EndsWith('.Samples'))">true</IsSamplesProject>
+    <IsTestSupportProject Condition="'$(IsTestProject)' != 'true' and ($(MSBuildProjectDirectory.Contains('/tests/')) or $(MSBuildProjectDirectory.Contains('\tests\')))">true</IsTestSupportProject>
+    <IsShippingLibrary Condition="'$(IsClientLibrary)' == 'true' and '$(IsTestProject)' != 'true' and '$(IsTestSupportProject)' != 'true' and '$(IsSamplesProject)' != 'true'">true</IsShippingLibrary>
 
-        <EnableClientSdkAnalyzers Condition="'$(IsShippingLibrary)' == 'true'">true</EnableClientSdkAnalyzers>
-        <EnableFxCopAnalyzers Condition="'$(IsShippingLibrary)' == 'true'">true</EnableFxCopAnalyzers>
-        <GenerateAPIListing Condition="'$(IsShippingLibrary)' == 'true'">true</GenerateAPIListing>
-        <UpdateSourceOnBuild Condition="'$(UpdateSourceOnBuild)' == ''">$(AZURE_DEV_UPDATESOURCESONBUILD)</UpdateSourceOnBuild>
-        <InheritDocEnabled>true</InheritDocEnabled>
-        <InheritDocTrimLevel>private</InheritDocTrimLevel>
-    </PropertyGroup>
+    <EnableClientSdkAnalyzers Condition="'$(IsShippingLibrary)' == 'true'">true</EnableClientSdkAnalyzers>
+    <EnableFxCopAnalyzers Condition="'$(IsShippingLibrary)' == 'true'">true</EnableFxCopAnalyzers>
+    <GenerateAPIListing Condition="'$(IsShippingLibrary)' == 'true'">true</GenerateAPIListing>
+    <UpdateSourceOnBuild Condition="'$(UpdateSourceOnBuild)' == ''">$(AZURE_DEV_UPDATESOURCESONBUILD)</UpdateSourceOnBuild>
+    <InheritDocEnabled>true</InheritDocEnabled>
+    <InheritDocTrimLevel>private</InheritDocTrimLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.3.0"/>
+    <PackageReference Include="System.Text.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" />
+    <PackageReference Include="AutoRest.CSharp.V3" Version="3.0.0-beta.20201217.1" />
+    <PackageReference Include="Azure.Core" Version="1.7.0"/>
+  </ItemGroup>
 
   <!-- Test project settings -->
   <ItemGroup Condition="'$(IsTestProject)' == 'true'">

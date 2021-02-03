@@ -27,7 +27,7 @@ namespace Microsoft.Marketplace.Tests
         private IConfigurationRoot config;
 
         // Changed to record when client code is generated first time manually.
-        public FulfillmentTests() : base(true, RecordedTestMode.Record)
+        public FulfillmentTests() : base(true, RecordedTestMode.Playback)
         {
             this.config = new ConfigurationBuilder()
                 .AddUserSecrets<FulfillmentTests>()
