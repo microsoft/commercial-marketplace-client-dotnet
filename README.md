@@ -1,4 +1,4 @@
-![.NET Core](https://github.com/Azure/commercial-marketplace-saas-sdk-client-dotnet/workflows/.NET%20Core/badge.svg)
+![.NET Core](https://github.com/microsoft/commercial-marketplace-client-dotnet/workflows/.NET%20Core/badge.svg)
 
 # Change log
     - Started using AutoRest C# generator V3 to take advantage of new features.
