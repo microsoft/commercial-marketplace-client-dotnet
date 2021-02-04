@@ -27,7 +27,7 @@ namespace Microsoft.Marketplace.Tests
         private IConfigurationRoot config;
 
         // Changed to record when client code is generated first time manually.
-        public FulfillmentTests() : base(true, RecordedTestMode.Playback)
+        public FulfillmentTests() : base(true, RecordedTestMode.Record)
         {
             this.config = new ConfigurationBuilder()
                 .AddUserSecrets<FulfillmentTests>()
@@ -89,7 +89,7 @@ namespace Microsoft.Marketplace.Tests
 
             // This needs to be run manually after receiving a marketplace token on the landing page, and adding here.
             // Don't forget to urldecode if you are copying from the url param
-            var marketplaceToken = "keS9yHatHjwwhsFx+qRXxKI9m2R8YyXGLA9GEvFbJbRWJGe6h6ClisIDoH1lquD+9XLjDXdHZ5aPbS/Rp5b5OujPhdYycjt+2RDhXQZ4oqLyflCGAno3+JGUUZnTIi5rn63gQ+uqHq9DgUSiAj5H9nsp03p9BcqxMrsctDeYbTfNau85EWD11Owlh4/RgNJ2l07uxxGv6D0yfnSh82sChlgXOFfz2ETS/ewZNevfxgw=";
+            var marketplaceToken = "RUA01U9XFK7hkUoCGo0yOCEnXyJHu3cP9VihTQREWTyUkDySoSiMb5j3t3PHXPZUIPN61g1IRQESVIfVRimE+XfdKYiMjg9El3nP0AFhYxuuRMX4jhGeaJHP1JAdz9SP0cti/o6z3RgJDzWTN0eXtLgzbCoRUgdWa64/iHGIFKN30RA9njDxuJkuUp1Ml3wFsQKYcq4HjfD5lUcYOw6amefQ4RzHk9L+krn83OrHfwo=";
             var resolvedSubscription = await sut.Fulfillment.ResolveAsync(marketplaceToken);
 
             Debug.Print(resolvedSubscription.Value.SubscriptionName);
