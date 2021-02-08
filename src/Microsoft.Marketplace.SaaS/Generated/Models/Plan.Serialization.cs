@@ -17,6 +17,12 @@ namespace Microsoft.Marketplace.SaaS.Models
             Optional<string> planId = default;
             Optional<string> displayName = default;
             Optional<bool> isPrivate = default;
+            Optional<string> description = default;
+            Optional<bool> hasFreeTrials = default;
+            Optional<bool> isPricePerSeat = default;
+            Optional<bool> isStopSell = default;
+            Optional<string> market = default;
+            Optional<PlanComponents> planComponents = default;
             foreach (var property in element.EnumerateObject())
             {
                 if (property.NameEquals("planId"))
@@ -39,8 +45,58 @@ namespace Microsoft.Marketplace.SaaS.Models
                     isPrivate = property.Value.GetBoolean();
                     continue;
                 }
+                if (property.NameEquals("description"))
+                {
+                    description = property.Value.GetString();
+                    continue;
+                }
+                if (property.NameEquals("hasFreeTrials"))
+                {
+                    if (property.Value.ValueKind == JsonValueKind.Null)
+                    {
+                        property.ThrowNonNullablePropertyIsNull();
+                        continue;
+                    }
+                    hasFreeTrials = property.Value.GetBoolean();
+                    continue;
+                }
+                if (property.NameEquals("isPricePerSeat"))
+                {
+                    if (property.Value.ValueKind == JsonValueKind.Null)
+                    {
+                        property.ThrowNonNullablePropertyIsNull();
+                        continue;
+                    }
+                    isPricePerSeat = property.Value.GetBoolean();
+                    continue;
+                }
+                if (property.NameEquals("isStopSell"))
+                {
+                    if (property.Value.ValueKind == JsonValueKind.Null)
+                    {
+                        property.ThrowNonNullablePropertyIsNull();
+                        continue;
+                    }
+                    isStopSell = property.Value.GetBoolean();
+                    continue;
+                }
+                if (property.NameEquals("market"))
+                {
+                    market = property.Value.GetString();
+                    continue;
+                }
+                if (property.NameEquals("planComponents"))
+                {
+                    if (property.Value.ValueKind == JsonValueKind.Null)
+                    {
+                        property.ThrowNonNullablePropertyIsNull();
+                        continue;
+                    }
+                    planComponents = PlanComponents.DeserializePlanComponents(property.Value);
+                    continue;
+                }
             }
-            return new Plan(planId.Value, displayName.Value, Optional.ToNullable(isPrivate));
+            return new Plan(planId.Value, displayName.Value, Optional.ToNullable(isPrivate), description.Value, Optional.ToNullable(hasFreeTrials), Optional.ToNullable(isPricePerSeat), Optional.ToNullable(isStopSell), market.Value, planComponents.Value);
         }
     }
 }

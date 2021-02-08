@@ -19,15 +19,33 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <param name="planId"> . </param>
         /// <param name="displayName"> . </param>
         /// <param name="isPrivate"> . </param>
-        internal Plan(string planId, string displayName, bool? isPrivate)
+        /// <param name="description"> . </param>
+        /// <param name="hasFreeTrials"> . </param>
+        /// <param name="isPricePerSeat"> . </param>
+        /// <param name="isStopSell"> . </param>
+        /// <param name="market"> . </param>
+        /// <param name="planComponents"> . </param>
+        internal Plan(string planId, string displayName, bool? isPrivate, string description, bool? hasFreeTrials, bool? isPricePerSeat, bool? isStopSell, string market, PlanComponents planComponents)
         {
             PlanId = planId;
             DisplayName = displayName;
             IsPrivate = isPrivate;
+            Description = description;
+            HasFreeTrials = hasFreeTrials;
+            IsPricePerSeat = isPricePerSeat;
+            IsStopSell = isStopSell;
+            Market = market;
+            PlanComponents = planComponents;
         }
 
         public string PlanId { get; }
         public string DisplayName { get; }
         public bool? IsPrivate { get; }
+        public string Description { get; }
+        public bool? HasFreeTrials { get; }
+        public bool? IsPricePerSeat { get; }
+        public bool? IsStopSell { get; }
+        public string Market { get; }
+        public PlanComponents PlanComponents { get; }
     }
 }

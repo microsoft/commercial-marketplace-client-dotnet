@@ -6,7 +6,7 @@
       "RequestHeaders": {
         "Accept": "application/json",
         "Authorization": "Sanitized",
-        "Request-Id": "|16a72d0a-426217b07df00d6b.",
+        "Request-Id": "|a0f2d504-42abcd9c1c789a47.",
         "User-Agent": [
           "azsdk-net-Microsoft.Marketplace/1.0.0",
           "(.NET Framework 4.8.4311.0; Microsoft Windows 10.0.21301 )"
@@ -20,16 +20,16 @@
       "ResponseHeaders": {
         "Content-Length": "1461",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Thu, 04 Feb 2021 00:01:05 GMT",
+        "Date": "Thu, 04 Feb 2021 16:37:14 GMT",
         "Server": "Microsoft-IIS/10.0",
         "Set-Cookie": [
           "ARRAffinity=540d435d9e124887614425ac3a1a59170072a70f62fae90a951d423a1d05d580;Path=/;HttpOnly;Secure;Domain=marketplaceapi.microsoft.com",
           "ARRAffinitySameSite=540d435d9e124887614425ac3a1a59170072a70f62fae90a951d423a1d05d580;Path=/;HttpOnly;SameSite=None;Secure;Domain=marketplaceapi.microsoft.com"
         ],
         "x-content-type-options": "nosniff",
-        "x-ms-activityid": "a8e63186-50f7-408a-a323-5ce4ca759c79",
-        "x-ms-correlationid": "cd0de82b-8e90-41ef-958b-763f16a90415",
-        "x-ms-requestid": "cd0de82b-8e90-41ef-958b-763f16a90415",
+        "x-ms-activityid": "b13604d0-783c-43dd-9c9a-c7b6cd552223",
+        "x-ms-correlationid": "80f386cb-a41c-42a5-a006-2e1eba6988ab",
+        "x-ms-requestid": "80f386cb-a41c-42a5-a006-2e1eba6988ab",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {

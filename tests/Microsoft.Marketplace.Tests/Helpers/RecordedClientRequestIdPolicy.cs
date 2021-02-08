@@ -1,12 +1,10 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#pragma warning disable SA1200 // Using directives should be placed correctly
+using System.Linq;
 using Azure.Core;
-#pragma warning restore SA1200 // Using directives should be placed correctly
 using Azure.Core.Pipeline;
 using Azure.Core.TestFramework;
-using System.Linq;
 
 namespace Microsoft.Marketplace.Tests
 {
@@ -16,18 +14,20 @@ namespace Microsoft.Marketplace.Tests
     /// </summary>
     public class RecordedClientRequestIdPolicy : HttpPipelineSynchronousPolicy
     {
-        private readonly TestRecording _testRecording;
-        private readonly string _parallelRangePrefix = null;
+        private readonly TestRecording testRecording;
+        private readonly string parallelRangePrefix = null;
 
         /// <summary>
-        /// Create a new RecordedClientRequestIdPolicy
+        /// Initializes a new instance of the <see cref="RecordedClientRequestIdPolicy"/> class.
         /// </summary>
+        /// <param name="testRecording">Recording.</param>
+        /// <param name="parallelRange">Allow paralellel ranges.</param>
         public RecordedClientRequestIdPolicy(TestRecording testRecording, bool parallelRange = false)
         {
-            _testRecording = testRecording;
+            this.testRecording = testRecording ?? throw new System.ArgumentNullException(nameof(testRecording));
             if (parallelRange)
             {
-                _parallelRangePrefix = _testRecording.GenerateId() + "_";
+                this.parallelRangePrefix = this.testRecording.GenerateId() + "_";
             }
         }
 
@@ -35,28 +35,28 @@ namespace Microsoft.Marketplace.Tests
         /// Verify x-ms-client-request-id and x-ms-client-return-request-id headers matches as
         /// x-ms-client-return-request-id is an echo of x-mis-client-request-id.
         /// </summary>
-        /// <param name="message">The message that was sent</param>
+        /// <param name="message">The message that was sent.</param>
         public override void OnSendingRequest(HttpMessage message)
         {
-            if (_parallelRangePrefix != null &&
+            if (this.parallelRangePrefix != null &&
                 message.Request.Headers.TryGetValue("x-ms-range", out string range))
             {
                 // If we're transferring a sequence of ranges in parallel, use
                 // the same prefix and use the range to differentiate each message
-                message.Request.ClientRequestId = _parallelRangePrefix + range;
+                message.Request.ClientRequestId = this.parallelRangePrefix + range;
             }
-            else if (_parallelRangePrefix != null &&
+            else if (this.parallelRangePrefix != null &&
                 message.Request.Uri.Query.Contains("blockid="))
             {
                 var queryParameters = message.Request.Uri.Query.Split('&');
                 var blockIdParameter = queryParameters.Where(s => s.Contains("blockid=")).First();
                 var blockIdValue = blockIdParameter.Split('=')[1];
 
-                message.Request.ClientRequestId = _parallelRangePrefix + blockIdValue;
+                message.Request.ClientRequestId = this.parallelRangePrefix + blockIdValue;
             }
             else
             {
-                message.Request.ClientRequestId = _testRecording.Random.NewGuid().ToString();
+                message.Request.ClientRequestId = this.testRecording.Random.NewGuid().ToString();
             }
         }
     }
