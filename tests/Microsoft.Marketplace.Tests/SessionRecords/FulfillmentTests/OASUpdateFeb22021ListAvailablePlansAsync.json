@@ -10,7 +10,7 @@
           "azsdk-net-Microsoft.Marketplace/1.0.0",
           "(.NET Framework 4.8.4311.0; Microsoft Windows 10.0.21301 )"
         ],
-        "x-ms-client-request-id": "6596abeb-4c02-35df-260a-560791625415",
+        "x-ms-client-request-id": "5bba35f5-d8ea-e9f4-64ec-57d3a3fc8f96",
         "x-ms-return-client-request-id": "true"
       },
       "RequestBody": null,
@@ -18,17 +18,17 @@
       "ResponseHeaders": {
         "Content-Length": "83978",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Thu, 04 Feb 2021 16:37:07 GMT",
-        "ETag": "\u0022d7b334c6-2b98-4be4-aaf4-3308f0d374a5\u0022",
+        "Date": "Thu, 04 Feb 2021 16:37:08 GMT",
+        "ETag": "\u0022260dede5-cfc5-492a-a69f-e72ce6b99b14\u0022",
         "Server": "Microsoft-IIS/10.0",
         "Set-Cookie": [
           "ARRAffinity=e198afec6581a1603d516688b9e05d55e216a7a6a28fad970baf7d024a095305;Path=/;HttpOnly;Secure;Domain=marketplaceapi.microsoft.com",
           "ARRAffinitySameSite=e198afec6581a1603d516688b9e05d55e216a7a6a28fad970baf7d024a095305;Path=/;HttpOnly;SameSite=None;Secure;Domain=marketplaceapi.microsoft.com"
         ],
         "x-content-type-options": "nosniff",
-        "x-ms-activityid": "24303518-26f7-4b34-bc02-1861bd1b6edc",
-        "x-ms-correlationid": "79349b03-cd34-4dc5-8fae-b10021bd5999",
-        "x-ms-requestid": "79349b03-cd34-4dc5-8fae-b10021bd5999",
+        "x-ms-activityid": "f43216c1-481b-4603-b035-c194251c764a",
+        "x-ms-correlationid": "5d9ccfb5-56dc-42ba-8f75-456a4e7d94eb",
+        "x-ms-requestid": "5d9ccfb5-56dc-42ba-8f75-456a4e7d94eb",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
@@ -3013,7 +3013,7 @@
           "azsdk-net-Microsoft.Marketplace/1.0.0",
           "(.NET Framework 4.8.4311.0; Microsoft Windows 10.0.21301 )"
         ],
-        "x-ms-client-request-id": "35134656-b675-f417-f50a-9c458168dee5",
+        "x-ms-client-request-id": "662e0391-f2b3-2c4b-ba17-45e6e9a7b0d3",
         "x-ms-return-client-request-id": "true"
       },
       "RequestBody": null,
@@ -3021,13 +3021,13 @@
       "ResponseHeaders": {
         "Content-Length": "89604",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Thu, 04 Feb 2021 16:37:07 GMT",
-        "ETag": "\u0022ae0b3e00-ef71-4556-b60e-8b304d5bd2b1\u0022",
+        "Date": "Thu, 04 Feb 2021 16:37:08 GMT",
+        "ETag": "\u00223d1017ae-8a98-4fbe-b2fa-1e7b08f99ed7\u0022",
         "Server": "Microsoft-IIS/10.0",
         "x-content-type-options": "nosniff",
-        "x-ms-activityid": "e12dd2a3-4d33-4d69-ad9a-edbe55222d1f",
-        "x-ms-correlationid": "5540febf-ac92-42fb-b617-2287745ab01b",
-        "x-ms-requestid": "5540febf-ac92-42fb-b617-2287745ab01b",
+        "x-ms-activityid": "a034c2bd-eea9-44c4-9e5b-82aa3c8e9e99",
+        "x-ms-correlationid": "d54a96c3-4ab3-4d67-a1ca-bf88a6089d28",
+        "x-ms-requestid": "d54a96c3-4ab3-4d67-a1ca-bf88a6089d28",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
@@ -6276,7 +6276,7 @@
           "azsdk-net-Microsoft.Marketplace/1.0.0",
           "(.NET Framework 4.8.4311.0; Microsoft Windows 10.0.21301 )"
         ],
-        "x-ms-client-request-id": "4bb0ac04-1e4f-0ba0-b09c-745fff37f6bb",
+        "x-ms-client-request-id": "a041a338-28cd-dae3-ae94-c4571a64a348",
         "x-ms-return-client-request-id": "true"
       },
       "RequestBody": null,
@@ -6284,13 +6284,13 @@
       "ResponseHeaders": {
         "Content-Length": "118394",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Thu, 04 Feb 2021 16:37:07 GMT",
-        "ETag": "\u0022699d2d51-69c0-48e3-8930-bbcb2d3de220\u0022",
+        "Date": "Thu, 04 Feb 2021 16:37:08 GMT",
+        "ETag": "\u0022751bae5c-1faf-4e6f-8a07-4c26a49f819e\u0022",
         "Server": "Microsoft-IIS/10.0",
         "x-content-type-options": "nosniff",
-        "x-ms-activityid": "56a54dcd-ca82-4c25-a0e5-9241f646e012",
-        "x-ms-correlationid": "906c5b1f-63d3-4312-bead-a99e163a7332",
-        "x-ms-requestid": "906c5b1f-63d3-4312-bead-a99e163a7332",
+        "x-ms-activityid": "3bebb5f1-442c-4b0a-bc8b-fbd38686d35d",
+        "x-ms-correlationid": "5cf0b01a-fb65-4a0c-8af9-3b7c1acb9c38",
+        "x-ms-requestid": "5cf0b01a-fb65-4a0c-8af9-3b7c1acb9c38",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
@@ -10483,7 +10483,7 @@
           "azsdk-net-Microsoft.Marketplace/1.0.0",
           "(.NET Framework 4.8.4311.0; Microsoft Windows 10.0.21301 )"
         ],
-        "x-ms-client-request-id": "d440bbe0-93b7-e396-1caf-a23fda504ff7",
+        "x-ms-client-request-id": "45ad3e6a-1065-d806-8041-ddaea53a7a86",
         "x-ms-return-client-request-id": "true"
       },
       "RequestBody": null,
@@ -10491,13 +10491,13 @@
       "ResponseHeaders": {
         "Content-Length": "97842",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Thu, 04 Feb 2021 16:37:07 GMT",
-        "ETag": "\u002214d2d310-a689-42f2-9e1d-605f396678a4\u0022",
+        "Date": "Thu, 04 Feb 2021 16:37:08 GMT",
+        "ETag": "\u0022af0d4726-a5a2-4278-b33c-6c033844c0e8\u0022",
         "Server": "Microsoft-IIS/10.0",
         "x-content-type-options": "nosniff",
-        "x-ms-activityid": "2923f8f0-259c-48fd-b44a-7be496aec9d8",
-        "x-ms-correlationid": "9133b7d9-4cb8-4fae-81c2-5eae76402226",
-        "x-ms-requestid": "9133b7d9-4cb8-4fae-81c2-5eae76402226",
+        "x-ms-activityid": "87de7e49-995f-49f9-bbdc-6864b81e40fa",
+        "x-ms-correlationid": "61d70777-791b-4673-8ede-56ac182b4b72",
+        "x-ms-requestid": "61d70777-791b-4673-8ede-56ac182b4b72",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
@@ -13936,7 +13936,7 @@
           "azsdk-net-Microsoft.Marketplace/1.0.0",
           "(.NET Framework 4.8.4311.0; Microsoft Windows 10.0.21301 )"
         ],
-        "x-ms-client-request-id": "437e3869-21f6-7103-0d3f-33da108d2d45",
+        "x-ms-client-request-id": "dced7dec-5eb6-ffe2-7aa7-59004bc18236",
         "x-ms-return-client-request-id": "true"
       },
       "RequestBody": null,
@@ -13944,13 +13944,13 @@
       "ResponseHeaders": {
         "Content-Length": "115879",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Thu, 04 Feb 2021 16:37:07 GMT",
-        "ETag": "\u00224509ec66-c5bf-4434-8f23-d4874c719259\u0022",
+        "Date": "Thu, 04 Feb 2021 16:37:08 GMT",
+        "ETag": "\u0022b330649f-f93d-42ec-b2a0-e34129045286\u0022",
         "Server": "Microsoft-IIS/10.0",
         "x-content-type-options": "nosniff",
-        "x-ms-activityid": "88eb0d13-8bb0-4cf5-8895-60509db24394",
-        "x-ms-correlationid": "61dc4d92-8504-4c86-b878-e46a097446f9",
-        "x-ms-requestid": "61dc4d92-8504-4c86-b878-e46a097446f9",
+        "x-ms-activityid": "942a1f96-af99-4dd8-8e9b-3626b8b56bb1",
+        "x-ms-correlationid": "bbdedb87-056c-48ab-8b9b-32c8aabb8174",
+        "x-ms-requestid": "bbdedb87-056c-48ab-8b9b-32c8aabb8174",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
@@ -18061,76 +18061,216 @@
       }
     },
     {
-      "RequestUri": "https://marketplaceapi.microsoft.com/api/saas/subscriptions/4aea5574-281c-7b2f-de26-e0f8369bc2d2?api-version=2018-08-31",
+      "RequestUri": "https://marketplaceapi.microsoft.com/api/saas/subscriptions/71e76a10-6e31-54c3-3715-79b62121f712/listAvailablePlans?api-version=2018-08-31",
       "RequestMethod": "GET",
       "RequestHeaders": {
         "Accept": "application/json",
         "Authorization": "Sanitized",
-        "Request-Id": "|a0f2d501-42abcd9c1c789a47.",
+        "Request-Id": "|a0f2d502-42abcd9c1c789a47.",
         "User-Agent": [
           "azsdk-net-Microsoft.Marketplace/1.0.0",
           "(.NET Framework 4.8.4311.0; Microsoft Windows 10.0.21301 )"
         ],
-        "x-ms-client-request-id": "a1d5ea18-0cd1-0701-83a9-1057a67c4051",
+        "x-ms-client-request-id": "27c250ee-9e4d-2bcf-401a-894b7ac5c471",
         "x-ms-return-client-request-id": "true"
       },
       "RequestBody": null,
       "StatusCode": 200,
       "ResponseHeaders": {
-        "Content-Length": "1008",
+        "Content-Length": "2523",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Thu, 04 Feb 2021 16:37:07 GMT",
-        "ETag": "\u0022387244be-0875-402a-b2d8-ab80c2442156\u0022",
+        "Date": "Thu, 04 Feb 2021 16:37:12 GMT",
+        "ETag": "\u00223cf6b32e-b28f-4b68-bf7b-11a9e8e77245\u0022",
         "Server": "Microsoft-IIS/10.0",
         "x-content-type-options": "nosniff",
-        "x-ms-activityid": "255a8af5-9171-4429-8b04-2a9e0eb9e63e",
-        "x-ms-correlationid": "acec4295-c192-4bb4-982b-a830e15640c1",
-        "x-ms-requestid": "acec4295-c192-4bb4-982b-a830e15640c1",
+        "x-ms-activityid": "ef4489ac-55ab-4052-a966-8a54b089a7c4",
+        "x-ms-correlationid": "cecd7735-f897-4cd5-90c7-894fa46f446f",
+        "x-ms-requestid": "cecd7735-f897-4cd5-90c7-894fa46f446f",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
-        "id": "4aea5574-281c-7b2f-de26-e0f8369bc2d2",
-        "publisherId": "testtestindustryexperiencestest",
-        "offerId": "ercsaastest1-preview",
-        "name": "Ercenk test 2",
-        "saasSubscriptionStatus": "Unsubscribed",
-        "beneficiary": {
-          "emailId": "ercenk@microsoft.com",
-          "objectId": "df30a7e0-98dc-41a6-afa6-d1ddea551529",
-          "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-          "puid": "10033FFFA7593A0D"
-        },
-        "purchaser": {
-          "emailId": "ercenk@microsoft.com",
-          "objectId": "df30a7e0-98dc-41a6-afa6-d1ddea551529",
-          "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-          "puid": "10033FFFA7593A0D"
-        },
-        "planId": "basic",
-        "term": {
-          "startDate": "2019-09-24T00:00:00Z",
-          "endDate": "2019-10-23T00:00:00Z",
-          "termUnit": "P1M"
-        },
-        "autoRenew": true,
-        "isTest": false,
-        "isFreeTrial": false,
-        "allowedCustomerOperations": [
-          "Delete",
-          "Update",
-          "Read"
-        ],
-        "sessionId": "265f0683-2b2c-4563-9e92-60bc630157d8",
-        "fulfillmentId": "badf9fce-f41d-4145-ab9d-9d4743eefe40",
-        "storeFront": "AzurePortal",
-        "sandboxType": "None",
-        "created": "2019-09-24T17:39:13.5661812Z",
-        "lastModified": "0001-01-01T00:00:00",
-        "sessionMode": "None"
+        "plans": [
+          {
+            "planId": "base",
+            "displayName": "Base",
+            "isPrivate": false,
+            "description": "Base plan",
+            "hasFreeTrials": false,
+            "isPricePerSeat": false,
+            "isStopSell": false,
+            "market": "US",
+            "planComponents": {
+              "recurrentBillingTerms": [
+                {
+                  "currency": "USD",
+                  "price": 0.0,
+                  "termUnit": "P1M",
+                  "termDescription": "1 Month Subscription",
+                  "meteredQuantityIncluded": [
+                    {
+                      "dimensionId": "dim1",
+                      "units": "10"
+                    }
+                  ]
+                }
+              ],
+              "meteringDimensions": [
+                {
+                  "id": "dim1",
+                  "currency": "USD",
+                  "pricePerUnit": 0.0,
+                  "unitOfMeasure": "piece",
+                  "displayName": "Number of X"
+                }
+              ]
+            }
+          },
+          {
+            "planId": "silver",
+            "displayName": "Silver",
+            "isPrivate": false,
+            "description": "Silver plan",
+            "hasFreeTrials": false,
+            "isPricePerSeat": false,
+            "isStopSell": false,
+            "market": "US",
+            "planComponents": {
+              "recurrentBillingTerms": [
+                {
+                  "currency": "USD",
+                  "price": 0.0,
+                  "termUnit": "P1M",
+                  "termDescription": "1 Month Subscription",
+                  "meteredQuantityIncluded": [
+                    {
+                      "dimensionId": "dim2",
+                      "units": "10"
+                    },
+                    {
+                      "dimensionId": "dim1",
+                      "units": "20"
+                    }
+                  ]
+                }
+              ],
+              "meteringDimensions": [
+                {
+                  "id": "dim2",
+                  "currency": "USD",
+                  "pricePerUnit": 0.0,
+                  "unitOfMeasure": "hour",
+                  "displayName": "Hours of Y"
+                },
+                {
+                  "id": "dim1",
+                  "currency": "USD",
+                  "pricePerUnit": 0.0,
+                  "unitOfMeasure": "piece",
+                  "displayName": "Number of X"
+                }
+              ]
+            }
+          },
+          {
+            "planId": "gold",
+            "displayName": "Gold",
+            "isPrivate": false,
+            "description": "Gold plan",
+            "hasFreeTrials": false,
+            "isPricePerSeat": false,
+            "isStopSell": false,
+            "market": "US",
+            "planComponents": {
+              "recurrentBillingTerms": [
+                {
+                  "currency": "USD",
+                  "price": 0.0,
+                  "termUnit": "P1M",
+                  "termDescription": "1 Month Subscription",
+                  "meteredQuantityIncluded": [
+                    {
+                      "dimensionId": "dim3",
+                      "units": "10"
+                    }
+                  ]
+                },
+                {
+                  "currency": "USD",
+                  "price": 0.0,
+                  "termUnit": "P1Y",
+                  "termDescription": "1 Year Subscription",
+                  "meteredQuantityIncluded": [
+                    {
+                      "dimensionId": "dim3",
+                      "units": "0"
+                    }
+                  ]
+                }
+              ],
+              "meteringDimensions": [
+                {
+                  "id": "dim3",
+                  "currency": "USD",
+                  "pricePerUnit": 0.0,
+                  "unitOfMeasure": "pieces",
+                  "displayName": "Number of Z"
+                }
+              ]
+            }
+          },
+          {
+            "planId": "platinum",
+            "displayName": "Platinum",
+            "isPrivate": false,
+            "description": "Platinum plan",
+            "hasFreeTrials": true,
+            "isPricePerSeat": false,
+            "isStopSell": false,
+            "market": "US",
+            "planComponents": {
+              "recurrentBillingTerms": [
+                {
+                  "currency": "USD",
+                  "price": 0.0,
+                  "termUnit": "P1M",
+                  "termDescription": "1 Month Subscription"
+                }
+              ],
+              "meteringDimensions": []
+            }
+          },
+          {
+            "planId": "public",
+            "displayName": "Public",
+            "isPrivate": false,
+            "description": "Example public plan for all markets",
+            "hasFreeTrials": true,
+            "isPricePerSeat": false,
+            "isStopSell": false,
+            "market": "US",
+            "planComponents": {
+              "recurrentBillingTerms": [
+                {
+                  "currency": "USD",
+                  "price": 0.0,
+                  "termUnit": "P1M",
+                  "termDescription": "1 Month Subscription"
+                },
+                {
+                  "currency": "USD",
+                  "price": 0.0,
+                  "termUnit": "P1Y",
+                  "termDescription": "1 Year Subscription"
+                }
+              ],
+              "meteringDimensions": []
+            }
+          }
+        ]
       }
     }
   ],
   "Variables": {
-    "RandomSeed": "893807496"
+    "RandomSeed": "1441503384"
   }
 }

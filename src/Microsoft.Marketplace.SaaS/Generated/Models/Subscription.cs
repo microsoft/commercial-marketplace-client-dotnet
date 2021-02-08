@@ -31,15 +31,18 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <param name="planId"> . </param>
         /// <param name="quantity"> . </param>
         /// <param name="term"> . </param>
+        /// <param name="autoRenew"> Indicating whether the subscription will renew automatically. </param>
         /// <param name="isTest"> Indicating whether the current subscription is a test asset. </param>
         /// <param name="isFreeTrial"> true - the customer subscription is currently in free trial, false - the customer subscription is not currently in free trial.(optional field - default false). </param>
         /// <param name="allowedCustomerOperations"> . </param>
         /// <param name="sessionId"> . </param>
         /// <param name="fulfillmentId"> . </param>
         /// <param name="storeFront"> . </param>
-        /// <param name="sessionMode"> Dry Run indicates all transactions run as Test-Mode in the commerce stack. </param>
         /// <param name="sandboxType"> Possible Values are None, Csp (Csp sandbox purchase). </param>
-        internal Subscription(Guid? id, string publisherId, string offerId, string name, SubscriptionStatusEnum? saasSubscriptionStatus, AadIdentifier beneficiary, AadIdentifier purchaser, string planId, int? quantity, SubscriptionTerm term, bool? isTest, bool? isFreeTrial, IReadOnlyList<AllowedCustomerOperationsEnum> allowedCustomerOperations, Guid? sessionId, Guid? fulfillmentId, string storeFront, SessionModeEnum? sessionMode, SandboxTypeEnum? sandboxType)
+        /// <param name="created"> . </param>
+        /// <param name="lastModified"> . </param>
+        /// <param name="sessionMode"> Dry Run indicates all transactions run as Test-Mode in the commerce stack. </param>
+        internal Subscription(Guid? id, string publisherId, string offerId, string name, SubscriptionStatusEnum? saasSubscriptionStatus, AadIdentifier beneficiary, AadIdentifier purchaser, string planId, int? quantity, SubscriptionTerm term, bool? autoRenew, bool? isTest, bool? isFreeTrial, IReadOnlyList<AllowedCustomerOperationsEnum> allowedCustomerOperations, Guid? sessionId, Guid? fulfillmentId, string storeFront, SandboxTypeEnum? sandboxType, DateTimeOffset? created, DateTimeOffset? lastModified, SessionModeEnum? sessionMode)
         {
             Id = id;
             PublisherId = publisherId;
@@ -51,14 +54,17 @@ namespace Microsoft.Marketplace.SaaS.Models
             PlanId = planId;
             Quantity = quantity;
             Term = term;
+            AutoRenew = autoRenew;
             IsTest = isTest;
             IsFreeTrial = isFreeTrial;
             AllowedCustomerOperations = allowedCustomerOperations;
             SessionId = sessionId;
             FulfillmentId = fulfillmentId;
             StoreFront = storeFront;
-            SessionMode = sessionMode;
             SandboxType = sandboxType;
+            Created = created;
+            LastModified = lastModified;
+            SessionMode = sessionMode;
         }
 
         public Guid? Id { get; }
@@ -72,6 +78,8 @@ namespace Microsoft.Marketplace.SaaS.Models
         public string PlanId { get; }
         public int? Quantity { get; }
         public SubscriptionTerm Term { get; }
+        /// <summary> Indicating whether the subscription will renew automatically. </summary>
+        public bool? AutoRenew { get; }
         /// <summary> Indicating whether the current subscription is a test asset. </summary>
         public bool? IsTest { get; }
         /// <summary> true - the customer subscription is currently in free trial, false - the customer subscription is not currently in free trial.(optional field - default false). </summary>
@@ -80,9 +88,11 @@ namespace Microsoft.Marketplace.SaaS.Models
         public Guid? SessionId { get; }
         public Guid? FulfillmentId { get; }
         public string StoreFront { get; }
-        /// <summary> Dry Run indicates all transactions run as Test-Mode in the commerce stack. </summary>
-        public SessionModeEnum? SessionMode { get; }
         /// <summary> Possible Values are None, Csp (Csp sandbox purchase). </summary>
         public SandboxTypeEnum? SandboxType { get; }
+        public DateTimeOffset? Created { get; }
+        public DateTimeOffset? LastModified { get; }
+        /// <summary> Dry Run indicates all transactions run as Test-Mode in the commerce stack. </summary>
+        public SessionModeEnum? SessionMode { get; }
     }
 }
