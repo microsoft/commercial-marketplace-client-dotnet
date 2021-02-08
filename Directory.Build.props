@@ -2,8 +2,11 @@
   xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
+    <RequiredTargetFrameworks>netstandard2.0;netcoreapp3.1;net5.0;net47</RequiredTargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
-    <RepoEngPath>$(MSBuildThisFileDirectory)eng</RepoEngPath>
     <RepoSrcPath>$(RepoRoot)src</RepoSrcPath>
   </PropertyGroup>
 
@@ -21,21 +24,5 @@
     <InheritDocEnabled>true</InheritDocEnabled>
     <InheritDocTrimLevel>private</InheritDocTrimLevel>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Azure.Identity" Version="1.3.0"/>
-    <PackageReference Include="System.Text.Json" Version="5.0.0" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" />
-    <PackageReference Include="AutoRest.CSharp.V3" Version="3.0.0-beta.20201217.1" />
-    <PackageReference Include="Azure.Core" Version="1.7.0"/>
-  </ItemGroup>
-
-  <!-- Test project settings -->
-  <ItemGroup Condition="'$(IsTestProject)' == 'true'">
-    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
-      <_Parameter1>SourcePath</_Parameter1>
-      <_Parameter2>$(MSBuildProjectDirectory)</_Parameter2>
-    </AssemblyAttribute>
-  </ItemGroup>
 
 </Project>
