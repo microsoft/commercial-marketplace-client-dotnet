@@ -1,0 +1,90 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "https://marketplaceapi.microsoft.com/api/saas/subscriptions/resolve?api-version=2018-08-31",
+      "RequestMethod": "POST",
+      "RequestHeaders": {
+        "Accept": "application/json",
+        "Authorization": "Sanitized",
+        "Request-Id": "|a0f2d504-42abcd9c1c789a47.",
+        "User-Agent": [
+          "azsdk-net-Microsoft.Marketplace/1.0.0",
+          "(.NET Framework 4.8.4311.0; Microsoft Windows 10.0.21301 )"
+        ],
+        "x-ms-client-request-id": "fcf5a7ee-1b2f-a327-a5aa-09b406b5fe11",
+        "x-ms-marketplace-token": "RUA01U9XFK7hkUoCGo0yOCEnXyJHu3cP9VihTQREWTyUkDySoSiMb5j3t3PHXPZUIPN61g1IRQESVIfVRimE\u002BXfdKYiMjg9El3nP0AFhYxuuRMX4jhGeaJHP1JAdz9SP0cti/o6z3RgJDzWTN0eXtLgzbCoRUgdWa64/iHGIFKN30RA9njDxuJkuUp1Ml3wFsQKYcq4HjfD5lUcYOw6amefQ4RzHk9L\u002Bkrn83OrHfwo=",
+        "x-ms-return-client-request-id": "true"
+      },
+      "RequestBody": null,
+      "StatusCode": 200,
+      "ResponseHeaders": {
+        "Content-Length": "1461",
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Thu, 04 Feb 2021 16:37:14 GMT",
+        "Server": "Microsoft-IIS/10.0",
+        "Set-Cookie": [
+          "ARRAffinity=540d435d9e124887614425ac3a1a59170072a70f62fae90a951d423a1d05d580;Path=/;HttpOnly;Secure;Domain=marketplaceapi.microsoft.com",
+          "ARRAffinitySameSite=540d435d9e124887614425ac3a1a59170072a70f62fae90a951d423a1d05d580;Path=/;HttpOnly;SameSite=None;Secure;Domain=marketplaceapi.microsoft.com"
+        ],
+        "x-content-type-options": "nosniff",
+        "x-ms-activityid": "b13604d0-783c-43dd-9c9a-c7b6cd552223",
+        "x-ms-correlationid": "80f386cb-a41c-42a5-a006-2e1eba6988ab",
+        "x-ms-requestid": "80f386cb-a41c-42a5-a006-2e1eba6988ab",
+        "X-Powered-By": "ASP.NET"
+      },
+      "ResponseBody": {
+        "id": "0ee05fcf-0dcb-f015-d459-58b630f59525",
+        "subscriptionName": "redmond120",
+        "offerId": "contoso_saas_offer-preview",
+        "planId": "silver",
+        "subscription": {
+          "id": "0ee05fcf-0dcb-f015-d459-58b630f59525",
+          "publisherId": "testtestindustryexperiencestest",
+          "offerId": "contoso_saas_offer-preview",
+          "name": "redmond120",
+          "saasSubscriptionStatus": "PendingFulfillmentStart",
+          "beneficiary": {
+            "emailId": "ercenk@microsoft.com",
+            "objectId": "df30a7e0-98dc-41a6-afa6-d1ddea551529",
+            "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+            "puid": "10033FFFA7593A0D",
+            "iss": "https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/",
+            "idp": "https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/",
+            "clienT-IP": "40.80.156.103:25728"
+          },
+          "purchaser": {
+            "emailId": "ercenk@microsoft.com",
+            "objectId": "df30a7e0-98dc-41a6-afa6-d1ddea551529",
+            "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+            "puid": "10033FFFA7593A0D",
+            "iss": "https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/",
+            "idp": "https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/",
+            "clienT-IP": "40.80.156.103:25728"
+          },
+          "planId": "silver",
+          "term": {
+            "termUnit": "P1M"
+          },
+          "autoRenew": true,
+          "isTest": false,
+          "isFreeTrial": false,
+          "allowedCustomerOperations": [
+            "Delete",
+            "Update",
+            "Read"
+          ],
+          "sessionId": "96ff6b82-c671-4122-b31a-e3033d2e5ba0",
+          "fulfillmentId": "8441cb76-fe06-434f-ad2a-cab6bff9ccc4",
+          "storeFront": "ARMApiCall",
+          "sandboxType": "None",
+          "created": "2021-01-20T18:29:27.3784172Z",
+          "lastModified": "2021-01-20T18:30:26.4474061Z",
+          "sessionMode": "None"
+        }
+      }
+    }
+  ],
+  "Variables": {
+    "RandomSeed": "910756722"
+  }
+}

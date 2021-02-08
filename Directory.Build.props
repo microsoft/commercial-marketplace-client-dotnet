@@ -1,0 +1,28 @@
+<Project ToolsVersion="15.0"
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <RequiredTargetFrameworks>netstandard2.0;net5.0;net47</RequiredTargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
+    <RepoSrcPath>$(RepoRoot)src</RepoSrcPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IsClientLibrary Condition="'$(IsClientLibrary)' == '' and $(MSBuildProjectName) == 'Microsoft.Marketplace'">true</IsClientLibrary>
+    <IsTestProject Condition="$(MSBuildProjectName.EndsWith('.Tests'))">true</IsTestProject>
+    <IsSamplesProject Condition="$(MSBuildProjectName.EndsWith('.Samples'))">true</IsSamplesProject>
+    <IsTestSupportProject Condition="'$(IsTestProject)' != 'true' and ($(MSBuildProjectDirectory.Contains('/tests/')) or $(MSBuildProjectDirectory.Contains('\tests\')))">true</IsTestSupportProject>
+    <IsShippingLibrary Condition="'$(IsClientLibrary)' == 'true' and '$(IsTestProject)' != 'true' and '$(IsTestSupportProject)' != 'true' and '$(IsSamplesProject)' != 'true'">true</IsShippingLibrary>
+
+    <EnableClientSdkAnalyzers Condition="'$(IsShippingLibrary)' == 'true'">true</EnableClientSdkAnalyzers>
+    <EnableFxCopAnalyzers Condition="'$(IsShippingLibrary)' == 'true'">true</EnableFxCopAnalyzers>
+    <GenerateAPIListing Condition="'$(IsShippingLibrary)' == 'true'">true</GenerateAPIListing>
+    <UpdateSourceOnBuild Condition="'$(UpdateSourceOnBuild)' == ''">$(AZURE_DEV_UPDATESOURCESONBUILD)</UpdateSourceOnBuild>
+    <InheritDocEnabled>true</InheritDocEnabled>
+    <InheritDocTrimLevel>private</InheritDocTrimLevel>
+  </PropertyGroup>
+
+</Project>

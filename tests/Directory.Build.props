@@ -1,0 +1,10 @@
+<Project ToolsVersion="15.0"
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- <Import Project="$(MSBuildThisFileDirectory)\Directory.Build.props" Condition="Exists('..\Directory.Build.props')" /> -->
+
+  <PropertyGroup>
+    <RequiredTargetFrameworks Condition="$(RequiredTargetFrameworks) == ''">netstandard2.0;net5.0;net47</RequiredTargetFrameworks>
+  </PropertyGroup>
+
+</Project>
