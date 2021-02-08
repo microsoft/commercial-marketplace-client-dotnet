@@ -353,3 +353,7 @@ MigrationBackup/
 .ionide/
 
 .DS_Store
+
+# Code generation
+CodeModel.yaml
+Configuration.json
