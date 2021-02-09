@@ -13,7 +13,7 @@ using Microsoft.Marketplace.Metering;
 namespace Microsoft.Marketplace.Metering
 {
     /// <summary> Metering service management client. </summary>
-    public class MeteringManagementClient
+    public class MeteringManagementClient : IMeteringManagementClient
     {
         private readonly ClientDiagnostics _clientDiagnostics;
         private readonly HttpPipeline _pipeline;
@@ -44,7 +44,6 @@ namespace Microsoft.Marketplace.Metering
             _endpoint = endpoint;
         }
 
-        /// <summary> Returns an instance of MeteringOperations. </summary>
         public virtual MeteringOperations Metering => new MeteringOperations(_clientDiagnostics, _pipeline, _endpoint);
     }
 }
