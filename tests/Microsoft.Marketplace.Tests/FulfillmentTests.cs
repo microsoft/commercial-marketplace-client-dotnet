@@ -116,7 +116,7 @@ namespace Microsoft.Marketplace.Tests
             // Cannot check whether this succeeed or not.
             var operationId = Guid.TryParse(result, out var value) ? value : Guid.Empty;
 
-            var operation = await sut.SubscriptionOperations.GetOperationStatusAsync(firstActiveSubscription.Id.Value, operationId);
+            var operation = await sut.Operations.GetOperationStatusAsync(firstActiveSubscription.Id.Value, operationId);
 
             Assert.IsNotNull(operation);
 

@@ -7,6 +7,6 @@ namespace Microsoft.Marketplace.SaaS
     {
         FulfillmentOperations Fulfillment { get; }
 
-        SubscriptionOperations SubscriptionOperations { get; }
+        SubscriptionOperations Operations { get; }
     }
 }
