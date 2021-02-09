@@ -12,28 +12,28 @@ using Azure.Core.Pipeline;
 namespace Microsoft.Marketplace.Metering
 {
     /// <summary> Metering service client. </summary>
-    public class MeteringManagementClient : IMarketplaceMeteringClient
+    public class MarketplaceMeteringClient : IMarketplaceMeteringClient
     {
         private readonly ClientDiagnostics _clientDiagnostics;
         private readonly HttpPipeline _pipeline;
         private readonly Uri _endpoint;
 
-        /// <summary> Initializes a new instance of MeteringManagementClient for mocking. </summary>
-        protected MeteringManagementClient()
+        /// <summary> Initializes a new instance of MarketplaceMeteringClient for mocking. </summary>
+        protected MarketplaceMeteringClient()
         {
         }
 
-        /// <summary> Initializes a new instance of MeteringManagementClient. </summary>
+        /// <summary> Initializes a new instance of MarketplaceMeteringClient. </summary>
         /// <param name="tokenCredential"> The OAuth token for making client requests. </param>
         /// <param name="options"> The options for configuring the client. </param>
-        public MeteringManagementClient(TokenCredential tokenCredential, MarketplaceMeteringClientOptions options = null) : this(null, tokenCredential, options)
+        public MarketplaceMeteringClient(TokenCredential tokenCredential, MarketplaceMeteringClientOptions options = null) : this(null, tokenCredential, options)
         {
         }
-        /// <summary> Initializes a new instance of MeteringManagementClient. </summary>
+        /// <summary> Initializes a new instance of MarketplaceMeteringClient. </summary>
         /// <param name="endpoint"> server parameter. </param>
         /// <param name="tokenCredential"> The OAuth token for making client requests. </param>
         /// <param name="options"> The options for configuring the client. </param>
-        public MeteringManagementClient(Uri endpoint, TokenCredential tokenCredential, MarketplaceMeteringClientOptions options = null)
+        public MarketplaceMeteringClient(Uri endpoint, TokenCredential tokenCredential, MarketplaceMeteringClientOptions options = null)
         {
             endpoint ??= new Uri("https://marketplaceapi.microsoft.com/api");
 
