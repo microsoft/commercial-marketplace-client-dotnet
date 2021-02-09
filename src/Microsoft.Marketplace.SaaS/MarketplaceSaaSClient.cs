@@ -8,7 +8,7 @@ namespace Microsoft.Marketplace.SaaS
     using Azure.Core.Pipeline;
 
     /// <summary> SaaS service management client. </summary>
-    public class MarketplaceSaaSClient
+    public class MarketplaceSaaSClient : IMarketplaceSaaSClient
     {
         private readonly ClientDiagnostics clientDiagnostics;
         private readonly HttpPipeline pipeline;
