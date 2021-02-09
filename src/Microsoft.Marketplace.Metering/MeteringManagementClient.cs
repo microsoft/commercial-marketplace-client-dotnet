@@ -8,12 +8,11 @@
 using System;
 using Azure.Core;
 using Azure.Core.Pipeline;
-using Microsoft.Marketplace.Metering;
 
 namespace Microsoft.Marketplace.Metering
 {
-    /// <summary> Metering service management client. </summary>
-    public class MeteringManagementClient : IMeteringManagementClient
+    /// <summary> Metering service client. </summary>
+    public class MeteringManagementClient : IMarketplaceMeteringClient
     {
         private readonly ClientDiagnostics _clientDiagnostics;
         private readonly HttpPipeline _pipeline;
@@ -27,18 +26,18 @@ namespace Microsoft.Marketplace.Metering
         /// <summary> Initializes a new instance of MeteringManagementClient. </summary>
         /// <param name="tokenCredential"> The OAuth token for making client requests. </param>
         /// <param name="options"> The options for configuring the client. </param>
-        public MeteringManagementClient(TokenCredential tokenCredential, MeteringManagementClientOptions options = null) : this(null, tokenCredential, options)
+        public MeteringManagementClient(TokenCredential tokenCredential, MarketplaceMeteringClientOptions options = null) : this(null, tokenCredential, options)
         {
         }
         /// <summary> Initializes a new instance of MeteringManagementClient. </summary>
         /// <param name="endpoint"> server parameter. </param>
         /// <param name="tokenCredential"> The OAuth token for making client requests. </param>
         /// <param name="options"> The options for configuring the client. </param>
-        public MeteringManagementClient(Uri endpoint, TokenCredential tokenCredential, MeteringManagementClientOptions options = null)
+        public MeteringManagementClient(Uri endpoint, TokenCredential tokenCredential, MarketplaceMeteringClientOptions options = null)
         {
             endpoint ??= new Uri("https://marketplaceapi.microsoft.com/api");
 
-            options ??= new MeteringManagementClientOptions();
+            options ??= new MarketplaceMeteringClientOptions();
             _clientDiagnostics = new ClientDiagnostics(options);
             _pipeline = ManagementPipelineBuilder.Build(tokenCredential, endpoint, options);
             _endpoint = endpoint;

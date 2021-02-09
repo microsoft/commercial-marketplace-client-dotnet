@@ -3,8 +3,8 @@
 
 namespace Microsoft.Marketplace.Metering
 {
-    /// <summary> Metering service management client. </summary>
-    public interface IMeteringManagementClient
+    /// <summary> Metering client. </summary>
+    public interface IMarketplaceMeteringClient
     {
         /// <summary> Gets an instance of MeteringOperations. </summary>
         MeteringOperations Metering { get; }
