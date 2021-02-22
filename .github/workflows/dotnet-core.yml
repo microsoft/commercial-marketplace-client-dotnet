@@ -20,12 +20,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Setup .NET Core
+    - name: Setup .NET Core 3.1.*
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.*
 
-    - name: Setup .NET Core
+    - name: Setup .NET Core 5.0.*
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '5.0.*'        
@@ -34,7 +34,7 @@ jobs:
       run: dotnet build --configuration Debug
       working-directory: ./src
 
-    - name: test
+    - name: Test
       run: dotnet test
       env:
         TenantId: ${{secrets.TENANTID}}
