@@ -118,7 +118,7 @@ namespace Microsoft.Marketplace.Tests
 
         [RecordedTest]
 
-        // [Ignore("Only use with a new marketplace token and record!")]
+        [Ignore("Use your own certificate file and record.")]
         public async Task ResolveSubscriptionWithCert()
         {
             var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient(true));
