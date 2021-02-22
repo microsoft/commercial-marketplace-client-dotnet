@@ -55,6 +55,7 @@ namespace Microsoft.Marketplace.Tests
         }
 
         [RecordedTest]
+        [Ignore("Use your own certificate file and record.")]
         public async Task GetAllSubscriptionsAsListWithCertAsync()
         {
             var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient(true));
