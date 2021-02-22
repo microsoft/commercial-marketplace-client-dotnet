@@ -18,12 +18,13 @@
 
   <ItemGroup>
     <!-- <ProjectReference Include="..\Azure.Core.TestFramework\src\Azure.Core.TestFramework.csproj" Aliases="AzureCoreTestFramework" /> -->
-    <ProjectReference Include="..\Azure.Core.TestFramework\src\Azure.Core.TestFramework.csproj"  />
+    <ProjectReference Include="..\Azure.Core.TestFramework\src\Azure.Core.TestFramework.csproj" />
     <ProjectReference Include="..\..\src\Microsoft.Marketplace.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Azure.Identity" Version="1.3.0" />
+    <PackageReference Include="Microsoft.Azure.AutoRest.CSharp" Version="3.0.0-beta.20210211.2" />
     <PackageReference Include="NUnit" Version="3.13.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
   </ItemGroup>
@@ -33,11 +34,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Identity" Version="1.3.0"/>
+    <PackageReference Include="Azure.Identity" Version="1.3.0" />
     <PackageReference Include="System.Text.Json" Version="5.0.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" />
-    <PackageReference Include="AutoRest.CSharp.V3" Version="3.0.0-beta.20201217.1" />
-    <PackageReference Include="Azure.Core" Version="1.7.0"/>
+    <PackageReference Include="Azure.Core" Version="1.7.0" />
   </ItemGroup>
   
     <ItemGroup Condition="'$(IsTestProject)' == 'true'">
