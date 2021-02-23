@@ -8,7 +8,7 @@ namespace Microsoft.Marketplace.SaaS
     using Azure.Core.Pipeline;
 
     /// <summary> SaaS service management client. </summary>
-    public class MarketplaceSaaSClient
+    public class MarketplaceSaaSClient : IMarketplaceSaaSClient
     {
         private readonly ClientDiagnostics clientDiagnostics;
         private readonly HttpPipeline pipeline;
@@ -50,7 +50,7 @@ namespace Microsoft.Marketplace.SaaS
         /// <summary> Gets an instance of FulfillmentOperations. </summary>
         public virtual FulfillmentOperations Fulfillment => new FulfillmentOperations(this.clientDiagnostics, this.pipeline, this.endpoint);
 
-        /// <summary> Gets an instance of SubscriptionOperations. </summary>
-        public virtual SubscriptionOperations SubscriptionOperations => new SubscriptionOperations(this.clientDiagnostics, this.pipeline, this.endpoint);
+        /// <summary> Gets an instance of Operations. </summary>
+        public virtual SubscriptionOperations Operations => new SubscriptionOperations(this.clientDiagnostics, this.pipeline, this.endpoint);
     }
 }

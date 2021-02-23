@@ -16,15 +16,9 @@ namespace Microsoft.Marketplace.SaaS
     [CodeGenSuppress("UpdateSubscription", typeof(Guid), typeof(SubscriberPlan), typeof(Guid), typeof(Guid), typeof(CancellationToken))]
     [CodeGenSuppress("DeleteSubscriptionAsync", typeof(Guid), typeof(Guid), typeof(Guid), typeof(CancellationToken))]
     [CodeGenSuppress("DeleteSubscription", typeof(Guid), typeof(Guid), typeof(Guid), typeof(CancellationToken))]
-    public partial class FulfillmentOperations
+    public partial class FulfillmentOperations : IFulfillmentOperations
     {
-        /// <summary> Use this call to update the plan, the user count (quantity), or both. </summary>
-        /// <param name="subscriptionId"> The Uuid to use. </param>
-        /// <param name="body"> The SubscriberPlan to use. </param>
-        /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
-        /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
-        /// <param name="cancellationToken"> The cancellation token to use. </param>
-        /// <returns>A <see cref="Task{string}"/> representing the result of the asynchronous operation.</returns>
+        /// <inheritdoc/>
         public virtual async Task<string> UpdateSubscriptionAsync(Guid subscriptionId, SubscriberPlan body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var scope = this._clientDiagnostics.CreateScope("FulfillmentOperations.UpdateSubscription");
@@ -41,13 +35,7 @@ namespace Microsoft.Marketplace.SaaS
             }
         }
 
-        /// <summary> Use this call to update the plan, the user count (quantity), or both. </summary>
-        /// <param name="subscriptionId"> The Uuid to use. </param>
-        /// <param name="body"> The SubscriberPlan to use. </param>
-        /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
-        /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
-        /// <param name="cancellationToken"> The cancellation token to use. </param>
-        /// <returns>A <see cref="string"/> representing the result of the  operation.</returns>
+        /// <inheritdoc/>
         public virtual string UpdateSubscription(Guid subscriptionId, SubscriberPlan body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var scope = this._clientDiagnostics.CreateScope("FulfillmentOperations.UpdateSubscription");
@@ -64,12 +52,7 @@ namespace Microsoft.Marketplace.SaaS
             }
         }
 
-        /// <summary> Unsubscribe and delete the specified subscription. </summary>
-        /// <param name="subscriptionId"> The Uuid to use. </param>
-        /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
-        /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
-        /// <param name="cancellationToken"> The cancellation token to use. </param>
-        /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
+        /// <inheritdoc/>
         public virtual async Task<string> DeleteSubscriptionAsync(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var scope = this._clientDiagnostics.CreateScope("FulfillmentOperations.DeleteSubscription");
@@ -86,12 +69,7 @@ namespace Microsoft.Marketplace.SaaS
             }
         }
 
-        /// <summary> Unsubscribe and delete the specified subscription. </summary>
-        /// <param name="subscriptionId"> The Uuid to use. </param>
-        /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
-        /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
-        /// <param name="cancellationToken"> The cancellation token to use. </param>
-        /// <returns>A <see cref="string"/> representing the result of the  operation.</returns>
+        /// <inheritdoc/>
         public virtual string DeleteSubscription(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var scope = this._clientDiagnostics.CreateScope("FulfillmentOperations.DeleteSubscription");

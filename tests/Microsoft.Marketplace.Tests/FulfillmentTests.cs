@@ -6,12 +6,15 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
+using System.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Azure.Core;
 using Azure.Core.Pipeline;
 using Azure.Core.TestFramework;
 using Azure.Identity;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Marketplace.Metering;
 using Microsoft.Marketplace.SaaS;
 using Microsoft.Marketplace.SaaS.Models;
 using NUnit.Framework;
@@ -24,6 +27,8 @@ namespace Microsoft.Marketplace.Tests
 #pragma warning restore SA1600 // Elements should be documented
     {
         private IConfigurationRoot config;
+
+        private const string MarketplacePurchaseIdentificationToken = "9EVFKOQwhUCgLB0OKLRdav6AoOXHDKqTUyYgGlJpDy92RdX8XGA+Ebv8XjBcKfcduQW0ggoG2xKszgQozWkU1yUouS+4xsy7xaCSiJRgg6XMkXI9RJV+pdD1/NbSGQIS7gqrxNziYDApXmSRvcd7EuTfdZK3vnsgcWf19g1qpVp+ooAVyCPb8sPvmSuOifJxdvHZu+99YvQURPKnnBchnJK2VQqxbNJZ1e3ZyhYxT28=";
 
         // Changed to record when client code is generated first time manually.
 #pragma warning disable SA1600 // Elements should be documented
@@ -41,6 +46,19 @@ namespace Microsoft.Marketplace.Tests
         public async Task GetAllSubscriptionsAsListAsync()
         {
             var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient());
+            var subscriptions = await sut.Fulfillment.ListSubscriptionsAsync().ToListAsync();
+
+            Debug.Print($"Received {subscriptions} subscriptions");
+            Debug.Print($"Received {subscriptions.Select(s => s.Id).Distinct().ToList().Count} distinct subscriptions");
+
+            NUnit.Framework.Assert.IsTrue(subscriptions.Any());
+        }
+
+        [RecordedTest]
+        [Ignore("Use your own certificate file and record.")]
+        public async Task GetAllSubscriptionsAsListWithCertAsync()
+        {
+            var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient(true));
             var subscriptions = await sut.Fulfillment.ListSubscriptionsAsync().ToListAsync();
 
             Debug.Print($"Received {subscriptions} subscriptions");
@@ -92,7 +110,23 @@ namespace Microsoft.Marketplace.Tests
 
             // This needs to be run manually after receiving a marketplace token on the landing page, and adding here.
             // Don't forget to urldecode if you are copying from the url param
-            var marketplaceToken = "RUA01U9XFK7hkUoCGo0yOCEnXyJHu3cP9VihTQREWTyUkDySoSiMb5j3t3PHXPZUIPN61g1IRQESVIfVRimE+XfdKYiMjg9El3nP0AFhYxuuRMX4jhGeaJHP1JAdz9SP0cti/o6z3RgJDzWTN0eXtLgzbCoRUgdWa64/iHGIFKN30RA9njDxuJkuUp1Ml3wFsQKYcq4HjfD5lUcYOw6amefQ4RzHk9L+krn83OrHfwo=";
+            var marketplaceToken = MarketplacePurchaseIdentificationToken;
+            var resolvedSubscription = await sut.Fulfillment.ResolveAsync(marketplaceToken);
+
+            Debug.Print(resolvedSubscription.Value.SubscriptionName);
+            Assert.IsNotNull(resolvedSubscription);
+        }
+
+        [RecordedTest]
+
+        [Ignore("Use your own certificate file and record.")]
+        public async Task ResolveSubscriptionWithCert()
+        {
+            var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient(true));
+
+            // This needs to be run manually after receiving a marketplace token on the landing page, and adding here.
+            // Don't forget to urldecode if you are copying from the url param
+            var marketplaceToken = MarketplacePurchaseIdentificationToken;
             var resolvedSubscription = await sut.Fulfillment.ResolveAsync(marketplaceToken);
 
             Debug.Print(resolvedSubscription.Value.SubscriptionName);
@@ -116,7 +150,7 @@ namespace Microsoft.Marketplace.Tests
             // Cannot check whether this succeeed or not.
             var operationId = Guid.TryParse(result, out var value) ? value : Guid.Empty;
 
-            var operation = await sut.SubscriptionOperations.GetOperationStatusAsync(firstActiveSubscription.Id.Value, operationId);
+            var operation = await sut.Operations.GetOperationStatusAsync(firstActiveSubscription.Id.Value, operationId);
 
             Assert.IsNotNull(operation);
 
@@ -154,14 +188,104 @@ namespace Microsoft.Marketplace.Tests
             Assert.IsTrue(availablePlans.Value.Plans.SelectMany(p => p.PlanComponents.RecurrentBillingTerms).Any());
         }
 
-        private MarketplaceSaaSClient GetMarketplaceSaaSClient()
+        [RecordedTest]
+        [Ignore("Ignore for the moment as usage with ResourceId seems to be failing on the service side.")]
+        public async Task PostSingleUsage()
         {
-            return new MarketplaceSaaSClient(new ClientSecretCredential(this.config["TenantId"], this.config["ClientId"], this.config["clientSecret"]), this.GetOptions());
+            var sut = this.InstrumentClient(this.GetMarketplaceMeteringClient());
+
+            var usageEvent = new Metering.Models.UsageEvent { 
+                ResourceUri = "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercuserassigned",
+                Quantity = 15,
+                Dimension = "dim1",
+                EffectiveStartTime = DateTime.Now.AddHours(-65),
+                PlanId = "userassigned",
+            };
+
+            var result = await sut.Metering.PostUsageEventAsync(usageEvent);
+
         }
 
-        private MarketplaceSaaSClientOptions GetOptions()
+        private MarketplaceSaaSClient GetMarketplaceSaaSClient(bool useCert = false)
+        {
+            TokenCredential creds;
+            if (useCert)
+            {
+                var password = this.config["certPassword"];
+                var filePath = this.config["certFilePath"];
+
+                var store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
+
+                var certCollection = new X509Certificate2Collection();
+                certCollection.Import(filePath, password, X509KeyStorageFlags.PersistKeySet);
+
+                var cert = certCollection[0];
+
+                creds = new ClientCertificateCredential(this.config["TenantId"], this.config["ClientId"], cert);
+            }
+            else
+            {
+                creds = new ClientSecretCredential(this.config["TenantId"], this.config["ClientId"], this.config["clientSecret"]);
+            }
+
+            return new MarketplaceSaaSClient(creds, this.GetMarketplaceSaaSClientOptions());
+        }
+
+        private MarketplaceMeteringClient GetMarketplaceMeteringClient(bool useCert = false)
+        {
+            TokenCredential creds;
+            if (useCert)
+            {
+                var password = this.config["certPassword"];
+                var filePath = this.config["certFilePath"];
+
+                var store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
+
+                var certCollection = new X509Certificate2Collection();
+                certCollection.Import(filePath, password, X509KeyStorageFlags.PersistKeySet);
+
+                var cert = certCollection[0];
+
+                creds = new ClientCertificateCredential(this.config["TenantId"], this.config["ClientId"], cert);
+            }
+            else
+            {
+                creds = new ClientSecretCredential(this.config["TenantId"], this.config["ClientId"], this.config["clientSecret"]);
+            }
+
+            return new MarketplaceMeteringClient(creds, this.GetMarketplaceMeteringClientOptions());
+        }
+
+        private MarketplaceSaaSClientOptions GetMarketplaceSaaSClientOptions()
         {
             var options = new MarketplaceSaaSClientOptions()
+            {
+                Diagnostics = { IsLoggingEnabled = true },
+                Retry =
+                {
+                    Mode = RetryMode.Exponential,
+                    MaxRetries = 10,
+                    Delay = TimeSpan.FromSeconds(this.Mode == RecordedTestMode.Playback ? 0.01 : 1),
+                    MaxDelay = TimeSpan.FromSeconds(this.Mode == RecordedTestMode.Playback ? 0.1 : 60),
+                    NetworkTimeout = TimeSpan.FromSeconds(this.Mode == RecordedTestMode.Playback ? 100 : 400),
+                },
+                Transport = new HttpClientTransport(
+                new HttpClient()
+                {
+                    Timeout = TimeSpan.FromSeconds(1000),
+                }),
+            };
+            if (this.Mode != RecordedTestMode.Live)
+            {
+                options.AddPolicy(new RecordedClientRequestIdPolicy(this.Recording, false), HttpPipelinePosition.PerCall);
+            }
+
+            return this.InstrumentClientOptions(options);
+        }
+
+        private MarketplaceMeteringClientOptions GetMarketplaceMeteringClientOptions()
+        {
+            var options = new MarketplaceMeteringClientOptions()
             {
                 Diagnostics = { IsLoggingEnabled = true },
                 Retry =

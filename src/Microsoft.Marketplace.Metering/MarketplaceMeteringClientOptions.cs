@@ -10,7 +10,8 @@ using Azure.Core;
 namespace Microsoft.Marketplace.Metering
 {
     /// <summary> Client options for Metering. </summary>
-    public class MeteringManagementClientOptions : ClientOptions
+    public class MarketplaceMeteringClientOptions
+        : ClientOptions
     {
     }
 }

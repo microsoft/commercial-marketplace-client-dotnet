@@ -7,7 +7,7 @@ namespace Microsoft.Marketplace.Metering
 
     /// <summary> The Subscription service client. </summary>
     [CodeGenClient("MeteringClient")]
-    public partial class MeteringOperations
+    public partial class MeteringOperations : IMeteringOperations
     {
     }
 }
