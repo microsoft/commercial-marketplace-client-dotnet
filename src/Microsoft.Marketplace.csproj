@@ -4,7 +4,23 @@
     <TargetFrameworks>$(RequiredTargetFrameworks)</TargetFrameworks>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
-
+ 
+  <PropertyGroup>
+    <PackageVersion>0.0.1-local-prerelease</PackageVersion>
+    <Authors>MicrosoftMarketplace</Authors>
+    <Description>
+      The Microsoft Commercial Marketplace SaaS .NET client enables publishers to build solutions interacting with Fulfillment and Metering APIs with .NET.
+    </Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Copyright>©2021 Microsoft</Copyright>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/microsoft/commercial-marketplace-client-dotnet</PackageProjectUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/microsoft/commercial-marketplace-client-dotnet</RepositoryUrl>
+    <PackageTags>Microsoft Marketplace</PackageTags>
+    <AssemblyName>Microsoft.Marketplace</AssemblyName>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.312">

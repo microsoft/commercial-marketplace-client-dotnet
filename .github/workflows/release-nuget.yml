@@ -1,0 +1,64 @@
+name: Publish NuGet
+
+#Publishes a nuget package every time a new release is created. 
+# Uses the Tag version as the NuGet Package version (Tag format must be vX.X.X -> v1.2.4)
+# Uses the Release Body as the Package release notes.
+
+on: 
+  release:
+    types: 
+      - created
+      
+env:
+  Configuration: Release
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Core 3.1.*
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.*
+
+    - name: Setup .NET Core 5.0.*
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.*'        
+
+    - name: Get Version From Tag
+      uses: BjornLuG/substitute-string-action@v1
+      id: sub
+      with:
+        _input-text: $${{ GITHUB.REF }}
+        $refs/tags/v: ""
+
+    - name: Package Library
+      run: dotnet pack src/Microsoft.Marketplace.csproj --configuration ${{ env.Configuration }} -o nupkg -p:PackageVersion=${{ steps.sub.outputs.result }} -p:PackageReleaseNotes='${{ GITHUB.event.release.body }}'
+    
+     # Need to extract the exact name of the nuget package since Upload-Release-Asset does not support wildcard asset names (https://github.com/actions/upload-release-asset/issues/47)
+    - name: Get Name of Artifact
+      run: |
+        ARTIFACT_PATHNAME=$(ls **/*.nupkg | head -n 1)
+        ARTIFACT_NAME=$(basename $ARTIFACT_PATHNAME)
+        echo "ARTIFACT_NAME=${ARTIFACT_NAME}" >> $GITHUB_ENV
+        echo "ARTIFACT_PATHNAME=${ARTIFACT_PATHNAME}" >> $GITHUB_ENV
+
+    - name: Upload artifact to release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        upload_url: ${{ GITHUB.event.release.upload_url }}
+        asset_path: ${{ env.ARTIFACT_PATHNAME }}
+        asset_name: ${{ env.ARTIFACT_NAME }}
+        asset_content_type: application/zip
+
+    #- name: Publish Library
+    #  run: dotnet nuget push ${{ env.ARTIFACT_PATHNAME }} -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json
