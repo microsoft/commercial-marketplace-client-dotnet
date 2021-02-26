@@ -6,7 +6,6 @@
 #nullable disable
 
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Azure;
@@ -82,7 +81,7 @@ namespace Microsoft.Marketplace.Metering
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual async Task<Response<IReadOnlyList<UsageEventOkResponse>>> PostBatchUsageEventAsync(IEnumerable<UsageEvent> body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public virtual async Task<Response<BatchUsageEventOkResponse>> PostBatchUsageEventAsync(BatchUsageEvent body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var scope = _clientDiagnostics.CreateScope("MeteringOperations.PostBatchUsageEvent");
             scope.Start();
@@ -102,7 +101,7 @@ namespace Microsoft.Marketplace.Metering
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual Response<IReadOnlyList<UsageEventOkResponse>> PostBatchUsageEvent(IEnumerable<UsageEvent> body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public virtual Response<BatchUsageEventOkResponse> PostBatchUsageEvent(BatchUsageEvent body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var scope = _clientDiagnostics.CreateScope("MeteringOperations.PostBatchUsageEvent");
             scope.Start();

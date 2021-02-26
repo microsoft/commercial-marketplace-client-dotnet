@@ -6,7 +6,6 @@
 #nullable disable
 
 using System;
-using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -62,8 +61,8 @@ namespace Microsoft.Marketplace.Metering
             {
                 request.Headers.Add("x-ms-correlationid", correlationId.Value);
             }
-            request.Headers.Add("Content-Type", "application/json");
             request.Headers.Add("Accept", "application/json");
+            request.Headers.Add("Content-Type", "application/json");
             var content = new Utf8JsonRequestContent();
             content.JsonWriter.WriteObjectValue(body);
             request.Content = content;
@@ -94,10 +93,6 @@ namespace Microsoft.Marketplace.Metering
                         value = UsageEventOkResponse.DeserializeUsageEventOkResponse(document.RootElement);
                         return Response.FromValue(value, message.Response);
                     }
-                case 400:
-                case 403:
-                case 409:
-                    return Response.FromValue<UsageEventOkResponse>(null, message.Response);
                 default:
                     throw await _clientDiagnostics.CreateRequestFailedExceptionAsync(message.Response).ConfigureAwait(false);
             }
@@ -127,16 +122,12 @@ namespace Microsoft.Marketplace.Metering
                         value = UsageEventOkResponse.DeserializeUsageEventOkResponse(document.RootElement);
                         return Response.FromValue(value, message.Response);
                     }
-                case 400:
-                case 403:
-                case 409:
-                    return Response.FromValue<UsageEventOkResponse>(null, message.Response);
                 default:
                     throw _clientDiagnostics.CreateRequestFailedException(message.Response);
             }
         }
 
-        internal HttpMessage CreatePostBatchUsageEventRequest(IEnumerable<UsageEvent> body, Guid? requestId, Guid? correlationId)
+        internal HttpMessage CreatePostBatchUsageEventRequest(BatchUsageEvent body, Guid? requestId, Guid? correlationId)
         {
             var message = _pipeline.CreateMessage();
             var request = message.Request;
@@ -154,15 +145,10 @@ namespace Microsoft.Marketplace.Metering
             {
                 request.Headers.Add("x-ms-correlationid", correlationId.Value);
             }
-            request.Headers.Add("Content-Type", "application/json");
             request.Headers.Add("Accept", "application/json");
+            request.Headers.Add("Content-Type", "application/json");
             var content = new Utf8JsonRequestContent();
-            content.JsonWriter.WriteStartArray();
-            foreach (var item in body)
-            {
-                content.JsonWriter.WriteObjectValue(item);
-            }
-            content.JsonWriter.WriteEndArray();
+            content.JsonWriter.WriteObjectValue(body);
             request.Content = content;
             return message;
         }
@@ -173,7 +159,7 @@ namespace Microsoft.Marketplace.Metering
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="body"/> is null. </exception>
-        public async Task<Response<IReadOnlyList<UsageEventOkResponse>>> PostBatchUsageEventAsync(IEnumerable<UsageEvent> body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public async Task<Response<BatchUsageEventOkResponse>> PostBatchUsageEventAsync(BatchUsageEvent body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             if (body == null)
             {
@@ -186,19 +172,11 @@ namespace Microsoft.Marketplace.Metering
             {
                 case 200:
                     {
-                        IReadOnlyList<UsageEventOkResponse> value = default;
+                        BatchUsageEventOkResponse value = default;
                         using var document = await JsonDocument.ParseAsync(message.Response.ContentStream, default, cancellationToken).ConfigureAwait(false);
-                        List<UsageEventOkResponse> array = new List<UsageEventOkResponse>();
-                        foreach (var item in document.RootElement.EnumerateArray())
-                        {
-                            array.Add(UsageEventOkResponse.DeserializeUsageEventOkResponse(item));
-                        }
-                        value = array;
+                        value = BatchUsageEventOkResponse.DeserializeBatchUsageEventOkResponse(document.RootElement);
                         return Response.FromValue(value, message.Response);
                     }
-                case 400:
-                case 403:
-                    return Response.FromValue<IReadOnlyList<UsageEventOkResponse>>(null, message.Response);
                 default:
                     throw await _clientDiagnostics.CreateRequestFailedExceptionAsync(message.Response).ConfigureAwait(false);
             }
@@ -210,7 +188,7 @@ namespace Microsoft.Marketplace.Metering
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="body"/> is null. </exception>
-        public Response<IReadOnlyList<UsageEventOkResponse>> PostBatchUsageEvent(IEnumerable<UsageEvent> body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public Response<BatchUsageEventOkResponse> PostBatchUsageEvent(BatchUsageEvent body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             if (body == null)
             {
@@ -223,19 +201,11 @@ namespace Microsoft.Marketplace.Metering
             {
                 case 200:
                     {
-                        IReadOnlyList<UsageEventOkResponse> value = default;
+                        BatchUsageEventOkResponse value = default;
                         using var document = JsonDocument.Parse(message.Response.ContentStream);
-                        List<UsageEventOkResponse> array = new List<UsageEventOkResponse>();
-                        foreach (var item in document.RootElement.EnumerateArray())
-                        {
-                            array.Add(UsageEventOkResponse.DeserializeUsageEventOkResponse(item));
-                        }
-                        value = array;
+                        value = BatchUsageEventOkResponse.DeserializeBatchUsageEventOkResponse(document.RootElement);
                         return Response.FromValue(value, message.Response);
                     }
-                case 400:
-                case 403:
-                    return Response.FromValue<IReadOnlyList<UsageEventOkResponse>>(null, message.Response);
                 default:
                     throw _clientDiagnostics.CreateRequestFailedException(message.Response);
             }

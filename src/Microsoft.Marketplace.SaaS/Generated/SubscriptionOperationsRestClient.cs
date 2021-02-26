@@ -85,11 +85,6 @@ namespace Microsoft.Marketplace.SaaS
                         value = OperationList.DeserializeOperationList(document.RootElement);
                         return Response.FromValue(value, message.Response);
                     }
-                case 400:
-                case 403:
-                case 404:
-                case 500:
-                    return Response.FromValue<OperationList>(null, message.Response);
                 default:
                     throw await _clientDiagnostics.CreateRequestFailedExceptionAsync(message.Response).ConfigureAwait(false);
             }
@@ -113,11 +108,6 @@ namespace Microsoft.Marketplace.SaaS
                         value = OperationList.DeserializeOperationList(document.RootElement);
                         return Response.FromValue(value, message.Response);
                     }
-                case 400:
-                case 403:
-                case 404:
-                case 500:
-                    return Response.FromValue<OperationList>(null, message.Response);
                 default:
                     throw _clientDiagnostics.CreateRequestFailedException(message.Response);
             }
@@ -167,11 +157,6 @@ namespace Microsoft.Marketplace.SaaS
                         value = Operation.DeserializeOperation(document.RootElement);
                         return Response.FromValue(value, message.Response);
                     }
-                case 400:
-                case 403:
-                case 404:
-                case 500:
-                    return Response.FromValue<Operation>(null, message.Response);
                 default:
                     throw await _clientDiagnostics.CreateRequestFailedExceptionAsync(message.Response).ConfigureAwait(false);
             }
@@ -196,11 +181,6 @@ namespace Microsoft.Marketplace.SaaS
                         value = Operation.DeserializeOperation(document.RootElement);
                         return Response.FromValue(value, message.Response);
                     }
-                case 400:
-                case 403:
-                case 404:
-                case 500:
-                    return Response.FromValue<Operation>(null, message.Response);
                 default:
                     throw _clientDiagnostics.CreateRequestFailedException(message.Response);
             }
@@ -254,11 +234,6 @@ namespace Microsoft.Marketplace.SaaS
             switch (message.Response.Status)
             {
                 case 200:
-                case 400:
-                case 403:
-                case 404:
-                case 409:
-                case 500:
                     return message.Response;
                 default:
                     throw await _clientDiagnostics.CreateRequestFailedExceptionAsync(message.Response).ConfigureAwait(false);
@@ -285,11 +260,6 @@ namespace Microsoft.Marketplace.SaaS
             switch (message.Response.Status)
             {
                 case 200:
-                case 400:
-                case 403:
-                case 404:
-                case 409:
-                case 500:
                     return message.Response;
                 default:
                     throw _clientDiagnostics.CreateRequestFailedException(message.Response);

@@ -1,0 +1,84 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "https://marketplaceapi.microsoft.com/api/batchUsageEvent?api-version=2018-08-31",
+      "RequestMethod": "POST",
+      "RequestHeaders": {
+        "Accept": "application/json",
+        "Authorization": "Sanitized",
+        "Content-Length": "432",
+        "Content-Type": "application/json",
+        "traceparent": "00-c92a39e08be2554bbef4f2701c2178cf-c0964532420df942-00",
+        "User-Agent": [
+          "azsdk-net-Microsoft.Marketplace/1.0.0",
+          "(.NET 5.0.2; Microsoft Windows 10.0.21322)"
+        ],
+        "x-ms-client-request-id": "fca86eff-d285-f502-6edb-e2b3e79183fc",
+        "x-ms-return-client-request-id": "true"
+      },
+      "RequestBody": {
+        "request": [
+          {
+            "resourceId": "da8dc4ae-4cdf-ed6b-e12e-9d0219306842",
+            "quantity": 20.5,
+            "dimension": "dim1",
+            "effectiveStartTime": "2021-03-08T17:11:26.3602080Z",
+            "planId": "silver"
+          },
+          {
+            "resourceUri": "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
+            "quantity": 20.5,
+            "dimension": "dim1",
+            "effectiveStartTime": "2021-03-08T17:11:26.3608718Z",
+            "planId": "userassigned"
+          }
+        ]
+      },
+      "StatusCode": 200,
+      "ResponseHeaders": {
+        "Content-Length": "867",
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Mon, 08 Mar 2021 22:11:28 GMT",
+        "Server": "Microsoft-IIS/10.0",
+        "Set-Cookie": [
+          "ARRAffinity=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;Secure;Domain=marketplaceapi.microsoft.com",
+          "ARRAffinitySameSite=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;SameSite=None;Secure;Domain=marketplaceapi.microsoft.com"
+        ],
+        "X-Content-Type-Options": "nosniff",
+        "x-ms-correlationid": "9d55cbb8-3377-4a9c-8bb8-eaaf5a2d475f",
+        "x-ms-requestid": "9d55cbb8-3377-4a9c-8bb8-eaaf5a2d475f",
+        "X-Powered-By": "ASP.NET"
+      },
+      "ResponseBody": {
+        "result": [
+          {
+            "usageEventId": "93decb82-96bc-4b7d-a376-907fb14a534c",
+            "status": "Accepted",
+            "messageTime": "2021-03-08T22:11:28.9790218Z",
+            "resourceId": "da8dc4ae-4cdf-ed6b-e12e-9d0219306842",
+            "resourceUri": "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.SaaS/resources/Redmond121",
+            "quantity": 20.5,
+            "dimension": "dim1",
+            "effectiveStartTime": "2021-03-08T17:11:26.360208Z",
+            "planId": "silver"
+          },
+          {
+            "usageEventId": "54cf11f9-0257-462c-9f10-1c70e334724a",
+            "status": "Accepted",
+            "messageTime": "2021-03-08T22:11:28.9790218Z",
+            "resourceId": "54372f22-697c-479e-9b76-d5bbdd6e701a",
+            "resourceUri": "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
+            "quantity": 20.5,
+            "dimension": "dim1",
+            "effectiveStartTime": "2021-03-08T17:11:26.3608718Z",
+            "planId": "userassigned"
+          }
+        ],
+        "count": 2
+      }
+    }
+  ],
+  "Variables": {
+    "RandomSeed": "711286632"
+  }
+}

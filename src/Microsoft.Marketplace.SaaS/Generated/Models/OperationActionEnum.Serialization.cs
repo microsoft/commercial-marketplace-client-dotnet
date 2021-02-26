@@ -9,7 +9,7 @@ using System;
 
 namespace Microsoft.Marketplace.SaaS.Models
 {
-    internal static class OperationActionEnumExtensions
+    internal static partial class OperationActionEnumExtensions
     {
         public static string ToSerialString(this OperationActionEnum value) => value switch
         {

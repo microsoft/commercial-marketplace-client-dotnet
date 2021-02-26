@@ -22,7 +22,7 @@ namespace Microsoft.Marketplace.Metering.Models
         /// <summary> Resource URI for the managed app. Used with managed applications. Only use resourceUri or resourceId, but never both. </summary>
         public string ResourceUri { get; set; }
         /// <summary> Number of units consumed. </summary>
-        public long? Quantity { get; set; }
+        public double? Quantity { get; set; }
         /// <summary> Dimension identifier. </summary>
         public string Dimension { get; set; }
         /// <summary> Time in UTC when the usage event occurred. </summary>

@@ -10,7 +10,7 @@ using Azure.Core;
 
 namespace Microsoft.Marketplace.SaaS
 {
-    internal class FulfillmentDeleteSubscriptionHeaders
+    internal partial class FulfillmentDeleteSubscriptionHeaders
     {
         private readonly Response _response;
         public FulfillmentDeleteSubscriptionHeaders(Response response)

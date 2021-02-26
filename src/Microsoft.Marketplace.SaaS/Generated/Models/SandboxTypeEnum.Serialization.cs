@@ -9,7 +9,7 @@ using System;
 
 namespace Microsoft.Marketplace.SaaS.Models
 {
-    internal static class SandboxTypeEnumExtensions
+    internal static partial class SandboxTypeEnumExtensions
     {
         public static string ToSerialString(this SandboxTypeEnum value) => value switch
         {

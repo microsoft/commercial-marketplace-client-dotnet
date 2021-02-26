@@ -1,4 +1,4 @@
-name: .NET Core
+name: .NET Core build and test
 
 on:
   push:
@@ -13,10 +13,9 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-    
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -31,13 +30,51 @@ jobs:
         dotnet-version: '5.0.*'        
 
     - name: Build
-      run: dotnet build --configuration Debug
+      run: dotnet build --configuration 'release'
       working-directory: ./src
 
-    - name: Test
-      run: dotnet test
+      # set pr number, if it's a pr build
+    - name: set pr build number
+      id: PRNUMBER
+      if: ${{ github.event_name == 'pull_request' }}
+      uses: kkak10/pr-number-action@v1.3
+
+      # set report file and title 
+    - name: Set Test Title
+      id: TITLES
+      run: |
+            if ${{ github.event_name == 'pull_request' }}
+            then
+              echo '::set-output name=title::Test Run for PR #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})'
+              echo '::set-output name=file_name::TestReport_${{steps.PRNUMBER.outputs.pr}}_${{github.run_number}}.md'
+            else
+              echo '::set-output name=title::Test Run ${{github.run_number}}'
+              echo '::set-output name=file_name::TestReport_${{github.run_number}}.md'
+            fi
+
+    - name: Test PR      
+      run: dotnet test --configuration 'release' --logger:'liquid.md;LogFileName=${{github.workspace}}/${{steps.TITLES.outputs.file_name}};Title=${{steps.TITLES.outputs.title}};'
       env:
         TenantId: ${{secrets.TENANTID}}
         ClientId: ${{secrets.CLIENTID}}
         clientSecret: ${{secrets.CLIENTSECRET}}
-      working-directory: .      
+        certPassword: ${{secrets.CERTPASSWORD}}
+        certBase64: ${{secrets.CERTBASE64}}
+      working-directory: ./tests/Microsoft.Marketplace.Tests
+
+    # upload report as build artifact
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      if: ${{always()}}
+      with:
+        name: 'Test Run'
+        path: ${{github.workspace}}/${{steps.TITLES.outputs.file_name}}      
+
+      # add report as PR comment (if PR)
+    - name: comment PR
+      uses: machine-learning-apps/pr-comment@master
+      if: ${{ github.event_name == 'pull_request' }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        path: ${{steps.TITLES.outputs.file_name}}        

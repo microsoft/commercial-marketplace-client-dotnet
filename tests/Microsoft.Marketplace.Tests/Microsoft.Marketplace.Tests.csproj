@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net5.0</TargetFrameworks>
+    <UserSecretsId>a41117b3-abaa-4bd0-86cc-bf3c014142c8</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -11,7 +12,6 @@
   <PropertyGroup>
     <AssemblyTitle>Microsoft Microsoft.Marketplace client library tests</AssemblyTitle>
     <IsPackable>false</IsPackable>
-    <UserSecretsId>a41117b3-abaa-4bd0-86cc-bf3c014142c8</UserSecretsId>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
 
@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <PackageReference Include="Azure.Identity" Version="1.3.0" />
+    <PackageReference Include="LiquidTestReports.Markdown" Version="1.0.9" />
     <PackageReference Include="Microsoft.Azure.AutoRest.CSharp" Version="3.0.0-beta.20210211.2" />
     <PackageReference Include="NUnit" Version="3.13.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
@@ -35,9 +36,9 @@
 
   <ItemGroup>
     <PackageReference Include="Azure.Identity" Version="1.3.0" />
-    <PackageReference Include="System.Text.Json" Version="5.0.0" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" />
-    <PackageReference Include="Azure.Core" Version="1.7.0" />
+    <PackageReference Include="System.Text.Json" Version="5.0.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.9.0" />
+    <PackageReference Include="Azure.Core" Version="1.10.0" />
   </ItemGroup>
   
     <ItemGroup Condition="'$(IsTestProject)' == 'true'">
@@ -50,9 +51,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
     <PackageReference Include="Microsoft.Rest.ClientRuntime.Azure.TestFramework" Version="1.7.7" />
-    <PackageReference Include="coverlet.collector" Version="3.0.2">
+    <PackageReference Include="coverlet.collector" Version="3.0.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

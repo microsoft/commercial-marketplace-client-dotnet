@@ -9,7 +9,7 @@ using System;
 
 namespace Microsoft.Marketplace.Metering.Models
 {
-    internal static class UsageEventStatusEnumExtensions
+    internal static partial class UsageEventStatusEnumExtensions
     {
         public static string ToSerialString(this UsageEventStatusEnum value) => value switch
         {

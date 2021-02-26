@@ -27,7 +27,8 @@ namespace Microsoft.Marketplace.Metering.Models
         public Guid? ResourceId { get; }
         /// <summary> Identifier of the managed app resource against which usage is emitted. </summary>
         public string ResourceUri { get; }
-        public long? Quantity { get; }
+        /// <summary> Number of units consumed. </summary>
+        public double? Quantity { get; }
         /// <summary> Dimension identifier. </summary>
         public string Dimension { get; }
         /// <summary> Time in UTC when the usage event occurred. </summary>

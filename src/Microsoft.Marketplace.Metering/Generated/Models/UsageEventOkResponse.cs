@@ -27,7 +27,7 @@ namespace Microsoft.Marketplace.Metering.Models
         /// <param name="dimension"> Dimension identifier. </param>
         /// <param name="effectiveStartTime"> Time in UTC when the usage event occurred. </param>
         /// <param name="planId"> Plan associated with the purchased offer. </param>
-        internal UsageEventOkResponse(Guid? usageEventId, UsageEventStatusEnum? status, DateTimeOffset? messageTime, Guid? resourceId, string resourceUri, long? quantity, string dimension, DateTimeOffset? effectiveStartTime, string planId)
+        internal UsageEventOkResponse(Guid? usageEventId, UsageEventStatusEnum? status, DateTimeOffset? messageTime, Guid? resourceId, string resourceUri, double? quantity, string dimension, DateTimeOffset? effectiveStartTime, string planId)
         {
             UsageEventId = usageEventId;
             Status = status;
@@ -51,7 +51,7 @@ namespace Microsoft.Marketplace.Metering.Models
         /// <summary> Identifier of the managed app resource against which usage is emitted. </summary>
         public string ResourceUri { get; }
         /// <summary> Number of units consumed. </summary>
-        public long? Quantity { get; }
+        public double? Quantity { get; }
         /// <summary> Dimension identifier. </summary>
         public string Dimension { get; }
         /// <summary> Time in UTC when the usage event occurred. </summary>

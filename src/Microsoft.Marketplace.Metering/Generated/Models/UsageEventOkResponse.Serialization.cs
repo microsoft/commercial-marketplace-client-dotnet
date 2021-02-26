@@ -20,7 +20,7 @@ namespace Microsoft.Marketplace.Metering.Models
             Optional<DateTimeOffset> messageTime = default;
             Optional<Guid> resourceId = default;
             Optional<string> resourceUri = default;
-            Optional<long> quantity = default;
+            Optional<double> quantity = default;
             Optional<string> dimension = default;
             Optional<DateTimeOffset> effectiveStartTime = default;
             Optional<string> planId = default;
@@ -78,7 +78,7 @@ namespace Microsoft.Marketplace.Metering.Models
                         property.ThrowNonNullablePropertyIsNull();
                         continue;
                     }
-                    quantity = property.Value.GetInt64();
+                    quantity = property.Value.GetDouble();
                     continue;
                 }
                 if (property.NameEquals("dimension"))

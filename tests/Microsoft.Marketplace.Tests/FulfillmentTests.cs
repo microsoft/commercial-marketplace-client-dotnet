@@ -15,6 +15,7 @@ using Azure.Core.TestFramework;
 using Azure.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Marketplace.Metering;
+using Microsoft.Marketplace.Metering.Models;
 using Microsoft.Marketplace.SaaS;
 using Microsoft.Marketplace.SaaS.Models;
 using NUnit.Framework;
@@ -26,14 +27,17 @@ namespace Microsoft.Marketplace.Tests
     public class FulfillmentTests : RecordedTestBase
 #pragma warning restore SA1600 // Elements should be documented
     {
-        private IConfigurationRoot config;
+        private const string MarketplacePurchaseIdentificationToken = "gxYkao5D3lHoEFVOKjY2sxLwEhi/4eR0IwbFlz1dmvpB/bWJuZ2uzYlc39RD5FR1LVWyFdE/lGZ+XgnJG04iupIg6ttluDMT5CwsnGtWe4OeH02xSy5gyQUSN333Dl11l5Zcap83RxtatjN3xAH8M9nM+Yj9YSkT08/WYKLmtj2X0K+LGA53grc5YKJ7xKO6KHy2Ah8zO3NMPTie0geH4ScabaMulK4+OWEeAMned6s=";
 
-        private const string MarketplacePurchaseIdentificationToken = "9EVFKOQwhUCgLB0OKLRdav6AoOXHDKqTUyYgGlJpDy92RdX8XGA+Ebv8XjBcKfcduQW0ggoG2xKszgQozWkU1yUouS+4xsy7xaCSiJRgg6XMkXI9RJV+pdD1/NbSGQIS7gqrxNziYDApXmSRvcd7EuTfdZK3vnsgcWf19g1qpVp+ooAVyCPb8sPvmSuOifJxdvHZu+99YvQURPKnnBchnJK2VQqxbNJZ1e3ZyhYxT28=";
+        private IConfigurationRoot config;
 
         // Changed to record when client code is generated first time manually.
 #pragma warning disable SA1600 // Elements should be documented
         public FulfillmentTests()
-            : base(true, RecordedTestMode.Playback)
+
+          // Uncomment following to record
+          // : base(true, RecordedTestMode.Record)
+           : base(true, RecordedTestMode.Playback)
 #pragma warning restore SA1600 // Elements should be documented
         {
             this.config = new ConfigurationBuilder()
@@ -55,7 +59,6 @@ namespace Microsoft.Marketplace.Tests
         }
 
         [RecordedTest]
-        [Ignore("Use your own certificate file and record.")]
         public async Task GetAllSubscriptionsAsListWithCertAsync()
         {
             var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient(true));
@@ -79,6 +82,10 @@ namespace Microsoft.Marketplace.Tests
             var result = await sut.Fulfillment.GetSubscriptionAsync(subscription.Id.Value);
 
             Assert.IsNotNull(result);
+
+            Assert.IsNotNull(result.Value.Beneficiary.TenantId);
+            
+            Assert.IsInstanceOf<DateTimeOffset>(result.Value.Created);
         }
 
         [RecordedTest]
@@ -102,8 +109,6 @@ namespace Microsoft.Marketplace.Tests
         }
 
         [RecordedTest]
-
-        // [Ignore("Only use with a new marketplace token and record!")]
         public async Task ResolveSubscription()
         {
             var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient());
@@ -118,8 +123,6 @@ namespace Microsoft.Marketplace.Tests
         }
 
         [RecordedTest]
-
-        [Ignore("Use your own certificate file and record.")]
         public async Task ResolveSubscriptionWithCert()
         {
             var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient(true));
@@ -158,24 +161,7 @@ namespace Microsoft.Marketplace.Tests
         }
 
         [RecordedTest]
-        public async Task OASUpdateFeb22021Subscription()
-        {
-            var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient());
-            var subscriptions = await sut.Fulfillment.ListSubscriptionsAsync().ToListAsync();
-            Assert.IsTrue(subscriptions.Any());
-
-            var subscription = subscriptions.First();
-
-            var result = await sut.Fulfillment.GetSubscriptionAsync(subscription.Id.Value);
-
-            Assert.IsNotNull(result);
-
-            Assert.IsNotNull(result.Value.Beneficiary.TenantId);
-            Assert.IsInstanceOf<DateTimeOffset>(result.Value.Created);
-        }
-
-        [RecordedTest]
-        public async Task OASUpdateFeb22021ListAvailablePlans()
+        public async Task ListAvailablePlans()
         {
             var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient());
             var subscriptions = await sut.Fulfillment.ListSubscriptionsAsync().ToListAsync();
@@ -189,21 +175,79 @@ namespace Microsoft.Marketplace.Tests
         }
 
         [RecordedTest]
-        [Ignore("Ignore for the moment as usage with ResourceId seems to be failing on the service side.")]
-        public async Task PostSingleUsage()
+        public async Task PostSingleUsageWithResourceUri()
         {
             var sut = this.InstrumentClient(this.GetMarketplaceMeteringClient());
 
             var usageEvent = new Metering.Models.UsageEvent { 
-                ResourceUri = "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercuserassigned",
-                Quantity = 15,
+                ResourceUri = "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
+                Quantity = 20.5,
                 Dimension = "dim1",
-                EffectiveStartTime = DateTime.Now.AddHours(-65),
+                // The time passed to Parse method should be the same as the recording
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTimeOffset.Parse("2021-03-08T12:53:04.1465802-08:00") : DateTime.UtcNow.AddMinutes(-65),
                 PlanId = "userassigned",
             };
 
             var result = await sut.Metering.PostUsageEventAsync(usageEvent);
 
+            Assert.AreEqual(result.Value.Status, UsageEventStatusEnum.Accepted);
+            Assert.AreEqual(result.Value.Quantity, 20.5);
+        }
+
+        [RecordedTest]
+        //[Ignore("Run locally only, ignore in GitHub actions.")]
+        public async Task PostSingleUsageWithResourceId()
+        {
+            var sut = this.InstrumentClient(this.GetMarketplaceMeteringClient());
+
+            var usageEvent = new Metering.Models.UsageEvent
+            {
+                ResourceId = Guid.Parse("da8dc4ae-4cdf-ed6b-e12e-9d0219306842"),
+                Quantity = 20.5,
+                Dimension = "dim1",
+                // The time passed to Parse method should be the same as the recording
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTimeOffset.Parse("2021-03-08T12:53:03.3453718-08:00") : DateTime.UtcNow.AddMinutes(-65),
+                PlanId = "silver",
+            };
+
+            var result = await sut.Metering.PostUsageEventAsync(usageEvent);
+
+            Assert.AreEqual(result.Value.Status, UsageEventStatusEnum.Accepted);
+            Assert.AreEqual(result.Value.Quantity, 20.5);
+        }
+
+        [RecordedTest]
+        public async Task PostBatchUsage()
+        {
+            var sut = this.InstrumentClient(this.GetMarketplaceMeteringClient());
+
+            var usageEvent1 = new Metering.Models.UsageEvent
+            {
+                ResourceId = Guid.Parse("da8dc4ae-4cdf-ed6b-e12e-9d0219306842"),
+                Quantity = 20.5,
+                Dimension = "dim1",
+                // The time passed to Parse method should be the same as the recording
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-08T17:11:26.3602080Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
+                PlanId = "silver",
+            };
+
+            var usageEvent2 = new Metering.Models.UsageEvent
+            {
+                ResourceUri = "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
+                Quantity = 20.5,
+                Dimension = "dim1",
+                // The time passed to Parse method should be the same as the recording
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-08T17:11:26.3608718Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
+                PlanId = "userassigned",
+            };
+
+            var usageBatch = new BatchUsageEvent { Request = { usageEvent1, usageEvent2 } };
+
+            var result = await sut.Metering.PostBatchUsageEventAsync(usageBatch);
+
+            Assert.IsTrue(result.Value.Result.All(r => r.Status == UsageEventStatusEnum.Accepted));
+            Assert.IsTrue(result.Value.Result.All(r => r.Quantity == 20.5));
+            Assert.AreEqual(result.Value.Count, 2);
         }
 
         private MarketplaceSaaSClient GetMarketplaceSaaSClient(bool useCert = false)
@@ -212,12 +256,11 @@ namespace Microsoft.Marketplace.Tests
             if (useCert)
             {
                 var password = this.config["certPassword"];
-                var filePath = this.config["certFilePath"];
-
-                var store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
 
                 var certCollection = new X509Certificate2Collection();
-                certCollection.Import(filePath, password, X509KeyStorageFlags.PersistKeySet);
+
+                var certBytes = this.ReadBytes();
+                certCollection.Import(certBytes, password, X509KeyStorageFlags.PersistKeySet);
 
                 var cert = certCollection[0];
 
@@ -237,12 +280,12 @@ namespace Microsoft.Marketplace.Tests
             if (useCert)
             {
                 var password = this.config["certPassword"];
-                var filePath = this.config["certFilePath"];
-
-                var store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
 
                 var certCollection = new X509Certificate2Collection();
-                certCollection.Import(filePath, password, X509KeyStorageFlags.PersistKeySet);
+
+                var certBytes = this.ReadBytes();
+
+                certCollection.Import(certBytes, password, X509KeyStorageFlags.PersistKeySet);
 
                 var cert = certCollection[0];
 
@@ -254,6 +297,14 @@ namespace Microsoft.Marketplace.Tests
             }
 
             return new MarketplaceMeteringClient(creds, this.GetMarketplaceMeteringClientOptions());
+        }
+
+        private ReadOnlySpan<byte> ReadBytes()
+        {
+            var base64String = this.config["certBase64"];
+            var bytes = Convert.FromBase64String(base64String);
+            var span = new ReadOnlySpan<byte>(bytes);
+            return span;
         }
 
         private MarketplaceSaaSClientOptions GetMarketplaceSaaSClientOptions()

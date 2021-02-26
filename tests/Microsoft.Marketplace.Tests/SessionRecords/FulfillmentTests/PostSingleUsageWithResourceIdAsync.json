@@ -1,0 +1,57 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "https://marketplaceapi.microsoft.com/api/usageEvent?api-version=2018-08-31",
+      "RequestMethod": "POST",
+      "RequestHeaders": {
+        "Accept": "application/json",
+        "Authorization": "Sanitized",
+        "Content-Length": "163",
+        "Content-Type": "application/json",
+        "traceparent": "00-dd8866fe9ef14440bc101c4bb8331c95-34db0fd232d0c245-00",
+        "User-Agent": [
+          "azsdk-net-Microsoft.Marketplace/1.0.0",
+          "(.NET 5.0.2; Microsoft Windows 10.0.21322)"
+        ],
+        "x-ms-client-request-id": "c4a8aa33-a3e6-29f9-3b22-ad23f49bbf58",
+        "x-ms-return-client-request-id": "true"
+      },
+      "RequestBody": {
+        "resourceId": "da8dc4ae-4cdf-ed6b-e12e-9d0219306842",
+        "quantity": 20.5,
+        "dimension": "dim1",
+        "effectiveStartTime": "2021-03-08T12:53:03.3453718-08:00",
+        "planId": "silver"
+      },
+      "StatusCode": 200,
+      "ResponseHeaders": {
+        "Content-Length": "419",
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Mon, 08 Mar 2021 21:58:03 GMT",
+        "Server": "Microsoft-IIS/10.0",
+        "Set-Cookie": [
+          "ARRAffinity=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;Secure;Domain=marketplaceapi.microsoft.com",
+          "ARRAffinitySameSite=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;SameSite=None;Secure;Domain=marketplaceapi.microsoft.com"
+        ],
+        "X-Content-Type-Options": "nosniff",
+        "x-ms-correlationid": "4d8ad9d4-bdab-47e2-addb-9d5b0eaae054",
+        "x-ms-requestid": "4d8ad9d4-bdab-47e2-addb-9d5b0eaae054",
+        "X-Powered-By": "ASP.NET"
+      },
+      "ResponseBody": {
+        "usageEventId": "faf72cfc-5771-40f5-a5a2-6508d7bd46cf",
+        "status": "Accepted",
+        "messageTime": "2021-03-08T21:58:03.9864909Z",
+        "resourceId": "da8dc4ae-4cdf-ed6b-e12e-9d0219306842",
+        "resourceUri": "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.SaaS/resources/Redmond121",
+        "quantity": 20.5,
+        "dimension": "dim1",
+        "effectiveStartTime": "2021-03-08T20:53:03.3453718\u002B00:00",
+        "planId": "silver"
+      }
+    }
+  ],
+  "Variables": {
+    "RandomSeed": "74765522"
+  }
+}
