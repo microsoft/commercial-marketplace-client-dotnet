@@ -40,9 +40,8 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <param name="storeFront"> . </param>
         /// <param name="sandboxType"> Possible Values are None, Csp (Csp sandbox purchase). </param>
         /// <param name="created"> . </param>
-        /// <param name="lastModified"> . </param>
         /// <param name="sessionMode"> Dry Run indicates all transactions run as Test-Mode in the commerce stack. </param>
-        internal Subscription(Guid? id, string publisherId, string offerId, string name, SubscriptionStatusEnum? saasSubscriptionStatus, AadIdentifier beneficiary, AadIdentifier purchaser, string planId, int? quantity, SubscriptionTerm term, bool? autoRenew, bool? isTest, bool? isFreeTrial, IReadOnlyList<AllowedCustomerOperationsEnum> allowedCustomerOperations, Guid? sessionId, Guid? fulfillmentId, string storeFront, SandboxTypeEnum? sandboxType, DateTimeOffset? created, DateTimeOffset? lastModified, SessionModeEnum? sessionMode)
+        internal Subscription(Guid? id, string publisherId, string offerId, string name, SubscriptionStatusEnum? saasSubscriptionStatus, AadIdentifier beneficiary, AadIdentifier purchaser, string planId, int? quantity, SubscriptionTerm term, bool? autoRenew, bool? isTest, bool? isFreeTrial, IReadOnlyList<AllowedCustomerOperationsEnum> allowedCustomerOperations, Guid? sessionId, Guid? fulfillmentId, string storeFront, SandboxTypeEnum? sandboxType, DateTimeOffset? created, SessionModeEnum? sessionMode)
         {
             Id = id;
             PublisherId = publisherId;
@@ -63,7 +62,6 @@ namespace Microsoft.Marketplace.SaaS.Models
             StoreFront = storeFront;
             SandboxType = sandboxType;
             Created = created;
-            LastModified = lastModified;
             SessionMode = sessionMode;
         }
 
@@ -91,7 +89,6 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <summary> Possible Values are None, Csp (Csp sandbox purchase). </summary>
         public SandboxTypeEnum? SandboxType { get; }
         public DateTimeOffset? Created { get; }
-        public DateTimeOffset? LastModified { get; }
         /// <summary> Dry Run indicates all transactions run as Test-Mode in the commerce stack. </summary>
         public SessionModeEnum? SessionMode { get; }
     }
