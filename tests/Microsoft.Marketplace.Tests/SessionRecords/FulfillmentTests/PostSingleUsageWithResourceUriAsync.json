@@ -6,12 +6,12 @@
       "RequestHeaders": {
         "Accept": "application/json",
         "Authorization": "Sanitized",
-        "Content-Length": "264",
+        "Content-Length": "259",
         "Content-Type": "application/json",
-        "traceparent": "00-3c02ac5be35a364b9fc59a73ee7c217b-3ff90f5c22880544-00",
+        "traceparent": "00-d184fffcc891e3489235638f983c86dd-9b0cc7eeb4031746-00",
         "User-Agent": [
           "azsdk-net-Microsoft.Marketplace/1.0.0",
-          "(.NET 5.0.2; Microsoft Windows 10.0.21322)"
+          "(.NET 5.0.2; Microsoft Windows 10.0.21332)"
         ],
         "x-ms-client-request-id": "407a11bf-a5df-5e5a-dde6-9ae9b27d2840",
         "x-ms-return-client-request-id": "true"
@@ -20,33 +20,33 @@
         "resourceUri": "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
         "quantity": 20.5,
         "dimension": "dim1",
-        "effectiveStartTime": "2021-03-08T12:53:04.1465802-08:00",
+        "effectiveStartTime": "2021-03-12T17:01:55.0912305Z",
         "planId": "userassigned"
       },
       "StatusCode": 200,
       "ResponseHeaders": {
-        "Content-Length": "435",
+        "Content-Length": "430",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Mon, 08 Mar 2021 21:58:04 GMT",
-        "Server": "Microsoft-IIS/10.0",
+        "Date": "Fri, 12 Mar 2021 18:06:53 GMT",
         "Set-Cookie": [
-          "ARRAffinity=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;Secure;Domain=marketplaceapi.microsoft.com",
-          "ARRAffinitySameSite=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;SameSite=None;Secure;Domain=marketplaceapi.microsoft.com"
+          "ARRAffinity=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;Secure;Domain=main.prod.marketplaceapi.azure.com",
+          "ARRAffinitySameSite=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;SameSite=None;Secure;Domain=main.prod.marketplaceapi.azure.com"
         ],
+        "X-Azure-Ref": "0vq1LYAAAAAAmSUa3auNmSKmG7709goF7V1NURURHRTA4MTMAMzEwNGIwOWItOTRhZS00NmZjLTkwMDYtMWVhMjA3YmE3YzE4",
         "X-Content-Type-Options": "nosniff",
-        "x-ms-correlationid": "5f5623c8-c359-4549-a262-f23e4ae3ff40",
-        "x-ms-requestid": "5f5623c8-c359-4549-a262-f23e4ae3ff40",
+        "x-ms-correlationid": "6efedfdc-6f31-4f80-9fbe-b99778555114",
+        "x-ms-requestid": "6efedfdc-6f31-4f80-9fbe-b99778555114",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
-        "usageEventId": "ac16ac85-94cf-4dd5-8611-7ea6510f744a",
+        "usageEventId": "8af46aa3-c9a9-4270-b2f9-ae1f05bfb95e",
         "status": "Accepted",
-        "messageTime": "2021-03-08T21:58:04.4291621Z",
+        "messageTime": "2021-03-12T18:06:54.1971938Z",
         "resourceId": "54372f22-697c-479e-9b76-d5bbdd6e701a",
         "resourceUri": "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
         "quantity": 20.5,
         "dimension": "dim1",
-        "effectiveStartTime": "2021-03-08T20:53:04.1465802\u002B00:00",
+        "effectiveStartTime": "2021-03-12T17:01:55.0912305Z",
         "planId": "userassigned"
       }
     }

@@ -27,7 +27,7 @@ namespace Microsoft.Marketplace.Tests
     public class FulfillmentTests : RecordedTestBase
 #pragma warning restore SA1600 // Elements should be documented
     {
-        private const string MarketplacePurchaseIdentificationToken = "gxYkao5D3lHoEFVOKjY2sxLwEhi/4eR0IwbFlz1dmvpB/bWJuZ2uzYlc39RD5FR1LVWyFdE/lGZ+XgnJG04iupIg6ttluDMT5CwsnGtWe4OeH02xSy5gyQUSN333Dl11l5Zcap83RxtatjN3xAH8M9nM+Yj9YSkT08/WYKLmtj2X0K+LGA53grc5YKJ7xKO6KHy2Ah8zO3NMPTie0geH4ScabaMulK4+OWEeAMned6s=";
+        private const string MarketplacePurchaseIdentificationToken = "ndET+tcimdfcX6uxfkRI+slWXz8TA46S6clVUkvm6Spbhn+7PbgVjOI/YYFuLwnVW/4XiJ2NMDkKAVCIgU6a9vGaYMUavl1+kMNxCt83l8ZNv6uAD0JOThJx2JgBInb6IQ3dhsjjLECSr6TkPDR/PbZFvPWXzjxabO9kt/z4st0Av0MvlJHgahfisyNQAmIyqrlTknHRDLZanYnyTQ99AN/BCg0gKLpt7yVhyPJ6hHw=";
 
         private IConfigurationRoot config;
 
@@ -184,7 +184,7 @@ namespace Microsoft.Marketplace.Tests
                 Quantity = 20.5,
                 Dimension = "dim1",
                 // The time passed to Parse method should be the same as the recording
-                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTimeOffset.Parse("2021-03-08T12:53:04.1465802-08:00") : DateTime.UtcNow.AddMinutes(-65),
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-12T17:01:55.0912305Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-65),
                 PlanId = "userassigned",
             };
 
@@ -206,7 +206,7 @@ namespace Microsoft.Marketplace.Tests
                 Quantity = 20.5,
                 Dimension = "dim1",
                 // The time passed to Parse method should be the same as the recording
-                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTimeOffset.Parse("2021-03-08T12:53:03.3453718-08:00") : DateTime.UtcNow.AddMinutes(-65),
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-12T17:01:54.5849135Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-65),
                 PlanId = "silver",
             };
 
@@ -227,7 +227,7 @@ namespace Microsoft.Marketplace.Tests
                 Quantity = 20.5,
                 Dimension = "dim1",
                 // The time passed to Parse method should be the same as the recording
-                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-08T17:11:26.3602080Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-12T13:06:52.8968294Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
                 PlanId = "silver",
             };
 
@@ -237,7 +237,7 @@ namespace Microsoft.Marketplace.Tests
                 Quantity = 20.5,
                 Dimension = "dim1",
                 // The time passed to Parse method should be the same as the recording
-                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-08T17:11:26.3608718Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-12T13:06:52.8971358Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
                 PlanId = "userassigned",
             };
 
