@@ -8,14 +8,26 @@
 namespace Microsoft.Marketplace.Metering.Models
 {
     /// <summary> The UsageEventConflictResponse. </summary>
-    internal partial class UsageEventConflictResponse
+    public partial class UsageEventConflictResponse
     {
         /// <summary> Initializes a new instance of UsageEventConflictResponse. </summary>
         internal UsageEventConflictResponse()
         {
         }
 
-        public string Code { get; }
+        /// <summary> Initializes a new instance of UsageEventConflictResponse. </summary>
+        /// <param name="additionalInfo"> . </param>
+        /// <param name="message"> . </param>
+        /// <param name="code"> . </param>
+        internal UsageEventConflictResponse(UsageEventConflictResponseAdditionalInfo additionalInfo, string message, string code)
+        {
+            AdditionalInfo = additionalInfo;
+            Message = message;
+            Code = code;
+        }
+
         public UsageEventConflictResponseAdditionalInfo AdditionalInfo { get; }
+        public string Message { get; }
+        public string Code { get; }
     }
 }

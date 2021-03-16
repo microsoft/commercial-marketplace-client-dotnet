@@ -16,19 +16,19 @@ namespace Microsoft.Marketplace.Metering.Models
         /// <summary> Initializes a new instance of BatchUsageEventOkResponse. </summary>
         internal BatchUsageEventOkResponse()
         {
-            Result = new ChangeTrackingList<UsageEventOkResponse>();
+            Result = new ChangeTrackingList<UsageBatchEventOkMessage>();
         }
 
         /// <summary> Initializes a new instance of BatchUsageEventOkResponse. </summary>
         /// <param name="result"> . </param>
         /// <param name="count"> . </param>
-        internal BatchUsageEventOkResponse(IReadOnlyList<UsageEventOkResponse> result, int? count)
+        internal BatchUsageEventOkResponse(IReadOnlyList<UsageBatchEventOkMessage> result, int? count)
         {
             Result = result;
             Count = count;
         }
 
-        public IReadOnlyList<UsageEventOkResponse> Result { get; }
+        public IReadOnlyList<UsageBatchEventOkMessage> Result { get; }
         public int? Count { get; }
     }
 }

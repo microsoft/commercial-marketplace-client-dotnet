@@ -19,6 +19,19 @@ namespace Microsoft.Marketplace.Metering.Models
             Details = new ChangeTrackingList<UsageEventBadRequestResponseDetail>();
         }
 
+        /// <summary> Initializes a new instance of UsageEventBadRequestResponse. </summary>
+        /// <param name="code"> . </param>
+        /// <param name="message"> . </param>
+        /// <param name="target"> . </param>
+        /// <param name="details"> . </param>
+        internal UsageEventBadRequestResponse(string code, string message, string target, IReadOnlyList<UsageEventBadRequestResponseDetail> details)
+        {
+            Code = code;
+            Message = message;
+            Target = target;
+            Details = details;
+        }
+
         public string Code { get; }
         public string Message { get; }
         public string Target { get; }

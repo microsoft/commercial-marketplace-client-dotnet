@@ -15,6 +15,17 @@ namespace Microsoft.Marketplace.Metering.Models
         {
         }
 
+        /// <summary> Initializes a new instance of UsageEventBadRequestResponseDetail. </summary>
+        /// <param name="code"> . </param>
+        /// <param name="message"> . </param>
+        /// <param name="target"> . </param>
+        internal UsageEventBadRequestResponseDetail(string code, string message, string target)
+        {
+            Code = code;
+            Message = message;
+            Target = target;
+        }
+
         public string Code { get; }
         public string Message { get; }
         public string Target { get; }

@@ -15,7 +15,7 @@ namespace Microsoft.Marketplace.Metering.Models
     {
         internal static BatchUsageEventOkResponse DeserializeBatchUsageEventOkResponse(JsonElement element)
         {
-            Optional<IReadOnlyList<UsageEventOkResponse>> result = default;
+            Optional<IReadOnlyList<UsageBatchEventOkMessage>> result = default;
             Optional<int> count = default;
             foreach (var property in element.EnumerateObject())
             {
@@ -26,10 +26,10 @@ namespace Microsoft.Marketplace.Metering.Models
                         property.ThrowNonNullablePropertyIsNull();
                         continue;
                     }
-                    List<UsageEventOkResponse> array = new List<UsageEventOkResponse>();
+                    List<UsageBatchEventOkMessage> array = new List<UsageBatchEventOkMessage>();
                     foreach (var item in property.Value.EnumerateArray())
                     {
-                        array.Add(UsageEventOkResponse.DeserializeUsageEventOkResponse(item));
+                        array.Add(UsageBatchEventOkMessage.DeserializeUsageBatchEventOkMessage(item));
                     }
                     result = array;
                     continue;

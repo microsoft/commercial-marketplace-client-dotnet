@@ -8,7 +8,7 @@
         "Authorization": "Sanitized",
         "Content-Length": "259",
         "Content-Type": "application/json",
-        "traceparent": "00-d184fffcc891e3489235638f983c86dd-9b0cc7eeb4031746-00",
+        "traceparent": "00-4d901a0094b5af4ba8b8194ba9546fe8-ca2a10cd0ca0ce47-00",
         "User-Agent": [
           "azsdk-net-Microsoft.Marketplace/1.0.0",
           "(.NET 5.0.2; Microsoft Windows 10.0.21332)"
@@ -20,33 +20,33 @@
         "resourceUri": "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
         "quantity": 20.5,
         "dimension": "dim1",
-        "effectiveStartTime": "2021-03-12T17:01:55.0912305Z",
+        "effectiveStartTime": "2021-03-15T22:01:05.0821551Z",
         "planId": "userassigned"
       },
       "StatusCode": 200,
       "ResponseHeaders": {
-        "Content-Length": "430",
+        "Content-Length": "429",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Fri, 12 Mar 2021 18:06:53 GMT",
+        "Date": "Mon, 15 Mar 2021 23:06:03 GMT",
         "Set-Cookie": [
-          "ARRAffinity=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;Secure;Domain=main.prod.marketplaceapi.azure.com",
-          "ARRAffinitySameSite=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;SameSite=None;Secure;Domain=main.prod.marketplaceapi.azure.com"
+          "ARRAffinity=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;Secure;Domain=main.prod.marketplaceapi.azure.com",
+          "ARRAffinitySameSite=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;SameSite=None;Secure;Domain=main.prod.marketplaceapi.azure.com"
         ],
-        "X-Azure-Ref": "0vq1LYAAAAAAmSUa3auNmSKmG7709goF7V1NURURHRTA4MTMAMzEwNGIwOWItOTRhZS00NmZjLTkwMDYtMWVhMjA3YmE3YzE4",
+        "X-Azure-Ref": "0XOhPYAAAAAAbGULEmttiQbX6nIk9zujVV1NURURHRTA4MjIAMzEwNGIwOWItOTRhZS00NmZjLTkwMDYtMWVhMjA3YmE3YzE4",
         "X-Content-Type-Options": "nosniff",
-        "x-ms-correlationid": "6efedfdc-6f31-4f80-9fbe-b99778555114",
-        "x-ms-requestid": "6efedfdc-6f31-4f80-9fbe-b99778555114",
+        "x-ms-correlationid": "046493bb-1bfc-4def-80a1-0705e9794cc3",
+        "x-ms-requestid": "046493bb-1bfc-4def-80a1-0705e9794cc3",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
-        "usageEventId": "8af46aa3-c9a9-4270-b2f9-ae1f05bfb95e",
+        "usageEventId": "98ff3b93-64d0-46ca-af20-2a3358c58abb",
         "status": "Accepted",
-        "messageTime": "2021-03-12T18:06:54.1971938Z",
+        "messageTime": "2021-03-15T23:06:04.498255Z",
         "resourceId": "54372f22-697c-479e-9b76-d5bbdd6e701a",
         "resourceUri": "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
         "quantity": 20.5,
         "dimension": "dim1",
-        "effectiveStartTime": "2021-03-12T17:01:55.0912305Z",
+        "effectiveStartTime": "2021-03-15T22:01:05.0821551Z",
         "planId": "userassigned"
       }
     }

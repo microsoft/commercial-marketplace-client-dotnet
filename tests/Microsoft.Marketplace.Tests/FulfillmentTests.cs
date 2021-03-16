@@ -27,7 +27,7 @@ namespace Microsoft.Marketplace.Tests
     public class FulfillmentTests : RecordedTestBase
 #pragma warning restore SA1600 // Elements should be documented
     {
-        private const string MarketplacePurchaseIdentificationToken = "ndET+tcimdfcX6uxfkRI+slWXz8TA46S6clVUkvm6Spbhn+7PbgVjOI/YYFuLwnVW/4XiJ2NMDkKAVCIgU6a9vGaYMUavl1+kMNxCt83l8ZNv6uAD0JOThJx2JgBInb6IQ3dhsjjLECSr6TkPDR/PbZFvPWXzjxabO9kt/z4st0Av0MvlJHgahfisyNQAmIyqrlTknHRDLZanYnyTQ99AN/BCg0gKLpt7yVhyPJ6hHw=";
+        private const string MarketplacePurchaseIdentificationToken = "IPZARpJbiIC3rDAESnmm2Zg1GJdHYHshWjLOvr/g+ASyLao9rPVrQ+mu2Li6uOBdtf7v/vXH6v+FdBT8egYh0Pmrv/kLoIbf/MuINnMLi+4IW2UFhR2qsrxRbEBfxYthSjKIrk28TgeZp19rDcNV1GqSXqR49Pma9i9EkPj6E8OTd71WWrJHG/4j+GOtm3Q1sFoBIzslczlC+BX89bcH8/a3zbir8fy+rDl576YKdE8=";
 
         private IConfigurationRoot config;
 
@@ -184,7 +184,7 @@ namespace Microsoft.Marketplace.Tests
                 Quantity = 20.5,
                 Dimension = "dim1",
                 // The time passed to Parse method should be the same as the recording
-                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-12T17:01:55.0912305Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-65),
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-15T22:01:05.0821551Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-65),
                 PlanId = "userassigned",
             };
 
@@ -206,7 +206,7 @@ namespace Microsoft.Marketplace.Tests
                 Quantity = 20.5,
                 Dimension = "dim1",
                 // The time passed to Parse method should be the same as the recording
-                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-12T17:01:54.5849135Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-65),
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-15T22:01:04.4810279Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-65),
                 PlanId = "silver",
             };
 
@@ -227,7 +227,7 @@ namespace Microsoft.Marketplace.Tests
                 Quantity = 20.5,
                 Dimension = "dim1",
                 // The time passed to Parse method should be the same as the recording
-                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-12T13:06:52.8968294Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-15T18:06:00.4578027Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
                 PlanId = "silver",
             };
 
@@ -237,7 +237,7 @@ namespace Microsoft.Marketplace.Tests
                 Quantity = 20.5,
                 Dimension = "dim1",
                 // The time passed to Parse method should be the same as the recording
-                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-12T13:06:52.8971358Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
+                EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-15T18:06:00.4580942Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
                 PlanId = "userassigned",
             };
 
@@ -248,6 +248,14 @@ namespace Microsoft.Marketplace.Tests
             Assert.IsTrue(result.Value.Result.All(r => r.Status == UsageEventStatusEnum.Accepted));
             Assert.IsTrue(result.Value.Result.All(r => r.Quantity == 20.5));
             Assert.AreEqual(result.Value.Count, 2);
+            Assert.IsTrue(result.Value.Result.All(r => r.Error == default));
+
+            // Now get duplicates
+            result = await sut.Metering.PostBatchUsageEventAsync(usageBatch);
+
+            Assert.IsTrue(result.Value.Result.All(r => r.Status == UsageEventStatusEnum.Duplicate));
+            Assert.IsTrue(result.Value.Result.All(r => r.Error != default));
+            Assert.IsTrue(result.Value.Result.All(r => r.UsageEventId == default));
         }
 
         private MarketplaceSaaSClient GetMarketplaceSaaSClient(bool useCert = false)

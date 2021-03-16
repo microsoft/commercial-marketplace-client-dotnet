@@ -18,17 +18,17 @@
       "ResponseHeaders": {
         "Content-Length": "57490",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Fri, 12 Mar 2021 18:06:48 GMT",
-        "ETag": "\u002285597b80-6e1d-4947-a92f-869e08905cc4\u0022",
+        "Date": "Mon, 15 Mar 2021 23:05:57 GMT",
+        "ETag": "\u0022c8941de3-9f8b-4c32-8eb2-2997fe395610\u0022",
         "Set-Cookie": [
-          "ARRAffinity=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;Secure;Domain=main.prod.marketplaceapi.azure.com",
-          "ARRAffinitySameSite=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;SameSite=None;Secure;Domain=main.prod.marketplaceapi.azure.com"
+          "ARRAffinity=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;Secure;Domain=main.prod.marketplaceapi.azure.com",
+          "ARRAffinitySameSite=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;SameSite=None;Secure;Domain=main.prod.marketplaceapi.azure.com"
         ],
-        "X-Azure-Ref": "0ua1LYAAAAAD33guYu9/rQJBuvBNBJ1wDV1NURURHRTA4MjAAMzEwNGIwOWItOTRhZS00NmZjLTkwMDYtMWVhMjA3YmE3YzE4",
+        "X-Azure-Ref": "0VehPYAAAAABmLVlg0XjqQbsBqexJRfVwV1NURURHRTA4MTAAMzEwNGIwOWItOTRhZS00NmZjLTkwMDYtMWVhMjA3YmE3YzE4",
         "X-Content-Type-Options": "nosniff",
-        "x-ms-activityid": "3aa83e33-b7a0-4c71-b503-1ebfdfc8d855",
-        "x-ms-correlationid": "2aebd27e-5b49-4bc9-868f-16a7af416c3d",
-        "x-ms-requestid": "2aebd27e-5b49-4bc9-868f-16a7af416c3d",
+        "x-ms-activityid": "dda280a8-950e-46e8-a308-e022f2ee8800",
+        "x-ms-correlationid": "9f478323-8f66-4d37-b317-d3b1a6378167",
+        "x-ms-requestid": "9f478323-8f66-4d37-b317-d3b1a6378167",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
@@ -2459,17 +2459,17 @@
       "ResponseHeaders": {
         "Content-Length": "60959",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Fri, 12 Mar 2021 18:06:49 GMT",
-        "ETag": "\u0022056290df-d744-4e2b-a877-056ffc744383\u0022",
+        "Date": "Mon, 15 Mar 2021 23:05:57 GMT",
+        "ETag": "\u0022e082a937-11f3-40ba-8558-e8604f3bf6c4\u0022",
         "Server": "Microsoft-IIS/10.0",
         "Set-Cookie": [
           "ARRAffinity=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;Secure;Domain=main.prod.marketplaceapi.azure.com",
           "ARRAffinitySameSite=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;SameSite=None;Secure;Domain=main.prod.marketplaceapi.azure.com"
         ],
         "X-Content-Type-Options": "nosniff",
-        "x-ms-activityid": "181796a7-4885-4b52-8138-09b7897a3f49",
-        "x-ms-correlationid": "67ccea76-5ab8-4a9e-948a-1ea957c86b03",
-        "x-ms-requestid": "67ccea76-5ab8-4a9e-948a-1ea957c86b03",
+        "x-ms-activityid": "586b1229-e936-4dc7-af6f-837bef988a6e",
+        "x-ms-correlationid": "d9f5344b-8096-45e4-aedc-80bd903308d1",
+        "x-ms-requestid": "d9f5344b-8096-45e4-aedc-80bd903308d1",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
@@ -5046,15 +5046,15 @@
       "RequestBody": null,
       "StatusCode": 200,
       "ResponseHeaders": {
-        "Content-Length": "75123",
+        "Content-Length": "75119",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Fri, 12 Mar 2021 18:06:49 GMT",
-        "ETag": "\u00228cc18a44-0778-4277-8753-1dfb34483350\u0022",
+        "Date": "Mon, 15 Mar 2021 23:05:57 GMT",
+        "ETag": "\u00228bbd63f1-1a7f-4025-b6a4-a7678a2f8795\u0022",
         "Server": "Microsoft-IIS/10.0",
         "X-Content-Type-Options": "nosniff",
-        "x-ms-activityid": "b5ff130a-ca40-4e51-b993-0f8be0b828cf",
-        "x-ms-correlationid": "d3a7dcb1-2883-43b9-80b0-b3232e84c1e9",
-        "x-ms-requestid": "d3a7dcb1-2883-43b9-80b0-b3232e84c1e9",
+        "x-ms-activityid": "049d55cb-ce01-48ec-a906-b92566316dc4",
+        "x-ms-correlationid": "226be224-0615-4c6e-9388-e9031a5e4db7",
+        "x-ms-requestid": "226be224-0615-4c6e-9388-e9031a5e4db7",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
@@ -7537,10 +7537,10 @@
               "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
               "puid": "10033FFFA7593A0D"
             },
-            "planId": "platinum",
+            "planId": "silver",
             "term": {
-              "startDate": "2021-02-14T00:00:00Z",
-              "endDate": "2021-03-13T00:00:00Z",
+              "startDate": "2021-03-14T00:00:00Z",
+              "endDate": "2021-04-13T00:00:00Z",
               "termUnit": "P1M"
             },
             "autoRenew": true,
@@ -7576,8 +7576,8 @@
             },
             "planId": "public",
             "term": {
-              "startDate": "2021-02-14T00:00:00Z",
-              "endDate": "2021-03-13T00:00:00Z",
+              "startDate": "2021-03-14T00:00:00Z",
+              "endDate": "2021-04-13T00:00:00Z",
               "termUnit": "P1M"
             },
             "autoRenew": true,
@@ -7613,8 +7613,8 @@
             },
             "planId": "gold",
             "term": {
-              "startDate": "2021-02-14T00:00:00Z",
-              "endDate": "2021-03-13T00:00:00Z",
+              "startDate": "2021-03-14T00:00:00Z",
+              "endDate": "2021-04-13T00:00:00Z",
               "termUnit": "P1M"
             },
             "autoRenew": true,
@@ -8123,7 +8123,7 @@
               "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
               "puid": "10033FFFA7593A0D"
             },
-            "planId": "platinum",
+            "planId": "silver",
             "term": {
               "startDate": "2021-02-21T00:00:00Z",
               "endDate": "2021-03-20T00:00:00Z",
@@ -8232,15 +8232,15 @@
       "RequestBody": null,
       "StatusCode": 200,
       "ResponseHeaders": {
-        "Content-Length": "58952",
+        "Content-Length": "58954",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Fri, 12 Mar 2021 18:06:49 GMT",
-        "ETag": "\u00220c59ba6b-d270-482a-8d6a-c79b74cda032\u0022",
+        "Date": "Mon, 15 Mar 2021 23:05:57 GMT",
+        "ETag": "\u00223b3d1211-f79e-4ed8-96f5-d73c413b0d69\u0022",
         "Server": "Microsoft-IIS/10.0",
         "X-Content-Type-Options": "nosniff",
-        "x-ms-activityid": "4d79e1a7-2f64-464b-84b2-a0f7320b0cf6",
-        "x-ms-correlationid": "70b6c456-138f-4e90-aba0-e5bd9c81dd39",
-        "x-ms-requestid": "70b6c456-138f-4e90-aba0-e5bd9c81dd39",
+        "x-ms-activityid": "76e5ed72-4eae-4eef-8d4d-97b44d661c0a",
+        "x-ms-correlationid": "b8a5dfac-47f8-4ac3-b504-d919c7fbbfff",
+        "x-ms-requestid": "b8a5dfac-47f8-4ac3-b504-d919c7fbbfff",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
@@ -10040,8 +10040,8 @@
             },
             "planId": "gold",
             "term": {
-              "startDate": "2021-02-14T00:00:00Z",
-              "endDate": "2021-03-13T00:00:00Z",
+              "startDate": "2021-03-14T00:00:00Z",
+              "endDate": "2021-04-13T00:00:00Z",
               "termUnit": "P1M"
             },
             "autoRenew": true,
@@ -10077,8 +10077,8 @@
             },
             "planId": "gold",
             "term": {
-              "startDate": "2021-02-15T00:00:00Z",
-              "endDate": "2021-03-14T00:00:00Z",
+              "startDate": "2021-03-15T00:00:00Z",
+              "endDate": "2021-04-14T00:00:00Z",
               "termUnit": "P1M"
             },
             "autoRenew": true,
@@ -10262,8 +10262,8 @@
             },
             "planId": "silver",
             "term": {
-              "startDate": "2021-02-14T00:00:00Z",
-              "endDate": "2021-03-13T00:00:00Z",
+              "startDate": "2021-03-14T00:00:00Z",
+              "endDate": "2021-04-13T00:00:00Z",
               "termUnit": "P1M"
             },
             "autoRenew": true,
@@ -10622,7 +10622,7 @@
               "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
               "puid": "10033FFFA7593A0D"
             },
-            "planId": "gold",
+            "planId": "silver",
             "term": {
               "startDate": "2021-02-24T00:00:00Z",
               "endDate": "2021-03-23T00:00:00Z",
@@ -10735,13 +10735,13 @@
       "ResponseHeaders": {
         "Content-Length": "76395",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Fri, 12 Mar 2021 18:06:49 GMT",
-        "ETag": "\u002285fcb0f7-fde0-4420-a909-d0d6e944403f\u0022",
+        "Date": "Mon, 15 Mar 2021 23:05:57 GMT",
+        "ETag": "\u0022e8547613-6dc8-4c82-a018-b2d730ac1c26\u0022",
         "Server": "Microsoft-IIS/10.0",
         "X-Content-Type-Options": "nosniff",
-        "x-ms-activityid": "fc62bce5-3f5c-4a6c-984a-97a849f19a2a",
-        "x-ms-correlationid": "56d628bd-7d35-4c6a-a857-2d00976ceb39",
-        "x-ms-requestid": "56d628bd-7d35-4c6a-a857-2d00976ceb39",
+        "x-ms-activityid": "14af524d-a978-4886-8f0e-16bcccd7d21b",
+        "x-ms-correlationid": "b07feb84-c13c-4e0b-87d5-803f800ec8e1",
+        "x-ms-requestid": "b07feb84-c13c-4e0b-87d5-803f800ec8e1",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
@@ -11932,8 +11932,8 @@
             },
             "planId": "base",
             "term": {
-              "startDate": "2021-02-13T00:00:00Z",
-              "endDate": "2021-03-12T00:00:00Z",
+              "startDate": "2021-03-13T00:00:00Z",
+              "endDate": "2021-04-12T00:00:00Z",
               "termUnit": "P1M"
             },
             "autoRenew": true,
@@ -13622,8 +13622,8 @@
             },
             "planId": "silver",
             "term": {
-              "startDate": "2021-02-14T00:00:00Z",
-              "endDate": "2021-03-13T00:00:00Z",
+              "startDate": "2021-03-14T00:00:00Z",
+              "endDate": "2021-04-13T00:00:00Z",
               "termUnit": "P1M"
             },
             "autoRenew": true,
@@ -13976,7 +13976,7 @@
       "RequestHeaders": {
         "Accept": "application/json",
         "Authorization": "Sanitized",
-        "traceparent": "00-874c8c5811dcad4c9c8d6de1972a340d-4695595751aeca4c-00",
+        "traceparent": "00-85af6c9dae30604e953c148d2955624e-8ba7419f5f018244-00",
         "User-Agent": [
           "azsdk-net-Microsoft.Marketplace/1.0.0",
           "(.NET 5.0.2; Microsoft Windows 10.0.21332)"
@@ -13989,17 +13989,17 @@
       "ResponseHeaders": {
         "Content-Length": "3444",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Fri, 12 Mar 2021 18:06:50 GMT",
-        "ETag": "\u0022c79b13bc-751b-4685-8813-1e404cf089c7\u0022",
+        "Date": "Mon, 15 Mar 2021 23:05:59 GMT",
+        "ETag": "\u00227f0fd3ad-c348-4077-8ec1-f35fc53edb33\u0022",
         "Set-Cookie": [
-          "ARRAffinity=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;Secure;Domain=main.prod.marketplaceapi.azure.com",
-          "ARRAffinitySameSite=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;SameSite=None;Secure;Domain=main.prod.marketplaceapi.azure.com"
+          "ARRAffinity=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;Secure;Domain=main.prod.marketplaceapi.azure.com",
+          "ARRAffinitySameSite=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;SameSite=None;Secure;Domain=main.prod.marketplaceapi.azure.com"
         ],
-        "X-Azure-Ref": "0uq1LYAAAAAAidr1s3hirRKFSF\u002BxcAyLiV1NURURHRTA4MjAAMzEwNGIwOWItOTRhZS00NmZjLTkwMDYtMWVhMjA3YmE3YzE4",
+        "X-Azure-Ref": "0VuhPYAAAAABWQb3oRckjRKla6qRctxeYV1NURURHRTA4MTAAMzEwNGIwOWItOTRhZS00NmZjLTkwMDYtMWVhMjA3YmE3YzE4",
         "X-Content-Type-Options": "nosniff",
-        "x-ms-activityid": "c77fb0cc-ba8f-4d62-867e-ed494c30e98a",
-        "x-ms-correlationid": "0fe571ad-68ef-4e81-84ea-373ac34b70b2",
-        "x-ms-requestid": "0fe571ad-68ef-4e81-84ea-373ac34b70b2",
+        "x-ms-activityid": "944c267d-2cdd-4138-a58d-4c4c3caee249",
+        "x-ms-correlationid": "84d7e447-2398-4187-9cac-72e79b2c2f63",
+        "x-ms-requestid": "84d7e447-2398-4187-9cac-72e79b2c2f63",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
