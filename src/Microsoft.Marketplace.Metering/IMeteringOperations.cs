@@ -12,9 +12,9 @@ namespace Microsoft.Marketplace.Metering
 {
     public interface IMeteringOperations
     {
-        Response<IReadOnlyList<UsageEventOkResponse>> PostBatchUsageEvent(IEnumerable<UsageEvent> body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
+        Response<BatchUsageEventOkResponse> PostBatchUsageEvent(BatchUsageEvent body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 
-        Task<Response<IReadOnlyList<UsageEventOkResponse>>> PostBatchUsageEventAsync(IEnumerable<UsageEvent> body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
+        Task<Response<BatchUsageEventOkResponse>> PostBatchUsageEventAsync(BatchUsageEvent body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 
         Response<UsageEventOkResponse> PostUsageEvent(UsageEvent body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 

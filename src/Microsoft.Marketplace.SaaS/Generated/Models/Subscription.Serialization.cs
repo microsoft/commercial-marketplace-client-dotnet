@@ -35,7 +35,6 @@ namespace Microsoft.Marketplace.SaaS.Models
             Optional<string> storeFront = default;
             Optional<SandboxTypeEnum> sandboxType = default;
             Optional<DateTimeOffset> created = default;
-            Optional<DateTimeOffset> lastModified = default;
             Optional<SessionModeEnum> sessionMode = default;
             foreach (var property in element.EnumerateObject())
             {
@@ -209,16 +208,6 @@ namespace Microsoft.Marketplace.SaaS.Models
                     created = property.Value.GetDateTimeOffset("O");
                     continue;
                 }
-                if (property.NameEquals("lastModified"))
-                {
-                    if (property.Value.ValueKind == JsonValueKind.Null)
-                    {
-                        property.ThrowNonNullablePropertyIsNull();
-                        continue;
-                    }
-                    lastModified = property.Value.GetDateTimeOffset("O");
-                    continue;
-                }
                 if (property.NameEquals("sessionMode"))
                 {
                     if (property.Value.ValueKind == JsonValueKind.Null)
@@ -230,7 +219,7 @@ namespace Microsoft.Marketplace.SaaS.Models
                     continue;
                 }
             }
-            return new Subscription(Optional.ToNullable(id), publisherId.Value, offerId.Value, name.Value, Optional.ToNullable(saasSubscriptionStatus), beneficiary.Value, purchaser.Value, planId.Value, Optional.ToNullable(quantity), term.Value, Optional.ToNullable(autoRenew), Optional.ToNullable(isTest), Optional.ToNullable(isFreeTrial), Optional.ToList(allowedCustomerOperations), Optional.ToNullable(sessionId), Optional.ToNullable(fulfillmentId), storeFront.Value, Optional.ToNullable(sandboxType), Optional.ToNullable(created), Optional.ToNullable(lastModified), Optional.ToNullable(sessionMode));
+            return new Subscription(Optional.ToNullable(id), publisherId.Value, offerId.Value, name.Value, Optional.ToNullable(saasSubscriptionStatus), beneficiary.Value, purchaser.Value, planId.Value, Optional.ToNullable(quantity), term.Value, Optional.ToNullable(autoRenew), Optional.ToNullable(isTest), Optional.ToNullable(isFreeTrial), Optional.ToList(allowedCustomerOperations), Optional.ToNullable(sessionId), Optional.ToNullable(fulfillmentId), storeFront.Value, Optional.ToNullable(sandboxType), Optional.ToNullable(created), Optional.ToNullable(sessionMode));
         }
     }
 }

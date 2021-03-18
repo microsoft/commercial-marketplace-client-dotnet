@@ -1,0 +1,57 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "https://marketplaceapi.microsoft.com/api/usageEvent?api-version=2018-08-31",
+      "RequestMethod": "POST",
+      "RequestHeaders": {
+        "Accept": "application/json",
+        "Authorization": "Sanitized",
+        "Content-Length": "259",
+        "Content-Type": "application/json",
+        "traceparent": "00-4d901a0094b5af4ba8b8194ba9546fe8-ca2a10cd0ca0ce47-00",
+        "User-Agent": [
+          "azsdk-net-Microsoft.Marketplace/1.0.0",
+          "(.NET 5.0.2; Microsoft Windows 10.0.21332)"
+        ],
+        "x-ms-client-request-id": "407a11bf-a5df-5e5a-dde6-9ae9b27d2840",
+        "x-ms-return-client-request-id": "true"
+      },
+      "RequestBody": {
+        "resourceUri": "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
+        "quantity": 20.5,
+        "dimension": "dim1",
+        "effectiveStartTime": "2021-03-15T22:01:05.0821551Z",
+        "planId": "userassigned"
+      },
+      "StatusCode": 200,
+      "ResponseHeaders": {
+        "Content-Length": "429",
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Mon, 15 Mar 2021 23:06:03 GMT",
+        "Set-Cookie": [
+          "ARRAffinity=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;Secure;Domain=main.prod.marketplaceapi.azure.com",
+          "ARRAffinitySameSite=ff65af957656edaa56e531d6c6097c7d151aeacf50dad58bbf5b489286d2e843;Path=/;HttpOnly;SameSite=None;Secure;Domain=main.prod.marketplaceapi.azure.com"
+        ],
+        "X-Azure-Ref": "0XOhPYAAAAAAbGULEmttiQbX6nIk9zujVV1NURURHRTA4MjIAMzEwNGIwOWItOTRhZS00NmZjLTkwMDYtMWVhMjA3YmE3YzE4",
+        "X-Content-Type-Options": "nosniff",
+        "x-ms-correlationid": "046493bb-1bfc-4def-80a1-0705e9794cc3",
+        "x-ms-requestid": "046493bb-1bfc-4def-80a1-0705e9794cc3",
+        "X-Powered-By": "ASP.NET"
+      },
+      "ResponseBody": {
+        "usageEventId": "98ff3b93-64d0-46ca-af20-2a3358c58abb",
+        "status": "Accepted",
+        "messageTime": "2021-03-15T23:06:04.498255Z",
+        "resourceId": "54372f22-697c-479e-9b76-d5bbdd6e701a",
+        "resourceUri": "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
+        "quantity": 20.5,
+        "dimension": "dim1",
+        "effectiveStartTime": "2021-03-15T22:01:05.0821551Z",
+        "planId": "userassigned"
+      }
+    }
+  ],
+  "Variables": {
+    "RandomSeed": "594687105"
+  }
+}

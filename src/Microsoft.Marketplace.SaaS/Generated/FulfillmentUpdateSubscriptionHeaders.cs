@@ -10,7 +10,7 @@ using Azure.Core;
 
 namespace Microsoft.Marketplace.SaaS
 {
-    internal class FulfillmentUpdateSubscriptionHeaders
+    internal partial class FulfillmentUpdateSubscriptionHeaders
     {
         private readonly Response _response;
         public FulfillmentUpdateSubscriptionHeaders(Response response)

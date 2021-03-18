@@ -5,34 +5,23 @@
 
 #nullable disable
 
-using System;
-
 namespace Microsoft.Marketplace.Metering.Models
 {
     /// <summary> The UsageEventConflictResponseAdditionalInfo. </summary>
-    internal partial class UsageEventConflictResponseAdditionalInfo
+    public partial class UsageEventConflictResponseAdditionalInfo
     {
         /// <summary> Initializes a new instance of UsageEventConflictResponseAdditionalInfo. </summary>
         internal UsageEventConflictResponseAdditionalInfo()
         {
         }
 
-        /// <summary> Unique identifier associated with the usage event. </summary>
-        public Guid? UsageEventId { get; }
-        /// <summary> Accepted|NotProcessed|Expired. </summary>
-        public UsageEventConflictResponseAdditionalInfoStatus? Status { get; }
-        /// <summary> Time this message was created in UTC. </summary>
-        public DateTimeOffset? MessageTime { get; }
-        /// <summary> Identifier of the resource against which usage is emitted. </summary>
-        public Guid? ResourceId { get; }
-        /// <summary> Identifier of the managed app resource against which usage is emitted. </summary>
-        public string ResourceUri { get; }
-        public long? Quantity { get; }
-        /// <summary> Dimension identifier. </summary>
-        public string Dimension { get; }
-        /// <summary> Time in UTC when the usage event occurred. </summary>
-        public DateTimeOffset? EffectiveStartTime { get; }
-        /// <summary> Plan associated with the purchased offer. </summary>
-        public Guid? PlanId { get; }
+        /// <summary> Initializes a new instance of UsageEventConflictResponseAdditionalInfo. </summary>
+        /// <param name="acceptedMessage"> . </param>
+        internal UsageEventConflictResponseAdditionalInfo(UsageEventOkResponse acceptedMessage)
+        {
+            AcceptedMessage = acceptedMessage;
+        }
+
+        public UsageEventOkResponse AcceptedMessage { get; }
     }
 }

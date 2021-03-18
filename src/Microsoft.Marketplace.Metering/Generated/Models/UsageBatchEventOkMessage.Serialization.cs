@@ -11,9 +11,9 @@ using Azure.Core;
 
 namespace Microsoft.Marketplace.Metering.Models
 {
-    public partial class UsageEventOkResponse
+    public partial class UsageBatchEventOkMessage
     {
-        internal static UsageEventOkResponse DeserializeUsageEventOkResponse(JsonElement element)
+        internal static UsageBatchEventOkMessage DeserializeUsageBatchEventOkMessage(JsonElement element)
         {
             Optional<Guid> usageEventId = default;
             Optional<UsageEventStatusEnum> status = default;
@@ -24,6 +24,7 @@ namespace Microsoft.Marketplace.Metering.Models
             Optional<string> dimension = default;
             Optional<DateTimeOffset> effectiveStartTime = default;
             Optional<string> planId = default;
+            Optional<UsageEventConflictResponse> error = default;
             foreach (var property in element.EnumerateObject())
             {
                 if (property.NameEquals("usageEventId"))
@@ -101,8 +102,18 @@ namespace Microsoft.Marketplace.Metering.Models
                     planId = property.Value.GetString();
                     continue;
                 }
+                if (property.NameEquals("error"))
+                {
+                    if (property.Value.ValueKind == JsonValueKind.Null)
+                    {
+                        property.ThrowNonNullablePropertyIsNull();
+                        continue;
+                    }
+                    error = UsageEventConflictResponse.DeserializeUsageEventConflictResponse(property.Value);
+                    continue;
+                }
             }
-            return new UsageEventOkResponse(Optional.ToNullable(usageEventId), Optional.ToNullable(status), Optional.ToNullable(messageTime), Optional.ToNullable(resourceId), resourceUri.Value, Optional.ToNullable(quantity), dimension.Value, Optional.ToNullable(effectiveStartTime), planId.Value);
+            return new UsageBatchEventOkMessage(Optional.ToNullable(usageEventId), Optional.ToNullable(status), Optional.ToNullable(messageTime), Optional.ToNullable(resourceId), resourceUri.Value, Optional.ToNullable(quantity), dimension.Value, Optional.ToNullable(effectiveStartTime), planId.Value, error.Value);
         }
     }
 }

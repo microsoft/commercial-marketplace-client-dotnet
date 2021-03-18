@@ -9,15 +9,15 @@ using System;
 
 namespace Microsoft.Marketplace.Metering.Models
 {
-    /// <summary> The UsageEventOkResponse. </summary>
-    public partial class UsageEventOkResponse
+    /// <summary> The UsageBatchEventOkMessage. </summary>
+    public partial class UsageBatchEventOkMessage
     {
-        /// <summary> Initializes a new instance of UsageEventOkResponse. </summary>
-        internal UsageEventOkResponse()
+        /// <summary> Initializes a new instance of UsageBatchEventOkMessage. </summary>
+        internal UsageBatchEventOkMessage()
         {
         }
 
-        /// <summary> Initializes a new instance of UsageEventOkResponse. </summary>
+        /// <summary> Initializes a new instance of UsageBatchEventOkMessage. </summary>
         /// <param name="usageEventId"> Unique identifier associated with the usage event. </param>
         /// <param name="status"> Status of the operation. </param>
         /// <param name="messageTime"> Time this message was created in UTC. </param>
@@ -27,7 +27,8 @@ namespace Microsoft.Marketplace.Metering.Models
         /// <param name="dimension"> Dimension identifier. </param>
         /// <param name="effectiveStartTime"> Time in UTC when the usage event occurred. </param>
         /// <param name="planId"> Plan associated with the purchased offer. </param>
-        internal UsageEventOkResponse(Guid? usageEventId, UsageEventStatusEnum? status, DateTimeOffset? messageTime, Guid? resourceId, string resourceUri, double? quantity, string dimension, DateTimeOffset? effectiveStartTime, string planId)
+        /// <param name="error"> . </param>
+        internal UsageBatchEventOkMessage(Guid? usageEventId, UsageEventStatusEnum? status, DateTimeOffset? messageTime, Guid? resourceId, string resourceUri, double? quantity, string dimension, DateTimeOffset? effectiveStartTime, string planId, UsageEventConflictResponse error)
         {
             UsageEventId = usageEventId;
             Status = status;
@@ -38,6 +39,7 @@ namespace Microsoft.Marketplace.Metering.Models
             Dimension = dimension;
             EffectiveStartTime = effectiveStartTime;
             PlanId = planId;
+            Error = error;
         }
 
         /// <summary> Unique identifier associated with the usage event. </summary>
@@ -58,5 +60,6 @@ namespace Microsoft.Marketplace.Metering.Models
         public DateTimeOffset? EffectiveStartTime { get; }
         /// <summary> Plan associated with the purchased offer. </summary>
         public string PlanId { get; }
+        public UsageEventConflictResponse Error { get; }
     }
 }
