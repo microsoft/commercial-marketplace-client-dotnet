@@ -10,10 +10,10 @@
 
   <ItemGroup>
     <PackageReference Include="Azure.Identity" Version="1.3.0"/>
-    <PackageReference Include="System.Text.Json" Version="5.0.0" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" />
+    <PackageReference Include="System.Text.Json" Version="5.0.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.9.0" />
     <PackageReference Include="Microsoft.Azure.AutoRest.CSharp" Version="3.0.0-beta.20210211.2" />
-    <PackageReference Include="Azure.Core" Version="1.7.0"/>
+    <PackageReference Include="Azure.Core" Version="1.10.0"/>
   </ItemGroup>
 
 </Project>
