@@ -15,6 +15,8 @@ namespace Microsoft.Marketplace.SaaS.Models
         {
             TermUnitEnum.P1M => "P1M",
             TermUnitEnum.P1Y => "P1Y",
+            TermUnitEnum.P2Y => "P2Y",
+            TermUnitEnum.P3Y => "P3Y",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, "Unknown TermUnitEnum value.")
         };
 
@@ -22,6 +24,8 @@ namespace Microsoft.Marketplace.SaaS.Models
         {
             if (string.Equals(value, "P1M", StringComparison.InvariantCultureIgnoreCase)) return TermUnitEnum.P1M;
             if (string.Equals(value, "P1Y", StringComparison.InvariantCultureIgnoreCase)) return TermUnitEnum.P1Y;
+            if (string.Equals(value, "P2Y", StringComparison.InvariantCultureIgnoreCase)) return TermUnitEnum.P2Y;
+            if (string.Equals(value, "P3Y", StringComparison.InvariantCultureIgnoreCase)) return TermUnitEnum.P3Y;
             throw new ArgumentOutOfRangeException(nameof(value), value, "Unknown TermUnitEnum value.");
         }
     }

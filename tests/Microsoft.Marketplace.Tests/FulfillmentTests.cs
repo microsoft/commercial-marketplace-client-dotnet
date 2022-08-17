@@ -84,7 +84,7 @@ namespace Microsoft.Marketplace.Tests
             Assert.IsNotNull(result);
 
             Assert.IsNotNull(result.Value.Beneficiary.TenantId);
-            
+
             Assert.IsInstanceOf<DateTimeOffset>(result.Value.Created);
         }
 
@@ -179,10 +179,12 @@ namespace Microsoft.Marketplace.Tests
         {
             var sut = this.InstrumentClient(this.GetMarketplaceMeteringClient());
 
-            var usageEvent = new Metering.Models.UsageEvent { 
+            var usageEvent = new Metering.Models.UsageEvent
+            {
                 ResourceUri = "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
                 Quantity = 20.5,
                 Dimension = "dim1",
+
                 // The time passed to Parse method should be the same as the recording
                 EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-15T22:01:05.0821551Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-65),
                 PlanId = "userassigned",
@@ -195,7 +197,8 @@ namespace Microsoft.Marketplace.Tests
         }
 
         [RecordedTest]
-        //[Ignore("Run locally only, ignore in GitHub actions.")]
+
+        // [Ignore("Run locally only, ignore in GitHub actions.")]
         public async Task PostSingleUsageWithResourceId()
         {
             var sut = this.InstrumentClient(this.GetMarketplaceMeteringClient());
@@ -205,6 +208,7 @@ namespace Microsoft.Marketplace.Tests
                 ResourceId = Guid.Parse("da8dc4ae-4cdf-ed6b-e12e-9d0219306842"),
                 Quantity = 20.5,
                 Dimension = "dim1",
+
                 // The time passed to Parse method should be the same as the recording
                 EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-15T22:01:04.4810279Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-65),
                 PlanId = "silver",
@@ -226,6 +230,7 @@ namespace Microsoft.Marketplace.Tests
                 ResourceId = Guid.Parse("da8dc4ae-4cdf-ed6b-e12e-9d0219306842"),
                 Quantity = 20.5,
                 Dimension = "dim1",
+
                 // The time passed to Parse method should be the same as the recording
                 EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-15T18:06:00.4578027Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
                 PlanId = "silver",
@@ -236,6 +241,7 @@ namespace Microsoft.Marketplace.Tests
                 ResourceUri = "/subscriptions/bf7adf12-c3a8-426c-9976-29f145eba70f/resourceGroups/ercmngd/providers/Microsoft.Solutions/applications/ercmdngd2231",
                 Quantity = 20.5,
                 Dimension = "dim1",
+
                 // The time passed to Parse method should be the same as the recording
                 EffectiveStartTime = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2021-03-15T18:06:00.4580942Z").ToUniversalTime() : DateTime.UtcNow.AddMinutes(-300),
                 PlanId = "userassigned",
