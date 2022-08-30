@@ -25,7 +25,7 @@ namespace Microsoft.Marketplace.SaaS.Models
             StartDate = startDate;
             EndDate = endDate;
         }
-
+        public TermUnitEnum TermUnit { get; }
         public DateTimeOffset? StartDate { get; }
         public DateTimeOffset? EndDate { get; }
     }
