@@ -85,6 +85,8 @@ namespace Microsoft.Marketplace.Tests
 
             Assert.IsNotNull(result.Value.Beneficiary.TenantId);
 
+            Assert.IsNotNull(result.Value.Term.TermUnit);
+
             Assert.IsInstanceOf<DateTimeOffset>(result.Value.Created);
         }
 
