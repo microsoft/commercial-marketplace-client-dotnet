@@ -19,6 +19,8 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <summary> Suspend. </summary>
         Suspend,
         /// <summary> Reinstate. </summary>
-        Reinstate
+        Reinstate,
+        /// <summary> Renew. </summary>
+        Renew
     }
 }
