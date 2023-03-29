@@ -15,10 +15,21 @@ namespace Microsoft.Marketplace.SaaS.Models
     {
         internal static SubscriptionTerm DeserializeSubscriptionTerm(JsonElement element)
         {
+            Optional<TermUnitEnum> termUnit = default;
             Optional<DateTimeOffset> startDate = default;
             Optional<DateTimeOffset> endDate = default;
             foreach (var property in element.EnumerateObject())
             {
+                if (property.NameEquals("termUnit"))
+                {
+                    if (property.Value.ValueKind == JsonValueKind.Null)
+                    {
+                        property.ThrowNonNullablePropertyIsNull();
+                        continue;
+                    }
+                    termUnit = property.Value.GetString().ToTermUnitEnum();
+                    continue;
+                }
                 if (property.NameEquals("startDate"))
                 {
                     if (property.Value.ValueKind == JsonValueKind.Null)
@@ -40,7 +51,7 @@ namespace Microsoft.Marketplace.SaaS.Models
                     continue;
                 }
             }
-            return new SubscriptionTerm(Optional.ToNullable(startDate), Optional.ToNullable(endDate));
+            return new SubscriptionTerm(Optional.ToNullable(termUnit), Optional.ToNullable(startDate), Optional.ToNullable(endDate));
         }
     }
 }

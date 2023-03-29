@@ -18,14 +18,17 @@ namespace Microsoft.Marketplace.SaaS.Models
         }
 
         /// <summary> Initializes a new instance of SubscriptionTerm. </summary>
+        /// <param name="termUnit"> . </param>
         /// <param name="startDate"> . </param>
         /// <param name="endDate"> . </param>
-        internal SubscriptionTerm(DateTimeOffset? startDate, DateTimeOffset? endDate)
+        internal SubscriptionTerm(TermUnitEnum? termUnit, DateTimeOffset? startDate, DateTimeOffset? endDate)
         {
+            TermUnit = termUnit;
             StartDate = startDate;
             EndDate = endDate;
         }
 
+        public TermUnitEnum? TermUnit { get; }
         public DateTimeOffset? StartDate { get; }
         public DateTimeOffset? EndDate { get; }
     }
