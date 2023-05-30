@@ -18,6 +18,7 @@ namespace Microsoft.Marketplace.SaaS.Models
             OperationActionEnum.ChangeQuantity => "ChangeQuantity",
             OperationActionEnum.Suspend => "Suspend",
             OperationActionEnum.Reinstate => "Reinstate",
+            OperationActionEnum.Renew => "Renew",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, "Unknown OperationActionEnum value.")
         };
 
@@ -28,6 +29,7 @@ namespace Microsoft.Marketplace.SaaS.Models
             if (string.Equals(value, "ChangeQuantity", StringComparison.InvariantCultureIgnoreCase)) return OperationActionEnum.ChangeQuantity;
             if (string.Equals(value, "Suspend", StringComparison.InvariantCultureIgnoreCase)) return OperationActionEnum.Suspend;
             if (string.Equals(value, "Reinstate", StringComparison.InvariantCultureIgnoreCase)) return OperationActionEnum.Reinstate;
+            if (string.Equals(value, "Renew", StringComparison.InvariantCultureIgnoreCase)) return OperationActionEnum.Renew;
             throw new ArgumentOutOfRangeException(nameof(value), value, "Unknown OperationActionEnum value.");
         }
     }
