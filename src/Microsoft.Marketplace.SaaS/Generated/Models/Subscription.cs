@@ -35,13 +35,10 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <param name="isTest"> Indicating whether the current subscription is a test asset. </param>
         /// <param name="isFreeTrial"> true - the customer subscription is currently in free trial, false - the customer subscription is not currently in free trial.(optional field - default false). </param>
         /// <param name="allowedCustomerOperations"> . </param>
-        /// <param name="sessionId"> . </param>
-        /// <param name="fulfillmentId"> . </param>
-        /// <param name="storeFront"> . </param>
         /// <param name="sandboxType"> Possible Values are None, Csp (Csp sandbox purchase). </param>
         /// <param name="created"> . </param>
         /// <param name="sessionMode"> Dry Run indicates all transactions run as Test-Mode in the commerce stack. </param>
-        internal Subscription(Guid? id, string publisherId, string offerId, string name, SubscriptionStatusEnum? saasSubscriptionStatus, AadIdentifier beneficiary, AadIdentifier purchaser, string planId, int? quantity, SubscriptionTerm term, bool? autoRenew, bool? isTest, bool? isFreeTrial, IReadOnlyList<AllowedCustomerOperationsEnum> allowedCustomerOperations, Guid? sessionId, Guid? fulfillmentId, string storeFront, SandboxTypeEnum? sandboxType, DateTimeOffset? created, SessionModeEnum? sessionMode)
+        internal Subscription(Guid? id, string publisherId, string offerId, string name, SubscriptionStatusEnum? saasSubscriptionStatus, AadIdentifier beneficiary, AadIdentifier purchaser, string planId, int? quantity, SubscriptionTerm term, bool? autoRenew, bool? isTest, bool? isFreeTrial, IReadOnlyList<AllowedCustomerOperationsEnum> allowedCustomerOperations, SandboxTypeEnum? sandboxType, DateTimeOffset? created, SessionModeEnum? sessionMode)
         {
             Id = id;
             PublisherId = publisherId;
@@ -57,9 +54,6 @@ namespace Microsoft.Marketplace.SaaS.Models
             IsTest = isTest;
             IsFreeTrial = isFreeTrial;
             AllowedCustomerOperations = allowedCustomerOperations;
-            SessionId = sessionId;
-            FulfillmentId = fulfillmentId;
-            StoreFront = storeFront;
             SandboxType = sandboxType;
             Created = created;
             SessionMode = sessionMode;
@@ -83,9 +77,6 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <summary> true - the customer subscription is currently in free trial, false - the customer subscription is not currently in free trial.(optional field - default false). </summary>
         public bool? IsFreeTrial { get; }
         public IReadOnlyList<AllowedCustomerOperationsEnum> AllowedCustomerOperations { get; }
-        public Guid? SessionId { get; }
-        public Guid? FulfillmentId { get; }
-        public string StoreFront { get; }
         /// <summary> Possible Values are None, Csp (Csp sandbox purchase). </summary>
         public SandboxTypeEnum? SandboxType { get; }
         public DateTimeOffset? Created { get; }

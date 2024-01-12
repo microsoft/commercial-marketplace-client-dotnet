@@ -144,7 +144,7 @@ namespace Microsoft.Marketplace.SaaS
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public async Task<Response<Operation>> GetOperationStatusAsync(Guid subscriptionId, Guid operationId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public async Task<Response<SaaSOperation>> GetOperationStatusAsync(Guid subscriptionId, Guid operationId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var message = CreateGetOperationStatusRequest(subscriptionId, operationId, requestId, correlationId);
             await _pipeline.SendAsync(message, cancellationToken).ConfigureAwait(false);
@@ -152,9 +152,9 @@ namespace Microsoft.Marketplace.SaaS
             {
                 case 200:
                     {
-                        Operation value = default;
+                        SaaSOperation value = default;
                         using var document = await JsonDocument.ParseAsync(message.Response.ContentStream, default, cancellationToken).ConfigureAwait(false);
-                        value = Operation.DeserializeOperation(document.RootElement);
+                        value = SaaSOperation.DeserializeSaaSOperation(document.RootElement);
                         return Response.FromValue(value, message.Response);
                     }
                 default:
@@ -168,7 +168,7 @@ namespace Microsoft.Marketplace.SaaS
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public Response<Operation> GetOperationStatus(Guid subscriptionId, Guid operationId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public Response<SaaSOperation> GetOperationStatus(Guid subscriptionId, Guid operationId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var message = CreateGetOperationStatusRequest(subscriptionId, operationId, requestId, correlationId);
             _pipeline.Send(message, cancellationToken);
@@ -176,9 +176,9 @@ namespace Microsoft.Marketplace.SaaS
             {
                 case 200:
                     {
-                        Operation value = default;
+                        SaaSOperation value = default;
                         using var document = JsonDocument.Parse(message.Response.ContentStream);
-                        value = Operation.DeserializeOperation(document.RootElement);
+                        value = SaaSOperation.DeserializeSaaSOperation(document.RootElement);
                         return Response.FromValue(value, message.Response);
                     }
                 default:

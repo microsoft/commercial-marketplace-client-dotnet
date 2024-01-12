@@ -9,32 +9,32 @@ using System.Collections.Generic;
 using System.Text.Json;
 using Azure.Core;
 
-namespace Microsoft.Marketplace.SaaS.Models
+namespace Microsoft.Marketplace.Metering.Models
 {
-    public partial class OperationList
+    public partial class GetUsageEventOkResponse
     {
-        internal static OperationList DeserializeOperationList(JsonElement element)
+        internal static GetUsageEventOkResponse DeserializeGetUsageEventOkResponse(JsonElement element)
         {
-            Optional<IReadOnlyList<SaaSOperation>> operations = default;
+            Optional<IReadOnlyList<GetUsageEvent>> request = default;
             foreach (var property in element.EnumerateObject())
             {
-                if (property.NameEquals("operations"))
+                if (property.NameEquals("request"))
                 {
                     if (property.Value.ValueKind == JsonValueKind.Null)
                     {
                         property.ThrowNonNullablePropertyIsNull();
                         continue;
                     }
-                    List<SaaSOperation> array = new List<SaaSOperation>();
+                    List<GetUsageEvent> array = new List<GetUsageEvent>();
                     foreach (var item in property.Value.EnumerateArray())
                     {
-                        array.Add(SaaSOperation.DeserializeSaaSOperation(item));
+                        array.Add(GetUsageEvent.DeserializeGetUsageEvent(item));
                     }
-                    operations = array;
+                    request = array;
                     continue;
                 }
             }
-            return new OperationList(Optional.ToList(operations));
+            return new GetUsageEventOkResponse(Optional.ToList(request));
         }
     }
 }

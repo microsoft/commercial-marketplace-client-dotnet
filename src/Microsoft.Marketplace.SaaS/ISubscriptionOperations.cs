@@ -11,9 +11,9 @@ namespace Microsoft.Marketplace.SaaS
 {
     public interface ISubscriptionOperations
     {
-        Response<Operation> GetOperationStatus(Guid subscriptionId, Guid operationId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
+        Response<SaaSOperation> GetOperationStatus(Guid subscriptionId, Guid operationId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 
-        Task<Response<Operation>> GetOperationStatusAsync(Guid subscriptionId, Guid operationId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
+        Task<Response<SaaSOperation>> GetOperationStatusAsync(Guid subscriptionId, Guid operationId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 
         Response<OperationList> ListOperations(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 

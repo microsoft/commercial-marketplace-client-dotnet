@@ -9,15 +9,15 @@ using System;
 
 namespace Microsoft.Marketplace.SaaS.Models
 {
-    /// <summary> The Operation. </summary>
-    public partial class Operation
+    /// <summary> The SaaSOperation. </summary>
+    public partial class SaaSOperation
     {
-        /// <summary> Initializes a new instance of Operation. </summary>
-        internal Operation()
+        /// <summary> Initializes a new instance of SaaSOperation. </summary>
+        internal SaaSOperation()
         {
         }
 
-        /// <summary> Initializes a new instance of Operation. </summary>
+        /// <summary> Initializes a new instance of SaaSOperation. </summary>
         /// <param name="id"> . </param>
         /// <param name="activityId"> . </param>
         /// <param name="subscriptionId"> . </param>
@@ -28,7 +28,7 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <param name="action"> . </param>
         /// <param name="timeStamp"> . </param>
         /// <param name="status"> . </param>
-        internal Operation(Guid? id, Guid? activityId, Guid? subscriptionId, string offerId, string publisherId, string planId, int? quantity, OperationActionEnum? action, DateTimeOffset? timeStamp, OperationStatusEnum? status)
+        internal SaaSOperation(Guid? id, Guid? activityId, Guid? subscriptionId, string offerId, string publisherId, string planId, int? quantity, OperationActionEnum? action, DateTimeOffset? timeStamp, OperationStatusEnum? status)
         {
             Id = id;
             ActivityId = activityId;

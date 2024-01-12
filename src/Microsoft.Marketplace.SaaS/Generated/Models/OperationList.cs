@@ -16,16 +16,16 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <summary> Initializes a new instance of OperationList. </summary>
         internal OperationList()
         {
-            Operations = new ChangeTrackingList<Operation>();
+            Operations = new ChangeTrackingList<SaaSOperation>();
         }
 
         /// <summary> Initializes a new instance of OperationList. </summary>
         /// <param name="operations"> . </param>
-        internal OperationList(IReadOnlyList<Operation> operations)
+        internal OperationList(IReadOnlyList<SaaSOperation> operations)
         {
             Operations = operations;
         }
 
-        public IReadOnlyList<Operation> Operations { get; }
+        public IReadOnlyList<SaaSOperation> Operations { get; }
     }
 }

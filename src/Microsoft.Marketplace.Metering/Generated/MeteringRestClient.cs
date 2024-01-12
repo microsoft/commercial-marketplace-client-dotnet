@@ -210,5 +210,110 @@ namespace Microsoft.Marketplace.Metering
                     throw _clientDiagnostics.CreateRequestFailedException(message.Response);
             }
         }
+
+        internal HttpMessage CreateGetUsageEventRequest(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate, string offerId, string planId, string dimension, Guid? azureSubscriptionId, ReconStatusEnum? reconStatus, Guid? requestId, Guid? correlationId)
+        {
+            var message = _pipeline.CreateMessage();
+            var request = message.Request;
+            request.Method = RequestMethod.Post;
+            var uri = new RawRequestUriBuilder();
+            uri.Reset(endpoint);
+            uri.AppendPath("/usageEvents", false);
+            uri.AppendQuery("api-version", apiVersion, true);
+            uri.AppendQuery("usageStartDate", usageStartDate, "O", true);
+            if (usageEndDate != null)
+            {
+                uri.AppendQuery("UsageEndDate", usageEndDate.Value, "O", true);
+            }
+            if (offerId != null)
+            {
+                uri.AppendQuery("offerId", offerId, true);
+            }
+            if (planId != null)
+            {
+                uri.AppendQuery("planId", planId, true);
+            }
+            if (dimension != null)
+            {
+                uri.AppendQuery("dimension", dimension, true);
+            }
+            if (azureSubscriptionId != null)
+            {
+                uri.AppendQuery("azureSubscriptionId", azureSubscriptionId.Value, true);
+            }
+            if (reconStatus != null)
+            {
+                uri.AppendQuery("reconStatus", reconStatus.Value.ToSerialString(), true);
+            }
+            request.Uri = uri;
+            if (requestId != null)
+            {
+                request.Headers.Add("x-ms-requestid", requestId.Value);
+            }
+            if (correlationId != null)
+            {
+                request.Headers.Add("x-ms-correlationid", correlationId.Value);
+            }
+            request.Headers.Add("Accept", "application/json");
+            return message;
+        }
+
+        /// <summary> You can call the usage events API to get the list of usage events. </summary>
+        /// <param name="usageStartDate"> DateTime in ISO8601 format. For example, 2020-12-03T15:00 or 2020-12-03. </param>
+        /// <param name="usageEndDate"> DateTime in ISO8601 format. Default = current date. </param>
+        /// <param name="offerId"> OfferId. </param>
+        /// <param name="planId"> PlanId. </param>
+        /// <param name="dimension"> DimensionId. </param>
+        /// <param name="azureSubscriptionId"> Azure Subscription Id. </param>
+        /// <param name="reconStatus"> Recon Status. </param>
+        /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
+        /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
+        /// <param name="cancellationToken"> The cancellation token to use. </param>
+        public async Task<Response<GetUsageEventOkResponse>> GetUsageEventAsync(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        {
+            using var message = CreateGetUsageEventRequest(usageStartDate, usageEndDate, offerId, planId, dimension, azureSubscriptionId, reconStatus, requestId, correlationId);
+            await _pipeline.SendAsync(message, cancellationToken).ConfigureAwait(false);
+            switch (message.Response.Status)
+            {
+                case 200:
+                    {
+                        GetUsageEventOkResponse value = default;
+                        using var document = await JsonDocument.ParseAsync(message.Response.ContentStream, default, cancellationToken).ConfigureAwait(false);
+                        value = GetUsageEventOkResponse.DeserializeGetUsageEventOkResponse(document.RootElement);
+                        return Response.FromValue(value, message.Response);
+                    }
+                default:
+                    throw await _clientDiagnostics.CreateRequestFailedExceptionAsync(message.Response).ConfigureAwait(false);
+            }
+        }
+
+        /// <summary> You can call the usage events API to get the list of usage events. </summary>
+        /// <param name="usageStartDate"> DateTime in ISO8601 format. For example, 2020-12-03T15:00 or 2020-12-03. </param>
+        /// <param name="usageEndDate"> DateTime in ISO8601 format. Default = current date. </param>
+        /// <param name="offerId"> OfferId. </param>
+        /// <param name="planId"> PlanId. </param>
+        /// <param name="dimension"> DimensionId. </param>
+        /// <param name="azureSubscriptionId"> Azure Subscription Id. </param>
+        /// <param name="reconStatus"> Recon Status. </param>
+        /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
+        /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
+        /// <param name="cancellationToken"> The cancellation token to use. </param>
+        public Response<GetUsageEventOkResponse> GetUsageEvent(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        {
+            using var message = CreateGetUsageEventRequest(usageStartDate, usageEndDate, offerId, planId, dimension, azureSubscriptionId, reconStatus, requestId, correlationId);
+            _pipeline.Send(message, cancellationToken);
+            switch (message.Response.Status)
+            {
+                case 200:
+                    {
+                        GetUsageEventOkResponse value = default;
+                        using var document = JsonDocument.Parse(message.Response.ContentStream);
+                        value = GetUsageEventOkResponse.DeserializeGetUsageEventOkResponse(document.RootElement);
+                        return Response.FromValue(value, message.Response);
+                    }
+                default:
+                    throw _clientDiagnostics.CreateRequestFailedException(message.Response);
+            }
+        }
     }
 }

@@ -30,9 +30,6 @@ namespace Microsoft.Marketplace.SaaS.Models
             Optional<bool> isTest = default;
             Optional<bool> isFreeTrial = default;
             Optional<IReadOnlyList<AllowedCustomerOperationsEnum>> allowedCustomerOperations = default;
-            Optional<Guid> sessionId = default;
-            Optional<Guid> fulfillmentId = default;
-            Optional<string> storeFront = default;
             Optional<SandboxTypeEnum> sandboxType = default;
             Optional<DateTimeOffset> created = default;
             Optional<SessionModeEnum> sessionMode = default;
@@ -163,31 +160,6 @@ namespace Microsoft.Marketplace.SaaS.Models
                     allowedCustomerOperations = array;
                     continue;
                 }
-                if (property.NameEquals("sessionId"))
-                {
-                    if (property.Value.ValueKind == JsonValueKind.Null)
-                    {
-                        property.ThrowNonNullablePropertyIsNull();
-                        continue;
-                    }
-                    sessionId = property.Value.GetGuid();
-                    continue;
-                }
-                if (property.NameEquals("fulfillmentId"))
-                {
-                    if (property.Value.ValueKind == JsonValueKind.Null)
-                    {
-                        property.ThrowNonNullablePropertyIsNull();
-                        continue;
-                    }
-                    fulfillmentId = property.Value.GetGuid();
-                    continue;
-                }
-                if (property.NameEquals("storeFront"))
-                {
-                    storeFront = property.Value.GetString();
-                    continue;
-                }
                 if (property.NameEquals("sandboxType"))
                 {
                     if (property.Value.ValueKind == JsonValueKind.Null)
@@ -219,7 +191,7 @@ namespace Microsoft.Marketplace.SaaS.Models
                     continue;
                 }
             }
-            return new Subscription(Optional.ToNullable(id), publisherId.Value, offerId.Value, name.Value, Optional.ToNullable(saasSubscriptionStatus), beneficiary.Value, purchaser.Value, planId.Value, Optional.ToNullable(quantity), term.Value, Optional.ToNullable(autoRenew), Optional.ToNullable(isTest), Optional.ToNullable(isFreeTrial), Optional.ToList(allowedCustomerOperations), Optional.ToNullable(sessionId), Optional.ToNullable(fulfillmentId), storeFront.Value, Optional.ToNullable(sandboxType), Optional.ToNullable(created), Optional.ToNullable(sessionMode));
+            return new Subscription(Optional.ToNullable(id), publisherId.Value, offerId.Value, name.Value, Optional.ToNullable(saasSubscriptionStatus), beneficiary.Value, purchaser.Value, planId.Value, Optional.ToNullable(quantity), term.Value, Optional.ToNullable(autoRenew), Optional.ToNullable(isTest), Optional.ToNullable(isFreeTrial), Optional.ToList(allowedCustomerOperations), Optional.ToNullable(sandboxType), Optional.ToNullable(created), Optional.ToNullable(sessionMode));
         }
     }
 }
