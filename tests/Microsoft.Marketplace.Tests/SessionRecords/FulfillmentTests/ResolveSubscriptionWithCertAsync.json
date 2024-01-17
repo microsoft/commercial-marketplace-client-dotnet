@@ -6,59 +6,60 @@
       "RequestHeaders": {
         "Accept": "application/json",
         "Authorization": "Sanitized",
-        "traceparent": "00-8b235b5624818e45b17bc67ad04432c8-e5bd48476d70e947-00",
-        "User-Agent": [
-          "azsdk-net-Microsoft.Marketplace/1.0.0",
-          "(.NET 5.0.2; Microsoft Windows 10.0.21332)"
-        ],
+        "traceparent": "00-37da38d26c6fffc5e4086029ae5bc85a-58cad35b458b02f7-00",
+        "User-Agent": "azsdk-net-Microsoft.Marketplace/1.0.0 (.NET 6.0.26; Microsoft Windows 10.0.22621)",
         "x-ms-client-request-id": "8ee70faf-9b5f-e40d-dbb9-ba6a9b5da94e",
-        "x-ms-marketplace-token": "IPZARpJbiIC3rDAESnmm2Zg1GJdHYHshWjLOvr/g\u002BASyLao9rPVrQ\u002Bmu2Li6uOBdtf7v/vXH6v\u002BFdBT8egYh0Pmrv/kLoIbf/MuINnMLi\u002B4IW2UFhR2qsrxRbEBfxYthSjKIrk28TgeZp19rDcNV1GqSXqR49Pma9i9EkPj6E8OTd71WWrJHG/4j\u002BGOtm3Q1sFoBIzslczlC\u002BBX89bcH8/a3zbir8fy\u002BrDl576YKdE8=",
+        "x-ms-marketplace-token": "2FnFznEDcwKdPBXWJ/3Lm\u002B3pZHkfYAgDLE8g7Msv2kQ1Z5P9x8Ddtq4ST4VV8PauQjkTaUpH74IclbSNexpiD9jdickD4U2waJ0KatdID8UdS6/xOvIlu5H7uawLWQUnzLCvNa0BNBR2VOGStPaC6PUG0RI/tqfwooiCH4OgYc5zRNC9qZAB3BBf4L9JpFGJRa6H2cnEcdwi/ZRN89u87w==",
         "x-ms-return-client-request-id": "true"
       },
       "RequestBody": null,
       "StatusCode": 200,
       "ResponseHeaders": {
-        "Content-Length": "1027",
+        "Accept-Ranges": "bytes",
+        "Connection": "keep-alive",
+        "Content-Length": "1000",
         "Content-Type": "application/json; charset=utf-8",
-        "Date": "Mon, 15 Mar 2021 23:06:05 GMT",
+        "Date": "Wed, 17 Jan 2024 17:40:58 GMT",
+        "mise-correlation-id": "5b1c6e34-ef0e-4a66-90cf-e4452c3a9d01",
         "Set-Cookie": [
-          "ARRAffinity=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;Secure;Domain=main.prod.marketplaceapi.azure.com",
-          "ARRAffinitySameSite=13673d48a5a129d46ca17ebde23192c9909d356fbe3a23654c2a7fe603495bcb;Path=/;HttpOnly;SameSite=None;Secure;Domain=main.prod.marketplaceapi.azure.com"
+          "ARRAffinity=de7d6685337db5796ac937cb299869659d92886509fa86a84877d6b74ca14565;Path=/;HttpOnly;Secure;Domain=saasapi.azure.com",
+          "ARRAffinitySameSite=de7d6685337db5796ac937cb299869659d92886509fa86a84877d6b74ca14565;Path=/;HttpOnly;SameSite=None;Secure;Domain=saasapi.azure.com"
         ],
-        "X-Azure-Ref": "0XehPYAAAAADhSegXyoOQQKHwLbEPmH4zV1NURURHRTA4MDgAMzEwNGIwOWItOTRhZS00NmZjLTkwMDYtMWVhMjA3YmE3YzE4",
+        "x-azure-ref": "20240117T174058Z-suh3u1r1517sxduexs3ga16k3800000000bg00000000bs0s",
+        "X-Cache": "CONFIG_NOCACHE",
         "X-Content-Type-Options": "nosniff",
-        "x-ms-activityid": "2a674cb3-1459-44e0-9d0f-135fb819a1c5",
-        "x-ms-correlationid": "094609e4-30c7-4b12-9f54-2bbc02e41eed",
-        "x-ms-requestid": "094609e4-30c7-4b12-9f54-2bbc02e41eed",
+        "x-ms-activityid": "cbb76436-c4f1-45bf-a165-4cc117313fa3",
+        "x-ms-correlationid": "a2a80b3a-d1ea-4b3c-9ed7-c44c170a07e0",
+        "x-ms-requestid": "a2a80b3a-d1ea-4b3c-9ed7-c44c170a07e0",
         "X-Powered-By": "ASP.NET"
       },
       "ResponseBody": {
-        "id": "da8dc4ae-4cdf-ed6b-e12e-9d0219306842",
-        "subscriptionName": "Redmond121",
-        "offerId": "contoso_saas_offer-preview",
-        "planId": "silver",
+        "id": "b8d6908b-0058-413a-cd62-b6761cf31997",
+        "subscriptionName": "sb-2023134",
+        "offerId": "sb-test-preview",
+        "planId": "test",
         "subscription": {
-          "id": "da8dc4ae-4cdf-ed6b-e12e-9d0219306842",
+          "id": "b8d6908b-0058-413a-cd62-b6761cf31997",
           "publisherId": "testtestindustryexperiencestest",
-          "offerId": "contoso_saas_offer-preview",
-          "name": "Redmond121",
+          "offerId": "sb-test-preview",
+          "name": "sb-2023134",
           "saasSubscriptionStatus": "Subscribed",
           "beneficiary": {
-            "emailId": "ercenk@microsoft.com",
-            "objectId": "df30a7e0-98dc-41a6-afa6-d1ddea551529",
+            "emailId": "sbomma@microsoft.com",
+            "objectId": "20688948-5bcb-4b80-bc9d-4cb83b4e32fd",
             "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-            "puid": "10033FFFA7593A0D"
+            "puid": "10032000748AD514"
           },
           "purchaser": {
-            "emailId": "ercenk@microsoft.com",
-            "objectId": "df30a7e0-98dc-41a6-afa6-d1ddea551529",
+            "emailId": "sbomma@microsoft.com",
+            "objectId": "20688948-5bcb-4b80-bc9d-4cb83b4e32fd",
             "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-            "puid": "10033FFFA7593A0D"
+            "puid": "10032000748AD514"
           },
-          "planId": "silver",
+          "planId": "test",
           "term": {
-            "startDate": "2021-02-21T00:00:00Z",
-            "endDate": "2021-03-20T00:00:00Z",
+            "startDate": "2024-01-14T00:00:00Z",
+            "endDate": "2024-02-13T00:00:00Z",
             "termUnit": "P1M"
           },
           "autoRenew": true,
@@ -66,11 +67,11 @@
           "isFreeTrial": false,
           "allowedCustomerOperations": [
             "Delete",
-            "Update",
-            "Read"
+            "Read",
+            "Update"
           ],
           "sandboxType": "None",
-          "created": "2021-01-21T18:47:25.2241546Z",
+          "created": "2023-04-14T00:07:14.962328Z",
           "lastModified": "0001-01-01T00:00:00",
           "sessionMode": "None"
         }
