@@ -5,15 +5,15 @@
   <!-- <Import Project="$(MSBuildThisFileDirectory)\Directory.Build.props" Condition="Exists('..\Directory.Build.props')" /> -->
 
   <PropertyGroup>
-    <RequiredTargetFrameworks Condition="$(RequiredTargetFrameworks) == ''">netstandard2.0;net5.0;net47</RequiredTargetFrameworks>
+    <RequiredTargetFrameworks Condition="$(RequiredTargetFrameworks) == ''">netstandard2.0;net461;net472;net6.0</RequiredTargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Identity" Version="1.3.0"/>
-    <PackageReference Include="System.Text.Json" Version="5.0.1" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.9.0" />
-    <PackageReference Include="Microsoft.Azure.AutoRest.CSharp" Version="3.0.0-beta.20210211.2" PrivateAssets="All"/>
-    <PackageReference Include="Azure.Core" Version="1.10.0"/>
+	<PackageReference Include="Azure.Identity" Version="1.10.4" />
+	  <PackageReference Include="System.Text.Json" Version="8.0.1" />
+	  <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
+	  <PackageReference Include="Microsoft.Azure.AutoRest.CSharp" Version="3.0.0-beta.20210211.2" PrivateAssets="All"/>
+    <PackageReference Include="Azure.Core" Version="1.37.0"/>
   </ItemGroup>
 
 </Project>
