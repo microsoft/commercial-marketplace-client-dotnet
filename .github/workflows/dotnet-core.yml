@@ -17,17 +17,12 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
-    - name: Setup .NET Core 3.1.*
-      uses: actions/setup-dotnet@v1
+    - name: Setup .NET Core 6.x
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 3.1.*
-
-    - name: Setup .NET Core 5.0.*
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '5.0.*'        
+        dotnet-version: '6.x'        
 
     - name: Build
       run: dotnet build --configuration 'release'
@@ -64,17 +59,8 @@ jobs:
 
     # upload report as build artifact
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: ${{always()}}
       with:
         name: 'Test Run'
-        path: ${{github.workspace}}/${{steps.TITLES.outputs.file_name}}      
-
-      # add report as PR comment (if PR)
-    - name: comment PR
-      uses: machine-learning-apps/pr-comment@master
-      if: ${{ github.event_name == 'pull_request' }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        path: ${{steps.TITLES.outputs.file_name}}        
+        path: ${{github.workspace}}/${{steps.TITLES.outputs.file_name}}
