@@ -28,7 +28,7 @@ namespace Microsoft.Marketplace.Tests
     public class FulfillmentTests : RecordedTestBase
 #pragma warning restore SA1600 // Elements should be documented
     {
-        private const string MarketplacePurchaseIdentificationToken = "inmOxcJjQvimZIut3eWMEB+RtzzUo0qq3Nuh+bKBZKD1cEbZHXJjcrzNcqxEQ89e+5nDQp8W+ygq8HuTFodyCteWZMNs5m9YKH3g6qC97InQhopMINwfy98gl8CijQgKeoDFJ3P2EEoP0alcVt8P+R2ireQKGmjcNuZwABrdGoVpQj1Kxjs33CncEQcGE2Yytl5CWMvuvPepgbeteKPXHG5g0oLjD9k+Vst3DdeeVXU=";
+        private const string MarketplacePurchaseIdentificationToken = "U4wtO5hPEoEuy665AFbbpUzkxRMAKuAIkxZ7rXeOHeSI5zcVg/srm8WiQd5eay5GB6bFeSyKEzsMUYFB3NoVpxgOHDs9KZ4aTT6RtAOioQjl9sk9tgKjHn/OwWdod84RtnZGDMddEQlkqkTGMrDLTj7+91mMSfHRTb57UnpuRDxy64gyKVD9svhvmsDSlqTPKrYctlOEkBD6DS6M2sKXLoPGyc0meWeFTHt8JVns+BQ=";
 
         private IConfigurationRoot config;
 
