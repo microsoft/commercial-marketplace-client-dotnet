@@ -6,6 +6,7 @@
 #nullable disable
 
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Azure;
@@ -127,7 +128,7 @@ namespace Microsoft.Marketplace.Metering
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual async Task<Response<GetUsageEventOkResponse>> GetUsageEventAsync(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public virtual async Task<Response<IReadOnlyList<GetUsageEvent>>> GetUsageEventAsync(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var scope = _clientDiagnostics.CreateScope("MeteringOperations.GetUsageEvent");
             scope.Start();
@@ -153,7 +154,7 @@ namespace Microsoft.Marketplace.Metering
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual Response<GetUsageEventOkResponse> GetUsageEvent(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public virtual Response<IReadOnlyList<GetUsageEvent>> GetUsageEvent(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var scope = _clientDiagnostics.CreateScope("MeteringOperations.GetUsageEvent");
             scope.Start();

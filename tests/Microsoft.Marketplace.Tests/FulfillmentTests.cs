@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
-using System.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Azure.Core;
@@ -36,9 +35,9 @@ namespace Microsoft.Marketplace.Tests
 #pragma warning disable SA1600 // Elements should be documented
         public FulfillmentTests()
 
-          // Uncomment following to record
-          // : base(true, RecordedTestMode.Record)
-           : base(true, RecordedTestMode.Playback)
+        // Uncomment following to record
+        // : base(true, RecordedTestMode.Record)
+        : base(true, RecordedTestMode.Playback)
 #pragma warning restore SA1600 // Elements should be documented
         {
             this.config = new ConfigurationBuilder()
@@ -263,6 +262,16 @@ namespace Microsoft.Marketplace.Tests
             ClassicAssert.IsTrue(result.Value.Result.All(r => r.Status == UsageEventStatusEnum.Duplicate));
             ClassicAssert.IsTrue(result.Value.Result.All(r => r.Error != default));
             ClassicAssert.IsTrue(result.Value.Result.All(r => r.UsageEventId == default));
+        }
+
+        [RecordedTest]
+        public async Task GetMeterUsage()
+        {
+            var sut = this.InstrumentClient(this.GetMarketplaceMeteringClient());
+            var yesterday = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2024-01-18T06:12:40.0746760Z").ToUniversalTime() : DateTime.UtcNow.AddDays(-1);
+            var result = await sut.Metering.GetUsageEventAsync(yesterday);
+
+            ClassicAssert.IsTrue(result.Value.Any());
         }
 
         private MarketplaceSaaSClient GetMarketplaceSaaSClient(bool useCert = false)

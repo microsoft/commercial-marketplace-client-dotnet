@@ -6,6 +6,7 @@
 #nullable disable
 
 using System;
+using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -215,7 +216,7 @@ namespace Microsoft.Marketplace.Metering
         {
             var message = _pipeline.CreateMessage();
             var request = message.Request;
-            request.Method = RequestMethod.Post;
+            request.Method = RequestMethod.Get;
             var uri = new RawRequestUriBuilder();
             uri.Reset(endpoint);
             uri.AppendPath("/usageEvents", false);
@@ -269,7 +270,7 @@ namespace Microsoft.Marketplace.Metering
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public async Task<Response<GetUsageEventOkResponse>> GetUsageEventAsync(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public async Task<Response<IReadOnlyList<GetUsageEvent>>> GetUsageEventAsync(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var message = CreateGetUsageEventRequest(usageStartDate, usageEndDate, offerId, planId, dimension, azureSubscriptionId, reconStatus, requestId, correlationId);
             await _pipeline.SendAsync(message, cancellationToken).ConfigureAwait(false);
@@ -277,9 +278,14 @@ namespace Microsoft.Marketplace.Metering
             {
                 case 200:
                     {
-                        GetUsageEventOkResponse value = default;
+                        IReadOnlyList<GetUsageEvent> value = default;
                         using var document = await JsonDocument.ParseAsync(message.Response.ContentStream, default, cancellationToken).ConfigureAwait(false);
-                        value = GetUsageEventOkResponse.DeserializeGetUsageEventOkResponse(document.RootElement);
+                        List<GetUsageEvent> array = new List<GetUsageEvent>();
+                        foreach (var item in document.RootElement.EnumerateArray())
+                        {
+                            array.Add(Models.GetUsageEvent.DeserializeGetUsageEvent(item));
+                        }
+                        value = array;
                         return Response.FromValue(value, message.Response);
                     }
                 default:
@@ -298,7 +304,7 @@ namespace Microsoft.Marketplace.Metering
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public Response<GetUsageEventOkResponse> GetUsageEvent(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public Response<IReadOnlyList<GetUsageEvent>> GetUsageEvent(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var message = CreateGetUsageEventRequest(usageStartDate, usageEndDate, offerId, planId, dimension, azureSubscriptionId, reconStatus, requestId, correlationId);
             _pipeline.Send(message, cancellationToken);
@@ -306,9 +312,14 @@ namespace Microsoft.Marketplace.Metering
             {
                 case 200:
                     {
-                        GetUsageEventOkResponse value = default;
+                        IReadOnlyList<GetUsageEvent> value = default;
                         using var document = JsonDocument.Parse(message.Response.ContentStream);
-                        value = GetUsageEventOkResponse.DeserializeGetUsageEventOkResponse(document.RootElement);
+                        List<GetUsageEvent> array = new List<GetUsageEvent>();
+                        foreach (var item in document.RootElement.EnumerateArray())
+                        {
+                            array.Add(Models.GetUsageEvent.DeserializeGetUsageEvent(item));
+                        }
+                        value = array;
                         return Response.FromValue(value, message.Response);
                     }
                 default:
