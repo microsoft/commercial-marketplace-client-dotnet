@@ -5,6 +5,8 @@
 
 #nullable disable
 
+using System;
+using System.Collections.Generic;
 using System.Text.Json;
 using Azure.Core;
 
@@ -18,11 +20,14 @@ namespace Microsoft.Marketplace.SaaS.Models
             Optional<string> displayName = default;
             Optional<bool> isPrivate = default;
             Optional<string> description = default;
+            Optional<long> minQuantity = default;
+            Optional<long> maxQuantity = default;
             Optional<bool> hasFreeTrials = default;
             Optional<bool> isPricePerSeat = default;
             Optional<bool> isStopSell = default;
             Optional<string> market = default;
             Optional<PlanComponents> planComponents = default;
+            Optional<IReadOnlyList<Guid>> sourceOffers = default;
             foreach (var property in element.EnumerateObject())
             {
                 if (property.NameEquals("planId"))
@@ -48,6 +53,26 @@ namespace Microsoft.Marketplace.SaaS.Models
                 if (property.NameEquals("description"))
                 {
                     description = property.Value.GetString();
+                    continue;
+                }
+                if (property.NameEquals("minQuantity"))
+                {
+                    if (property.Value.ValueKind == JsonValueKind.Null)
+                    {
+                        property.ThrowNonNullablePropertyIsNull();
+                        continue;
+                    }
+                    minQuantity = property.Value.GetInt64();
+                    continue;
+                }
+                if (property.NameEquals("maxQuantity"))
+                {
+                    if (property.Value.ValueKind == JsonValueKind.Null)
+                    {
+                        property.ThrowNonNullablePropertyIsNull();
+                        continue;
+                    }
+                    maxQuantity = property.Value.GetInt64();
                     continue;
                 }
                 if (property.NameEquals("hasFreeTrials"))
@@ -95,8 +120,23 @@ namespace Microsoft.Marketplace.SaaS.Models
                     planComponents = PlanComponents.DeserializePlanComponents(property.Value);
                     continue;
                 }
+                if (property.NameEquals("sourceOffers"))
+                {
+                    if (property.Value.ValueKind == JsonValueKind.Null)
+                    {
+                        property.ThrowNonNullablePropertyIsNull();
+                        continue;
+                    }
+                    List<Guid> array = new List<Guid>();
+                    foreach (var item in property.Value.EnumerateArray())
+                    {
+                        array.Add(item.GetGuid());
+                    }
+                    sourceOffers = array;
+                    continue;
+                }
             }
-            return new Plan(planId.Value, displayName.Value, Optional.ToNullable(isPrivate), description.Value, Optional.ToNullable(hasFreeTrials), Optional.ToNullable(isPricePerSeat), Optional.ToNullable(isStopSell), market.Value, planComponents.Value);
+            return new Plan(planId.Value, displayName.Value, Optional.ToNullable(isPrivate), description.Value, Optional.ToNullable(minQuantity), Optional.ToNullable(maxQuantity), Optional.ToNullable(hasFreeTrials), Optional.ToNullable(isPricePerSeat), Optional.ToNullable(isStopSell), market.Value, planComponents.Value, Optional.ToList(sourceOffers));
         }
     }
 }

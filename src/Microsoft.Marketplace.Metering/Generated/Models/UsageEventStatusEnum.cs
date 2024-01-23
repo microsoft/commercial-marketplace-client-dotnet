@@ -22,6 +22,8 @@ namespace Microsoft.Marketplace.Metering.Models
         ResourceNotFound,
         /// <summary> ResourceNotAuthorized. </summary>
         ResourceNotAuthorized,
+        /// <summary> ResourceNotActive. </summary>
+        ResourceNotActive,
         /// <summary> InvalidDimension. </summary>
         InvalidDimension,
         /// <summary> InvalidQuantity. </summary>

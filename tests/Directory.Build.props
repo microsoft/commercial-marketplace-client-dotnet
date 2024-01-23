@@ -4,7 +4,7 @@
   <!-- <Import Project="$(MSBuildThisFileDirectory)\Directory.Build.props" Condition="Exists('..\Directory.Build.props')" /> -->
 
   <PropertyGroup>
-    <RequiredTargetFrameworks Condition="$(RequiredTargetFrameworks) == ''">netstandard2.0;net5.0;net47</RequiredTargetFrameworks>
+    <RequiredTargetFrameworks Condition="$(RequiredTargetFrameworks) == ''">net6.0;net47</RequiredTargetFrameworks>
   </PropertyGroup>
 
 </Project>

@@ -1,0 +1,40 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "https://marketplaceapi.microsoft.com/api/usageEvents?api-version=2018-08-31\u0026usageStartDate=2024-01-18T06%3A12%3A40.0746760Z",
+      "RequestMethod": "GET",
+      "RequestHeaders": {
+        "Accept": "application/json",
+        "Authorization": "Sanitized",
+        "traceparent": "00-742831eb8c8e7c22ccf8d19be01f4fb9-ec7ee813bfee1b56-00",
+        "User-Agent": "azsdk-net-Microsoft.Marketplace/1.0.0 (.NET 6.0.26; Microsoft Windows 10.0.22621)",
+        "x-ms-client-request-id": "18f5ce3e-6790-a548-91fc-0cb06c94a724",
+        "x-ms-return-client-request-id": "true"
+      },
+      "RequestBody": null,
+      "StatusCode": 200,
+      "ResponseHeaders": {
+        "Accept-Ranges": "bytes",
+        "Connection": "keep-alive",
+        "Content-Length": "1089",
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Fri, 19 Jan 2024 06:12:41 GMT",
+        "mise-correlation-id": "b4714cb7-fd04-4dd0-a4e6-002d20236d47",
+        "Set-Cookie": [
+          "ARRAffinity=3b465a6a7ecf1050cba96e08bdd73408f917882519717f0e1456eda9f6b61aee;Path=/;HttpOnly;Secure;Domain=saasapi.azure.com",
+          "ARRAffinitySameSite=3b465a6a7ecf1050cba96e08bdd73408f917882519717f0e1456eda9f6b61aee;Path=/;HttpOnly;SameSite=None;Secure;Domain=saasapi.azure.com"
+        ],
+        "x-azure-ref": "20240119T061241Z-sptutmqcg11cx8k9v1edm5p8x800000000m000000001t892",
+        "X-Cache": "CONFIG_NOCACHE",
+        "X-Content-Type-Options": "nosniff",
+        "x-ms-correlationid": "bda7fccc-a3b8-4d9b-bc70-7cc49b15f4b1",
+        "x-ms-requestid": "bda7fccc-a3b8-4d9b-bc70-7cc49b15f4b1",
+        "X-Powered-By": "ASP.NET"
+      },
+      "ResponseBody": "[{\u0022usageDate\u0022:\u00222024-01-19T00:00:00Z\u0022,\u0022usageResourceId\u0022:\u002218c51f6e-4d1b-48da-da96-23c9f3558cfc\u0022,\u0022dimension\u0022:\u0022q2\u0022,\u0022planId\u0022:\u0022milestone\u0022,\u0022planName\u0022:\u0022\u0022,\u0022offerId\u0022:\u0022sb-test-preview\u0022,\u0022offerName\u0022:\u0022\u0022,\u0022offerType\u0022:\u0022SaaS\u0022,\u0022azureSubscriptionId\u0022:\u00226791bfbb-5494-4eca-ae6f-e60a7c01077c\u0022,\u0022reconStatus\u0022:\u0022Submitted\u0022,\u0022submittedQuantity\u0022:6.0,\u0022processedQuantity\u0022:0.0,\u0022submittedCount\u0022:6},{\u0022usageDate\u0022:\u00222024-01-18T00:00:00Z\u0022,\u0022usageResourceId\u0022:\u002218c51f6e-4d1b-48da-da96-23c9f3558cfc\u0022,\u0022dimension\u0022:\u0022q2\u0022,\u0022planId\u0022:\u0022milestone\u0022,\u0022planName\u0022:\u0022\u0022,\u0022offerId\u0022:\u0022sb-test-preview\u0022,\u0022offerName\u0022:\u0022\u0022,\u0022offerType\u0022:\u0022SaaS\u0022,\u0022azureSubscriptionId\u0022:\u00226791bfbb-5494-4eca-ae6f-e60a7c01077c\u0022,\u0022reconStatus\u0022:\u0022Submitted\u0022,\u0022submittedQuantity\u0022:17.0,\u0022processedQuantity\u0022:0.0,\u0022submittedCount\u0022:17},{\u0022usageDate\u0022:\u00222024-01-18T00:00:00Z\u0022,\u0022usageResourceId\u0022:\u002248e4f71a-35de-48ec-d602-b748a986587f\u0022,\u0022dimension\u0022:\u0022q2\u0022,\u0022planId\u0022:\u0022milestone\u0022,\u0022planName\u0022:\u0022\u0022,\u0022offerId\u0022:\u0022sb-test-preview\u0022,\u0022offerName\u0022:\u0022\u0022,\u0022offerType\u0022:\u0022SaaS\u0022,\u0022azureSubscriptionId\u0022:\u00226791bfbb-5494-4eca-ae6f-e60a7c01077c\u0022,\u0022reconStatus\u0022:\u0022Submitted\u0022,\u0022submittedQuantity\u0022:1.0,\u0022processedQuantity\u0022:0.0,\u0022submittedCount\u0022:1}]"
+    }
+  ],
+  "Variables": {
+    "RandomSeed": "25035204"
+  }
+}

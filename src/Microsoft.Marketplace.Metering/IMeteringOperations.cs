@@ -19,5 +19,9 @@ namespace Microsoft.Marketplace.Metering
         Response<UsageEventOkResponse> PostUsageEvent(UsageEvent body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 
         Task<Response<UsageEventOkResponse>> PostUsageEventAsync(UsageEvent body, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
+
+        Response<IReadOnlyList<GetUsageEvent>> GetUsageEvent(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
+
+        Task<Response<IReadOnlyList<GetUsageEvent>>> GetUsageEventAsync(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
     }
 }

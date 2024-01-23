@@ -11,9 +11,9 @@ using Azure.Core;
 
 namespace Microsoft.Marketplace.SaaS.Models
 {
-    public partial class Operation
+    public partial class SaaSOperation
     {
-        internal static Operation DeserializeOperation(JsonElement element)
+        internal static SaaSOperation DeserializeSaaSOperation(JsonElement element)
         {
             Optional<Guid> id = default;
             Optional<Guid> activityId = default;
@@ -113,7 +113,7 @@ namespace Microsoft.Marketplace.SaaS.Models
                     continue;
                 }
             }
-            return new Operation(Optional.ToNullable(id), Optional.ToNullable(activityId), Optional.ToNullable(subscriptionId), offerId.Value, publisherId.Value, planId.Value, Optional.ToNullable(quantity), Optional.ToNullable(action), Optional.ToNullable(timeStamp), Optional.ToNullable(status));
+            return new SaaSOperation(Optional.ToNullable(id), Optional.ToNullable(activityId), Optional.ToNullable(subscriptionId), offerId.Value, publisherId.Value, planId.Value, Optional.ToNullable(quantity), Optional.ToNullable(action), Optional.ToNullable(timeStamp), Optional.ToNullable(status));
         }
     }
 }

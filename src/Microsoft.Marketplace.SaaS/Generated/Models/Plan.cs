@@ -5,6 +5,10 @@
 
 #nullable disable
 
+using System;
+using System.Collections.Generic;
+using Azure.Core;
+
 namespace Microsoft.Marketplace.SaaS.Models
 {
     /// <summary> The Plan. </summary>
@@ -13,6 +17,7 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <summary> Initializes a new instance of Plan. </summary>
         internal Plan()
         {
+            SourceOffers = new ChangeTrackingList<Guid>();
         }
 
         /// <summary> Initializes a new instance of Plan. </summary>
@@ -20,32 +25,41 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <param name="displayName"> . </param>
         /// <param name="isPrivate"> . </param>
         /// <param name="description"> . </param>
+        /// <param name="minQuantity"> . </param>
+        /// <param name="maxQuantity"> . </param>
         /// <param name="hasFreeTrials"> . </param>
         /// <param name="isPricePerSeat"> . </param>
         /// <param name="isStopSell"> . </param>
         /// <param name="market"> . </param>
         /// <param name="planComponents"> . </param>
-        internal Plan(string planId, string displayName, bool? isPrivate, string description, bool? hasFreeTrials, bool? isPricePerSeat, bool? isStopSell, string market, PlanComponents planComponents)
+        /// <param name="sourceOffers"> . </param>
+        internal Plan(string planId, string displayName, bool? isPrivate, string description, long? minQuantity, long? maxQuantity, bool? hasFreeTrials, bool? isPricePerSeat, bool? isStopSell, string market, PlanComponents planComponents, IReadOnlyList<Guid> sourceOffers)
         {
             PlanId = planId;
             DisplayName = displayName;
             IsPrivate = isPrivate;
             Description = description;
+            MinQuantity = minQuantity;
+            MaxQuantity = maxQuantity;
             HasFreeTrials = hasFreeTrials;
             IsPricePerSeat = isPricePerSeat;
             IsStopSell = isStopSell;
             Market = market;
             PlanComponents = planComponents;
+            SourceOffers = sourceOffers;
         }
 
         public string PlanId { get; }
         public string DisplayName { get; }
         public bool? IsPrivate { get; }
         public string Description { get; }
+        public long? MinQuantity { get; }
+        public long? MaxQuantity { get; }
         public bool? HasFreeTrials { get; }
         public bool? IsPricePerSeat { get; }
         public bool? IsStopSell { get; }
         public string Market { get; }
         public PlanComponents PlanComponents { get; }
+        public IReadOnlyList<Guid> SourceOffers { get; }
     }
 }

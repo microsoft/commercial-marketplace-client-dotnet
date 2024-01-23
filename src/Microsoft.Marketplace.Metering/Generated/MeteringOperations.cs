@@ -6,6 +6,7 @@
 #nullable disable
 
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Azure;
@@ -108,6 +109,58 @@ namespace Microsoft.Marketplace.Metering
             try
             {
                 return RestClient.PostBatchUsageEvent(body, requestId, correlationId, cancellationToken);
+            }
+            catch (Exception e)
+            {
+                scope.Failed(e);
+                throw;
+            }
+        }
+
+        /// <summary> You can call the usage events API to get the list of usage events. </summary>
+        /// <param name="usageStartDate"> DateTime in ISO8601 format. For example, 2020-12-03T15:00 or 2020-12-03. </param>
+        /// <param name="usageEndDate"> DateTime in ISO8601 format. Default = current date. </param>
+        /// <param name="offerId"> OfferId. </param>
+        /// <param name="planId"> PlanId. </param>
+        /// <param name="dimension"> DimensionId. </param>
+        /// <param name="azureSubscriptionId"> Azure Subscription Id. </param>
+        /// <param name="reconStatus"> Recon Status. </param>
+        /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
+        /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
+        /// <param name="cancellationToken"> The cancellation token to use. </param>
+        public virtual async Task<Response<IReadOnlyList<GetUsageEvent>>> GetUsageEventAsync(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        {
+            using var scope = _clientDiagnostics.CreateScope("MeteringOperations.GetUsageEvent");
+            scope.Start();
+            try
+            {
+                return await RestClient.GetUsageEventAsync(usageStartDate, usageEndDate, offerId, planId, dimension, azureSubscriptionId, reconStatus, requestId, correlationId, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception e)
+            {
+                scope.Failed(e);
+                throw;
+            }
+        }
+
+        /// <summary> You can call the usage events API to get the list of usage events. </summary>
+        /// <param name="usageStartDate"> DateTime in ISO8601 format. For example, 2020-12-03T15:00 or 2020-12-03. </param>
+        /// <param name="usageEndDate"> DateTime in ISO8601 format. Default = current date. </param>
+        /// <param name="offerId"> OfferId. </param>
+        /// <param name="planId"> PlanId. </param>
+        /// <param name="dimension"> DimensionId. </param>
+        /// <param name="azureSubscriptionId"> Azure Subscription Id. </param>
+        /// <param name="reconStatus"> Recon Status. </param>
+        /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
+        /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
+        /// <param name="cancellationToken"> The cancellation token to use. </param>
+        public virtual Response<IReadOnlyList<GetUsageEvent>> GetUsageEvent(DateTimeOffset usageStartDate, DateTimeOffset? usageEndDate = null, string offerId = null, string planId = null, string dimension = null, Guid? azureSubscriptionId = null, ReconStatusEnum? reconStatus = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        {
+            using var scope = _clientDiagnostics.CreateScope("MeteringOperations.GetUsageEvent");
+            scope.Start();
+            try
+            {
+                return RestClient.GetUsageEvent(usageStartDate, usageEndDate, offerId, planId, dimension, azureSubscriptionId, reconStatus, requestId, correlationId, cancellationToken);
             }
             catch (Exception e)
             {

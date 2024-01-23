@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
-using System.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Azure.Core;
@@ -19,6 +18,7 @@ using Microsoft.Marketplace.Metering.Models;
 using Microsoft.Marketplace.SaaS;
 using Microsoft.Marketplace.SaaS.Models;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace Microsoft.Marketplace.Tests
 {
@@ -27,7 +27,7 @@ namespace Microsoft.Marketplace.Tests
     public class FulfillmentTests : RecordedTestBase
 #pragma warning restore SA1600 // Elements should be documented
     {
-        private const string MarketplacePurchaseIdentificationToken = "IPZARpJbiIC3rDAESnmm2Zg1GJdHYHshWjLOvr/g+ASyLao9rPVrQ+mu2Li6uOBdtf7v/vXH6v+FdBT8egYh0Pmrv/kLoIbf/MuINnMLi+4IW2UFhR2qsrxRbEBfxYthSjKIrk28TgeZp19rDcNV1GqSXqR49Pma9i9EkPj6E8OTd71WWrJHG/4j+GOtm3Q1sFoBIzslczlC+BX89bcH8/a3zbir8fy+rDl576YKdE8=";
+        private const string MarketplacePurchaseIdentificationToken = "2FnFznEDcwKdPBXWJ/3Lm+3pZHkfYAgDLE8g7Msv2kQ1Z5P9x8Ddtq4ST4VV8PauQjkTaUpH74IclbSNexpiD9jdickD4U2waJ0KatdID8UdS6/xOvIlu5H7uawLWQUnzLCvNa0BNBR2VOGStPaC6PUG0RI/tqfwooiCH4OgYc5zRNC9qZAB3BBf4L9JpFGJRa6H2cnEcdwi/ZRN89u87w==";
 
         private IConfigurationRoot config;
 
@@ -35,9 +35,9 @@ namespace Microsoft.Marketplace.Tests
 #pragma warning disable SA1600 // Elements should be documented
         public FulfillmentTests()
 
-          // Uncomment following to record
-          // : base(true, RecordedTestMode.Record)
-           : base(true, RecordedTestMode.Playback)
+        // Uncomment following to record
+        // : base(true, RecordedTestMode.Record)
+        : base(true, RecordedTestMode.Playback)
 #pragma warning restore SA1600 // Elements should be documented
         {
             this.config = new ConfigurationBuilder()
@@ -55,7 +55,7 @@ namespace Microsoft.Marketplace.Tests
             Debug.Print($"Received {subscriptions} subscriptions");
             Debug.Print($"Received {subscriptions.Select(s => s.Id).Distinct().ToList().Count} distinct subscriptions");
 
-            NUnit.Framework.Assert.IsTrue(subscriptions.Any());
+            ClassicAssert.IsTrue(subscriptions.Any());
         }
 
         [RecordedTest]
@@ -67,7 +67,7 @@ namespace Microsoft.Marketplace.Tests
             Debug.Print($"Received {subscriptions} subscriptions");
             Debug.Print($"Received {subscriptions.Select(s => s.Id).Distinct().ToList().Count} distinct subscriptions");
 
-            NUnit.Framework.Assert.IsTrue(subscriptions.Any());
+            ClassicAssert.IsTrue(subscriptions.Any());
         }
 
         [RecordedTest]
@@ -75,17 +75,17 @@ namespace Microsoft.Marketplace.Tests
         {
             var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient());
             var subscriptions = await sut.Fulfillment.ListSubscriptionsAsync().ToListAsync();
-            Assert.IsTrue(subscriptions.Any());
+            ClassicAssert.IsTrue(subscriptions.Any());
 
             var subscription = subscriptions.First();
 
             var result = await sut.Fulfillment.GetSubscriptionAsync(subscription.Id.Value);
 
-            Assert.IsNotNull(result);
+            ClassicAssert.IsNotNull(result);
 
-            Assert.IsNotNull(result.Value.Beneficiary.TenantId);
+            ClassicAssert.IsNotNull(result.Value.Beneficiary.TenantId);
 
-            Assert.IsInstanceOf<DateTimeOffset>(result.Value.Created);
+            ClassicAssert.IsInstanceOf<DateTimeOffset>(result.Value.Created);
         }
 
         [RecordedTest]
@@ -105,7 +105,7 @@ namespace Microsoft.Marketplace.Tests
             Debug.Print($"Received {subscriptions} subscriptions");
             Debug.Print($"Received {subscriptions.Select(s => s.Id).Distinct().ToList().Count} distinct subscriptions");
 
-            Assert.IsTrue(subscriptions.Any());
+            ClassicAssert.IsTrue(subscriptions.Any());
         }
 
         [RecordedTest]
@@ -119,7 +119,7 @@ namespace Microsoft.Marketplace.Tests
             var resolvedSubscription = await sut.Fulfillment.ResolveAsync(marketplaceToken);
 
             Debug.Print(resolvedSubscription.Value.SubscriptionName);
-            Assert.IsNotNull(resolvedSubscription);
+            ClassicAssert.IsNotNull(resolvedSubscription);
         }
 
         [RecordedTest]
@@ -133,7 +133,7 @@ namespace Microsoft.Marketplace.Tests
             var resolvedSubscription = await sut.Fulfillment.ResolveAsync(marketplaceToken);
 
             Debug.Print(resolvedSubscription.Value.SubscriptionName);
-            Assert.IsNotNull(resolvedSubscription);
+            ClassicAssert.IsNotNull(resolvedSubscription);
         }
 
         [RecordedTest]
@@ -142,7 +142,7 @@ namespace Microsoft.Marketplace.Tests
             var sut = this.InstrumentClient(this.GetMarketplaceSaaSClient());
 
             var subscriptions = await sut.Fulfillment.ListSubscriptionsAsync().ToListAsync();
-            Assert.IsTrue(subscriptions.Any());
+            ClassicAssert.IsTrue(subscriptions.Any());
 
             var firstActiveSubscription = subscriptions.First(s => s.SaasSubscriptionStatus.Value == SubscriptionStatusEnum.Subscribed);
 
@@ -155,7 +155,7 @@ namespace Microsoft.Marketplace.Tests
 
             var operation = await sut.Operations.GetOperationStatusAsync(firstActiveSubscription.Id.Value, operationId);
 
-            Assert.IsNotNull(operation);
+            ClassicAssert.IsNotNull(operation);
 
             Debug.Print(Enum.GetName(typeof(OperationStatusEnum), operation.Value.Status));
         }
@@ -170,8 +170,8 @@ namespace Microsoft.Marketplace.Tests
 
             var availablePlans = await sut.Fulfillment.ListAvailablePlansAsync(contosoSubscription.Id.Value);
 
-            Assert.IsTrue(availablePlans.Value.Plans.SelectMany(p => p.PlanComponents.MeteringDimensions).Any());
-            Assert.IsTrue(availablePlans.Value.Plans.SelectMany(p => p.PlanComponents.RecurrentBillingTerms).Any());
+            ClassicAssert.IsTrue(availablePlans.Value.Plans.SelectMany(p => p.PlanComponents.MeteringDimensions).Any());
+            ClassicAssert.IsTrue(availablePlans.Value.Plans.SelectMany(p => p.PlanComponents.RecurrentBillingTerms).Any());
         }
 
         [RecordedTest]
@@ -192,8 +192,8 @@ namespace Microsoft.Marketplace.Tests
 
             var result = await sut.Metering.PostUsageEventAsync(usageEvent);
 
-            Assert.AreEqual(result.Value.Status, UsageEventStatusEnum.Accepted);
-            Assert.AreEqual(result.Value.Quantity, 20.5);
+            ClassicAssert.AreEqual(result.Value.Status, UsageEventStatusEnum.Accepted);
+            ClassicAssert.AreEqual(result.Value.Quantity, 20.5);
         }
 
         [RecordedTest]
@@ -216,8 +216,8 @@ namespace Microsoft.Marketplace.Tests
 
             var result = await sut.Metering.PostUsageEventAsync(usageEvent);
 
-            Assert.AreEqual(result.Value.Status, UsageEventStatusEnum.Accepted);
-            Assert.AreEqual(result.Value.Quantity, 20.5);
+            ClassicAssert.AreEqual(result.Value.Status, UsageEventStatusEnum.Accepted);
+            ClassicAssert.AreEqual(result.Value.Quantity, 20.5);
         }
 
         [RecordedTest]
@@ -251,17 +251,27 @@ namespace Microsoft.Marketplace.Tests
 
             var result = await sut.Metering.PostBatchUsageEventAsync(usageBatch);
 
-            Assert.IsTrue(result.Value.Result.All(r => r.Status == UsageEventStatusEnum.Accepted));
-            Assert.IsTrue(result.Value.Result.All(r => r.Quantity == 20.5));
-            Assert.AreEqual(result.Value.Count, 2);
-            Assert.IsTrue(result.Value.Result.All(r => r.Error == default));
+            ClassicAssert.IsTrue(result.Value.Result.All(r => r.Status == UsageEventStatusEnum.Accepted));
+            ClassicAssert.IsTrue(result.Value.Result.All(r => r.Quantity == 20.5));
+            ClassicAssert.AreEqual(result.Value.Count, 2);
+            ClassicAssert.IsTrue(result.Value.Result.All(r => r.Error == default));
 
             // Now get duplicates
             result = await sut.Metering.PostBatchUsageEventAsync(usageBatch);
 
-            Assert.IsTrue(result.Value.Result.All(r => r.Status == UsageEventStatusEnum.Duplicate));
-            Assert.IsTrue(result.Value.Result.All(r => r.Error != default));
-            Assert.IsTrue(result.Value.Result.All(r => r.UsageEventId == default));
+            ClassicAssert.IsTrue(result.Value.Result.All(r => r.Status == UsageEventStatusEnum.Duplicate));
+            ClassicAssert.IsTrue(result.Value.Result.All(r => r.Error != default));
+            ClassicAssert.IsTrue(result.Value.Result.All(r => r.UsageEventId == default));
+        }
+
+        [RecordedTest]
+        public async Task GetMeterUsage()
+        {
+            var sut = this.InstrumentClient(this.GetMarketplaceMeteringClient());
+            var yesterday = this.Mode == RecordedTestMode.Playback ? DateTime.Parse("2024-01-18T06:12:40.0746760Z").ToUniversalTime() : DateTime.UtcNow.AddDays(-1);
+            var result = await sut.Metering.GetUsageEventAsync(yesterday);
+
+            ClassicAssert.IsTrue(result.Value.Any());
         }
 
         private MarketplaceSaaSClient GetMarketplaceSaaSClient(bool useCert = false)

@@ -19,6 +19,7 @@ namespace Microsoft.Marketplace.Metering.Models
             UsageEventStatusEnum.Error => "Error",
             UsageEventStatusEnum.ResourceNotFound => "ResourceNotFound",
             UsageEventStatusEnum.ResourceNotAuthorized => "ResourceNotAuthorized",
+            UsageEventStatusEnum.ResourceNotActive => "ResourceNotActive",
             UsageEventStatusEnum.InvalidDimension => "InvalidDimension",
             UsageEventStatusEnum.InvalidQuantity => "InvalidQuantity",
             UsageEventStatusEnum.BadArgument => "BadArgument",
@@ -33,6 +34,7 @@ namespace Microsoft.Marketplace.Metering.Models
             if (string.Equals(value, "Error", StringComparison.InvariantCultureIgnoreCase)) return UsageEventStatusEnum.Error;
             if (string.Equals(value, "ResourceNotFound", StringComparison.InvariantCultureIgnoreCase)) return UsageEventStatusEnum.ResourceNotFound;
             if (string.Equals(value, "ResourceNotAuthorized", StringComparison.InvariantCultureIgnoreCase)) return UsageEventStatusEnum.ResourceNotAuthorized;
+            if (string.Equals(value, "ResourceNotActive", StringComparison.InvariantCultureIgnoreCase)) return UsageEventStatusEnum.ResourceNotActive;
             if (string.Equals(value, "InvalidDimension", StringComparison.InvariantCultureIgnoreCase)) return UsageEventStatusEnum.InvalidDimension;
             if (string.Equals(value, "InvalidQuantity", StringComparison.InvariantCultureIgnoreCase)) return UsageEventStatusEnum.InvalidQuantity;
             if (string.Equals(value, "BadArgument", StringComparison.InvariantCultureIgnoreCase)) return UsageEventStatusEnum.BadArgument;

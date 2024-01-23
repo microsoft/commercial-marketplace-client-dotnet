@@ -15,7 +15,7 @@ namespace Microsoft.Marketplace.SaaS.Models
     {
         internal static OperationList DeserializeOperationList(JsonElement element)
         {
-            Optional<IReadOnlyList<Operation>> operations = default;
+            Optional<IReadOnlyList<SaaSOperation>> operations = default;
             foreach (var property in element.EnumerateObject())
             {
                 if (property.NameEquals("operations"))
@@ -25,10 +25,10 @@ namespace Microsoft.Marketplace.SaaS.Models
                         property.ThrowNonNullablePropertyIsNull();
                         continue;
                     }
-                    List<Operation> array = new List<Operation>();
+                    List<SaaSOperation> array = new List<SaaSOperation>();
                     foreach (var item in property.Value.EnumerateArray())
                     {
-                        array.Add(Operation.DeserializeOperation(item));
+                        array.Add(SaaSOperation.DeserializeSaaSOperation(item));
                     }
                     operations = array;
                     continue;
