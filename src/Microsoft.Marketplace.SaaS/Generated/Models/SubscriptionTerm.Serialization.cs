@@ -18,6 +18,7 @@ namespace Microsoft.Marketplace.SaaS.Models
             Optional<TermUnitEnum> termUnit = default;
             Optional<DateTimeOffset> startDate = default;
             Optional<DateTimeOffset> endDate = default;
+            Optional<string> chargeDuration = default;
             foreach (var property in element.EnumerateObject())
             {
                 if (property.NameEquals("termUnit"))
@@ -50,8 +51,13 @@ namespace Microsoft.Marketplace.SaaS.Models
                     endDate = property.Value.GetDateTimeOffset("O");
                     continue;
                 }
+                if (property.NameEquals("chargeDuration"))
+                {
+                    chargeDuration = property.Value.GetString();
+                    continue;
+                }
             }
-            return new SubscriptionTerm(Optional.ToNullable(termUnit), Optional.ToNullable(startDate), Optional.ToNullable(endDate));
+            return new SubscriptionTerm(Optional.ToNullable(termUnit), Optional.ToNullable(startDate), Optional.ToNullable(endDate), chargeDuration.Value);
         }
     }
 }

@@ -119,16 +119,17 @@ namespace Microsoft.Marketplace.SaaS
 
         /// <summary> Use this call to find out if there are any private or public offers for the current publisher. </summary>
         /// <param name="subscriptionId"> The Uuid to use. </param>
+        /// <param name="planId"> planid. </param>
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual async Task<Response<SubscriptionPlans>> ListAvailablePlansAsync(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public virtual async Task<Response<SubscriptionPlans>> ListAvailablePlansAsync(Guid subscriptionId, string planId = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var scope = _clientDiagnostics.CreateScope("FulfillmentOperations.ListAvailablePlans");
             scope.Start();
             try
             {
-                return await RestClient.ListAvailablePlansAsync(subscriptionId, requestId, correlationId, cancellationToken).ConfigureAwait(false);
+                return await RestClient.ListAvailablePlansAsync(subscriptionId, planId, requestId, correlationId, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception e)
             {
@@ -139,16 +140,17 @@ namespace Microsoft.Marketplace.SaaS
 
         /// <summary> Use this call to find out if there are any private or public offers for the current publisher. </summary>
         /// <param name="subscriptionId"> The Uuid to use. </param>
+        /// <param name="planId"> planid. </param>
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual Response<SubscriptionPlans> ListAvailablePlans(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public virtual Response<SubscriptionPlans> ListAvailablePlans(Guid subscriptionId, string planId = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
             using var scope = _clientDiagnostics.CreateScope("FulfillmentOperations.ListAvailablePlans");
             scope.Start();
             try
             {
-                return RestClient.ListAvailablePlans(subscriptionId, requestId, correlationId, cancellationToken);
+                return RestClient.ListAvailablePlans(subscriptionId, planId, requestId, correlationId, cancellationToken);
             }
             catch (Exception e)
             {

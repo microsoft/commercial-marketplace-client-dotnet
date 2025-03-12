@@ -36,9 +36,9 @@ namespace Microsoft.Marketplace.SaaS
 
         Task<Response<Subscription>> GetSubscriptionAsync(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 
-        Response<SubscriptionPlans> ListAvailablePlans(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
+        Response<SubscriptionPlans> ListAvailablePlans(Guid subscriptionId, string planId = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 
-        Task<Response<SubscriptionPlans>> ListAvailablePlansAsync(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
+        Task<Response<SubscriptionPlans>> ListAvailablePlansAsync(Guid subscriptionId, string planId = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 
         Pageable<Subscription> ListSubscriptions(string continuationToken = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default);
 

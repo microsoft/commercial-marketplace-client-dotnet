@@ -21,15 +21,18 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <param name="termUnit"> . </param>
         /// <param name="startDate"> . </param>
         /// <param name="endDate"> . </param>
-        internal SubscriptionTerm(TermUnitEnum? termUnit, DateTimeOffset? startDate, DateTimeOffset? endDate)
+        /// <param name="chargeDuration"> . </param>
+        internal SubscriptionTerm(TermUnitEnum? termUnit, DateTimeOffset? startDate, DateTimeOffset? endDate, string chargeDuration)
         {
             TermUnit = termUnit;
             StartDate = startDate;
             EndDate = endDate;
+            ChargeDuration = chargeDuration;
         }
 
         public TermUnitEnum? TermUnit { get; }
         public DateTimeOffset? StartDate { get; }
         public DateTimeOffset? EndDate { get; }
+        public string ChargeDuration { get; }
     }
 }
