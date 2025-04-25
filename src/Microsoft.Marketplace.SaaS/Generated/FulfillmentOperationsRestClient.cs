@@ -403,7 +403,7 @@ namespace Microsoft.Marketplace.SaaS
             }
         }
 
-        internal HttpMessage CreateListAvailablePlansRequest(Guid subscriptionId, Guid? requestId, Guid? correlationId)
+        internal HttpMessage CreateListAvailablePlansRequest(Guid subscriptionId, string planId, Guid? requestId, Guid? correlationId)
         {
             var message = _pipeline.CreateMessage();
             var request = message.Request;
@@ -414,6 +414,10 @@ namespace Microsoft.Marketplace.SaaS
             uri.AppendPath(subscriptionId, true);
             uri.AppendPath("/listAvailablePlans", false);
             uri.AppendQuery("api-version", apiVersion, true);
+            if (planId != null)
+            {
+                uri.AppendQuery("planId", planId, true);
+            }
             request.Uri = uri;
             if (requestId != null)
             {
@@ -429,12 +433,13 @@ namespace Microsoft.Marketplace.SaaS
 
         /// <summary> Use this call to find out if there are any private or public offers for the current publisher. </summary>
         /// <param name="subscriptionId"> The Uuid to use. </param>
+        /// <param name="planId"> planid. </param>
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public async Task<Response<SubscriptionPlans>> ListAvailablePlansAsync(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public async Task<Response<SubscriptionPlans>> ListAvailablePlansAsync(Guid subscriptionId, string planId = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
-            using var message = CreateListAvailablePlansRequest(subscriptionId, requestId, correlationId);
+            using var message = CreateListAvailablePlansRequest(subscriptionId, planId, requestId, correlationId);
             await _pipeline.SendAsync(message, cancellationToken).ConfigureAwait(false);
             switch (message.Response.Status)
             {
@@ -452,12 +457,13 @@ namespace Microsoft.Marketplace.SaaS
 
         /// <summary> Use this call to find out if there are any private or public offers for the current publisher. </summary>
         /// <param name="subscriptionId"> The Uuid to use. </param>
+        /// <param name="planId"> planid. </param>
         /// <param name="requestId"> A unique string value for tracking the request from the client, preferably a GUID. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="correlationId"> A unique string value for operation on the client. This parameter correlates all events from client operation with events on the server side. If this value isn&apos;t provided, one will be generated and provided in the response headers. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public Response<SubscriptionPlans> ListAvailablePlans(Guid subscriptionId, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
+        public Response<SubscriptionPlans> ListAvailablePlans(Guid subscriptionId, string planId = null, Guid? requestId = null, Guid? correlationId = null, CancellationToken cancellationToken = default)
         {
-            using var message = CreateListAvailablePlansRequest(subscriptionId, requestId, correlationId);
+            using var message = CreateListAvailablePlansRequest(subscriptionId, planId, requestId, correlationId);
             _pipeline.Send(message, cancellationToken);
             switch (message.Response.Status)
             {
