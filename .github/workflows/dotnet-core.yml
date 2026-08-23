@@ -17,10 +17,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
     - name: Setup .NET Core 6.x
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@55ec9447dda3d1cf6bd587150f3262f30ee10815 # v3.4.2
       with:
         dotnet-version: '6.x'        
 
@@ -32,7 +32,7 @@ jobs:
     - name: set pr build number
       id: PRNUMBER
       if: ${{ github.event_name == 'pull_request' }}
-      uses: kkak10/pr-number-action@v1.3
+      uses: kkak10/pr-number-action@8f5358941366822cd0825e04dfe68437f2f5f15b # v1.3
 
       # set report file and title 
     - name: Set Test Title
@@ -59,7 +59,7 @@ jobs:
 
     # upload report as build artifact
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@ff15f0306b3f739f7b6fd43fb5d26cd321bd4de5 # v3.2.1
       if: ${{always()}}
       with:
         name: 'Test Run'
