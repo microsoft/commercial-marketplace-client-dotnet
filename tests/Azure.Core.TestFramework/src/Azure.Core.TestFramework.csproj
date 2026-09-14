@@ -1,6 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>$(RequiredTargetFrameworks)</TargetFrameworks>
+    <!-- This project is a shared test-helper library referenced by real test projects; it
+         contains no test methods of its own. Without this flag, `dotnet test`/VSTest treats it
+         as a test project (because it references Microsoft.NET.Test.Sdk/NUnit3TestAdapter) and
+         emits a "No test is available" warning on every run. -->
+    <IsTestProject>false</IsTestProject>
   </PropertyGroup>
 
   <PropertyGroup>

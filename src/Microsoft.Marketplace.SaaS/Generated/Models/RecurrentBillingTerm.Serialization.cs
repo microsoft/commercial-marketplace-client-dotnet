@@ -17,7 +17,7 @@ namespace Microsoft.Marketplace.SaaS.Models
         {
             Optional<string> currency = default;
             Optional<float> price = default;
-            Optional<TermUnitEnum> termUnit = default;
+            Optional<TermUnit> termUnit = default;
             Optional<string> termDescription = default;
             Optional<IReadOnlyList<MeteringedQuantityIncluded>> meteredQuantityIncluded = default;
             foreach (var property in element.EnumerateObject())
@@ -44,7 +44,7 @@ namespace Microsoft.Marketplace.SaaS.Models
                         property.ThrowNonNullablePropertyIsNull();
                         continue;
                     }
-                    termUnit = property.Value.GetString().ToTermUnitEnum();
+                    termUnit = property.Value.GetString().ToTermUnit();
                     continue;
                 }
                 if (property.NameEquals("termDescription"))

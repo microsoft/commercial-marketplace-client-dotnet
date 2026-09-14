@@ -19,15 +19,21 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
-    - name: Setup .NET Core 6.x
-      uses: actions/setup-dotnet@55ec9447dda3d1cf6bd587150f3262f30ee10815 # v3.4.2
+    - name: Setup .NET 10
+      uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
       with:
-        dotnet-version: '6.x'        
+        global-json-file: global.json
 
     - name: Build
       run: dotnet build --configuration 'release'
       working-directory: ./src
 
+      # NOTE: Test execution is temporarily disabled in CI. FulfillmentTests.cs requires
+      # live/recorded Marketplace credentials (TenantId, ClientId, clientSecret, certPassword,
+      # certBase64) supplied via repository secrets. These secrets are intentionally not
+      # configured on this repo. Tests can still be run locally. Re-enable this block once
+      # the required secrets are configured (or the tests no longer require them).
+      
       # set pr number, if it's a pr build
     - name: set pr build number
       id: PRNUMBER

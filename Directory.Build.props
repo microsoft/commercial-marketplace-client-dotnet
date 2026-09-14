@@ -2,12 +2,25 @@
   xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <RequiredTargetFrameworks>netstandard2.0;net472;net8.0</RequiredTargetFrameworks>
+    <RequiredTargetFrameworks>netstandard2.0;net472;net10.0</RequiredTargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
     <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
     <RepoSrcPath>$(RepoRoot)src</RepoSrcPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!--
+      SA0001: XML comment analysis is disabled because GenerateDocumentationFile
+      is not set for these projects; this is purely informational noise.
+      CS8602/CS8604 are NOT suppressed here. See src\Directory.Build.props and
+      tests\Directory.Build.props (note: this root file is NOT currently
+      imported by either of those - the import is commented out - so any
+      shared configuration intended for src/tests projects must be duplicated
+      there rather than placed here).
+    -->
+    <NoWarn>$(NoWarn);SA0001</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup>

@@ -281,10 +281,8 @@ namespace Microsoft.Marketplace.Tests
             {
                 var password = this.config["certPassword"];
 
-                var certCollection = new X509Certificate2Collection();
-
                 var certBytes = this.ReadBytes();
-                certCollection.Import(certBytes, password, X509KeyStorageFlags.PersistKeySet);
+                var certCollection = X509CertificateLoader.LoadPkcs12Collection(certBytes, password, X509KeyStorageFlags.PersistKeySet);
 
                 var cert = certCollection[0];
 
@@ -305,11 +303,9 @@ namespace Microsoft.Marketplace.Tests
             {
                 var password = this.config["certPassword"];
 
-                var certCollection = new X509Certificate2Collection();
-
                 var certBytes = this.ReadBytes();
 
-                certCollection.Import(certBytes, password, X509KeyStorageFlags.PersistKeySet);
+                var certCollection = X509CertificateLoader.LoadPkcs12Collection(certBytes, password, X509KeyStorageFlags.PersistKeySet);
 
                 var cert = certCollection[0];
 

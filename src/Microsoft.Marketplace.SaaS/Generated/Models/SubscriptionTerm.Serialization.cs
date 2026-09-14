@@ -15,7 +15,7 @@ namespace Microsoft.Marketplace.SaaS.Models
     {
         internal static SubscriptionTerm DeserializeSubscriptionTerm(JsonElement element)
         {
-            Optional<TermUnitEnum> termUnit = default;
+            Optional<TermUnit> termUnit = default;
             Optional<DateTimeOffset> startDate = default;
             Optional<DateTimeOffset> endDate = default;
             Optional<string> chargeDuration = default;
@@ -28,7 +28,7 @@ namespace Microsoft.Marketplace.SaaS.Models
                         property.ThrowNonNullablePropertyIsNull();
                         continue;
                     }
-                    termUnit = property.Value.GetString().ToTermUnitEnum();
+                    termUnit = property.Value.GetString().ToTermUnit();
                     continue;
                 }
                 if (property.NameEquals("startDate"))

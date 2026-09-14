@@ -25,7 +25,7 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <param name="termUnit"> . </param>
         /// <param name="termDescription"> . </param>
         /// <param name="meteredQuantityIncluded"> . </param>
-        internal RecurrentBillingTerm(string currency, float? price, TermUnitEnum? termUnit, string termDescription, IReadOnlyList<MeteringedQuantityIncluded> meteredQuantityIncluded)
+        internal RecurrentBillingTerm(string currency, float? price, TermUnit? termUnit, string termDescription, IReadOnlyList<MeteringedQuantityIncluded> meteredQuantityIncluded)
         {
             Currency = currency;
             Price = price;
@@ -36,7 +36,7 @@ namespace Microsoft.Marketplace.SaaS.Models
 
         public string Currency { get; }
         public float? Price { get; }
-        public TermUnitEnum? TermUnit { get; }
+        public TermUnit? TermUnit { get; }
         public string TermDescription { get; }
         public IReadOnlyList<MeteringedQuantityIncluded> MeteredQuantityIncluded { get; }
     }

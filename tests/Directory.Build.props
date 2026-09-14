@@ -4,7 +4,12 @@
   <!-- <Import Project="$(MSBuildThisFileDirectory)\Directory.Build.props" Condition="Exists('..\Directory.Build.props')" /> -->
 
   <PropertyGroup>
-    <RequiredTargetFrameworks Condition="$(RequiredTargetFrameworks) == ''">net6.0;net47</RequiredTargetFrameworks>
+    <RequiredTargetFrameworks Condition="$(RequiredTargetFrameworks) == ''">net10.0;net47</RequiredTargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- See src\Directory.Build.props for details on why CS8602/CS8604/SA0001 are suppressed here. -->
+    <NoWarn>$(NoWarn);CS8602;CS8604;SA0001</NoWarn>
   </PropertyGroup>
 
 </Project>
