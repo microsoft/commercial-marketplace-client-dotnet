@@ -33,35 +33,25 @@ jobs:
       # certBase64) supplied via repository secrets. These secrets are intentionally not
       # configured on this repo. Tests can still be run locally. Re-enable this block once
       # the required secrets are configured (or the tests no longer require them).
-      
-      # set pr number, if it's a pr build
-    - name: set pr build number
-      id: PRNUMBER
-      if: ${{ github.event_name == 'pull_request' }}
-      uses: kkak10/pr-number-action@8f5358941366822cd0825e04dfe68437f2f5f15b # v1.3
 
-      # set report file and title 
-    - name: Set Test Title
-      id: TITLES
-      run: |
-            if ${{ github.event_name == 'pull_request' }}
-            then
-              echo '::set-output name=title::Test Run for PR #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})'
-              echo '::set-output name=file_name::TestReport_${{steps.PRNUMBER.outputs.pr}}_${{github.run_number}}.md'
-            else
-              echo '::set-output name=title::Test Run ${{github.run_number}}'
-              echo '::set-output name=file_name::TestReport_${{github.run_number}}.md'
-            fi
+      # # set pr number, if it's a pr build
+      # - name: set pr build number
+      #   id: PRNUMBER
+      #   if: ${{ github.event_name == 'pull_request' }}
+      #   uses: kkak10/pr-number-action@8f5358941366822cd0825e04dfe68437f2f5f15b # v1.3
 
-    - name: Test PR      
-      run: dotnet test --configuration 'release' --logger:'liquid.md;LogFileName=${{github.workspace}}/${{steps.TITLES.outputs.file_name}};Title=${{steps.TITLES.outputs.title}};'
-      env:
-        TenantId: ${{secrets.TENANTID}}
-        ClientId: ${{secrets.CLIENTID}}
-        clientSecret: ${{secrets.CLIENTSECRET}}
-        certPassword: ${{secrets.CERTPASSWORD}}
-        certBase64: ${{secrets.CERTBASE64}}
-      working-directory: ./tests/Microsoft.Marketplace.Tests
+      # # set report file and title
+      # - name: Set Test Title
+      #   id: TITLES
+      #   run: |
+      #         if ${{ github.event_name == 'pull_request' }}
+      #         then
+      #           echo '::set-output name=title::Test Run for PR #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})'
+      #           echo '::set-output name=file_name::TestReport_${{steps.PRNUMBER.outputs.pr}}_${{github.run_number}}.md'
+      #         else
+      #           echo '::set-output name=title::Test Run ${{github.run_number}}'
+      #           echo '::set-output name=file_name::TestReport_${{github.run_number}}.md'
+      #         fi
 
     # upload report as build artifact
     - name: Upload a Build Artifact
